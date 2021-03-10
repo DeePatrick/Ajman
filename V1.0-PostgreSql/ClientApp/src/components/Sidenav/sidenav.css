@@ -1,0 +1,57 @@
+
+.sidebar-fixed-left {
+  top:170px;
+  width: 14%;
+  float: left;
+  background-color: #a0a0a0;
+  height: 700px;
+
+}
+
+.sidebar-fixed-left .sidebar-nav {
+  position: relative;
+  padding: 15px 8px 0 8px;
+  margin: 0 auto;
+}
+
+.sidebar-fixed-left .sidebar-nav a:hover {
+  text-decoration: none;
+}
+
+.sidebar-fixed-left .sidebar-nav a:focus {
+
+}
+
+.sidebar-fixed-left .sidebar-nav .icorns {
+  width: 100%;
+  list-style: none;
+  color: #ffffff;
+}
+
+.sidebar-fixed-left .sidebar-nav .icorns .fa {
+  font-size: 1.5em;
+  text-align: center;
+  display: block;
+  width:25%;
+  padding: 0 2.5%;
+  margin-bottom: 25px;
+}
+
+.sidebar-fixed-left .sidebar-nav  .icorns .icorn-text {
+  font-size: 0.7em;
+  float: right;
+  text-align: left;
+  display: block;
+  width: 65%;
+  padding: 0 0 0 5%;
+  margin-top: -45px;
+}
+
+.sidebar-fixed-left .sidebar-nav #icorn-cog {
+  position: absolute;
+  bottom: -320px;
+  left: 4.5%;
+}
+.sidebar-fixed-left .sidebar-nav a:nth-child(4) .icorn-text {
+  margin-top: -52px;
+}

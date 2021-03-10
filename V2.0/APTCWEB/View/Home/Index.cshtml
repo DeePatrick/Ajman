@@ -1,0 +1,507 @@
+﻿
+<div class="jumbotron" style="padding:5px;">
+    @*<h3>Individual</h3>*@
+    <h3>APTC - APIs WSDL</h3>
+    <a href="http://103.69.38.2:8081/Help">Click here to API list</a>
+</div>
+<div class="row" style="margin-bottom:20px;display:none">
+    <div class="row" style='background-color:gray;height:30px'>
+        <div class="col-lg-3">Id</div>
+        <div class="col-lg-3">Name</div>
+        <div class="col-lg-2">Email</div>
+        <div class="col-lg-2">Address</div>
+    </div>
+    <div class="row" id="body1">
+
+    </div>
+</div>
+<div id="emiratId" class="row" style="margin-top:30px;">
+    <div class="col-md-4">
+        <div class="form-group">
+            <input type="text" id="txtEmiratID" name="name" class="form-control" placeholder="enter Emirat ID" style="display:none" />
+        </div>
+        <input type="submit" id="btnFirst" name="name" value="Continue" onclick="SendEmiratiId(this)" style="display:none" />
+    </div>
+</div>
+<div id="firstScreen" style="padding:20px; display:none">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group">
+                En Full Name <input type="text" id="txtName" readonly name="name" class="form-control" placeholder="enter your first name" />
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                Ar Full Name <input type="text" id="txtLastName" readonly name="name" class="form-control" placeholder="enter last name" />
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group">
+                Gender <input type="text" id="txtG" readonly name="name" class="form-control" />
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                Date Of Birth <input type="text" id="txtD" readonly name="name" class="form-control" />
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <input type="submit" name="name" value="Continue" onclick="SaveFirstNameAndLastName();" />
+    </div>
+</div>
+<div id="secondScreen" style="margin-top:30px; display:none">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group">
+                <label><strong style="color:red">*</strong>&nbsp;Email</label> <input type="email" id="txtEmail" name="name" class="form-control" placeholder="enter email" />
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label><strong style="color:red">*</strong>&nbsp;MobNum</label>
+                <div class="row">
+                    <div class="col-md-4"><input type="number" id="txtPhoneCity" name="name" class="form-control" placeholder="City" /></div>
+                    <div class="col-md-4"><input type="number" id="txtPhoneArea" name="name" class="form-control" placeholder="Area" /></div>
+                    <div class="col-md-4"><input type="number" id="txtPhoneNum" name="name" class="form-control" placeholder="Num" /></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <label>TelNum</label>
+            <div class="row">
+                <div class="col-md-4"><input type="number" id="txtOPhoneCity" name="name" class="form-control" placeholder="City" /></div>
+                <div class="col-md-4"><input type="number" id="txtOPhoneArea" name="name" class="form-control" placeholder="Area" /></div>
+                <div class="col-md-4"><input type="number" id="txtOPhoneNum" name="name" class="form-control" placeholder="Num" /></div>
+            </div>
+            @*<div class="form-group">
+                <input type="email" id="txtOtherPhone" name="name" class="form-control" placeholder="enter Other Phone" />
+            </div>*@
+        </div>
+        <div class="col-md-4">
+
+            <div class="form-group">
+                <label><strong style="color:red">*</strong>&nbsp;Nationality</label><input type="text" readonly id="txtNationality" name="name" class="form-control" />
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group">
+                <label><strong style="color:red">*</strong>&nbsp;Address1</label><input type="text" id="txtAddress1" name="name" class="form-control" placeholder="enter Address1" />
+            </div>
+        </div>
+        <div class="col-md-4">
+            <label>Address2</label>
+            <div class="form-group">
+                <input type="text" id="txtAddress2" name="name" class="form-control" placeholder="enter Address2" />
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group">
+                <label><strong style="color:red">*</strong>&nbsp;City</label><input type="email" id="txtCity" name="name" class="form-control" placeholder="enter City" />
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label><strong style="color:red">*</strong>&nbsp;State</label><input type="text" id="txtState" name="name" class="form-control" placeholder="enter State" />
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group">
+                <label><strong style="color:red">*</strong>&nbsp;Country</label><input type="email" id="txtCountry" name="name" class="form-control" placeholder="enter Country" />
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label>Preferred Language</label><input type="text" id="txtLang" name="name" class="form-control" placeholder="enter  Preferred Language" />
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group">
+                <label><strong style="color:red">*</strong>&nbsp;Religion</label><input type="text" id="txtReligion" name="name" class="form-control" placeholder="enter Religion" />
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label><strong style="color:red">*</strong>&nbsp;Marital</label><input type="text" id="txtMarital" name="name" class="form-control" placeholder="enter Marital" />
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <input type="submit" name="name" value="Continue" onclick="SaveCustomerDetails();" />
+    </div>
+</div>
+<div id="dvOtp" style="display:none">
+    <div class="col-md-4">
+        <div class="form-group">
+            <strong>*</strong>&nbsp;Email<input type="text" id="txtEmailOtp" name="name" class="form-control" placeholder="email otp" />
+
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="form-group">
+            <strong>*</strong>&nbsp;Mobile <input type="text" id="txtMobileOtp" name="name" class="form-control" placeholder="mobile otp" />
+        </div>
+    </div>
+    <input type="submit" name="name" onclick="ResendOtp();" value="Resend Otp" />
+    <input type="submit" name="name" onclick="MatchOtp();" value="Continue" />
+</div>
+<div class="row" id="individual" style="display:none;margin-top:30px">
+    <form action="/mydocs/" method="post" enctype="multipart/form-data" id="fileUploadForm">
+        <div class="col-md-4">
+            <div class="form-group">
+                Visa <input type="file" id="txtVisa" name="name" class="form-control" placeholder="Visa" />
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                Passport<input type="file" id="txtPasport" name="name" class="form-control" placeholder="Passport" />
+            </div>
+        </div>
+        <input type="submit" value="Submit" id="btnSubmit" />
+    </form>
+</div>
+<div class="row" id="Noindividual" style="display:none;margin-top:30px">
+    <div class="col-md-4">
+        <div class="form-group">
+            <input type="email" id="txtVarEmail" name="name" class="form-control" placeholder="Enter Email Security Code" />
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="form-group">
+            <input type="text" id="txtSMS" name="name" class="form-control" placeholder="enter SMS Security Code" />
+        </div>
+    </div>
+</div>
+<input type="submit" name="name" value="Save" style="display:none" onclick="Save()" />
+<input type="hidden" id="hdfId" name="name" value="" />
+<script>
+    var documentId = '';
+    //$(document).ready(function myfunction() {
+    //    $.ajax({
+    //        type: "GET",
+    //        dataType: "json",
+    //        url: "http://localhost:63391/api/aptc.user/getusers",
+    //        success: function (data) {
+    //            debugger;
+    //            var strTable = "";
+    //            for (var i = 0; i < data.length; i++) {
+    //                $('#body1').append('<div class="row">')
+    //                $('#body1').append('<div class="col-lg-3">' + data[i].id + '</div>')
+    //                $('#body1').append('<div class="col-lg-3">' + data[i].name + '</div>')
+    //                $('#body1').append('<div class="col-lg-2">' + data[i].email + '</div>')
+    //                $('#body1').append('<div class="col-lg-2">' + data[i].addressLine1 + ' ' + data[i].addressLine2 + ', ' + data[i].city
+    //                    + ' ' + data[i].state + ' ' + data[i].country + '</div>')
+    //                $('#body1').append('<div class="col-lg-1"><a href="#" id="edit_' + data[i].id + '"  onclick="Edit(this)">Edit</a></div>');
+    //                $('#body1').append('<div class="col-lg-1"><a href="#" id="delet_' + data[i].id + '"  onclick="Delete(this)">Delete</a></div>');
+    //                $('#body1').append('</div>')
+    //            }
+    //        },
+    //        error: function (errMsg) {
+    //            debugger;
+    //            alert(errMsg);
+    //        }
+    //    });
+    //});
+    function Edit(_obj) {
+        var key = _obj.id.split("_");
+        $('#hdfId').val(key[1]);
+        $.ajax({
+            type: "GET",
+            dataType: "json",
+            url: hostUrl + 'aptc.user/edit/' + key[1],
+            success: function (data) {
+                debugger;
+                $("#txtName").val(data.name);
+                $("#txtEmail").val(data.email);
+                $("#pas").hide();
+                $("#txtConfirmPassword").hide();
+                $("#txtAdd1").val(data.addressLine1);
+                $("#txtAdd2").val(data.addressLine2);
+                $("#txtCity").val(data.city);
+                $("#txtState").val(data.state);
+                $("#txtCountry").val(data.country);
+            },
+            error: function (errMsg) {
+                debugger;
+                alert(errMsg);
+            }
+        });
+    }
+    function Delete(_obj) {
+        var key = _obj.id.split("_");
+        $.ajax({
+            type: "DELETE",
+            dataType: "json",
+            url: hostUrl + 'aptc.user/delete/' + key[1],
+            success: function (data) {
+
+            },
+            error: function (errMsg) {
+                debugger;
+                alert(errMsg);
+            }
+        });
+    }
+    function Save() {
+        var address = {};
+        address.addressLine1 = $("#txtAdd1").val();
+        address.addressLine2 = $("#txtAdd2").val();
+        address.city = $("#txtCity").val();
+        address.state = $("#txtState").val();
+        address.country = $("#txtCountry").val();
+        var obj = {};
+        obj.name = $("#txtName").val();
+        obj.email = $("#txtEmail").val();
+        obj.password = $("#txtPassword").val();
+        obj.confirmpassword = $("#txtConfirmPassword").val();
+        obj.address = address;
+        var action = "POST";
+        var url = hostUrl + 'aptc.user/register';
+        if ($('#hdfId').val() != "") {
+            action = "PUT";
+            url = hostUrl + 'aptc.user/update'
+            obj.id = $('#hdfId').val();
+        }
+        $.ajax({
+            type: action,
+            data: obj,
+            dataType: "json",
+            url: url,
+            success: function (data) {
+                alert(data);
+            },
+            error: function (errMsg) {
+                alert
+            }
+        });
+    }
+    var userData = {};
+    function SendEmiratiId(obj) {
+        $.ajax({
+            type: "GET",
+            dataType: "json",
+            url: hostUrl + 'aptc.user/' + $('#txtEmiratID').val(),
+            success: function (data, status) {
+                if (status == 'nocontent') {
+                    alert('Please enter valid emirati id');
+                }
+                else {
+                    userData = data;
+                    $('#emiratId').hide();
+                    $('#firstScreen').show();
+                    $('#txtName').val(data[0].ICADB.body.personName.fullEnglishName);
+                    $('#txtLastName').val(data[0].ICADB.body.personName.fullArabicName);
+                    if (data[0].ICADB.body.gender.enDesc = "MALE") {
+                        $('#txtG').val("M");
+                    }
+                    else {
+                        $('#txtG').val("M");
+                    }
+
+                    var date = new Date(data[0].ICADB.body.dateOfBirth);
+                    $('#txtD').val((date.getMonth() + 1) + '/' + date.getDate() + '/' + date.getFullYear());
+                }
+            },
+            error: function (errMsg) {
+
+                alert('plaese enter valid emirati id');
+            }
+        });
+    }
+    function SaveFirstNameAndLastName() {
+        $('#firstScreen').hide();
+        $('#secondScreen').show();
+        $('#txtNationality').val(userData[0].ICADB.body.nationality.enDesc);
+        $('#txtReligion').val(userData[0].ICADB.body.religion.enDesc);
+        $('#txtMarital').val(userData[0].ICADB.body.maritalStatus.enDesc);
+
+    }
+
+    function SaveIndividualDetails() {
+        var obj = {}
+        obj = userData[0].ICADB;
+        obj.email = $('#txtEmail').val();
+        obj.phone = $('#txtPhoneCity').val();
+        obj.phone = $('#txtPhoneArea').val();
+        obj.phone = $('#txtOPhoneNum').val();
+        obj.otherPhone = $('#txtOPhoneCity').val();
+        obj.otherPhone = $('#txtOPhoneArea').val();
+        obj.otherPhone = $('#txtOPhoneNum').val();
+        obj.Language = $('#txtLang').val();
+        obj.EmiratId = userData[0].ICADB.id;
+        var address = {};
+        address.addressLine1 = $("#txtAddress1").val();
+        address.addressLine2 = $("#txtAddress2").val();
+        address.city = $("#txtCity").val();
+        address.state = $("#txtState").val();
+        address.country = $("#txtCountry").val();
+        obj.body.address = address;
+        obj.body.nationality.enDesc = userData[0].ICADB.body.nationality.enDesc;
+        $.ajax({
+            type: "POST",
+            data: obj,
+            dataType: "json",
+            url: hostUrl + 'aptc.user/register',
+            success: function (data) {
+                if (data != null) {
+                    documentId = data;
+                    $('#secondScreen').hide();
+                    $('#firstScreen').hide();
+                    $('#Noindividual').hide();
+                    $('#individual').hide();
+                    $('#dvOtp').show();
+                }
+            },
+            error: function (errMsg) {
+                $('#Noindividual').hide();
+                $('#individual').hide();
+                $('#dvOtp').hide();
+                $('#secondScreen').show();
+                alert(errMsg.responseText);
+            }
+        });
+    }
+    function SaveCustomerDetails() {
+        var obj = {}
+        obj = userData[0].ICADB;
+        obj.email = $('#txtEmail').val();
+        obj.phone = $('#txtPhone').val();
+        obj.otherPhone = $('#txtOtherPhone').val();
+        obj.Language = $('#txtLang').val();
+        obj.EmiratId = userData[0].ICADB.id;
+        var address = {};
+        address.addressLine1 = $("#txtAddress1").val();
+        address.addressLine2 = $("#txtAddress2").val();
+        address.city = $("#txtCity").val();
+        address.state = $("#txtState").val();
+        address.country = $("#txtCountry").val();
+        obj.body.address = address;
+        obj.body.nationality.enDesc = userData[0].ICADB.body.nationality.enDesc;
+        $.ajax({
+            type: "POST",
+            data: obj,
+            dataType: "json",
+            url: hostUrl + 'aptc.user/register',
+            success: function (data) {
+                if (data != null) {
+                    documentId = data;
+                    $('#secondScreen').hide();
+                    $('#firstScreen').hide();
+                    $('#Noindividual').hide();
+                    $('#individual').hide();
+                    $('#dvOtp').show();
+                }
+            },
+            error: function (errMsg) {
+                $('#Noindividual').hide();
+                $('#individual').hide();
+                $('#dvOtp').hide();
+                $('#secondScreen').show();
+                alert(errMsg.responseText);
+            }
+        });
+    }
+    $(document).ready(function () {
+
+        $("#btnSubmit").click(function (event) {
+            //stop submit the form, we will post it manually.
+            event.preventDefault();
+            // Get form
+            var form = $('#fileUploadForm')[0];
+            // Create an FormData object
+            var data = new FormData(form);
+            // If you want to add an extra field for the FormData
+            data.append("Type", "customer");
+            // disabled the submit button
+            $.ajax({
+                type: "POST",
+                //enctype: 'multipart/form-data',
+                url: "/api/upload/file/customer/" + documentId,
+                data: data,
+                processData: false,
+                contentType: false,
+                cache: false,
+                timeout: 600000,
+                success: function (data) {
+                    alert('image uploaded successfully.');
+                },
+                error: function (e) {
+                    alert(e.responseText);
+                }
+            });
+        });
+    });
+    var otp = '';
+    function ResendOtp() {
+        $('#firstScreen').hide();
+        $('#secondScreen').hide();
+        var objotp = {}
+        objotp.customeDocumentId = 'Customer_784123412345671'; //documentId;
+        objotp.Email = 'akjs005@hotmail.com'; //$("#txtEmailOtp").val();
+        objotp.MobileNo = '9312998984'; //$("#txtMobileOtp").val();
+        objotp.UserName = 'Arvind' //$('#txtName').val();
+        $.ajax({
+            type: "POST",
+            data: objotp,
+            dataType: "json",
+            url: hostUrl + 'aptc.user/resendotp',
+            success: function (data) {
+                if (data == 'success') {
+                    alert('your otp has been sent successfully.');
+                }
+            },
+            error: function (errMsg) {
+
+            }
+        });
+    }
+    function MatchOtp() {
+        $('#firstScreen').hide();
+        $('#secondScreen').hide();
+        var objotp = {}
+        objotp.customeDocumentId = "Customer_" + documentId;
+        objotp.emailOtp = $("#txtEmailOtp").val();
+        objotp.mobileOtp = $("#txtMobileOtp").val();
+        $.ajax({
+            type: "POST",
+            data: objotp,
+            dataType: "json",
+            url: hostUrl + 'aptc.user/matchotp',
+            success: function (data) {
+                if (data != null) {
+                    if (data == 'valid') {
+                        $('#dvOtp').hide();
+                        if (userData[0].ICADB.body.nationality.enDesc == 'Individual') {
+                            $('#Noindividual').hide();
+                            $('#individual').show();
+                        }
+                        else {
+                            $('#Noindividual').show();
+                            $('#individual').hide();
+                        }
+                    }
+                    else {
+                        $('#dvOtp').show();
+                        alert('invalid otp')
+                    }
+                }
+            },
+            error: function (errMsg) {
+                alert
+            }
+        });
+    }
+</script>

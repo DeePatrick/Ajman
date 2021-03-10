@@ -1,0 +1,19 @@
+﻿<strong>JSON Input<strong> <br/><br/>
+{
+	"userId": "vv11@cc.com",
+	"password": "11223344556677",
+	"type": "Cust",
+	"status": "A",
+	"role": "G",
+	"pre_language": "EN",
+	"created_on": "2018-07-17 00:00:00" 
+}
+<br/>
+<br/><strong>Response</strong><br/><br/>
+{"id":"LOGIN_vv11@cc.com", "IsSuccess": "true", "message":"Successfully","statusCode":"200"}<br/>
+{"id":"", "IsSuccess": "false", "message": "157-User Id is required","statusCode":"400"}<br/>
+{"id":"", "IsSuccess": "false", "message": "158-Password is required","statusCode":"400"}<br/>
+{"id":"", "IsSuccess": "false", "message": "159-User type is required":"400"}<br/>
+
+
+

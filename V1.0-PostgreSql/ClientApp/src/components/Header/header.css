@@ -1,0 +1,221 @@
+.nav > li > a {
+    position: relative;
+    display: block;
+    padding: 10px 10px 10px 10px;
+}
+
+.welcome-custom-styling {
+    margin-left: 10px;
+    margin-right: 20px;
+}
+
+.welcome-custom-styling-container {
+    padding-right: 15px;
+    padding-left: 0px;
+}
+
+
+.header .ajman-logos {
+    padding: 15px 30px;
+    background-color: white;
+    width: 100%;
+}
+
+.menu-icon {
+    font-size: 30px;
+}
+
+.menu-text {
+    font-weight: bold;
+}
+
+.nav-item a {
+    text-align: center;
+    width: auto;
+    display: block;
+    color: #9f8865;
+    margin: 0px 5px 0px 5px;
+}
+
+.nav-item-main a {
+    text-align: center;
+    width: auto;
+    display: block;
+    color: #fff;
+    margin: 0px 5px 0px 5px;
+}
+
+.nav-item-top a {
+    color: #9f8865;
+}
+
+.navbar-nav {
+    margin: 7.5px 5px;
+}
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+    border-color: transparent;
+}
+
+.navbar-default .hamburger {
+    background-color: #9f8865 !important;
+}
+
+.navbar-default .hamburger:hover {
+    background-color: #9f8865 !important;
+}
+
+.navbar-default .hamburger .icon-bar {
+    background-color: #fff;
+}
+
+        .header .ajman-logos:after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+
+        /* LOGO'S */
+
+        .header .ajman-logos .ajman-logo-left {
+            float: left;
+        }
+
+            .header .ajman-logos .ajman-logo-left img {
+                width: 250px;
+                margin-left: -10px;
+            }
+
+        .header .ajman-logos .ajman-logo-right {
+            float: right;
+        }
+
+            .header .ajman-logos .ajman-logo-right img {
+                width: 130px;
+            }
+
+    /* LOGO'S */
+
+    /* NAVIGATION */
+.header .top-nav .navbar {
+    background-color: #ffffff;
+}
+
+.header .navbar {
+    background-color: #9f8865;
+    width: 100%;
+    margin-bottom: 0px !important;
+    padding: 0px;
+    min-height: 25px !important;
+    border: none;
+    border-radius: 0px !important;
+}
+
+    .header .navbar .collapse #navLink {
+        color: #9f8865 !important;
+    }
+
+    .header .navbar .collapse #navLink:hover {
+        text-decoration: none;
+    }
+
+        .header .navbar .left {
+            float: left;
+        }
+
+        .header .navbar .right {
+            float: right;
+            margin-left: 60px;
+        }
+
+    .top-nav {
+        background-color: #fff;
+    }
+
+.top-nav-fa {
+    font-size: 24px !important;
+    color: #9f8865;
+}
+
+    .header .navbar .collapse:after {
+        display: block;
+        clear: both;
+        content: "";
+    }
+
+
+
+    .header .navbar .collapse #navLink {
+        color: #9f8865;
+    }
+
+    .header .navbar .collapse .left a {
+        font-weight: bold;
+        /*border-right: 1px #9f8865 solid;*/
+        padding: 0;
+        text-decoration: none;
+    }
+.nav-Litem {
+    border-right: 1px #9f8865 solid;
+    font-size:15px;
+}
+.nav-Ritem {
+    font-size: 28px;
+}
+        .header .navbar .collapse .left a:nth-child(7),
+        .header .navbar .collapse .left a:nth-child(8) {
+            border: none;
+        }
+
+    .header .navbar .collapse .left a,
+    .header .navbar .collapse .right a {
+        padding: 0 10px;
+    }
+
+    .header .navbar .collapse .right a {
+        padding: 0 2px;
+    }
+
+
+/* NAVIGATION */
+
+        .header .ajman-logos:after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+
+        /* LOGO'S */
+
+        .header .ajman-logos .ajman-logo-left {
+            float: left;
+        }
+
+            .header .ajman-logos .ajman-logo-left img {
+                width: 250px;
+                margin-left: -10px;
+            }
+
+        .header .ajman-logos .ajman-logo-right {
+            float: right;
+        }
+
+            .header .ajman-logos .ajman-logo-right img {
+                width: 130px;
+            }
+
+    /* LOGO'S */
+
+    /* NAVIGATION */
+
+ 
+
+.bottommenu li a {
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+    color: white !important;
+    font-size: 2em !important;
+}
+/* NAVIGATION */

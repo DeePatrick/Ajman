@@ -1,0 +1,1047 @@
+﻿@{
+    /**/
+    ViewBag.Title = "APIs WSDL";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="jumbotron" style="padding:5px;">
+    <h3>APIs WSDL</h3>
+</div>
+
+<div id="addNew" style="margin-top:20px;">
+    <div class="row" id="dvLogin" style="display:none">
+        <input type="text" style="margin-bottom:10px;" id="txtUser" class="form-control" name="name" value="" placeholder="userid" />
+        <input type="password" style="margin-bottom:10px;" id="txtPassword" class="form-control" name="name" value="" placeholder="password" />
+        <input type="submit" onclick="login()" name="name" value="Login for API" />
+    </div>
+    <div class="row" id="dvLeft" style="margin-top:20px;">
+        <div class="col-md-2">
+            <label>Get APIs</label>
+            @*<div id="dvvGetCustomer">
+                <a href="javascript:void(0)" id="btnGetCustomerWSDL" onclick="GetCustomer();">Get Customer from ICA</a>
+            </div>
+            <br />
+            <div id="dvvGetCustomerFromdb">
+                <a href="javascript:void(0)" id="btnGetCustomerWSDLdb" onclick="GetCustomerdb('db');">Get Customer by id [APTC]</a>
+            </div>
+            <br />
+            <div id="dvvGetAllCustomer">
+                <a href="javascript:void(0)" id="btnGetAllCustomerWSDL" onclick="GetAllCustomer();">Get All Customer [APTC]</a>
+            </div>
+            <br />*@
+            <div id="dvvGetLoginById">
+                <a href="javascript:void(0)" id="btnGetLoginByIdWSDL" onclick="GetLoginById();">Get Lgoin by Id [APTC]</a>
+            </div>
+            <br />
+            <div id="dvvGetAllLogin">
+                <a href="javascript:void(0)" id="btnGetAllLoginWSDL" onclick="GetAllLogin();">Get All Login [APTC]</a>
+            </div>
+            <br />
+            <div id="dvvGetPassengerMessage">
+                <a href="javascript:void(0)" id="btnGetVehicleWSDL" onclick="GetPassengerMessage();">Get Passenger Message</a>
+            </div>
+            <br />
+            <div id="dvvGetDriverStatus">
+                <a href="javascript:void(0)" id="btnGetVehicleWSDL" onclick="GetDriverStatus();">Get Driver Status</a>
+            </div>
+            <br />
+            <div id="dvvGetIncidentMessage">
+                <a href="javascript:void(0)" id="btnGetVehicleWSDL" onclick="GetIncidentMessage();">Get Incident Message</a>
+            </div>
+            <br />
+            <label>Post APIs</label>
+            <br />
+            <div id="dvvPostCustomer">
+                <a href="javascript:void(0)" id="btnGetCustomerWSDL" onclick="PostCustomerWSDL();">Post Customer [APTC]</a>
+            </div>
+            <br />
+            <div id="dvvPostVehicle">
+                <a href="javascript:void(0)" id="btnGetDriverWSDL" onclick="PostDriverWSDL();">Post Driver [APTC]</a>
+            </div>
+            <br />
+            <div id="dvvPostVehicle">
+                <a href="javascript:void(0)" id="btnGetVehicleWSDL" onclick="PostVehicleWSDL();">Post Vehicle [APTC]</a>
+                @*<input type="submit" id="btnPostVehicleWSDL" onclick="PostVehicleWSDL();" class="btn btn-danger" name="Vehicle" value="Post Vehicle" title="Click here to Post Vehicle api details." />*@
+            </div>
+            <br />
+        </div>
+        <div class="col-md-10" style="background-color:lightblue;min-height:500px; padding:20px;">
+            <div>
+
+                @*<div id="dvGetCustomer">
+                    <div>
+                        <label><h2>Get Customer WSDL From [ICA] </h2></label>
+                        <br />
+                        <label>URL</label>: http://103.69.38.2:8080/api/aptc.user/id <br />
+                        <br />
+                        <label>
+                            JSON Output
+                        </label>:<br />
+                        [
+                        {
+                        "ICADB": {
+                        "id": "12345678",
+                        "trnHeader": {
+                        "serviceProviderEntity": "APTC"
+                        },
+                        "body": {
+                        "uniFiedNumber": "192",
+                        "identityCard": {
+                        "number": "9818018012222",
+                        "issueDate": "2018-05-29T00:00:00+05:30",
+                        "expiryDate": "2018-05-29T00:00:00+05:30"
+                        },
+                        "nationality": {
+                        "arDesc": "???????",
+                        "enDesc": "Individual"
+                        },
+                        "personName": {
+                        "fullArabicName": "??????",
+                        "firstNameArabic": "??????",
+                        "secondNameArabic": "????",
+                        "thirdNameArabic": "??????",
+                        "fourthNameArabic": "???????",
+                        "familyNameArabic": "???????",
+                        "cleanNameArabic": null,
+                        "fullEnglishName": "JOE Dowling",
+                        "firstNameEnglish": "JOE",
+                        "secondNameEnglish": "Dowling",
+                        "thirdNameEnglish": "MONATHER",
+                        "fourthNameEnglish": "BELAL",
+                        "familyNameEnglish": "JOE-Dowling",
+                        "cleanNameEnglish": null,
+                        "tribe": {
+                        "arDesc": "?????",
+                        "enDesc": "JOE-Dowling"
+                        }
+                        },
+                        "gender": {
+                        "arDesc": "?????",
+                        "enDesc": "MALE"
+                        },
+                        "dateOfBirth": "2018-05-29T00:00:00+05:30",
+                        "countryOfBirth": {
+                        "arDesc": "?????",
+                        "enDesc": "UNITED ARAB EMIRATES"
+                        },
+                        "emirateOfBirth": {
+                        "arDesc": "?????",
+                        "enDesc": "ABU DHABI"
+                        },
+                        "cityOfBirth": {
+                        "arDesc": "?????",
+                        "enDesc": "ALAIN"
+                        },
+                        "placeOfBirthAr": "?????",
+                        "placeOfBirthEn": "ALAIN",
+                        "maritalStatus": {
+                        "arDesc": "?????",
+                        "enDesc": "MARRIED"
+                        },
+                        "religion": {
+                        "arDesc": "?????",
+                        "enDesc": "ISLAM"
+                        }
+                        }
+                        }
+                        }
+                        ]
+
+                        <br />
+                    </div>
+                </div>
+
+                <div id="dvGetCustomerdb" style="display:none">
+                    <div>
+                        <label><h2>Get Customer WSDL [APTC]</h2></label>
+                        <br />
+                        <label>URL</label>: http://103.69.38.2:8080/api/aptc.user/customer/id <br />
+                        <br />
+                        <label>
+                            JSON Output
+                        </label>:<br />
+                        [
+                        {
+                        "Customer": {
+                        "emiratId": "em002",
+                        "email": "MaryK@conatact.com",
+                        "phone": "(44) 7879065789",
+                        "language": "Arabic",
+                        "otherPhone": "(971) 1706666789",
+                        "comPhoto": null,
+                        "trnHeader": {
+                        "serviceProviderEntity": "APTC"
+                        },
+                        "body": {
+                        "uniFiedNumber": "sample string 2",
+                        "identityCard": {
+                        "number": "JN418488C",
+                        "issueDate": "2018-06-20T00:00:00+05:30",
+                        "expiryDate": "2018-06-20T00:00:00+05:30"
+                        },
+                        "nationality": {
+                        "arDesc": "لإنجليزية",
+                        "enDesc": "Emirati"
+                        },
+                        "personName": {
+                        "fullArabicName": "شرفي",
+                        "firstNameArabic": "شرفي",
+                        "secondNameArabic": "شرف",
+                        "thirdNameArabic": "باستطاعة",
+                        "fourthNameArabic": "قفز",
+                        "familyNameArabic": "شرفد",
+                        "cleanNameArabic": null,
+                        "fullEnglishName": "Mariam Kitaiana Ahmed Saheed",
+                        "firstNameEnglish": "Mariam",
+                        "secondNameEnglish": "Mariam",
+                        "thirdNameEnglish": "Kitaiana",
+                        "fourthNameEnglish": "Ahmed",
+                        "familyNameEnglish": "Saheed",
+                        "cleanNameEnglish": null,
+                        "tribe": {
+                        "arDesc": "الملوك",
+                        "enDesc": "Kings"
+                        }
+                        },
+                        "gender": {
+                        "arDesc": "الذكر",
+                        "enDesc": "Male"
+                        },
+                        "dateOfBirth": "2018-06-20T00:00:00+05:30",
+                        "countryOfBirth": {
+                        "arDesc": "الإمارات العربية المتحدةسا",
+                        "enDesc": "UAE"
+                        },
+                        "emirateOfBirth": {
+                        "arDesc": "عجمان",
+                        "enDesc": "Ajuman"
+                        },
+                        "cityOfBirth": {
+                        "arDesc": "قرية الاتحاد",
+                        "enDesc": "Ittihad Village"
+                        },
+                        "placeOfBirthAr": "Ittihad Village",
+                        "placeOfBirthEn": "قرية الاmarried",
+                        "maritalStatus": {
+                        "arDesc": "Married",
+                        "enDesc": "زوجت"
+                        },
+                        "religion": {
+                        "arDesc": "دين الاسلام",
+                        "enDesc": "Islam"
+                        },
+                        "address": {
+                        "addressLine1": "23 Amaitage road,",
+                        "addressLine2": null,
+                        "city": "Ajman",
+                        "state": "Manama",
+                        "country": "UAE"
+                        }
+                        }
+                        }
+                        },
+                        {
+                        "Customer": {
+                        "emiratId": "em002",
+                        "email": "MaryK@conatact.com",
+                        "phone": "(44) 7879065789",
+                        "language": "Arabic",
+                        "otherPhone": "(971) 1706666789",
+                        "comPhoto": null,
+                        "trnHeader": {
+                        "serviceProviderEntity": "APTC"
+                        },
+                        "body": {
+                        "uniFiedNumber": "sample string 2",
+                        "identityCard": {
+                        "number": "JN418488C",
+                        "issueDate": "2018-06-20T00:00:00+05:30",
+                        "expiryDate": "2018-06-20T00:00:00+05:30"
+                        },
+                        "nationality": {
+                        "arDesc": "لإنجليزية",
+                        "enDesc": "Emirati"
+                        },
+                        "personName": {
+                        "fullArabicName": "شرفي",
+                        "firstNameArabic": "شرفي",
+                        "secondNameArabic": "شرف",
+                        "thirdNameArabic": "باستطاعة",
+                        "fourthNameArabic": "قفز",
+                        "familyNameArabic": "شرفد",
+                        "cleanNameArabic": null,
+                        "fullEnglishName": "Mariam Kitaiana Ahmed Saheed",
+                        "firstNameEnglish": "Mariam",
+                        "secondNameEnglish": "Mariam",
+                        "thirdNameEnglish": "Kitaiana",
+                        "fourthNameEnglish": "Ahmed",
+                        "familyNameEnglish": "Saheed",
+                        "cleanNameEnglish": null,
+                        "tribe": {
+                        "arDesc": "الملوك",
+                        "enDesc": "Kings"
+                        }
+                        },
+                        "gender": {
+                        "arDesc": "الذكر",
+                        "enDesc": "Male"
+                        },
+                        "dateOfBirth": "2018-06-20T00:00:00+05:30",
+                        "countryOfBirth": {
+                        "arDesc": "الإمارات العربية المتحدةسا",
+                        "enDesc": "UAE"
+                        },
+                        "emirateOfBirth": {
+                        "arDesc": "عجمان",
+                        "enDesc": "Ajuman"
+                        },
+                        "cityOfBirth": {
+                        "arDesc": "قرية الاتحاد",
+                        "enDesc": "Ittihad Village"
+                        },
+                        "placeOfBirthAr": "Ittihad Village",
+                        "placeOfBirthEn": "قرية الاmarried",
+                        "maritalStatus": {
+                        "arDesc": "Married",
+                        "enDesc": "زوجت"
+                        },
+                        "religion": {
+                        "arDesc": "دين الاسلام",
+                        "enDesc": "Islam"
+                        },
+                        "address": {
+                        "addressLine1": "23 Amaitage road,",
+                        "addressLine2": null,
+                        "city": "Ajman",
+                        "state": "Manama",
+                        "country": "UAE"
+                        }
+                        }
+                        }
+                        }
+                        ]
+
+                        <br />
+                    </div>
+                </div>
+
+                <div id="dvGetAllCustomer" style="display:none">
+                    <div>
+                        <label><h2>Get Customer WSDL [APTC]</h2></label>
+                        <br />
+                        <label>URL</label>: http://103.69.38.2:8080/api/aptc.user/getall <br />
+                        <br />
+                        <label>
+                            JSON Output
+                        </label>:<br />
+                        [
+                        {
+                        {
+                        "Customer": {
+                        "emiratId": "em001",
+                        "email": "patrick@gmail.com",
+                        "phone": "(44) 7879065789",
+                        "language": "English",
+                        "otherPhone": "(44) 1708065789",
+                        "comPhoto": null,
+                        "trnHeader": {
+                        "serviceProviderEntity": "APTC"
+                        },
+                        "body": {
+                        "uniFiedNumber": "sample string 1",
+                        "identityCard": {
+                        "number": "SV818488A",
+                        "issueDate": "2018-06-20T00:00:00+05:30",
+                        "expiryDate": "2018-06-20T00:00:00+05:30"
+                        },
+                        "nationality": {
+                        "arDesc": "لإنجليزية",
+                        "enDesc": "English"
+                        },
+                        "personName": {
+                        "fullArabicName": "قوي",
+                        "firstNameArabic": "قوي",
+                        "secondNameArabic": "رجل",
+                        "thirdNameArabic": "باستطاعة",
+                        "fourthNameArabic": "قفز",
+                        "familyNameArabic": "أسد",
+                        "cleanNameArabic": null,
+                        "fullEnglishName": "Strongman-Agile",
+                        "firstNameEnglish": "Hercules",
+                        "secondNameEnglish": "man",
+                        "thirdNameEnglish": "Can",
+                        "fourthNameEnglish": "Jump",
+                        "familyNameEnglish": "Strong",
+                        "cleanNameEnglish": null,
+                        "tribe": {
+                        "arDesc": "الملوك",
+                        "enDesc": "Kings"
+                        }
+                        },
+                        "gender": {
+                        "arDesc": "الذكر",
+                        "enDesc": "Male"
+                        },
+                        "dateOfBirth": "2018-06-20T00:00:00+05:30",
+                        "countryOfBirth": {
+                        "arDesc": "الإمارات العربية المتحدةسا",
+                        "enDesc": "UAE"
+                        },
+                        "emirateOfBirth": {
+                        "arDesc": "عجمان",
+                        "enDesc": "Ajuman"
+                        },
+                        "cityOfBirth": {
+                        "arDesc": "قرية الاتحاد",
+                        "enDesc": "Ittihad Village"
+                        },
+                        "placeOfBirthAr": "Ittihad Village",
+                        "placeOfBirthEn": "قرية الاmarried",
+                        "maritalStatus": {
+                        "arDesc": "Married",
+                        "enDesc": "زوجت"
+                        },
+                        "religion": {
+                        "arDesc": "دين الاسلام",
+                        "enDesc": "Islam"
+                        },
+                        "address": {
+                        "addressLine1": "23 Royal drive road,",
+                        "addressLine2": null,
+                        "city": "Ajman",
+                        "state": "Manama",
+                        "country": "UAE"
+                        }
+                        }
+                        }
+                        },
+                        {
+                        "Customer": {
+                        "emiratId": "em002",
+                        "email": "MaryK@conatact.com",
+                        "phone": "(44) 7879065789",
+                        "language": "Arabic",
+                        "otherPhone": "(971) 1706666789",
+                        "comPhoto": null,
+                        "trnHeader": {
+                        "serviceProviderEntity": "APTC"
+                        },
+                        "body": {
+                        "uniFiedNumber": "sample string 2",
+                        "identityCard": {
+                        "number": "JN418488C",
+                        "issueDate": "2018-06-20T00:00:00+05:30",
+                        "expiryDate": "2018-06-20T00:00:00+05:30"
+                        },
+                        "nationality": {
+                        "arDesc": "لإنجليزية",
+                        "enDesc": "Emirati"
+                        },
+                        "personName": {
+                        "fullArabicName": "شرفي",
+                        "firstNameArabic": "شرفي",
+                        "secondNameArabic": "شرف",
+                        "thirdNameArabic": "باستطاعة",
+                        "fourthNameArabic": "قفز",
+                        "familyNameArabic": "شرفد",
+                        "cleanNameArabic": null,
+                        "fullEnglishName": "Mariam Kitaiana Ahmed Saheed",
+                        "firstNameEnglish": "Mariam",
+                        "secondNameEnglish": "Mariam",
+                        "thirdNameEnglish": "Kitaiana",
+                        "fourthNameEnglish": "Ahmed",
+                        "familyNameEnglish": "Saheed",
+                        "cleanNameEnglish": null,
+                        "tribe": {
+                        "arDesc": "الملوك",
+                        "enDesc": "Kings"
+                        }
+                        },
+                        "gender": {
+                        "arDesc": "الذكر",
+                        "enDesc": "Male"
+                        },
+                        "dateOfBirth": "2018-06-20T00:00:00+05:30",
+                        "countryOfBirth": {
+                        "arDesc": "الإمارات العربية المتحدةسا",
+                        "enDesc": "UAE"
+                        },
+                        "emirateOfBirth": {
+                        "arDesc": "عجمان",
+                        "enDesc": "Ajuman"
+                        },
+                        "cityOfBirth": {
+                        "arDesc": "قرية الاتحاد",
+                        "enDesc": "Ittihad Village"
+                        },
+                        "placeOfBirthAr": "Ittihad Village",
+                        "placeOfBirthEn": "قرية الاmarried",
+                        "maritalStatus": {
+                        "arDesc": "Married",
+                        "enDesc": "زوجت"
+                        },
+                        "religion": {
+                        "arDesc": "دين الاسلام",
+                        "enDesc": "Islam"
+                        },
+                        "address": {
+                        "addressLine1": "23 Amaitage road,",
+                        "addressLine2": null,
+                        "city": "Ajman",
+                        "state": "Manama",
+                        "country": "UAE"
+                        }
+                        }
+                        }
+                        }
+                        ]
+                        <br />
+                    </div>
+                </div>*@
+
+                <div id="dvGetLoginById" style="display:none">
+                    <div>
+                        <label><h2>Get Login by Id [APTC]</h2></label>
+                        <br />
+                        <label>URL</label>: http://103.69.38.2:8080/api/aptc.login/id <br />
+                        <br />
+                        <label>
+                            JSON Output
+                        </label>:<br />
+                        [
+                        {
+                        "APTCLOGIN": {
+                        "id": "LOGIN_vv11@cc.com",
+                        "userId": "vv11@cc.com",
+                        "password": "11223344556677",
+                        "type": "Cust",
+                        "status": "A",
+                        "role": "G",
+                        "per_language": "EN",
+                        "created_on": "2018-07-10 00:00:00",
+                        }
+                        }
+                        ]
+                        <br />
+                    </div>
+                </div>
+
+                <div id="dvGetAllLogin" style="display:none">
+                    <div>
+                        <label><h2>Get All Login [APTC]</h2></label>
+                        <br />
+                        <label>URL</label>: http://103.69.38.2:8080/api/aptc.login/getall <br />
+                        <br />
+                        <label>
+                            JSON Output
+                        </label>:<br />
+                        [
+                        {
+                        "LOGIN": {
+                        "id": "LOGIN_vv11@cc.com",
+                        "userId": "vv11@cc.com",
+                        "password": "11223344556677",
+                        "type": "Cust",
+                        "status": "A",
+                        "role": "G",
+                        "per_language": "EN",
+                        "created_on": "2018-07-12 00:00:00"
+                        }
+                        },
+                        {
+                        "LOGIN": {
+                        "id": "LOGIN_vv@cc.com",
+                        "userId": "vv@cc.com",
+                        "password": "11223344556677",
+                        "type": "Cust",
+                        "status": "A",
+                        "role": "G",
+                        "per_language": "AR",
+                        "created_on": "28-06-2018 00:00:00"
+                        }
+                        }
+                        ]
+                        <br />
+                    </div>
+                </div>
+
+                <div id="dvGetPassengerMessage" style="display:none;background-color:lightblue;">
+                    <label><h2>Get Passenger Message WSDL</h2></label>
+                    <br />
+                    <label>URL</label>: http://103.69.38.2:8080/api/aptc.pgrmsg/getall <br />
+                    <br />
+                    <label>
+                        JSON Output
+                    </label>:<br />
+                    [
+                    {
+                    "PassengerMessage":{
+                    "action": "ADD",
+                    "id": "PassengerMessage_asdasdsad",
+                    "fullNameEN": "Abdul Rahman",
+                    "fullNameAR": "عبد الرحمن",
+                    "mobileNumber": "9876543210",
+                    "emailAddress": "v.s@qlc.com"}
+                    }
+                    ]
+                    <br />
+                </div>
+
+                <div id="dvGetDriverStatus" style="display:none;background-color:lightblue;">
+                    <label><h2>Get Driver Status WSDL</h2></label>
+                    <br />
+                    <label>URL</label>: http://103.69.38.2:8080/api/aptc.driver/status/getall <br />
+                    <br />
+                    <label>
+                        JSON Output
+                    </label>:<br />
+                    [
+                    {
+                    "DriverStatus": {
+                    "driverID": "DriverStatus_784-2020-1234567-1",
+                    "driverState": "off-line",
+                    "date": "2018=-07-01",
+                    "time": "11:12:11",
+                    "vehicleID": "1GNEK13ZX3R298984"}
+                    }
+                    ]
+                    <br />
+                </div>
+
+                <div id="dvGetIncidentMessage" style="display:none;background-color:lightblue;">
+                    <label><h2>Get Incident Message WSDL</h2></label>
+                    <br />
+                    <label>URL</label>: http://103.69.38.2:8080/api/aptc.incmsg/getall <br />
+                    <br />
+                    <label>
+                        JSON Output
+                    </label>:<br />
+                    {"driverID": "784-2020-1234567-1", "dateTime": "2018-06-06 19:48:02", "notes": "Incident reported,please contact as earliest to driver." }
+                    <br />
+                </div>
+
+                <div id="dvPostCustomer" style="display:none;background-color:lightblue;">
+                    <label><h2>Post Customer WSDL [APTC]</h2></label>
+                    <br />
+                    <label>URL</label>: http://103.69.38.2:8080/api/aptc.user <br />
+                    <br />
+                    <label>
+                        JSON Input
+                    </label>:<br />
+                    <br />
+                    [ { "Customer": { "emiratId": "em002", "email": "MaryK@conatact.com", "phone": "(44) 7879065789", "language": "Arabic", "otherPhone": "(971) 1706666789", "comPhoto": null, "trnHeader": { "serviceProviderEntity": "APTC" }, "body": { "uniFiedNumber": "sample string 2", "identityCard": { "number": "JN418488C", "issueDate": "2018-06-20T00:00:00+05:30", "expiryDate": "2018-06-20T00:00:00+05:30" }, "nationality": { "arDesc": "لإنجليزية", "enDesc": "Emirati" }, "personName": { "fullArabicName": "شرفي", "firstNameArabic": "شرفي", "secondNameArabic": "شرف", "thirdNameArabic": "باستطاعة", "fourthNameArabic": "قفز", "familyNameArabic": "شرفد", "cleanNameArabic": null, "fullEnglishName": "Mariam Kitaiana Ahmed Saheed", "firstNameEnglish": "Mariam", "secondNameEnglish": "Mariam", "thirdNameEnglish": "Kitaiana", "fourthNameEnglish": "Ahmed", "familyNameEnglish": "Saheed", "cleanNameEnglish": null, "tribe": { "arDesc": "الملوك", "enDesc": "Kings" } }, "gender": { "arDesc": "الذكر", "enDesc": "Male" }, "dateOfBirth": "2018-06-20T00:00:00+05:30", "countryOfBirth": { "arDesc": "الإمارات العربية المتحدةسا", "enDesc": "UAE" }, "emirateOfBirth": { "arDesc": "عجمان", "enDesc": "Ajuman" }, "cityOfBirth": { "arDesc": "قرية الاتحاد", "enDesc": "Ittihad Village" }, "placeOfBirthAr": "Ittihad Village", "placeOfBirthEn": "قرية الاmarried", "maritalStatus": { "arDesc": "Married", "enDesc": "زوجت" }, "religion": { "arDesc": "دين الاسلام", "enDesc": "Islam" }, "address": { "addressLine1": "23 Amaitage road,", "addressLine2": null, "city": "Ajman", "state": "Manama", "country": "UAE" } } } }, { "Customer": { "emiratId": "em002", "email": "MaryK@conatact.com", "phone": "(44) 7879065789", "language": "Arabic", "otherPhone": "(971) 1706666789", "comPhoto": null, "trnHeader": { "serviceProviderEntity": "APTC" }, "body": { "uniFiedNumber": "sample string 2", "identityCard": { "number": "JN418488C", "issueDate": "2018-06-20T00:00:00+05:30", "expiryDate": "2018-06-20T00:00:00+05:30" }, "nationality": { "arDesc": "لإنجليزية", "enDesc": "Emirati" }, "personName": { "fullArabicName": "شرفي", "firstNameArabic": "شرفي", "secondNameArabic": "شرف", "thirdNameArabic": "باستطاعة", "fourthNameArabic": "قفز", "familyNameArabic": "شرفد", "cleanNameArabic": null, "fullEnglishName": "Mariam Kitaiana Ahmed Saheed", "firstNameEnglish": "Mariam", "secondNameEnglish": "Mariam", "thirdNameEnglish": "Kitaiana", "fourthNameEnglish": "Ahmed", "familyNameEnglish": "Saheed", "cleanNameEnglish": null, "tribe": { "arDesc": "الملوك", "enDesc": "Kings" } }, "gender": { "arDesc": "الذكر", "enDesc": "Male" }, "dateOfBirth": "2018-06-20T00:00:00+05:30", "countryOfBirth": { "arDesc": "الإمارات العربية المتحدةسا", "enDesc": "UAE" }, "emirateOfBirth": { "arDesc": "عجمان", "enDesc": "Ajuman" }, "cityOfBirth": { "arDesc": "قرية الاتحاد", "enDesc": "Ittihad Village" }, "placeOfBirthAr": "Ittihad Village", "placeOfBirthEn": "قرية الاmarried", "maritalStatus": { "arDesc": "Married", "enDesc": "زوجت" }, "religion": { "arDesc": "دين الاسلام", "enDesc": "Islam" }, "address": { "addressLine1": "23 Amaitage road,", "addressLine2": null, "city": "Ajman", "state": "Manama", "country": "UAE" } } } } ]
+                    </label>
+                    <br /><br />
+                    <label>Response</label><br />
+                    {"id":"784-2020-1234567-1", "IsSuccess": "true", "message":"Successfully","statusCode":"200"}<br />
+                    {"id":"", "IsSuccess": "false", "message": "Date is in the future","statusCode":"400"}<br />
+                    {"id":"", "IsSuccess": "false", "message": "Emirat Id is not known","statusCode":"400"}
+                    <br />
+                </div>
+
+                <div id="dvPostDriver" style="display:none;background-color:lightblue;">
+                    <label><h2>Post Driver WSDL [APTC]</h2></label>
+                    <br />
+                    <label>URL</label>: http://103.69.38.2:8080/api/aptc.driver <br />
+                    <br />
+                    <label>
+                        JSON Input
+                    </label>:<br />
+                    <br />
+                    {
+                    "action": "ADD", "emiratiId": "784-2020-1234567-1", "fullNameEN": "Vishal Saxena",
+                    "fullNameAR": "عبد الرحمن", "mobileNumber": "9876543210",
+                    "emailAddress": "v.s@qlc.com", "vehicleType": "Car", "permitNumber": "DL6HW 5652",
+                    "licenseNumber": "DE3138275", "pasportNumber": "P46RGWFQGF", "photo": "",
+                    "password": "aWe4", "driverValid": "true", "licenseIssueDate": "2015-07-10",
+                    "licenseExpiryDate": "2025-07-10"
+                    }
+                    </label>
+                    <br /><br />
+                    <label>Response</label><br />
+                    {"id":"784-2020-1234567-1", "IsSuccess": "true", "message":"Successfully","statusCode":"200"}<br />
+                    {"id":"", "IsSuccess": "false", "message": "Date is in the future","statusCode":"400"}<br />
+                    {"id":"", "IsSuccess": "false", "message": "Vehicle ID is not known","statusCode":"400"}
+                    <br />
+                </div>
+
+                <div id="dvPostVehicle" style="display:none;background-color:lightblue;">
+                    <label><h2>Post Vehicle WSDL [APTC]</h2></label>
+                    <br />
+                    <label>URL</label>: http://103.69.38.2:8080/api/aptc.vehicle <br />
+                    <br />
+                    <label>
+                        JSON Input
+                    </label>:<br />
+                    <br />
+                    {
+                    "action": "ADD",
+                    "vehicleValid": "true",
+                    "vIN": "3UGBH71JXRY109122",
+                    "engineNumber": "44WPQ10335",
+                    "registration": "JL09GHS",
+                    "vehicleType": "Car",
+                    "make": "Toyota",
+                    "model": "Altima",
+                    "modelYear": "2018",
+                    "colour": "red"                    
+                    }
+                    </label>
+                    <br /><br />
+                    <label>Response</label><br />
+                    {"id":"784-2020-1234567-1", "IsSuccess": "true", "message":"Successfully","statusCode":"200"}<br />
+                    {"id":"", "IsSuccess": "false", "message": "Date is in the future","statusCode":"400"}<br />
+                    {"id":"", "IsSuccess": "false", "message": "Vehicle ID is not known","statusCode":"400"}
+                    <br />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="display:none">
+        <div class="row">
+            <div class="col-md-2">
+                <label>Get APIs</label>
+                <div id="dvvGetVehicle">
+                    <a href="#" id="btnGetVehicleWSDL" onclick="GetVehicle();">Get Vehicle</a>
+                    @*<input type="submit" id="btnGetVehicleWSDL" onclick="GetVehicle();"  value="Get Vehicle" title="Click here to get Vehicle api details." />*@
+                </div>
+                <br />
+                <div id="dvvGetLoginById">
+                    <a href="#" id="btnGetLoginByIdWSDL" onclick="GetLoginById();">Get Login by Id [APTC]</a>
+                </div>
+                <br />
+                <div id="dvvGetAllLogin">
+                    <a href="#" id="btnGetAllLoginWSDL" onclick="GetAllLogin();">Get All Login [APTC]</a>
+                </div>
+                <br />
+                <div id="dvvGetPassengerMessage">
+                    <a href="#" id="btnGetVehicleWSDL" onclick="GetPassengerMessage();">Get Passenger Message</a>
+                    @*<input type="submit" id="btnGetPassengerMessage" onclick="GetPassengerMessage();" value="Get Passenger Message" title="Click here to get Passenger Message api details." />*@
+                </div>
+                <br />
+                <div id="dvvGetDriverStatus">
+                    <a href="#" id="btnGetVehicleWSDL" onclick="GetDriverStatus();">Get Driver Status</a>
+                    @*<input type="submit" id="btnGetDriverStatus" onclick="GetDriverStatus();" name="Vehicle" value="Get Driver Status" title="Click here to get Driver Status api details." />*@
+                </div>
+                <br />
+                <div id="dvvGetIncidentMessage">
+                    <a href="#" id="btnGetVehicleWSDL" onclick="GetIncidentMessage();">Get Driver Status</a>
+                    @*<input type="submit" id="btnGetIncidentMessage" onclick="GetIncidentMessage();" name="Vehicle" value="Get Incident Message" title="Click here to get Incident Message api details." />*@
+                </div>
+                <br />
+            </div>
+                <div class="col-md-8" style="margin-left:10px;">
+                    <!-- Get Divs-->
+                </div>
+            </div>
+        <div class="row">
+            <div class="col-md-2">
+                <label>Post APIs</label>
+                <div id="dvvPostVehicle">
+                    <a href="#" id="btnGetVehicleWSDL" onclick="PostVehicleWSDL();">Post Vehicle</a>
+                    @*<input type="submit" id="btnPostVehicleWSDL" onclick="PostVehicleWSDL();" class="btn btn-danger" name="Vehicle" value="Post Vehicle" title="Click here to Post Vehicle api details." />*@
+                </div>
+                <br />
+                <div id="dvvPostPassengerMessage">
+                    <a href="#" id="btnGetVehicleWSDL" onclick="PostPassengerMessage();">Post Passenger Message</a>
+                    @*<input type="submit" id="btnPostPassengerMessage" onclick="PostPassengerMessage();" class="btn btn-danger" value="Post Passenger Message" title="Click here to Post Passenger Message api details." />*@
+                </div>
+                <br />
+                <div id="dvvPostDriverStatus">
+                    <a href="#" id="btnGetVehicleWSDL" onclick="PostVehicleWSDL();">Post Driver Status</a>
+                    @*<input type="submit" id="btnPostDriverStatus" onclick="PostDriverStatus();" class="btn btn-danger" name="Vehicle" value="Post Driver Status" title="Click here to Post Driver Status api details." />*@
+                </div>
+                <br />
+                <div id="dvvPostIncidentMessage">
+                    <a href="#" id="btnGetVehicleWSDL" onclick="PostIncidentMessage();">Post Incident Message</a>
+                    @*<input type="submit" id="btnPostIncidentMessage" onclick="PostIncidentMessage();" class="btn btn-danger" name="Vehicle" value="Post Incident Message" title="Click here to Post Incident Message api details." />*@
+                </div>
+                <br />
+            </div>
+            <div class="col-md-8">
+                <!-- Post Divs-->
+            </div>
+        </div>
+    </div>
+</div>
+
+<div>
+    <script>
+        function login() {
+            var obj = {};
+            obj.userId = $('#txtUser').val();
+            obj.password = $('#txtPassword').val();
+            //debugger;
+            $.ajax({
+                url: 'http://localhost:63391/api/login/login',
+                type: 'POST',
+                data: obj,
+                dataType: 'json',
+                success: function (data) {
+                    if (data == 'E') {
+                        alert('please enter userid and password');
+                    }
+                    else if (data == 'F') {
+                        alert('please enter valid userid or password');
+                    }
+                    else {
+                        $('#dvLogin').hide();
+                        $('#dvLeft').show();
+                    }
+                },
+                error: function (data) {
+                    alert(data.responseText);
+                },
+            });
+        }
+    </script>
+    <script>
+        //////////// Post
+        function PostDriverPerformanceWSDL() {
+            $('#dvPostDriverPerformance').show();
+            $('#dvPostDriverJourney').hide();
+            $('#dvPostCustomer').hide();
+            $('#dvPostDriver').hide();
+            $('#dvPostVehicle').hide();
+            $('#dvPostPassengerMessage').hide();
+            $('#dvPostDriverStatus').hide();
+            $('#dvPostIncidentMessage').hide();
+            $('#dvGetCustomer').hide();
+            $('#dvGetDriver').hide();
+            $('#dvGetVehicle').hide();
+            $('#dvGetPassengerMessage').hide();
+            $('#dvGetDriverStatus').hide();
+            $('#dvGetIncidentMessage').hide();
+            $('#dvGetLoginById').hide();
+            $('#dvGetAllLogin').hide();
+            $('#dvGetDriverLicense').hide();
+        }
+
+        function PostDriverJourneyWSDL() {
+            $('#dvPostDriverPerformance').hide();
+            $('#dvPostDriverJourney').show();
+            $('#dvPostCustomer').hide();
+            $('#dvPostDriver').hide();
+            $('#dvPostVehicle').hide();
+            $('#dvPostPassengerMessage').hide();
+            $('#dvPostDriverStatus').hide();
+            $('#dvPostIncidentMessage').hide();
+            $('#dvGetCustomer').hide();
+            $('#dvGetDriver').hide();
+            $('#dvGetVehicle').hide();
+            $('#dvGetPassengerMessage').hide();
+            $('#dvGetDriverStatus').hide();
+            $('#dvGetIncidentMessage').hide();
+            $('#dvGetLoginById').hide();
+            $('#dvGetAllLogin').hide();
+            $('#dvGetDriverLicense').hide();
+        }
+
+        function PostCustomerWSDL() {
+            $('#dvPostDriverPerformance').hide();
+            $('#dvPostDriverJourney').hide();
+            $('#dvPostCustomer').show();
+            $('#dvPostDriver').hide();
+            $('#dvPostVehicle').hide();
+            $('#dvPostPassengerMessage').hide();
+            $('#dvPostDriverStatus').hide();
+            $('#dvPostIncidentMessage').hide();
+            $('#dvGetCustomer').hide();
+            $('#dvGetDriver').hide();
+            $('#dvGetVehicle').hide();
+            $('#dvGetPassengerMessage').hide();
+            $('#dvGetDriverStatus').hide();
+            $('#dvGetIncidentMessage').hide();
+            $('#dvGetLoginById').hide();
+            $('#dvGetAllLogin').hide();
+            $('#dvGetDriverLicense').hide();
+        }
+
+        function PostDriverWSDL() {
+            $('#dvPostDriverPerformance').hide();
+            $('#dvPostDriverJourney').hide();
+            $('#dvPostCustomer').hide();
+            $('#dvPostDriver').show();
+            $('#dvPostVehicle').hide();
+            $('#dvPostPassengerMessage').hide();
+            $('#dvPostDriverStatus').hide();
+            $('#dvPostIncidentMessage').hide();
+            $('#dvGetCustomer').hide();
+            $('#dvGetDriver').hide();
+            $('#dvGetVehicle').hide();
+            $('#dvGetPassengerMessage').hide();
+            $('#dvGetDriverStatus').hide();
+            $('#dvGetIncidentMessage').hide();
+            $('#dvGetLoginById').hide();
+            $('#dvGetAllLogin').hide();
+            $('#dvGetDriverLicense').hide();
+        }
+
+        function PostVehicleWSDL() {
+            $('#dvPostDriverPerformance').hide();
+            $('#dvPostDriverJourney').hide();
+            $('#dvPostCustomer').hide();
+            $('#dvPostDriver').hide();
+            $('#dvPostVehicle').show();
+            $('#dvPostPassengerMessage').hide();
+            $('#dvPostDriverStatus').hide();
+            $('#dvPostIncidentMessage').hide();
+            $('#dvGetCustomer').hide();
+            $('#dvGetDriver').hide();
+            $('#dvGetVehicle').hide();
+            $('#dvGetPassengerMessage').hide();
+            $('#dvGetDriverStatus').hide();
+            $('#dvGetIncidentMessage').hide();
+            $('#dvGetLoginById').hide();
+            $('#dvGetAllLogin').hide();
+            $('#dvGetDriverLicense').hide();
+        }
+
+        function PostPassengerMessage() {
+            $('#dvPostDriverPerformance').hide();
+            $('#dvPostDriverJourney').hide();
+            $('#dvPostCustomer').hide();
+            $('#dvPostDriver').hide();
+            $('#dvPostVehicle').hide();
+            $('#dvPostPassengerMessage').show();
+            $('#dvPostDriverStatus').hide();
+            $('#dvPostIncidentMessage').hide();
+            $('#dvGetCustomer').hide();
+            $('#dvGetDriver').hide();
+            $('#dvGetVehicle').hide();
+            $('#dvGetPassengerMessage').hide();
+            $('#dvGetDriverStatus').hide();
+            $('#dvGetIncidentMessage').hide();
+            $('#dvGetLoginById').hide();
+            $('#dvGetAllLogin').hide();
+            $('#dvGetDriverLicense').hide();
+        }
+
+        function PostDriverStatus() {
+            $('#dvPostDriverPerformance').hide();
+            $('#dvPostDriverJourney').hide();
+            $('#dvPostCustomer').hide();
+            $('#dvPostDriver').hide();
+            $('#dvPostVehicle').hide();
+            $('#dvPostPassengerMessage').hide();
+            $('#dvPostDriverStatus').show();
+            $('#dvPostIncidentMessage').hide();
+            $('#dvGetCustomer').hide();
+            $('#dvGetDriver').hide();
+            $('#dvGetVehicle').hide();
+            $('#dvGetPassengerMessage').hide();
+            $('#dvGetDriverStatus').hide();
+            $('#dvGetIncidentMessage').hide();
+            $('#dvGetLoginById').hide();
+            $('#dvGetAllLogin').hide();
+            $('#dvGetDriverLicense').hide();
+        }
+
+        function PostIncidentMessage() {
+            $('#dvPostDriverPerformance').hide();
+            $('#dvPostDriverJourney').hide();
+            $('#dvPostCustomer').hide();
+            $('#dvPostDriver').hide();
+            $('#dvPostVehicle').hide();
+            $('#dvPostPassengerMessage').hide();
+            $('#dvPostDriverStatus').hide();
+            $('#dvPostIncidentMessage').show();
+            $('#dvGetCustomer').hide();
+            $('#dvGetDriver').hide();
+            $('#dvGetVehicle').hide();
+            $('#dvGetPassengerMessage').hide();
+            $('#dvGetDriverStatus').hide();
+            $('#dvGetIncidentMessage').hide();
+            $('#dvGetLoginById').hide();
+            $('#dvGetAllLogin').hide();
+            $('#dvGetDriverLicense').hide();
+        }
+
+        ///////////////// Get APIs
+
+        function Hide() {
+            $('#dvPostDriverPerformance').hide();
+            $('#dvPostDriverJourney').hide();
+            $('#dvPostCustomer').hide();
+            $('#dvPostDriver').hide();
+            $('#dvPostVehicle').hide();
+            $('#dvPostPassengerMessage').hide();
+            $('#dvPostDriverStatus').hide();
+            $('#dvPostIncidentMessage').hide();
+            $('#dvGetCustomer').hide();
+            $('#dvGetAllCustomer').hide();
+            $('#dvGetDriver').hide();
+            $('#dvGetVehicle').hide();
+            $('#dvGetPassengerMessage').hide();
+            $('#dvGetDriverStatus').hide();
+            $('#dvGetIncidentMessage').hide();
+            $('#dvGetCustomerdb').hide();
+            $('#dvGetLoginById').hide();
+            $('#dvGetAllLogin').hide();
+            $('#dvGetDriverLicense').hide();
+        }
+
+        function GetLoginById() {
+            Hide();
+            $('#dvGetLoginById').show();
+        }
+
+        function GetAllLogin() {
+            Hide();
+            $('#dvGetAllLogin').show();
+        }
+
+        function GetCustomer(obj) {
+            //debugger;
+            $.getJSON('../web.json', function (data) {
+                // alert(data);
+                //console.log(data);
+
+                //var items = data.items.map(function (item) {
+                //    return item.key + ': ' + item.value;
+            });
+            Hide();
+            $('#dvGetCustomer').show();
+        }
+
+        function GetCustomerdb(obj) {
+            Hide();
+            $('#dvGetCustomerdb').show();
+        }
+
+        function GetAllCustomer() {
+            Hide();
+            $('#dvGetAllCustomer').show();
+        }
+
+        function GetDriver() {
+            Hide();
+            $('#dvGetDriver').show();
+        }
+
+        function GetDriverLicense() {
+            Hide();
+            $('#dvGetDriverLicense').show();
+        }
+
+        function GetVehicle() {
+            Hide();
+            $('#dvGetVehicle').show();
+        }
+
+        function GetPassengerMessage() {
+            Hide();
+            $('#dvGetPassengerMessage').show();
+        }
+
+        function GetDriverStatus() {
+            Hide();
+            $('#dvGetDriverStatus').show();
+        }
+
+        function GetIncidentMessage() {
+            Hide();
+            $('#dvGetIncidentMessage').show();
+        }
+
+    </script>
+</div>

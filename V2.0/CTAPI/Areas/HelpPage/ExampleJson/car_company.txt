@@ -1,0 +1,100 @@
+﻿<strong>JSON Input<strong> <br/><br/>
+{
+  "keyID": "Key1",
+  "docType": "DocType2",
+  "email": "v.c@qlc.com",
+  "website": "www.qlc.com",
+  "roles": [
+    {
+      "code": "1",
+      "name": "Admin"
+    },
+    {
+      "code": "1",
+      "name": "Agent"
+    }
+  ],
+  "fines": [
+    {
+      "date": "2018-07-14",
+      "amount": "20.0",
+      "remark": "crosed red light"
+    },
+    {
+      "date": "2018-07-15",
+      "amount": "128.0",
+      "remark": "licence expire"
+    }
+  ],
+  "documents": [
+    {
+      "date": "2018-07-16",
+      "name": "d1.pdf",
+      "path": "aptcDOC/d1.pdf"
+    },
+    {
+      "date": "2018-07-16",
+      "name": "d1.pdf",
+      "path": "aptcDOC/d2.pdf"
+    }
+  ],
+  "vehicles": [
+    {
+      "name": "car",
+      "model": "toyota",
+      "type": "Altima"
+    },
+    {
+      "name": "car",
+      "model": "honda",
+      "type": "brv"
+    }
+  ],
+  "mobNum": {
+    "countryCode": "91",
+    "num": "9876543210"
+  },
+  "telNum": {
+    "countryCode": "91",
+    "num": "9123456780"
+  },
+  "auditInfo": {
+    "version": "1.0",
+    "status": "ACTIVE",
+    "remarks": "",
+    "lastChangeDate": "2018-05-17 10:11:11",
+    "lastChangeBy": "admin",
+    "isDeleted": true,
+    "dateCreated": "2018-06-17 12:11:11",
+    "createdBy": "admin"
+  },
+  "address": {
+    "addressLine1": "JAC 003",
+    "addressLine2": "Indrapuram",
+    "city": "ghaziabad",
+    "zip": "201301",
+    "state": "UP",
+    "country": "India",
+    "line": {
+      "line1": "line 1",
+      "line2": "line 2"
+    }
+  },
+  "name": {
+    "aR": {
+      "fullName": "عبد الرحمن"
+    },
+    "eN": {
+      "fullName": "Abdul Rahman"
+    }
+  }
+}
+<br/>
+<br/>
+<br/><strong>Response</strong><br/><br/>
+{"id":"company_", "IsSuccess": "true", "message":"Successfully","statusCode":"200"}<br/>
+{"id":"", "IsSuccess": "false", "message": "112-email is required","statusCode":"400"}<br/>
+{"id":"", "IsSuccess": "false", "message": "120-please enter valid email address","statusCode":"400"}<br/>
+{"id":"", "IsSuccess": "false", "message": "141-country is required":"400"}<br/>
+
+

@@ -1,0 +1,188 @@
+﻿@{
+                /**/
+
+                ViewBag.Title = "DriverStatus";
+                Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="jumbotron">
+    <h3>Driver Status List</h3>
+</div>
+<div class="row">
+    <div id="target">
+
+    </div>
+</div>
+
+<div id="addNew" style="display:none">
+
+
+    <div class="row">
+        <div class="col-md-4">
+            <label>Driver State</label>
+            <input type="text" id="txtDriverState" name="name" value="" class="form-control" placeholder="Driver State" title="Driver State" />
+        </div>
+        <div class="col-md-4">
+            <label>Date</label>
+            <input type="text" id="txtDate" name="name" value="" class="form-control" placeholder="Date" title="Date" />
+        </div>
+    </div> 
+
+    <div class="row">
+        <div class="col-md-4">
+            <label>Time</label>
+            <input type="text" id="txtTime" name="name" value="" class="form-control" placeholder="Time" title="Time" />
+        </div>
+        <div class="col-md-4">
+            <label>Vehicle ID</label>
+            <input type="text" id="txtVehicleID" name="name" value="" class="form-control" placeholder="Vehicle ID" title="Vehicle ID" />
+        </div>
+    </div>
+
+
+
+
+    <div class="row">
+        <div class="col-md-4">
+
+        </div>
+        <div class="col-md-4">
+            <input type="submit" name="Save" onclick="SaveDriverStatus()" value="Save" class="btn btn-danger" style="width:100px; margin-top:20px;" />
+        </div>
+    </div>
+</div>
+<div id="dvAddButton">
+    <input type="submit" onclick="addNewDriverStatus();" name="name" class="btn btn-danger" value="Add New Driver Status" />
+    <input type="submit" id="btnCancel" onclick="Cancel();" class="btn btn-danger" style="display:none" name="name" value="Cancel" />
+</div>
+<div class="row" id="grdDriver">
+    <table id="tblEntAttributes" class="table table-bordered">
+        <thead class="success">
+            <tr>
+                <th>Driver ID</th>
+                <th>Driver State</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Vehicle ID</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody"></tbody>
+    </table>
+</div>
+<div>
+    <script>
+        function addNewDriverStatus() {
+            $('#addNew').show();
+            $('#btnCancel').show();
+        }
+
+        function deleteDriverStatus(obj) {
+            $.ajax({
+                url: hostUrl + 'aptc.driver/status/delete/' + obj.id,
+                type: 'GET',
+                dataType: 'json',
+                success: function (data) {
+                    if (data == 'deleted') {
+                        alert('deleted successfully');
+                        getAllDriverStatus();
+                    }
+                },
+                error: function (data) {
+                    alert(data.responseText);
+                },
+            });
+        }
+
+        var editObj = {};
+
+        function editDriverStatus(obj) {
+            $.ajax({
+                url: hostUrl + 'aptc.driver/status/edit/' + obj.id,
+                type: 'GET',
+                dataType: 'json',
+                success: function (data) {
+                    debugger;
+
+                },
+                error: function (data) {
+                    alert(data.responseText);
+                },
+            });
+        }
+
+        function Cancel() {
+            $('#addNew').hide();
+            $('#btnCancel').hide();
+        }
+
+        function getAllDriverStatus() {
+            var strTable = ` `
+            tableBody
+            $.ajax({
+                url: hostUrl + 'aptc.driver/status/getall',
+                type: 'GET',
+                dataType: 'json',
+                success: function (data) {
+                    $('#tableBody').html('');
+                    for (var i = 0; i < data.length; i++) {
+                        var tblBody = '';
+                        tblBody = '<tr><td>' + data[i].DriverStatus.driverID + '</td><td>' + data[i].DriverStatus.driverState + '</td><td>' + data[i].DriverStatus.date + '</td><td>' + data[i].DriverStatus.time + '</td><td>' + data[i].DriverStatus.vehicleID + '</td></tr>'
+                        $("#tblEntAttributes tbody").append(tblBody);
+                    }
+                },
+                error: function (data) {
+                    alert(data.responseText);
+                },
+            });
+        }
+
+        var filePath = '';
+        $(function () {
+            $('#fileUpload').change(function (event) {
+                var tmppath = URL.createObjectURL(event.target.files[0]);
+                debugger;
+                filePath = $(this).val();
+                $("img").fadeIn("fast").attr('src', URL.createObjectURL(event.target.files[0]));
+            });
+            getAllDriverStatus();
+        });
+
+        function deleteDriverStatus(obj) {
+            $.ajax({
+                url: hostUrl + 'aptc.driver/status/delete/' + obj.id,
+                type: 'GET',
+                dataType: 'json',
+                success: function (data) {
+                    debugger;
+                    if (data == 'deleted') {
+                        alert('deleted successfully');
+                        getAllDriverStatus();
+                    }
+                },
+                error: function (data) {
+                    alert(data.responseText);
+                },
+            });
+        }
+
+        function SaveDriverStatus() {
+            var obj = {};    
+            obj.driverState = $("#txtDriverState").val();
+            obj.date = $("#txtDate").val();
+            obj.time = $("#txtTime").val();
+            obj.vehicleID = $("#txtVehicleID").val();
+            $.ajax({
+                type: 'POST',
+                data: obj,
+                dataType: "json",
+                url: hostUrl + 'aptc.driver/status/register',
+                success: function (data) {
+                    alert(data);
+                },
+                error: function (errMsg) {
+                    alert(errMsg.responseText)
+                }
+            });
+        }
+    </script>
+</div>

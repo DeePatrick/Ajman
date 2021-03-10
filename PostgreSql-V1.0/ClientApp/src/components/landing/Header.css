@@ -1,0 +1,143 @@
+.main-nav .navbar li {
+    float: none;
+    font-size: 8px;
+    margin: 0px;
+}
+
+.main-nav li .icon-home a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.navbar-brand {
+    padding-left: 10px;
+    margin-bottom: 20px;
+    margin-top: 5px;
+    margin-bottom: 25px;
+}
+
+.navbar-inverse .navbar-collapse,
+.navbar-inverse .navbar-form {
+    border-color: #fff;
+}
+
+/* Keep the nav menu independent of scrolling and on top of other items */
+
+.main-nav {
+    position: fixed;
+    top: 0px;
+    z-index: 2;
+    max-width: 70px;
+}
+
+a.active.arabic-logo:hover, a.active.arabic-logo:focus {
+    background-color: #ffffff;
+    border-radius: 0 !important;
+}
+
+@media (max-width: 767px) {
+    /* On small screens, the nav menu spans the full width of the screen. Leave a space for it. */
+    /*body {
+        padding-top: 15px;
+    }*/
+    div .main-nav {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    /* On small screens, convert the nav menu to a vertical sidebar */
+    .main-nav {
+        height: 100%;
+        width: calc(25% - 20px);
+    }
+
+        .main-nav .navbar {
+            border-radius: 0px;
+            border-width: 0px;
+            height: 100%;
+        }
+
+        .main-nav .navbar-header {
+            float: none;
+        }
+
+        .main-nav .navbar-collapse {
+            border-top: 1px solid #444;
+            padding: 0px;
+        }
+
+        .main-nav .navbar ul {
+            float: none;
+        }
+
+        .main-nav .navbar li {
+            float: none;
+            font-size: 8px;
+            margin: 0px;
+        }
+
+        .main-nav .navbar a {
+            /* If a menu item's text is too long, truncate it */
+            width: 100%;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+}
+
+.icons {
+    font-size: xx-large;
+    transform: scale(1.00);
+    text-align: center;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+ul li .fa {
+    padding-left: 0px
+}
+
+/* .navbar-inverse .navbar-nav > li > a {
+    color: #333333;
+} */
+
+
+.icon-sidebar {
+    color: #ffffff;
+    text-align: center;
+    font-size: xx-large;
+    transform: scale(0.75);
+}
+
+
+
+#icon-ticket-alt {
+    transform: rotate(-30deg);
+}
+
+.icon-cog {
+    -ms-transform: translate(0vh, 40vh);
+    /* IE 9 */
+    -webkit-transform: translate(0vh, 40vh);
+    /* Safari */
+    transform: translate(0vh, 40vh);
+}
+
+#description {
+    float: left;
+}
+
+.nav-pills > li + li {
+    margin-left: 2px;
+    margin-right: 10px;
+}
+
+.fa-bell,
+.fa-question-circle,
+.fa-comments {
+    font-size: 33px;
+    transform: scale(1);
+    padding: 2px 2px;
+    color: #9f8865;
+}

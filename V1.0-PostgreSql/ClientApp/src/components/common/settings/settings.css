@@ -1,0 +1,28 @@
+.settings .container-fluid .row .fa-cog {
+  color: #9f8865;
+  margin-right: 10px;
+  font-size: 1.5em;
+}
+
+.settings .container-fluid .row h4 {
+  color: #9f8865;
+  font-weight: bold;
+  font-size: 0.8em;
+  margin-top: 5px;
+}
+
+.settings .container-fluid .links {
+  background-color: #ffffff;
+  padding: 10px;
+  margin-top: 15px;
+  border-radius: 5px;
+}
+
+.settings .container-fluid .links .col-md-4 {
+  margin: 25px 0;
+}
+
+.settings .container-fluid .links .col-md-4 a {
+  display: inline-block;
+  color: #a0a0a0;
+}

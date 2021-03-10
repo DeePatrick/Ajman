@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/web.js"></script>
+    <style>
+        .lable strong{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @*@Html.ActionLink("Aptc Api Wsdl", "APIWSDL", "Home", new { area = "" }, new { @class = "navbar-brand" })*@
+                @*@Html.ActionLink("Car Track Api Wsdl", "CTAPIWSDL", "Home", new { area = "" }, new { @class = "navbar-brand" })*@
+
+                @Html.ActionLink("Atpc Api List", "Index", "Help", new { area = "HelpPage" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Car Track Api List", "CarTrackApiList", "Help", new { area = "HelpPage" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    @*<li>@Html.ActionLink("Individual", "Index", "Home", new { area = "" }, null)</li>*@
+                    @*<li>@Html.ActionLink("Login", "Login", "Home", new { area = "" }, null)</li>*@
+                    @*<li>@Html.ActionLink("Company", "Index", "Home", new { area = "" }, null)</li>*@
+                    @*<li>@Html.ActionLink("Driver", "Driver", "Home", new { area = "" }, null)</li>*@
+                    @*<li>@Html.ActionLink("Vehicle ", "Vehicle", "Home", new { area = "" }, null)</li>*@
+                    @*<li>@Html.ActionLink("Passenger Message", "PassengerMessage", "Home", new { area = "" }, null)</li>*@
+                    @*<li>@Html.ActionLink("Driver Status", "DriverStatus", "Home", new { area = "" }, null)</li>
+                    <li>@Html.ActionLink("Incident Message", "IncidentMessage", "Home", new { area = "" }, null)</li>*@
+                    @*<li>@Html.ActionLink("API WSDL", "APIWSDL", "Home", new { area = "" }, null)</li>*@
+                    @*<li>@Html.ActionLink("API List", "Index", "Help", new { area = "" }, null)</li>*@
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        <div style="min-height:500px;">
+            @RenderBody()
+        </div>
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </footer>
+    </div>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+    <script>
+        function ctapi() {
+            var strTable = ` `
+            tableBody
+            $.ajax({
+                url: 'http://localhost:63391/api/driver/getalldriver',
+                type: 'GET',
+                dataType: 'json',
+                success: function (data) {
+                    for (var i = 0; i < data.length; i++) {
+                        var carTrackDriverResponse = '';
+                        var tblBody = '';
+                        if (data[i].Driver.carTrackDriverResponse != null) {
+                            tblBody = '<tr><td>' + data[i].Driver.emiratiId + '</td><td>' + data[i].Driver.firstNameEN + '</td><td>' + data[i].Driver.lastNameEN + '</td><td>' + data[i].Driver.emailAddress + '</td><td>' + data[i].Driver.mobileNumber + '</td><td>' + data[i].Driver.licenseNumber + '</td><td>' + data[i].Driver.pasportNumber + '</td><td>' + data[i].Driver.permitNumber + '</td><td>' + data[i].Driver.driverValid + '</td><td>' + data[i].Driver.carTrackDriverResponse.cTStatus + '</td><td>' + data[i].Driver.carTrackDriverResponse.cTDescription + '</td></tr>'
+                        }
+                        else {
+                            tblBody = '<tr><td>' + data[i].Driver.emiratiId + '</td><td>' + data[i].Driver.firstNameEN + '</td><td>' + data[i].Driver.lastNameEN + '</td><td>' + data[i].Driver.emailAddress + '</td><td>' + data[i].Driver.mobileNumber + '</td><td>' + data[i].Driver.licenseNumber + '</td><td>' + data[i].Driver.pasportNumber + '</td><td>' + data[i].Driver.permitNumber + '</td><td>' + data[i].Driver.driverValid + '</td><td>N/A</td><td>N/A</td></tr>'
+                        }
+
+                        $("#tblEntAttributes tbody").append(tblBody);
+                    }
+                },
+                error: function (data) {
+                    alert(data.responseText);
+                },
+            });
+        }
+    </script>
+</body>
+</html>

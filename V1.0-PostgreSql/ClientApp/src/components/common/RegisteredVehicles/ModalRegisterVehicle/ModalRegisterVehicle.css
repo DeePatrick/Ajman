@@ -1,0 +1,62 @@
+/* General */
+.ModalRegisterVehicle .modal-content {
+
+}
+
+
+/* Header */
+.ModalRegisterVehicle .modal-header {
+  position: relative;
+  border-bottom: none;
+}
+
+.ModalRegisterVehicle .modal-header #close-modal {
+  position: absolute;
+  top:5px;
+  right:8px;
+  background-color:none;
+  outline: none;
+}
+
+.ModalRegisterVehicle .modal-header button span {
+  color:black;
+}
+
+/* Body */
+
+.ModalRegisterVehicle .modal-body {
+ padding: 25px;
+ color: #a0a0a0;
+ font-weight: bold;
+ font-size: 0.8em;
+}
+
+.ModalRegisterVehicle .modal-body input {
+  color: #a0a0a0;
+  border: none;
+  border-bottom: 1px #a0a0a0 solid;
+  outline: none;
+  margin-top: 15px;
+}
+
+/* Footer */
+
+.ModalRegisterVehicle .modal-footer {
+  text-align: center;
+}
+
+.ModalRegisterVehicle .modal-footer #save-changes {
+  border-radius: 0;
+  margin: 0 auto;
+  width: 120px;
+  height: 30px;
+  font-size: 0.7em;
+  background-color: #a0a0a0;
+  outline: none !important;
+  border:none;
+}
+.ModalRegisterVehicle .modal-footer #save-changes:focus {
+  border: none;
+  background-color:#a0a0a0;
+  outline: none !important;
+}

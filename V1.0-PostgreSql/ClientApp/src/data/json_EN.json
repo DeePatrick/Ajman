@@ -1,0 +1,2868 @@
+{
+  "Id": "REF: en-US ",
+  "Contents": {
+    "Title": [
+      {
+        "Code": 1,
+        "Value": "Mr.",
+        "Rank": 1
+      },
+      {
+        "Code": 2,
+        "Value": "Mrs.",
+        "Rank": 2
+      },
+      {
+        "Code": 3,
+        "Value": "Ms.",
+        "Rank": 3
+      },
+      {
+        "Code": 4,
+        "Value": "Miss.",
+        "Rank": 5
+      },
+      {
+        "Code": 5,
+        "Value": "Dr.",
+        "Rank": null
+      },
+      {
+        "Code": 6,
+        "Value": "Prof.",
+        "Rank": null
+      },
+      {
+        "Code": 7,
+        "Value": " Sheikh.",
+        "Rank": 4
+      },
+      {
+        "Code": 8,
+        "Value": "HH.",
+        "Rank": null
+      }
+    ],
+    "Gender": [
+      {
+        "Code": "M",
+        "Value": "Male",
+        "Rank": 1
+      },
+      {
+        "Code": "F",
+        "Value": "Female",
+        "Rank": 2
+      }
+    ],
+    "Religion": [
+      {
+        "Code": 1,
+        "Value": "Islam",
+        "Rank": 1
+      },
+      {
+        "Code": 2,
+        "Value": "Christianity",
+        "Rank": 2
+      },
+      {
+        "Code": 3,
+        "Value": "Hinduism",
+        "Rank": 3
+      },
+      {
+        "Code": 4,
+        "Value": "Non Religious",
+        "Rank": 4
+      },
+      {
+        "Code": 5,
+        "Value": "Chinese Folk",
+        "Rank": 5
+      },
+      {
+        "Code": 6,
+        "Value": "Buddhism",
+        "Rank": null
+      },
+      {
+        "Code": 7,
+        "Value": "Tribal Religions",
+        "Rank": null
+      },
+      {
+        "Code": 8,
+        "Value": "Baha'i",
+        "Rank": null
+      },
+      {
+        "Code": 9,
+        "Value": "Zoroastrianism",
+        "Rank": null
+      },
+      {
+        "Code": 10,
+        "Value": "Sabean",
+        "Rank": null
+      },
+      {
+        "Code": 11,
+        "Value": "Almharicih",
+        "Rank": null
+      },
+      {
+        "Code": 12,
+        "Value": "Jainism",
+        "Rank": null
+      },
+      {
+        "Code": 13,
+        "Value": "Confucianism",
+        "Rank": null
+      },
+      {
+        "Code": 14,
+        "Value": "Spiritism",
+        "Rank": null
+      },
+      {
+        "Code": 15,
+        "Value": "Shinto",
+        "Rank": null
+      },
+      {
+        "Code": 16,
+        "Value": "Paganism",
+        "Rank": null
+      },
+      {
+        "Code": 17,
+        "Value": "Cao Dai",
+        "Rank": null
+      },
+      {
+        "Code": 18,
+        "Value": "Tenrikyo",
+        "Rank": null
+      },
+      {
+        "Code": 19,
+        "Value": "Rastafarianism",
+        "Rank": null
+      },
+      {
+        "Code": 20,
+        "Value": "Taoism",
+        "Rank": null
+      },
+      {
+        "Code": 21,
+        "Value": "Sikhism",
+        "Rank": null
+      },
+      {
+        "Code": 22,
+        "Value": "Judaism",
+        "Rank": null
+      },
+      {
+        "Code": 23,
+        "Value": "Qadiani",
+        "Rank": null
+      },
+      {
+        "Code": 24,
+        "Value": "Atheists",
+        "Rank": null
+      },
+      {
+        "Code": 25,
+        "Value": "Undefiened",
+        "Rank": null
+      }
+    ],
+    "MaritalStatus": [
+      {
+        "Code": "S",
+        "Value": "Single",
+        "Rank": 2
+      },
+      {
+        "Code": "M",
+        "Value": "Married",
+        "Rank": 1
+      },
+      {
+        "Code": "D",
+        "Value": "Divorced",
+        "Rank": 3
+      },
+      {
+        "Code": "W",
+        "Value": "Widowed",
+        "Rank": 4
+      }
+    ],
+    "Language": [
+      {
+        "Code": "ar_SA",
+        "Value": "Arabic",
+        "Rank": 1,
+        "Type": "RTL"
+      },
+      {
+        "Code": "en_US",
+        "Value": "English",
+        "Rank": 2,
+        "Type": "LTR"
+      }
+    ],
+    "Country": [
+      {
+        "Code": "AE",
+        "Value": "United Arab Emirates",
+        "Rank": 1,
+        "State": [
+          {
+            "Code": "AD",
+            "Value": "Abu Dhabi"
+          },
+          {
+            "Code": "DU",
+            "Value": "Dubai"
+          },
+          {
+            "Code": "SH",
+            "Value": "Sharjah"
+          },
+          {
+            "Code": "AJ",
+            "Value": "Ajman"
+          },
+          {
+            "Code": "UQ",
+            "Value": "Umm Al Quwain"
+          },
+          {
+            "Code": "RK",
+            "Value": "Ras Al Khaimah"
+          },
+          {
+            "Code": "FU",
+            "Value": "Fujairah"
+          }
+        ]
+      },
+      {
+        "Code": "SA",
+        "Value": "Saudi Arabia",
+        "Rank": 5,
+        "State": null
+      },
+      {
+        "Code": "KW",
+        "Value": "Kuwait",
+        "Rank": 6,
+        "State": null
+      },
+      {
+        "Code": "BH",
+        "Value": "Bahrain",
+        "Rank": 7,
+        "State": null
+      },
+      {
+        "Code": "QA",
+        "Value": "Qatar",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "OM",
+        "Value": "Oman",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "IQ",
+        "Value": "Iraq",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "YE",
+        "Value": "Yemen",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "LB",
+        "Value": "Lebanon",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "SY",
+        "Value": "Syrian Arab Republic",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "JO",
+        "Value": "Jordan",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "PS",
+        "Value": "State Of Palestine",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "EG",
+        "Value": "Egypt",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "LY",
+        "Value": "Libya",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "TN",
+        "Value": "Tunisia",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "DZ",
+        "Value": "Algeria",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "MA",
+        "Value": "Morocco",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "MR",
+        "Value": "Mauritania",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "SD",
+        "Value": "Sudan",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "SS",
+        "Value": "South Sudan",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "SO",
+        "Value": "Somalia",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "DJ",
+        "Value": "Djibouti",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "IR",
+        "Value": "Iran (Islamic Republic Of)",
+        "Rank": 8,
+        "State": null
+      },
+      {
+        "Code": "PK",
+        "Value": "Pakistan",
+        "Rank": 3,
+        "State": null
+      },
+      {
+        "Code": "IN",
+        "Value": "India",
+        "Rank": 2,
+        "State": null
+      },
+      {
+        "Code": "BD",
+        "Value": "Bangladesh",
+        "Rank": 4,
+        "State": null
+      },
+      {
+        "Code": "AF",
+        "Value": "Afghanistan",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "BT",
+        "Value": "Bhutan",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "MM",
+        "Value": "Myanmar",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "KH",
+        "Value": "Cambodia",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "LK",
+        "Value": "Sri Lanka",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "CN",
+        "Value": "China",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "HK",
+        "Value": "Hong Kong Special Administrative Region",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "SG",
+        "Value": "Singapore",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "KR",
+        "Value": "Republic Of Korea",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "KP",
+        "Value": "Democratic People's Republic Of Korea",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "JP",
+        "Value": "Japan",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "VN",
+        "Value": "Viet Nam",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "NP",
+        "Value": "Nepal",
+        "Rank": 10,
+        "State": null
+      },
+      {
+        "Code": "PH",
+        "Value": "Philippines",
+        "Rank": 9,
+        "State": null
+      },
+      {
+        "Code": "TH",
+        "Value": "Thailand",
+        "Rank": 11,
+        "State": null
+      },
+      {
+        "Code": "MY",
+        "Value": "Malaysia",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "ID",
+        "Value": "Indonesia",
+        "Rank": 12,
+        "State": null
+      },
+      {
+        "Code": "LA",
+        "Value": "Laos People's Democratic Republic",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "MN",
+        "Value": "Mongolia",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "AG",
+        "Value": "Antigua And Barbuda",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "BN",
+        "Value": "Brunei Darussalam",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "TO",
+        "Value": "Tonga",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "MV",
+        "Value": "Maldives",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "KZ",
+        "Value": "Kazakhstan",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "AM",
+        "Value": "Armenia",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "AZ",
+        "Value": "Azerbaijan",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "TJ",
+        "Value": "Tajikistan",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "KG",
+        "Value": "Kyrgyzstan",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "TM",
+        "Value": "Turkmenistan",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "UZ",
+        "Value": "Uzbekistan",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "GE",
+        "Value": "Georgia",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "KM",
+        "Value": "Comoros",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "ER",
+        "Value": "Eritrea",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "AO",
+        "Value": "Angola",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "BI",
+        "Value": "Burundi",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "CM",
+        "Value": "Cameroon",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "TD",
+        "Value": "Chad",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "CG",
+        "Value": "Congo",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "ET",
+        "Value": "Ethiopia",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "GH",
+        "Value": "Ghana",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "GN",
+        "Value": "Guinea",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "CI",
+        "Value": "Cote D'ivoire",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "KE",
+        "Value": "Kenya",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "LR",
+        "Value": "Liberia",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "MG",
+        "Value": "Madagascar",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "ZW",
+        "Value": "Zimbabwe",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "MW",
+        "Value": "Malawi",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "ML",
+        "Value": "Mali",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "MZ",
+        "Value": "Mozambique",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "NE",
+        "Value": "Niger",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "NG",
+        "Value": "Nigeria",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "RW",
+        "Value": "Rwanda",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "SN",
+        "Value": "Senegal",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "SL",
+        "Value": "Sierra Leone",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "ZA",
+        "Value": "South Africa",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "BF",
+        "Value": "Burkina Faso",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "TZ",
+        "Value": "United Republic Of Tanzania",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "TG",
+        "Value": "Togo",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "UG",
+        "Value": "Uganda",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "ZM",
+        "Value": "Zambia",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "CD",
+        "Value": "Democratic Republic Of The Congo",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "CF",
+        "Value": "Central African Republic",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "GL",
+        "Value": "Greenland",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "MU",
+        "Value": "Mauritius",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "BJ",
+        "Value": "Benin",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "GA",
+        "Value": "Gabon",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "NA",
+        "Value": "Namibia",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "BW",
+        "Value": "Botswana",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "LS",
+        "Value": "Lesotho",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "SZ",
+        "Value": "Swaziland",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "GM",
+        "Value": "Gambia",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "SC",
+        "Value": "Seychelles",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "GW",
+        "Value": "Guinea-Bissau",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "KI",
+        "Value": "Kiribati",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "CV",
+        "Value": "Cabo Verde",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "ST",
+        "Value": "Sao Tome And Principe",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "UK",
+        "Value": "United Kingdom (Uk)",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "FR",
+        "Value": "France",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "IT",
+        "Value": "Italy",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "DE",
+        "Value": "Germany",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "NL",
+        "Value": "Netherlands",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "BE",
+        "Value": "Belgium",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "LU",
+        "Value": "Luxembourg",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "CH",
+        "Value": "Switzerland",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "AT",
+        "Value": "Austria",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "SE",
+        "Value": "Sweden",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "NO",
+        "Value": "Norway",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "DK",
+        "Value": "Denmark",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "PT",
+        "Value": "Portugal",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "IE",
+        "Value": "Ireland",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "GR",
+        "Value": "Greece",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "MK",
+        "Value": "Republic Of Macedonia",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "CY",
+        "Value": "Cyprus",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "FI",
+        "Value": "Finland",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "MT",
+        "Value": "Malta",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "ES",
+        "Value": "Spain",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "MC",
+        "Value": "Monaco",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "VA",
+        "Value": "Holy See (Vatican)",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "IS",
+        "Value": "Iceland",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "AD",
+        "Value": "Andorra",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "SM",
+        "Value": "San Marino",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "LI",
+        "Value": "Liechtenstein",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "CZ",
+        "Value": "Czech Republic",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "HR",
+        "Value": "Croatia",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "SI",
+        "Value": "Slovenia",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "LT",
+        "Value": "Lithuania",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "EE",
+        "Value": "Estonia",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "LV",
+        "Value": "Latvia",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "SK",
+        "Value": "Slovakia",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "BA",
+        "Value": "Bosnia And Herzegovina",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "BG",
+        "Value": "Bulgaria",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "RS",
+        "Value": "Serbia",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "HU",
+        "Value": "Hungary",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "RO",
+        "Value": "Romania",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "PL",
+        "Value": "Poland",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "AL",
+        "Value": "Albania",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "TR",
+        "Value": "Turkey",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "RU",
+        "Value": "Russian Federation",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "UA",
+        "Value": "Ukraine",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "MD",
+        "Value": "Republic Of Moldova",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "BY",
+        "Value": "Belarus",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "KN",
+        "Value": "Saint Kitts And Nevis",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "ME",
+        "Value": "Montenegro",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "CA",
+        "Value": "Canada",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "US",
+        "Value": "United States Of America",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "KY",
+        "Value": "Cayman Islands",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "MX",
+        "Value": "Mexico",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "BR",
+        "Value": "Brazil",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "AR",
+        "Value": "Argentina",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "SH",
+        "Value": "Saint Helena",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "CL",
+        "Value": "Chile",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "BO",
+        "Value": "Bolivia",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "CO",
+        "Value": "Colombia",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "EC",
+        "Value": "Ecuador",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "PE",
+        "Value": "Peru",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "VE",
+        "Value": "Venezuela",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "BS",
+        "Value": "Bahamas",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "CU",
+        "Value": "Cuba",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "CR",
+        "Value": "Costa Rica",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "DO",
+        "Value": "Dominican Republic",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "GT",
+        "Value": "Guatemala",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "JM",
+        "Value": "Jamaica",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "NI",
+        "Value": "Nicaragua",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "PA",
+        "Value": "Panama",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "BM",
+        "Value": "Bermuda",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "SV",
+        "Value": "El Salvador",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "TT",
+        "Value": "Trinidad And Tobago",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "HT",
+        "Value": "Haiti",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "PR",
+        "Value": "Puerto Rico",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "DM",
+        "Value": "Dominica",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "UY",
+        "Value": "Uruguay",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "PY",
+        "Value": "Paraguay",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "HN",
+        "Value": "Honduras",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "GD",
+        "Value": "Grenada",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "BZ",
+        "Value": "Belize",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "GY",
+        "Value": "Guyana",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "SR",
+        "Value": "Suriname",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "BB",
+        "Value": "Barbados",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "GF",
+        "Value": "French Guiana",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "MQ",
+        "Value": "Martinique",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "LC",
+        "Value": "Saint Lucia",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "VC",
+        "Value": "Saint Vincent And The Grenadines",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "PW",
+        "Value": "Palau",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "AU",
+        "Value": "Australia",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "NZ",
+        "Value": "New Zealand",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "FJ",
+        "Value": "Fiji",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "PG",
+        "Value": "Papua New Guinea",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "TL",
+        "Value": "Timor-Leste",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "NC",
+        "Value": "New Caledonia",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "MP",
+        "Value": "Northern Mariana Islands",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "SB",
+        "Value": "Solomon Islands",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "MH",
+        "Value": "Marshall Islands",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "WS",
+        "Value": "Samoa",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "FM",
+        "Value": "Micronesia (Federated States Of)",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "VU",
+        "Value": "Vanuatu",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "TV",
+        "Value": "Tuvalu",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "NR",
+        "Value": "Nauru",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "GQ",
+        "Value": "Equatorial Guinea",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "AS",
+        "Value": "American Samoa",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "RE",
+        "Value": "Reunion",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "NL",
+        "Value": "Bonaire, Sint Eustatius And Saba",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "VG",
+        "Value": "British Virgin Islands",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "CW",
+        "Value": "Curacao",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "FK",
+        "Value": "Falkland Islands (Malvinas)",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "PF",
+        "Value": "French Polynesia",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "GP",
+        "Value": "Guadeloupe",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "GU",
+        "Value": "Guam",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "GG",
+        "Value": "Guernsey",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "JE",
+        "Value": "Jersey",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "YT",
+        "Value": "Mayotte",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "MS",
+        "Value": "Montserrat",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "NU",
+        "Value": "Niue",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "NF",
+        "Value": "Norfolk Island",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "PN",
+        "Value": "Pitcairn",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "MF",
+        "Value": "Saint Martin (French Part)",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "PM",
+        "Value": "Saint Pierre And Miquelon",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "SX",
+        "Value": "Sint Maarten (Dutch Part)",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "NO",
+        "Value": "Svalbard Islands",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "TK",
+        "Value": "Tokelau",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "TC",
+        "Value": "Turks And Caicos Islands",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "VI",
+        "Value": "United States Virgin Islands",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "WF",
+        "Value": "Wallis And Futuna",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "EH",
+        "Value": "Western Sahara Region",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "BL",
+        "Value": "Saint Barthelemy",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "AX",
+        "Value": "Aland Islands",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "AW",
+        "Value": "Aruba",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "CK",
+        "Value": "Cook Islands",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "GI",
+        "Value": "Gibraltar",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "IL",
+        "Value": "Israel",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "AI",
+        "Value": "Anguilla",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "TW",
+        "Value": "Taiwan, Province Of China[A]",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "XK",
+        "Value": "Kosovo",
+        "Rank": null,
+        "State": null
+      },
+      {
+        "Code": "XX",
+        "Value": "Undefined",
+        "Rank": null,
+        "State": null
+      }
+    ],
+    "Profession": [
+      {
+        "Code": 1,
+        "Value": "Taxi Driver",
+        "Rank": 1
+      },
+      {
+        "Code": 2,
+        "Value": "Driver",
+        "Rank": 2
+      }
+    ],
+    "FuelType": [
+      {
+        "Code": "GAS",
+        "Value": "Gasoline",
+        "Rank": 1
+      },
+      {
+        "Code": "DIE",
+        "Value": "Diesel",
+        "Rank": 2
+      },
+      {
+        "Code": "ETH",
+        "Value": "Ethanol",
+        "Rank": null
+      },
+      {
+        "Code": "BIO",
+        "Value": "Biodiesel",
+        "Rank": null
+      },
+      {
+        "Code": "PRO",
+        "Value": "Propane",
+        "Rank": null
+      },
+      {
+        "Code": "CNG",
+        "Value": "Compressed Natural Gas",
+        "Rank": null
+      },
+      {
+        "Code": "ELE",
+        "Value": "Electric Batteries",
+        "Rank": null
+      },
+      {
+        "Code": "HYB",
+        "Value": "Hybrid",
+        "Rank": 3
+      },
+      {
+        "Code": "HYD",
+        "Value": "Hydrogen",
+        "Rank": null
+      }
+    ],
+    "NumberOfSeats": [
+      {
+        "Code": 1,
+        "Value": 2,
+        "Rank": 1
+      },
+      {
+        "Code": 2,
+        "Value": 4,
+        "Rank": 2
+      },
+      {
+        "Code": 3,
+        "Value": 5,
+        "Rank": 3
+      },
+      {
+        "Code": 4,
+        "Value": 7,
+        "Rank": 4
+      }
+    ],
+    "YearManufactured": [
+      {
+        "Code": 1,
+        "Value": "2000 - 2005",
+        "Rank": 1
+      },
+      {
+        "Code": 2,
+        "Value": "2005 - 2010",
+        "Rank": 2
+      },
+      {
+        "Code": 3,
+        "Value": "2010 - 2015",
+        "Rank": 3
+      },
+      {
+        "Code": 4,
+        "Value": "2015 - 2020",
+        "Rank": 4
+      }
+    ],
+    "TransType": [
+      {
+        "Code": "AT",
+        "Value": "Automatic Transmission",
+        "Rank": 1
+      },
+      {
+        "Code": "MT",
+        "Value": "Manual Transmission",
+        "Rank": 2
+      },
+      {
+        "Code": "AM",
+        "Value": "Automated Manual Transmission",
+        "Rank": 3
+      },
+      {
+        "Code": "CV",
+        "Value": "Continuously Variable Transmission",
+        "Rank": 4
+      }
+    ],
+    "VehColour": [
+      {
+        "Code": 1,
+        "Value": "White",
+        "Rank": null
+      },
+      {
+        "Code": 2,
+        "Value": "Pearly White",
+        "Rank": null
+      },
+      {
+        "Code": 3,
+        "Value": "White/Black",
+        "Rank": null
+      },
+      {
+        "Code": 4,
+        "Value": "White/Gray",
+        "Rank": null
+      },
+      {
+        "Code": 5,
+        "Value": "White/Green",
+        "Rank": null
+      },
+      {
+        "Code": 6,
+        "Value": "White/Red",
+        "Rank": null
+      },
+      {
+        "Code": 7,
+        "Value": "White/Blue",
+        "Rank": null
+      },
+      {
+        "Code": 8,
+        "Value": "White/Silver",
+        "Rank": null
+      },
+      {
+        "Code": 9,
+        "Value": "White/Orange",
+        "Rank": null
+      },
+      {
+        "Code": 10,
+        "Value": "White/Yellow",
+        "Rank": null
+      },
+      {
+        "Code": 11,
+        "Value": "White/Gold",
+        "Rank": null
+      },
+      {
+        "Code": 12,
+        "Value": "White/Brown",
+        "Rank": null
+      },
+      {
+        "Code": 13,
+        "Value": "White/Purple",
+        "Rank": null
+      },
+      {
+        "Code": 14,
+        "Value": "White/Beige",
+        "Rank": null
+      },
+      {
+        "Code": 15,
+        "Value": "White/Red/Green",
+        "Rank": null
+      },
+      {
+        "Code": 16,
+        "Value": "White/Gray/Green",
+        "Rank": null
+      },
+      {
+        "Code": 17,
+        "Value": "White/Gray/Red",
+        "Rank": null
+      },
+      {
+        "Code": 18,
+        "Value": "White/Orange/Yellow",
+        "Rank": null
+      },
+      {
+        "Code": 19,
+        "Value": "White/Blue/Orange",
+        "Rank": null
+      },
+      {
+        "Code": 20,
+        "Value": "White/Red/Blue",
+        "Rank": null
+      },
+      {
+        "Code": 21,
+        "Value": "White/Red/Gold",
+        "Rank": null
+      },
+      {
+        "Code": 22,
+        "Value": "White/Red/Purple",
+        "Rank": null
+      },
+      {
+        "Code": 23,
+        "Value": "White/Gray Silver",
+        "Rank": null
+      },
+      {
+        "Code": 24,
+        "Value": "White/Orange/Green",
+        "Rank": null
+      },
+      {
+        "Code": 25,
+        "Value": "White/Limonite",
+        "Rank": null
+      },
+      {
+        "Code": 26,
+        "Value": "White/Black/Blue",
+        "Rank": null
+      },
+      {
+        "Code": 27,
+        "Value": "White/Black/Yellow",
+        "Rank": null
+      },
+      {
+        "Code": 28,
+        "Value": "White/Orange/Yellow",
+        "Rank": null
+      },
+      {
+        "Code": 29,
+        "Value": "Black",
+        "Rank": null
+      },
+      {
+        "Code": 30,
+        "Value": "Black/Green",
+        "Rank": null
+      },
+      {
+        "Code": 31,
+        "Value": "Black/Gray",
+        "Rank": null
+      },
+      {
+        "Code": 32,
+        "Value": "Black/Green/Gold",
+        "Rank": null
+      },
+      {
+        "Code": 33,
+        "Value": "Black/Gray/Yellow",
+        "Rank": null
+      },
+      {
+        "Code": 34,
+        "Value": "Gray",
+        "Rank": null
+      },
+      {
+        "Code": 35,
+        "Value": "Gray/Blue",
+        "Rank": null
+      },
+      {
+        "Code": 36,
+        "Value": "Gray/Yellow",
+        "Rank": null
+      },
+      {
+        "Code": 37,
+        "Value": "Gray/Green/Yellow",
+        "Rank": null
+      },
+      {
+        "Code": 38,
+        "Value": "Green",
+        "Rank": null
+      },
+      {
+        "Code": 39,
+        "Value": "Dark Green",
+        "Rank": null
+      },
+      {
+        "Code": 40,
+        "Value": "Light Green",
+        "Rank": null
+      },
+      {
+        "Code": 41,
+        "Value": "Herbal",
+        "Rank": null
+      },
+      {
+        "Code": 42,
+        "Value": "Green/Yellow",
+        "Rank": null
+      },
+      {
+        "Code": 43,
+        "Value": "Green/Brown",
+        "Rank": null
+      },
+      {
+        "Code": 44,
+        "Value": "Red",
+        "Rank": null
+      },
+      {
+        "Code": 45,
+        "Value": "Dark Red",
+        "Rank": null
+      },
+      {
+        "Code": 46,
+        "Value": "Light Red",
+        "Rank": null
+      },
+      {
+        "Code": 47,
+        "Value": "Milky Red",
+        "Rank": null
+      },
+      {
+        "Code": 48,
+        "Value": "Red/Orange",
+        "Rank": null
+      },
+      {
+        "Code": 49,
+        "Value": "Red/Green",
+        "Rank": null
+      },
+      {
+        "Code": 50,
+        "Value": "Red/Blue",
+        "Rank": null
+      },
+      {
+        "Code": 51,
+        "Value": "Red/Silver",
+        "Rank": null
+      },
+      {
+        "Code": 52,
+        "Value": "Red/Gold",
+        "Rank": null
+      },
+      {
+        "Code": 53,
+        "Value": "Red/Black",
+        "Rank": null
+      },
+      {
+        "Code": 54,
+        "Value": "Red/Green/Yellow",
+        "Rank": null
+      },
+      {
+        "Code": 55,
+        "Value": "Red/Blue/Yellow",
+        "Rank": null
+      },
+      {
+        "Code": 56,
+        "Value": "Red/Blue/Orange",
+        "Rank": null
+      },
+      {
+        "Code": 57,
+        "Value": "Red/Brown/Yellow",
+        "Rank": null
+      },
+      {
+        "Code": 58,
+        "Value": "Red/Blue/Gold",
+        "Rank": null
+      },
+      {
+        "Code": 59,
+        "Value": "Blue",
+        "Rank": null
+      },
+      {
+        "Code": 60,
+        "Value": "Dark Blue",
+        "Rank": null
+      },
+      {
+        "Code": 61,
+        "Value": "Light Blue",
+        "Rank": null
+      },
+      {
+        "Code": 62,
+        "Value": "Cyan Blue",
+        "Rank": null
+      },
+      {
+        "Code": 63,
+        "Value": "Blue/Gold",
+        "Rank": null
+      },
+      {
+        "Code": 64,
+        "Value": "Silver",
+        "Rank": null
+      },
+      {
+        "Code": 65,
+        "Value": "Silver Gray",
+        "Rank": null
+      },
+      {
+        "Code": 66,
+        "Value": "Silver/Purple",
+        "Rank": null
+      },
+      {
+        "Code": 67,
+        "Value": "Silver/Blue",
+        "Rank": null
+      },
+      {
+        "Code": 68,
+        "Value": "Silver/Black/Red",
+        "Rank": null
+      },
+      {
+        "Code": 69,
+        "Value": "Silver/Black/Blue",
+        "Rank": null
+      },
+      {
+        "Code": 70,
+        "Value": "Orange",
+        "Rank": null
+      },
+      {
+        "Code": 71,
+        "Value": "Orange/Green",
+        "Rank": null
+      },
+      {
+        "Code": 72,
+        "Value": "Orange/Yellow",
+        "Rank": null
+      },
+      {
+        "Code": 73,
+        "Value": "Orange/Blue",
+        "Rank": null
+      },
+      {
+        "Code": 74,
+        "Value": "Yellow",
+        "Rank": null
+      },
+      {
+        "Code": 75,
+        "Value": "Yellow/Gold",
+        "Rank": null
+      },
+      {
+        "Code": 76,
+        "Value": "Yellow/Green",
+        "Rank": null
+      },
+      {
+        "Code": 77,
+        "Value": "Yellow/Blue",
+        "Rank": null
+      },
+      {
+        "Code": 78,
+        "Value": "Yellow/Black",
+        "Rank": null
+      },
+      {
+        "Code": 79,
+        "Value": "Gold",
+        "Rank": null
+      },
+      {
+        "Code": 80,
+        "Value": "Brown",
+        "Rank": null
+      },
+      {
+        "Code": 81,
+        "Value": "Brown/Gold",
+        "Rank": null
+      },
+      {
+        "Code": 82,
+        "Value": "Purple",
+        "Rank": null
+      },
+      {
+        "Code": 83,
+        "Value": "Beige",
+        "Rank": null
+      },
+      {
+        "Code": 84,
+        "Value": "Beige/Red",
+        "Rank": null
+      },
+      {
+        "Code": 85,
+        "Value": "Beige/Gray",
+        "Rank": null
+      },
+      {
+        "Code": 86,
+        "Value": "Beige/Green",
+        "Rank": null
+      },
+      {
+        "Code": 87,
+        "Value": "Beige/Orange",
+        "Rank": null
+      },
+      {
+        "Code": 88,
+        "Value": "Beige/Gold",
+        "Rank": null
+      },
+      {
+        "Code": 89,
+        "Value": "Beige/Red/Blue",
+        "Rank": null
+      }
+    ],
+    "VehType": [
+      {
+        "Code": 1,
+        "Value": "Light Bus",
+        "Rank": 1
+      },
+      {
+        "Code": 2,
+        "Value": "Heavy Bus",
+        "Rank": 2
+      },
+      {
+        "Code": 3,
+        "Value": "Saloon",
+        "Rank": 3
+      },
+      {
+        "Code": 4,
+        "Value": "Pickup",
+        "Rank": 4
+      },
+      {
+        "Code": 5,
+        "Value": "Heavy Vehicle (Truck)",
+        "Rank": 5
+      },
+      {
+        "Code": 6,
+        "Value": "Light Mechanical Device",
+        "Rank": null
+      },
+      {
+        "Code": 7,
+        "Value": "Heavy Mechanical Device",
+        "Rank": null
+      },
+      {
+        "Code": 8,
+        "Value": "Tanker",
+        "Rank": null
+      },
+      {
+        "Code": 9,
+        "Value": "Freight Cars",
+        "Rank": null
+      },
+      {
+        "Code": 10,
+        "Value": "Locomotive And Trailer",
+        "Rank": null
+      },
+      {
+        "Code": 11,
+        "Value": "Transport Containers",
+        "Rank": null
+      },
+      {
+        "Code": 12,
+        "Value": "Freezer",
+        "Rank": null
+      },
+      {
+        "Code": 13,
+        "Value": "Shipping Water Bottles",
+        "Rank": null
+      },
+      {
+        "Code": 14,
+        "Value": "Gas Cylinder Carriers",
+        "Rank": null
+      },
+      {
+        "Code": 15,
+        "Value": "Taxi Cars",
+        "Rank": 6
+      },
+      {
+        "Code": 16,
+        "Value": "Service Vehicles",
+        "Rank": 7
+      },
+      {
+        "Code": 17,
+        "Value": "Truck",
+        "Rank": 8
+      },
+      {
+        "Code": 18,
+        "Value": "Van Cargo",
+        "Rank": 9
+      },
+      {
+        "Code": 19,
+        "Value": "Crane",
+        "Rank": null
+      },
+      {
+        "Code": 20,
+        "Value": "Concrete Pump ",
+        "Rank": null
+      },
+      {
+        "Code": 21,
+        "Value": "Truck Cars",
+        "Rank": null
+      },
+      {
+        "Code": 22,
+        "Value": "Shipping With A Crane",
+        "Rank": null
+      },
+      {
+        "Code": 23,
+        "Value": "Pickup Of Gas Cylinders",
+        "Rank": null
+      },
+      {
+        "Code": 24,
+        "Value": "Pickup Double Cab With Box",
+        "Rank": null
+      },
+      {
+        "Code": 25,
+        "Value": "Pickup With Box",
+        "Rank": null
+      },
+      {
+        "Code": 26,
+        "Value": "Pick Up Double Cab",
+        "Rank": null
+      },
+      {
+        "Code": 27,
+        "Value": "Bob Cat",
+        "Rank": null
+      },
+      {
+        "Code": 28,
+        "Value": "Heavy Truck With Wheels",
+        "Rank": null
+      },
+      {
+        "Code": 29,
+        "Value": "Truck Loader",
+        "Rank": null
+      },
+      {
+        "Code": 30,
+        "Value": "Van Cargo Fridge",
+        "Rank": null
+      },
+      {
+        "Code": 31,
+        "Value": "Diesel Tanker",
+        "Rank": null
+      },
+      {
+        "Code": 32,
+        "Value": "Water Tanker",
+        "Rank": null
+      },
+      {
+        "Code": 33,
+        "Value": "Dump Truck",
+        "Rank": null
+      },
+      {
+        "Code": 34,
+        "Value": "Forklift",
+        "Rank": null
+      },
+      {
+        "Code": 35,
+        "Value": "Compactor Roller",
+        "Rank": null
+      },
+      {
+        "Code": 36,
+        "Value": "Excavator",
+        "Rank": null
+      },
+      {
+        "Code": 37,
+        "Value": "Bop Louder",
+        "Rank": null
+      },
+      {
+        "Code": 38,
+        "Value": "Caterpillar",
+        "Rank": null
+      },
+      {
+        "Code": 39,
+        "Value": "Truck With Box",
+        "Rank": null
+      },
+      {
+        "Code": 40,
+        "Value": "Caterpillar Bluder",
+        "Rank": null
+      },
+      {
+        "Code": 41,
+        "Value": "Cmc Freezer",
+        "Rank": null
+      },
+      {
+        "Code": 42,
+        "Value": "Truck Fridge",
+        "Rank": null
+      },
+      {
+        "Code": 43,
+        "Value": "Cement Mixer",
+        "Rank": null
+      },
+      {
+        "Code": 44,
+        "Value": "Pickup With Freezer ",
+        "Rank": null
+      },
+      {
+        "Code": 45,
+        "Value": "Passenger Van",
+        "Rank": null
+      },
+      {
+        "Code": 46,
+        "Value": "School Bus",
+        "Rank": null
+      },
+      {
+        "Code": 47,
+        "Value": "Swept Roads",
+        "Rank": null
+      },
+      {
+        "Code": 48,
+        "Value": "Ambulance",
+        "Rank": null
+      },
+      {
+        "Code": 49,
+        "Value": "Waste Carrier",
+        "Rank": null
+      },
+      {
+        "Code": 50,
+        "Value": "Waste Container Washbasin",
+        "Rank": null
+      },
+      {
+        "Code": 53,
+        "Value": "Recovery",
+        "Rank": null
+      },
+      {
+        "Code": 54,
+        "Value": "Tractor ",
+        "Rank": null
+      }
+    ],
+    "VehMake": [
+      {
+        "Code": 1,
+        "Value": "Toyota",
+        "Rank": 1,
+        "Model": [
+          {
+            "Code": 1,
+            "Value": "Camry",
+            "Rank": 1
+          },
+          {
+            "Code": 2,
+            "Value": "Corolla",
+            "Rank": 2
+          }
+        ]
+      }
+    ],
+
+    "ComStatus": [
+      {
+        "Code": 1,
+        "Value": "Input"
+      },
+      {
+        "Code": 2,
+        "Value": "Pending"
+      },
+      {
+        "Code": 3,
+        "Value": "Active"
+      },
+      {
+        "Code": 4,
+        "Value": "Inactive"
+      }
+    ],
+
+    "LegalForm": [
+      {
+        "Code": "SPS",
+        "Value": "Sole proprietorship"
+      },
+      {
+        "Code": "CVC",
+        "Value": "Civil Company"
+      },
+      {
+        "Code": "LLC",
+        "Value": "Limited Liability Company (LLC)"
+      },
+      {
+        "Code": "PRS",
+        "Value": "Partnership"
+      },
+      {
+        "Code": "PVH",
+        "Value": "Private Share Holding Company"
+      },
+      {
+        "Code": "PUH",
+        "Value": "Public Share Holding Company"
+      },
+      {
+        "Code": "BRA",
+        "Value": "Branches"
+      },
+      {
+        "Code": "RPO",
+        "Value": "Representative Offices"
+      }
+    ],
+    "ComType": [
+      {
+        "Code": "REN",
+        "Value": "Rental Company"
+      },
+      {
+        "Code": "SCH",
+        "Value": "School"
+      },
+      {
+        "Code": "SPE",
+        "Value": "Special"
+      },
+      {
+        "Code": "CON",
+        "Value": "Construction"
+      },
+      {
+        "Code": "PUT",
+        "Value": "Public Transport"
+      },
+      {
+        "Code": "PKT",
+        "Value": "PickUp Truck"
+      },
+      {
+        "Code": "TOU",
+        "Value": "Tourism"
+      },
+      {
+        "Code": "LIM",
+        "Value": "Limousine"
+      },
+      {
+        "Code": "TRA",
+        "Value": "Transportation"
+      },
+      {
+        "Code": "VPC",
+        "Value": "Vehicle Permit Customers"
+      }
+    ],
+    "ComActivities": [
+      {
+        "Code": 4923009,
+        "Value": "Transport of materials Assembly heavy truck",
+        "Rank": null
+      },
+      {
+        "Code": 4923004,
+        "Value": "Petroleum Materials Land Transportation",
+        "Rank": null
+      },
+      {
+        "Code": 4923002,
+        "Value": "Raw Materials Land Transportation",
+        "Rank": null
+      },
+      {
+        "Code": 4921001,
+        "Value": "Passengers Transportation via Public Buses within Cities",
+        "Rank": null
+      },
+      {
+        "Code": 4922006,
+        "Value": "Passengers Transportation via Rented Buses",
+        "Rank": null
+      },
+      {
+        "Code": 4923012,
+        "Value": "Radioactive Materials Transport",
+        "Rank": null
+      },
+      {
+        "Code": 4923008,
+        "Value": "Transport of hazardous materials",
+        "Rank": null
+      },
+      {
+        "Code": 4923003,
+        "Value": "Furniture Transportation",
+        "Rank": null
+      },
+      {
+        "Code": 4922007,
+        "Value": "Passengers Transportation via Tourist Buses",
+        "Rank": null
+      },
+      {
+        "Code": 4923011,
+        "Value": "General Transportation",
+        "Rank": null
+      },
+      {
+        "Code": 4922003,
+        "Value": "Passengers Transportation via Taxis",
+        "Rank": null
+      },
+      {
+        "Code": 4923007,
+        "Value": "Transportation via Specialized Cars",
+        "Rank": null
+      },
+      {
+        "Code": 4922005,
+        "Value": "Special Cars Rentel with a Driver",
+        "Rank": null
+      },
+      {
+        "Code": 4923005,
+        "Value": "Water Transportation",
+        "Rank": null
+      },
+      {
+        "Code": 4923010,
+        "Value": "Transport of materials Assembl light trucks",
+        "Rank": null
+      },
+      {
+        "Code": 4922004,
+        "Value": "Passengers Transportation Via Luxurious Cars",
+        "Rank": null
+      },
+      {
+        "Code": 4922001,
+        "Value": "Passengers Transportation via Buses on International Lines",
+        "Rank": null
+      },
+      {
+        "Code": 4923006,
+        "Value": "Refrigerated Transportation",
+        "Rank": null
+      },
+      {
+        "Code": 4923001,
+        "Value": "Goods Land Transportation",
+        "Rank": null
+      },
+      {
+        "Code": 4922008,
+        "Value": "School Buses  Transportation",
+        "Rank": null
+      },
+      {
+        "Code": 4922002,
+        "Value": "Passengers Transportation via Public Buses Between Cities",
+        "Rank": null
+      },
+      {
+        "Code": 4922011,
+        "Value": "Passenger Transport by Classic Cars",
+        "Rank": null
+      },
+      {
+        "Code": 4923015,
+        "Value": "Animals Transport",
+        "Rank": null
+      },
+      {
+        "Code": 4923016,
+        "Value": "Fodder & Animal Feed Transport",
+        "Rank": null
+      },
+      {
+        "Code": 5021002,
+        "Value": "Excursion Boats and Ships Renting",
+        "Rank": null
+      },
+      {
+        "Code": 5021003,
+        "Value": "Running Marine Tourist Voyages",
+        "Rank": null
+      },
+      {
+        "Code": 5021001,
+        "Value": "Internal Water Transportation of Passengers",
+        "Rank": null
+      },
+      {
+        "Code": 5012002,
+        "Value": "Maritime transport of oil rigs and buoys",
+        "Rank": null
+      },
+      {
+        "Code": 5012003,
+        "Value": "Marine Transportation of Passengers and Goods by Contracts",
+        "Rank": null
+      },
+      {
+        "Code": 5229002,
+        "Value": "International Piloting Licenses Issuance Services",
+        "Rank": null
+      },
+      {
+        "Code": 5229010,
+        "Value": "Passengers Baggage Delivery",
+        "Rank": null
+      },
+      {
+        "Code": 5221004,
+        "Value": "Heavy Transportation on Roads Organizing Services",
+        "Rank": null
+      },
+      {
+        "Code": 5221001,
+        "Value": "(without Repair) Towing and Transporting of  Broken Down Cars",
+        "Rank": null
+      },
+      {
+        "Code": 5229011,
+        "Value": "Transportation Consultancy",
+        "Rank": null
+      },
+      {
+        "Code": 5221006,
+        "Value": "Towing and Transporting of motorcycle idl",
+        "Rank": null
+      },
+      {
+        "Code": 5224002,
+        "Value": "Goods Marine Shipment Services",
+        "Rank": null
+      },
+      {
+        "Code": 5224004,
+        "Value": "Goods Land Shipment Services",
+        "Rank": null
+      },
+      {
+        "Code": 5221007,
+        "Value": "Transport and Withdrawal Prix boats, boats and jet skis",
+        "Rank": null
+      },
+      {
+        "Code": 5221008,
+        "Value": "Management and operation of the (organisation) passenger transport on roads",
+        "Rank": null
+      }
+    ],
+
+    "FineStatus": [
+      {
+        "Code": 1,
+        "Value": "Paid"
+      },
+      {
+        "Code": 2,
+        "Value": "Unpaid"
+      }
+    ],
+    "DocStatus": [
+      {
+        "Code": 1,
+        "Value": "Active"
+      },
+      {
+        "Code": 2,
+        "Value": "Inactive"
+      }
+    ]
+
+
+
+  },
+  "Audit": [
+    {
+      "Version": 1,
+      "Date": "2018/06/21"
+    },
+    {
+      "Version": 2,
+      "Date": "2018/08/13",
+      "Comment": "Company Refrence added"
+    }
+  ]
+}

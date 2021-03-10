@@ -1,0 +1,22 @@
+﻿<strong>JSON Input<strong> <br/><br/>
+{
+	"driverID": "784-2020-9871234-1",
+	"nameEN": "Abdul Rahman",
+	"nameAR": "عبد الرحمن",
+	"franchise":"1234567",
+	"mobileNumber": "9876543210",
+	"emailAddress": "v.s@qlc.com",
+	"vehicleType": "car",
+	"permitNumber": "DL6HW 5652",
+	"licenseNumber": "DE3138275",
+	"passportNumber": "P46RGWFQGF",
+	"photo": "Abdul_Rahman_784-2020-9871234-1.png",
+	"password": "aWe4",
+	"driverValid": true
+} 
+<br/>
+<br/>
+<br/><strong>Response</strong><br/><br/>
+{"id":"Driver_784-2020-9871234-1", "IsSuccess": "true", "message":"Successfully","statusCode":"200"}<br/>
+{"id":"", "IsSuccess": "false", "message": "143-Emirati Id is required","statusCode":"400"}<br/>
+{"id":"", "IsSuccess": "false", "message": "165-Emirati Id already exists":"400"}<br/>

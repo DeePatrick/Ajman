@@ -1,0 +1,24 @@
+<strong>JSON Input<strong> <br/><br/>
+{
+  "customeDocumentId": "ss",
+  "email": "v.s@qlc.com",
+  "mobileNo": 
+  {
+    "countryCode": "91",
+    "num": "9876543210"
+  },
+  "emailOtp": "2323",
+  "mobileOtp": "2231",
+  "fullName":"Vishal Saxena", 
+  "message":"this is my first trip."
+}
+
+<br/>
+<br/>
+<br/><strong>Response</strong><br/><br/>
+{"IsSuccess": "true", "message":"Valied","statusCode":"200"}<br/>
+{"IsSuccess": "false", "message": "Invalied":"400"}<br/>
+{"IsSuccess": "false", "message": "112-email is required":"400"}<br/>
+{"IsSuccess": "false", "message": "172-fullName is required":"400"}<br/>
+{"IsSuccess": "false", "message": "173-invalid mobile otp":"400"}<br/>
+{"IsSuccess": "false", "message": "174-invalid email otp":"400"}<br/>

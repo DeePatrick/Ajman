@@ -1,0 +1,16 @@
+﻿<strong>JSON Input<strong> <br/><br/>
+{
+  "vehicleID": "V001",
+  "make":"Toyata",
+  "modelYear":"2017",
+  "vehType":"car",
+  "status":"Active"
+}
+
+<br/>
+<br/>
+<br/><strong>Response</strong><br/><br/>
+{"id":"V001 has been added sucessfully", "IsSuccess": "true", "message":"Successfully","statusCode":"200"}<br/>
+{"id":"", "IsSuccess": "false", "message": "V001 already exists","statusCode":"409"}<br/>
+
+

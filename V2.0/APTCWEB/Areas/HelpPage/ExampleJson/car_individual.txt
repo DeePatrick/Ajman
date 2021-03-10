@@ -1,0 +1,84 @@
+﻿<strong>JSON Input<strong> <br/><br/>
+{
+  "EmiratiID": "784-2020-9871234-1",
+  "DocType": "DocType3",
+  "Email": "a.r@qlc.com",
+  "DOB": "1982-12-29",
+  "Nationality": "INDIA",
+  "Notes": "",
+  "Gender": "M",
+  "Language": "EN",
+  "MaritalStatus": "M",
+  "roles": [
+    {
+      "code": "1",
+      "name": "Admin"
+    },
+    {
+      "code": "1",
+      "name": "Agent"
+    }
+  ],
+  "fines": [
+    {
+      "date": "2018-07-14",
+      "amount": "20.0",
+      "remark": "crosed red light"
+    },
+    {
+      "date": "2018-07-15",
+      "amount": "128.0",
+      "remark": "licence expire"
+    }
+  ],
+  "documents": [
+    {
+      "date": "2018-07-16",
+      "name": "d1.pdf",
+      "path": "aptcDOC/d1.pdf"
+    },
+    {
+      "date": "2018-07-16",
+      "name": "d1.pdf",
+      "path": "aptcDOC/d2.pdf"
+    }
+  ],
+  "vehicles": [
+    {
+      "name": "car",
+      "model": "toyota",
+      "type": "Altima"
+    },
+    {
+      "name": "car",
+      "model": "honda",
+      "type": "brv"
+    }
+  ],
+  "mobNum": {
+    "countryCode": "91",
+    "num": "9876543210"
+  },
+  "telNum": {
+    "countryCode": "91",
+    "num": "9123456780"
+  },
+  "name": {
+     "aR": {
+      "fullName": "عبد الرحمن"
+    },
+    "eN": {
+      "fullName": "Abdul Rahman"
+    }
+  },
+  "emailOtp": "4544",
+  "mobileOtp": "4566",
+  "otpDateTime": "2018-07-15"
+}
+<br/>
+<br/>
+<br/><strong>Response</strong><br/><br/>
+{"id":"individual_", "IsSuccess": "true", "message":"Successfully","statusCode":"200"}<br/>
+{"id":"", "IsSuccess": "false", "message": "143-Emirati Id is required","statusCode":"400"}<br/>
+{"id":"", "IsSuccess": "false", "message": "163-number is required","statusCode":"400"}<br/>
+{"id":"", "IsSuccess": "false", "message": "172-fullName is required":"400"}<br/>

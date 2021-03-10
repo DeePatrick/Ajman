@@ -1,0 +1,202 @@
+﻿
+@{
+    ViewBag.Title = "PassengerMessage";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="jumbotron">
+    <h3>Passenger Message List</h3>
+</div>
+<div class="row">
+    <div id="target">
+
+    </div>
+</div>
+     
+<div id="addNew" style="display:none">
+
+
+    <div class="row">
+        <div class="col-md-4">
+            <label>First Name AR</label>
+            <input type="text" id="txtFirstNameAR" name="name" value="" class="form-control" placeholder="First Name AR" title="First Name AR" />
+        </div>
+        <div class="col-md-4">
+            <label>Last Name AR</label>
+            <input type="text" id="txtLastNameAR" name="name" value="" class="form-control" placeholder="Last Name AR" title="Last Name AR" />
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4">
+            <label>First Name EN</label>
+            <input type="text" id="txtFirstNameEN" name="name" value="" class="form-control" placeholder="First Name EN" title="First Name EN" />
+        </div>
+        <div class="col-md-4">
+            <label>Last Name EN</label>
+            <input type="text" id="txtLastNameEN" name="name" value="" class="form-control" placeholder="Last Name EN" title="Last Name EN" />
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4">
+            <label>Mobile Number</label>
+            <input type="text" id="txtMobileNumber" name="name" value="" class="form-control" placeholder="Mobile Number" title="Mobile Number" />
+        </div>
+        <div class="col-md-4">
+            <label>Email Address</label>
+            <input type="text" id="txtEmailAddress" name="name" value="" class="form-control" placeholder="Email Address" title="Email Address" />
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-md-4">
+
+        </div>
+        <div class="col-md-4">
+            <input type="submit" name="Save" onclick="SavePassengerMessage()" value="Save" class="btn btn-danger" style="width:100px; margin-top:20px;" />
+        </div>
+    </div>
+</div>
+<div id="dvAddButton">
+    <input type="submit" onclick="addNewPassengerMessage();" name="name" class="btn btn-danger" value="Add New Passenger Message" />
+    <input type="submit" id="btnCancel" onclick="Cancel();" class="btn btn-danger" style="display:none" name="name" value="Cancel" />
+</div>
+<div class="row" id="grdDriver">
+    <table id="tblEntAttributes" class="table table-bordered">
+        <thead class="success">
+            <tr>
+                <th>ID</th>
+                <th>First Name AR</th>
+                <th>Last Name AR</th>
+                <th>First Name EN</th>
+                <th>Last Name EN</th>
+                <th>Mobile Number</th>
+                <th>Email Address</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody"></tbody>
+    </table>
+</div>
+<div>
+    <script>
+
+        function addNewPassengerMessage() {
+            $('#addNew').show();
+            $('#btnCancel').show();
+        }
+
+        function deletePassengerMessage(obj) {
+            $.ajax({
+                url: hostUrl + 'aptc.passng/delete/' + obj.id,
+                type: 'GET',
+                dataType: 'json',
+                success: function (data) {
+                    if (data == 'deleted') {
+                        alert('deleted successfully');
+                        getAllPassengerMessage();
+                    }
+                },
+                error: function (data) {
+                    alert(data.responseText);
+                },
+            });
+        }
+
+        var editObj = {};
+
+        function editPassengerMessage(obj) {
+            $.ajax({
+                url: hostUrl + 'aptc.passng/edit/' + obj.id,
+                type: 'GET',
+                dataType: 'json',
+                success: function (data) {
+                    //debugger;
+
+                },
+                error: function (data) {
+                    alert(data.responseText);
+                },
+            });
+        }
+
+        function Cancel() {
+            $('#addNew').hide();
+            $('#btnCancel').hide();
+        }
+
+        function getAllPassengerMessage() {
+            var strTable = ` `
+            tableBody
+            $.ajax({
+                url: hostUrl + 'aptc.passng/getall',
+                type: 'GET',
+                dataType: 'json',
+                success: function (data) {
+                    $('#tableBody').html('');
+                    for (var i = 0; i < data.length; i++) {
+                        var tblBody = '';
+                        tblBody = '<tr><td>' + data[i].PassengerMessage.id + '</td><td>' + data[i].PassengerMessage.firstNameAR + '</td><td>' + data[i].PassengerMessage.lastNameAR + '</td><td>' + data[i].PassengerMessage.firstNameEN + '</td><td>' + data[i].PassengerMessage.lastNameEN + '</td><td>' + data[i].PassengerMessage.mobileNumber + '</td><td>' + data[i].PassengerMessage.emailAddress + '</td></tr>'
+                        $("#tblEntAttributes tbody").append(tblBody);
+                    }
+                },
+                error: function (data) {
+                    alert(data.responseText);
+                },
+            });
+        }
+
+        var filePath = '';
+
+        $(function () {
+            $('#fileUpload').change(function (event) {
+                var tmppath = URL.createObjectURL(event.target.files[0]);
+                //debugger;
+                filePath = $(this).val();
+                $("img").fadeIn("fast").attr('src', URL.createObjectURL(event.target.files[0]));
+            });
+            getAllPassengerMessage();
+        });
+
+        function deletePassengerMessage(obj) {
+            $.ajax({
+                url: hostUrl + 'aptc.passng/delete/' + obj.id,
+                type: 'GET',
+                dataType: 'json',
+                success: function (data) {
+                    //debugger;
+                    if (data == 'deleted') {
+                        alert('deleted successfully');
+                        getAllPassengerMessage();
+                    }
+                },
+                error: function (data) {
+                    alert(data.responseText);
+                },
+            });
+        }
+
+        function SavePassengerMessage() {
+            var obj = {};
+            obj.firstNameAR = $("#txtFirstNameAR").val();
+            obj.lastNameAR = $("#txtLastNameAR").val();
+            obj.firstNameEN = $("#txtFirstNameEN").val();
+            obj.lastNameEN = $("#txtLastNameEN").val();
+            obj.mobileNumber = $("#txtMobileNumber").val();
+            obj.emailAddress = $("#txtEmailAddress").val();
+            $.ajax({
+                type: 'POST',
+                data: obj,
+                dataType: "json",
+                url: hostUrl + 'aptc.passng',
+                success: function (data) {
+                    alert(data);
+                },
+                error: function (errMsg) {
+                    alert(errMsg.responseText)
+                }
+            });
+        }
+    </script>
+</div>

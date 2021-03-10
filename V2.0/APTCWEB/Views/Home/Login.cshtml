@@ -1,0 +1,84 @@
+﻿@{
+    ViewBag.Title = "Create Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="jumbotron" style="padding:5px;">
+    <h3>Create Login</h3>
+</div>
+
+<div id="addNew">
+
+    <div class="row">
+        <div class="col-md-4">
+            <label><strong style="color:red">*</strong>&nbsp;User ID</label>
+            <input type="text" name="name" id="txtUserID" value="" class="form-control" placeholder="User ID" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <label><strong style="color:red">*</strong>&nbsp;Password</label>
+            <input type="text" name="name" id="txtPassword" value="" class="form-control" placeholder="Password" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <label><strong style="color:red">*</strong>&nbsp;User Type</label>
+            <input type="text" name="name" value="" id="txtUserType" class="form-control" placeholder="User Type" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <label><strong style="color:red">*</strong>&nbsp;Status</label>
+            <input type="text" name="name" value="" id="txtStatus" class="form-control" placeholder="Status" />
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <label><strong style="color:red">*</strong>&nbsp;Role</label>
+            <input type="text" name="name" value="" id="txtRole" class="form-control" placeholder="Role" />
+        </div>
+    </div>
+    <div class="row">
+            <div class="col-md-4">
+                <label><strong style="color:red">*</strong>&nbsp;Preferred Language</label>
+                <input type="text" name="name" value="" id="txtPreferredLanguage" class="form-control"  placeholder="Preferred Language"/>
+            </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <input type="submit" name="Save" onclick="SaveLogin()" value="Save" class="btn btn-danger" style="width:100px; margin-top:20px;" />
+        </div>
+    </div>
+</div>
+<script>
+    function SaveLogin()
+    {
+       
+        var loginData =
+            {
+                action:"ADD",
+                userId: $("#txtUserID").val(),
+                password: $("#txtPassword").val(),
+                type: $("#txtUserType").val(),
+                status: $("#txtStatus").val(),
+                role: $("#txtRole").val(),
+                pre_language: $("#txtPreferredLanguage").val()
+               }
+        
+            $.ajax({
+                url: hostUrl + 'aptc_login',
+                type: 'POST',
+                data: loginData,
+                dataType: 'json',
+                success: function (data) {
+                    $('#addNew').hide();
+                },
+                error: function (data) {
+                    alert(data.responseText);
+                },
+            });
+    }
+</script>
+

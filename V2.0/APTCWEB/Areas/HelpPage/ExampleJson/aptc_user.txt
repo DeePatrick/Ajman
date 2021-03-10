@@ -1,0 +1,65 @@
+﻿<strong>JSON Input<strong> <br/><br/>
+{
+  "keyID": "784123412345671",
+  "docType": "User",
+  "email": "akjs005@hotmail.com",
+  "dOB": "1980-09-12",
+  "nationality": "indian",
+  "religion": "Hindu",
+  "maritalStatus":"Singal",
+  "notes": "This is notes",
+  "gender": "Male",
+  "language": "en_US",
+  "mobNum": {
+    "countryCodeM": "+91",
+    "numM": "9312998984",
+    "areaM": "01"
+  },
+  "telNum": {
+    "countryCodeT": "+454",
+    "numT": "1234567",
+    "areaT": "05"
+  },
+  "password":"123456",
+  "mobnum":{
+ 	"countryCodeM":"+971",
+ 	"numM":"9876543211",
+ 	"areaM":"1"
+	},
+  "address": {
+    "city": "Noida",
+    "state": "UP",
+    "area": "Greater Noida",
+    "street": "sector 16 B",
+    "bldgNum": "L",
+    "flatNum": "702"
+  },
+  "fullName": {
+    "ar_SA": "",
+    "en_US": "Arvind Kumar Jaiswal"
+  },
+	"loginDetails": {
+    "lang": "en_US",
+    "emirateId": "",
+	"password":"qwer1234",
+    "department": "Front Office",
+    "roles": {
+      "PrimaryRole": "HOD",
+      "otherRoles": [
+        {
+          "name": "FO"
+        },
+        {
+          "name": "HO"
+        }
+      ]
+    }
+    }
+}
+<br/>
+<br/>
+<br/><strong>Response</strong><br/><br/>
+{"id":"individual_", "IsSuccess": "true", "message":"Successfully","statusCode":"200"}<br/>
+{"id":"", "IsSuccess": "false", "message": "143-Emirati Id is required","statusCode":"400"}<br/>
+{"id":"", "IsSuccess": "false", "message": "112-email is required","statusCode":"400"}<br/>
+

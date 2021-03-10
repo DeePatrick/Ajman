@@ -1,0 +1,21 @@
+﻿<strong>JSON Input<strong> <br/><br/>
+ {
+       
+	"action": "MOD",
+  
+	"expiryDate": "2025-07-01 00:00:00",
+
+        "hotelPickup": true,
+    
+        "id": "784-2020-9871234-9",
+  
+        "issueDate": "2015-07-01 00:00:00",
+   
+        "licenseNumber": "DE31382751"
+  
+  } 
+<br/>
+<br/>
+<br/><strong>Response</strong><br/><br/>
+{"id":"DriverLicense_784-2020-9871234-9", "IsSuccess": "true", "message":"Successfully","statusCode":"200"}<br/>
+{"id":"", "IsSuccess": "false", "message": "164-license expiry date should be breater than license issue date","statusCode":"400"}<br/>

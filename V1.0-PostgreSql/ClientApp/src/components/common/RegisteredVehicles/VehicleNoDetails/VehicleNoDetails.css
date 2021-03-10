@@ -1,0 +1,18 @@
+.register .row .right .vehicle-result {
+  background-color: #ffffff;
+  width: 100%;
+  height: 300px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.register .row .right .vehicle-result .fa-car {
+  color: #a0a0a0;
+  font-size: 2em;
+  margin-top: 100px;
+}
+
+.register .row .right .vehicle-result p {
+  color: #a0a0a0;
+  font-size: 0.8em;
+}

@@ -1,0 +1,31 @@
+﻿<strong>JSON Input<strong> <br/><br/>
+{
+        "lang":"en_US",
+	"docType":"company",
+	
+	"labels":
+	{
+		"code":1,
+		"value":"E-mail"
+	},
+	"messages":
+	{
+		"code":1,
+		"value":"Please enter the email id"
+	},
+	"buttons":
+	{
+		"code":1,
+		"value":"Save"
+	},
+	"help":
+	{
+		"code":1,
+		"value":"Enter the email id"
+	}
+}
+<br/>
+<br/><strong>Response</strong><br/><br/>
+{"id":"fnctn_21345", "IsSuccess": "true", "message":"Successfully","statusCode":"200"}<br/>
+{"id":"", "IsSuccess": "false", "message": "192-code is required","statusCode":"400"}<br/>
+

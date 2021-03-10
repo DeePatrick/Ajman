@@ -1,0 +1,39 @@
+.nav-tabs > li > a:hover {
+    background-color: #9f8866;
+    color: #ffffff;
+    border-radius: 4px 4px 0px 0px !important;
+}
+
+.nav-tabs a.nav-link.active:hover {
+    border-radius: 4px 4px 0px 0px !important;
+}
+
+.search-well {
+  padding-top: 11px;
+  padding-bottom: 45px;
+  font-size: 16px;
+  color: #555;
+}
+
+
+.enquiry {
+  -webkit-box-shadow: 0px 0px 0px 0px rgba(170, 170, 170, 1);
+  box-shadow: 0px 0px 0px 0px rgba(170, 170, 170, 1);
+  -webkit-user-select: none;
+}
+
+
+.btn-enquiry {
+  color: #fff;
+  background-color: #9f8865;
+  border-color: #9f8865;
+  padding-left: 12px;
+  padding-right: 12px;
+  border-radius: 5px;
+  float:right;
+}
+
+.enquiry-text {
+  margin-left: -10px;
+  margin-top: 10px;
+}

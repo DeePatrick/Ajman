@@ -1,0 +1,9 @@
+﻿<strong>JSON Input<strong> <br/><br/>
+{
+	"status":false,
+	"rejReas":"rejReas_1"
+}
+<br/>
+<br/><strong>Response</strong><br/><br/>
+{"id":"DOCIN_21345", "IsSuccess": "true", "message":"DOCIN_21345 has been updated Successfully","statusCode":"200"}<br/>
+{"id":"", "IsSuccess": "false", "message": "193-rejection reason is required","statusCode":"400"}

@@ -1,0 +1,17 @@
+﻿<strong>JSON Input<strong> <br/><br/>
+{
+  "roleID": "TaxiDriver",
+  "link": {
+    "linkID": "L001",
+    "name": "QLC",
+    "type": "SSE"
+  }
+}
+
+<br/>
+<br/>
+<br/><strong>Response</strong><br/><br/>
+{"id":"TaxiDriver has been added sucessfully", "IsSuccess": "true", "message":"Successfully","statusCode":"200"}<br/>
+{"id":"", "IsSuccess": "false", "message": "TaxiDriver already exists","statusCode":"409"}<br/>
+
+

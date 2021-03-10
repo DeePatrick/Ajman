@@ -1,0 +1,52 @@
+.register .fa-car {
+  color: #9f8865;
+}
+
+.register .row h4 {
+  color: #9f8865;
+  font-weight: bolder;
+  font-size: 1em;
+  margin-left: 10px;
+}
+
+.register .row .register-vehicle-button {
+  background-color:#9f8865;
+  color: white;
+  font-size: 0.6em;
+  height: 2.5em;
+  padding: 0.6em 1.5em 0.5em 1.5em;
+  margin-left: 3px;
+  margin-top: -3px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* LEFT COLUMN */
+.register .row .left {
+  /* background-color: red; */
+  padding: 5px;
+}
+
+.register .row .left .list ul {
+  background-color:#ffffff;
+  border-radius: 5px;
+  padding: 15px;
+  /* margin-left: -15px; */
+}
+
+/* LEFT COLUMN */
+
+/* RIGHT COLUMN */
+
+.register .row .right {
+  /* background-color: blue; */
+  height: 500px;
+  padding: 5px;
+}
+
+
+/* WITH DETAILS */
+
+
+/* RIGHT COLUMN */

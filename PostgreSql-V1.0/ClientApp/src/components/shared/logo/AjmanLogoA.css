@@ -1,0 +1,73 @@
+/*svg starts*/
+
+/*svg icon starts*/
+
+.cls-1 {
+  /* fill: #9f8865; */
+  fill: #ffffff;
+}
+
+.cls-2 {
+  /* fill: #606060; */
+  fill: #ffffff;
+}
+
+/*svg icon ends*/
+
+/*svg background starts*/
+
+.st0 {
+  fill: #83AED9;
+}
+
+.st1 {
+  fill: #EFEFEF;
+}
+
+.st2 {
+  fill: #BFBBBA;
+}
+
+.st3 {
+  fill: #A25541;
+}
+
+.st4 {
+  fill: #619530;
+}
+
+.cls-8 {
+  fill: #b9d6ed;
+}
+
+.cls-9,
+.cls-3,
+.cls-4 {
+  fill: #efefef;
+}
+
+.cls-3 {
+  opacity: 0.3;
+}
+
+.cls-4 {
+  opacity: 0.6;
+}
+
+.cls-5 {
+  fill: #969595;
+}
+
+.cls-6 {
+  fill: #a25541;
+}
+
+.cls-7 {
+  fill: #619530;
+}
+
+/*svg background ends*/
+
+polygon {
+  stroke: #ffffff;
+}

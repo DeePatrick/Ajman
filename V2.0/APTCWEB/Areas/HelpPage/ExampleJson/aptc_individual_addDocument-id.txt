@@ -1,0 +1,16 @@
+﻿<strong>JSON Input<strong> <br/><br/>
+{
+  "documentID": "passport",
+  "documentValue":"test",
+  "version":"1",
+  "number":"GH632748",
+  "expiryDate":"2028-05-28",
+  "status":"Active"
+}
+<br/>
+<br/>
+<br/><strong>Response</strong><br/><br/>
+{"id":"passport has been added sucessfully", "IsSuccess": "true", "message":"Successfully","statusCode":"200"}<br/>
+{"id":"", "IsSuccess": "false", "message": "passport already exists","statusCode":"409"}<br/>
+
+

@@ -1,0 +1,2843 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="fleettestlive.cartrackme.com/api/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns="http://schemas.xmlsoap.org/wsdl/" targetNamespace="fleettestlive.cartrackme.com/api/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="fleettestlive.cartrackme.com/api/">
+      <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <xsd:import namespace="http://schemas.xmlsoap.org/wsdl/" />
+      <xsd:complexType name="create_driverResultType0Row">
+        <xsd:all>
+          <xsd:element name="client_driver_id" type="xsd:integer" />
+          <xsd:element name="driver_state" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="create_driverResultType0">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute wsdl:arrayType="tns:create_driverResultType0Row[]" ref="SOAP-ENC:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="create_geofenceResultType0Row">
+        <xsd:all>
+          <xsd:element name="out_geofence_id" type="xsd:string" />
+          <xsd:element name="out_success" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="create_geofenceResultType0">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute wsdl:arrayType="tns:create_geofenceResultType0Row[]" ref="SOAP-ENC:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="create_geofencegroup_alertResultType0Row">
+        <xsd:all>
+          <xsd:element name="out_msg" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="create_geofencegroup_alertResultType0">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute wsdl:arrayType="tns:create_geofencegroup_alertResultType0Row[]" ref="SOAP-ENC:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="create_geofencegroup_alert_by_contact_typeResultType0Row">
+        <xsd:all>
+          <xsd:element name="out_msg" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="create_geofencegroup_alert_by_contact_typeResultType0">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute wsdl:arrayType="tns:create_geofencegroup_alert_by_contact_typeResultType0Row[]" ref="SOAP-ENC:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="create_geofencegrouplist_alertResultType0Row">
+        <xsd:all>
+          <xsd:element name="out_msg" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="create_geofencegrouplist_alertResultType0">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute wsdl:arrayType="tns:create_geofencegrouplist_alertResultType0Row[]" ref="SOAP-ENC:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="create_messageResultType0Row">
+        <xsd:all>
+          <xsd:element name="ref" type="xsd:string" />
+          <xsd:element name="message" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="create_messageResultType0">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute wsdl:arrayType="tns:create_messageResultType0Row[]" ref="SOAP-ENC:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="create_reportResultType0Row">
+        <xsd:all>
+          <xsd:element name="result" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="create_reportResultType0">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute wsdl:arrayType="tns:create_reportResultType0Row[]" ref="SOAP-ENC:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="create_taskResultType0Row">
+        <xsd:all>
+          <xsd:element name="task_id" type="xsd:integer" />
+          <xsd:element name="task_state" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="create_taskResultType0">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute wsdl:arrayType="tns:create_taskResultType0Row[]" ref="SOAP-ENC:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="create_task_destinationResultType0Row">
+        <xsd:all>
+          <xsd:element name="destination_id" type="xsd:integer" />
+          <xsd:element name="destination_state" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="create_task_destinationResultType0">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute wsdl:arrayType="tns:create_task_destinationResultType0Row[]" ref="SOAP-ENC:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="create_task_stepResultType0Row">
+        <xsd:all>
+          <xsd:element name="task_step_state" type="xsd:integer" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="create_task_stepResultType0">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute wsdl:arrayType="tns:create_task_stepResultType0Row[]" ref="SOAP-ENC:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="get_LCST00001_vehicle_localResultType0Row">
+        <xsd:all>
+          <xsd:element name="vehicle_id" type="xsd:int" />
+          <xsd:element name="event_ts" type="xsd:dateTime" />
+          <xsd:element name="registration" type="xsd:string" />
+          <xsd:element name="driver" type="xsd:string" />
+          <xsd:element name="fuel_consumption" type="xsd:int" />
+          <xsd:element name="latitude" type="xsd:double" />
+          <xsd:element name="longitude" type="xsd:double" />
+          <xsd:element name="speed" type="xsd:int" />
+          <xsd:element name="position_descripition" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="get_LCST00001_vehicle_localResultType0">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute wsdl:arrayType="tns:get_LCST00001_vehicle_localResultType0Row[]" ref="SOAP-ENC:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="get_all_tripsResultType0Row">
+        <xsd:all>
+          <xsd:element name="vehicle_id" type="xsd:decimal" />
+          <xsd:element name="start_timestamp" type="xsd:string" />
+          <xsd:element name="end_timestamp" type="xsd:string" />
+          <xsd:element name="start_location" type="xsd:string" />
+          <xsd:element name="end_location" type="xsd:string" />
+          <xsd:element name="trip_distance" type="xsd:decimal" />
+          <xsd:element name="trip_time" type="xsd:string" />
+          <xsd:element name="registration" type="xsd:string" />
+          <xsd:element name="driver_id" type="xsd:string" />
+          <xsd:element name="driver" type="xsd:string" />
+          <xsd:element name="driver_id_number" type="xsd:string" />
+          <xsd:element name="client_vehicle_description" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="get_all_tripsResultType0">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute wsdl:arrayType="tns:get_all_tripsResultType0Row[]" ref="SOAP-ENC:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="get_all_vehicles_last_positionsResultType0Row">
+        <xsd:all>
+          <xsd:element name="o_registration" type="xsd:string" />
+          <xsd:element name="o_event_ts" type="xsd:string" />
+          <xsd:element name="o_ignition" type="xsd:decimal" />
+          <xsd:element name="o_bearing" type="xsd:decimal" />
+          <xsd:element name="o_latitude" type="xsd:decimal" />
+          <xsd:element name="o_longitude" type="xsd:decimal" />
+          <xsd:element name="o_speed" type="xsd:decimal" />
+          <xsd:element name="o_odometer" type="xsd:decimal" />
+          <xsd:element name="o_position_description" type="xsd:string" />
+          <xsd:element name="o_identification_tag" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="get_all_vehicles_last_positionsResultType0">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute wsdl:arrayType="tns:get_all_vehicles_last_positionsResultType0Row[]" ref="SOAP-ENC:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="get_communicatorsResultType0Row">
+        <xsd:all>
+          <xsd:element name="terminal_serial" type="xsd:string" />
+          <xsd:element name="active" type="xsd:integer" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="get_communicatorsResultType0">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute wsdl:arrayType="tns:get_communicatorsResultType0Row[]" ref="SOAP-ENC:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="get_customer_dataResultType0Row">
+        <xsd:all>
+          <xsd:element name="message_id" type="xsd:integer" />
+          <xsd:element name="terminal_serial" type="xsd:string" />
+          <xsd:element name="timestamp" type="xsd:string" />
+          <xsd:element name="message_body" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="get_customer_dataResultType0">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute wsdl:arrayType="tns:get_customer_dataResultType0Row[]" ref="SOAP-ENC:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="get_destination_bycontactResultType0Row">
+        <xsd:all>
+          <xsd:element name="task_destination_id" type="xsd:integer" />
+          <xsd:element name="sub_client_id" type="xsd:integer" />
+          <xsd:element name="country" type="xsd:string" />
+          <xsd:element name="suburb" type="xsd:string" />
+          <xsd:element name="street" type="xsd:integer" />
+          <xsd:element name="street_number" type="xsd:string" />
+          <xsd:element name="contact_person" type="xsd:string" />
+          <xsd:element name="contact_number" type="xsd:string" />
+          <xsd:element name="contact_email" type="xsd:string" />
+          <xsd:element name="lat" type="xsd:decimal" />
+          <xsd:element name="lon" type="xsd:decimal" />
+          <xsd:element name="task_destination_type_id" type="xsd:integer" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="get_destination_bycontactResultType0">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute wsdl:arrayType="tns:get_destination_bycontactResultType0Row[]" ref="SOAP-ENC:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="get_destination_bystreetResultType0Row">
+        <xsd:all>
+          <xsd:element name="task_destination_id" type="xsd:integer" />
+          <xsd:element name="sub_client_id" type="xsd:integer" />
+          <xsd:element name="country" type="xsd:string" />
+          <xsd:element name="suburb" type="xsd:string" />
+          <xsd:element name="street" type="xsd:integer" />
+          <xsd:element name="street_number" type="xsd:string" />
+          <xsd:element name="contact_person" type="xsd:string" />
+          <xsd:element name="contact_number" type="xsd:string" />
+          <xsd:element name="contact_email" type="xsd:string" />
+          <xsd:element name="lat" type="xsd:decimal" />
+          <xsd:element name="lon" type="xsd:decimal" />
+          <xsd:element name="task_destination_type_id" type="xsd:integer" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="get_destination_bystreetResultType0">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute wsdl:arrayType="tns:get_destination_bystreetResultType0Row[]" ref="SOAP-ENC:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="get_destination_bysuburbResultType0Row">
+        <xsd:all>
+          <xsd:element name="task_destination_id" type="xsd:integer" />
+          <xsd:element name="sub_client_id" type="xsd:integer" />
+          <xsd:element name="country" type="xsd:string" />
+          <xsd:element name="suburb" type="xsd:string" />
+          <xsd:element name="street" type="xsd:integer" />
+          <xsd:element name="street_number" type="xsd:string" />
+          <xsd:element name="contact_person" type="xsd:string" />
+          <xsd:element name="contact_number" type="xsd:string" />
+          <xsd:element name="contact_email" type="xsd:string" />
+          <xsd:element name="lat" type="xsd:decimal" />
+          <xsd:element name="lon" type="xsd:decimal" />
+          <xsd:element name="task_destination_type_id" type="xsd:integer" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="get_destination_bysuburbResultType0">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute wsdl:arrayType="tns:get_destination_bysuburbResultType0Row[]" ref="SOAP-ENC:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="get_destinationlistResultType0Row">
+        <xsd:all>
+          <xsd:element name="task_destination_id" type="xsd:integer" />
+          <xsd:element name="sub_client_id" type="xsd:integer" />
+          <xsd:element name="country" type="xsd:string" />
+          <xsd:element name="suburb" type="xsd:string" />
+          <xsd:element name="street" type="xsd:integer" />
+          <xsd:element name="street_number" type="xsd:string" />
+          <xsd:element name="contact_person" type="xsd:string" />
+          <xsd:element name="contact_number" type="xsd:string" />
+          <xsd:element name="contact_email" type="xsd:string" />
+          <xsd:element name="lat" type="xsd:decimal" />
+          <xsd:element name="lon" type="xsd:decimal" />
+          <xsd:element name="task_destination_type_id" type="xsd:integer" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="get_destinationlistResultType0">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute wsdl:arrayType="tns:get_destinationlistResultType0Row[]" ref="SOAP-ENC:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="get_directionsResultType0Row">
+        <xsd:all>
+          <xsd:element name="route_id" type="xsd:string" />
+          <xsd:element name="description" type="xsd:string" />
+          <xsd:element name="distance" type="xsd:string" />
+          <xsd:element name="minutes" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="get_directionsResultType0">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute wsdl:arrayType="tns:get_directionsResultType0Row[]" ref="SOAP-ENC:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="get_driverResultType0Row">
+        <xsd:all>
+          <xsd:element name="client_driver_id" type="xsd:string" />
+          <xsd:element name="user_id" type="xsd:string" />
+          <xsd:element name="driver_name" type="xsd:string" />
+          <xsd:element name="id_number" type="xsd:string" />
+          <xsd:element name="gender" type="xsd:string" />
+          <xsd:element name="cell_number" type="xsd:string" />
+          <xsd:element name="license_number" type="xsd:string" />
+          <xsd:element name="license_driver_restrictions" type="xsd:string" />
+          <xsd:element name="license_vehicle_restrictions" type="xsd:string" />
+          <xsd:element name="license_valid_start" type="xsd:string" />
+          <xsd:element name="license_valid_end" type="xsd:string" />
+          <xsd:element name="license_code" type="xsd:string" />
+          <xsd:element name="license_first_issue_date" type="xsd:string" />
+          <xsd:element name="license_issued_country" type="xsd:string" />
+          <xsd:element name="license_points" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="get_driverResultType0">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute wsdl:arrayType="tns:get_driverResultType0Row[]" ref="SOAP-ENC:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="get_driver_loginResultType0Row">
+        <xsd:all>
+          <xsd:element name="result" type="xsd:string" />
+          <xsd:element name="driver_id" type="xsd:string" />
+          <xsd:element name="driver_name" type="xsd:string" />
+          <xsd:element name="registration" type="xsd:string" />
+          <xsd:element name="user_name" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="get_driver_loginResultType0">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute wsdl:arrayType="tns:get_driver_loginResultType0Row[]" ref="SOAP-ENC:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="get_driver_password_resetResultType0Row">
+        <xsd:all>
+          <xsd:element name="result" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="get_driver_password_resetResultType0">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute wsdl:arrayType="tns:get_driver_password_resetResultType0Row[]" ref="SOAP-ENC:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="get_driver_privacy_modeResultType0Row">
+        <xsd:all>
+          <xsd:element name="result" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="get_driver_privacy_modeResultType0">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute wsdl:arrayType="tns:get_driver_privacy_modeResultType0Row[]" ref="SOAP-ENC:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="get_driver_vehiclesResultType0Row">
+        <xsd:all>
+          <xsd:element name="manufacturer" type="xsd:string" />
+          <xsd:element name="model" type="xsd:string" />
+          <xsd:element name="modelyear" type="xsd:string" />
+          <xsd:element name="registration" type="xsd:string" />
+          <xsd:element name="terminal_serial" type="xsd:string" />
+          <xsd:element name="colour" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="get_driver_vehiclesResultType0">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute wsdl:arrayType="tns:get_driver_vehiclesResultType0Row[]" ref="SOAP-ENC:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="get_driverlistResultType0Row">
+        <xsd:all>
+          <xsd:element name="client_driver_id" type="xsd:string" />
+          <xsd:element name="user_id" type="xsd:integer" />
+          <xsd:element name="driver_name" type="xsd:string" />
+          <xsd:element name="id_number" type="xsd:string" />
+          <xsd:element name="gender" type="xsd:integer" />
+          <xsd:element name="cell_number" type="xsd:string" />
+          <xsd:element name="license_number" type="xsd:string" />
+          <xsd:element name="license_driver_restrictions" type="xsd:string" />
+          <xsd:element name="license_vehicle_restrictions" type="xsd:string" />
+          <xsd:element name="license_valid_start" type="xsd:string" />
+          <xsd:element name="license_valid_end" type="xsd:string" />
+          <xsd:element name="license_code" type="xsd:string" />
+          <xsd:element name="license_first_issue_date" type="xsd:string" />
+          <xsd:element name="license_issued_country" type="xsd:string" />
+          <xsd:element name="license_points" type="xsd:integer" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="get_driverlistResultType0">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute wsdl:arrayType="tns:get_driverlistResultType0Row[]" ref="SOAP-ENC:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="get_drivers_detail_per_vehicleResultType0Row">
+        <xsd:all>
+          <xsd:element name="driver_name" type="xsd:string" />
+          <xsd:element name="id_number" type="xsd:string" />
+          <xsd:element name="cell_number" type="xsd:string" />
+          <xsd:element name="license_code" type="xsd:string" />
+          <xsd:element name="license_driver_restrictions" type="xsd:string" />
+          <xsd:element name="license_points" type="xsd:string" />
+          <xsd:element name="license_valid_end" type="xsd:string" />
+          <xsd:element name="client_driver_id" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="get_drivers_detail_per_vehicleResultType0">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute wsdl:arrayType="tns:get_drivers_detail_per_vehicleResultType0Row[]" ref="SOAP-ENC:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="get_fuel_fillsResultType0Row">
+        <xsd:all>
+          <xsd:element name="registration" type="xsd:string" />
+          <xsd:element name="vehicle_description" type="xsd:string" />
+          <xsd:element name="fill_amount_litrs" type="xsd:decimal" />
+          <xsd:element name="fill_timestamp" type="xsd:string" />
+          <xsd:element name="fill_location" type="xsd:string" />
+          <xsd:element name="fill_odometer" type="xsd:decimal" />
+          <xsd:element name="latitude" type="xsd:decimal" />
+          <xsd:element name="longitude" type="xsd:decimal" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="get_fuel_fillsResultType0">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute wsdl:arrayType="tns:get_fuel_fillsResultType0Row[]" ref="SOAP-ENC:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="get_geofenceResultType0Row">
+        <xsd:all>
+          <xsd:element name="out_geofence_id" type="xsd:string" />
+          <xsd:element name="out_geofence_name" type="xsd:string" />
+          <xsd:element name="out_geofence_desc" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="get_geofenceResultType0">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute wsdl:arrayType="tns:get_geofenceResultType0Row[]" ref="SOAP-ENC:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="get_geofence_visitsResultType0Row">
+        <xsd:all>
+          <xsd:element name="o_registration" type="xsd:string" />
+          <xsd:element name="o_make" type="xsd:string" />
+          <xsd:element name="o_driver" type="xsd:string" />
+          <xsd:element name="o_geofence_name" type="xsd:string" />
+          <xsd:element name="o_enter_ts" type="xsd:string" />
+          <xsd:element name="o_leave_ts" type="xsd:string" />
+          <xsd:element name="o_visit_duration" type="xsd:decimal" />
+          <xsd:element name="o_enter_odo" type="xsd:decimal" />
+          <xsd:element name="o_leave_odo" type="xsd:decimal" />
+          <xsd:element name="o_visit_distance" type="xsd:decimal" />
+          <xsd:element name="o_client_vehicle_description" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="get_geofence_visitsResultType0">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute wsdl:arrayType="tns:get_geofence_visitsResultType0Row[]" ref="SOAP-ENC:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="get_geofence_visits_by_idResultType0Row">
+        <xsd:all>
+          <xsd:element name="o_registration" type="xsd:string" />
+          <xsd:element name="o_make" type="xsd:string" />
+          <xsd:element name="o_driver" type="xsd:string" />
+          <xsd:element name="o_geofence_id" type="xsd:string" />
+          <xsd:element name="o_geofence_name" type="xsd:string" />
+          <xsd:element name="o_geofence_desc" type="xsd:string" />
+          <xsd:element name="o_enter_ts" type="xsd:string" />
+          <xsd:element name="o_leave_ts" type="xsd:string" />
+          <xsd:element name="o_visit_duration" type="xsd:string" />
+          <xsd:element name="o_enter_odo" type="xsd:string" />
+          <xsd:element name="o_leave_odo" type="xsd:string" />
+          <xsd:element name="o_visit_distance" type="xsd:string" />
+          <xsd:element name="o_client_vehicle_description" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="get_geofence_visits_by_idResultType0">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute wsdl:arrayType="tns:get_geofence_visits_by_idResultType0Row[]" ref="SOAP-ENC:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="get_message_stateResultType0Row">
+        <xsd:all>
+          <xsd:element name="state" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="get_message_stateResultType0">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute wsdl:arrayType="tns:get_message_stateResultType0Row[]" ref="SOAP-ENC:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="get_messagesResultType0Row">
+        <xsd:all>
+          <xsd:element name="message_id" type="xsd:string" />
+          <xsd:element name="terminal_serial" type="xsd:string" />
+          <xsd:element name="message_body" type="xsd:string" />
+          <xsd:element name="message_state" type="xsd:string" />
+          <xsd:element name="timestamp" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="get_messagesResultType0">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute wsdl:arrayType="tns:get_messagesResultType0Row[]" ref="SOAP-ENC:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="get_messages_afterResultType0Row">
+        <xsd:all>
+          <xsd:element name="message_id" type="xsd:string" />
+          <xsd:element name="terminal_serial" type="xsd:string" />
+          <xsd:element name="message_body" type="xsd:string" />
+          <xsd:element name="message_state" type="xsd:string" />
+          <xsd:element name="timestamp" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="get_messages_afterResultType0">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute wsdl:arrayType="tns:get_messages_afterResultType0Row[]" ref="SOAP-ENC:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="get_nearest_cornerResultType0Row">
+        <xsd:all>
+          <xsd:element name="road_x1" type="xsd:string" />
+          <xsd:element name="road_x2" type="xsd:string" />
+          <xsd:element name="x1" type="xsd:string" />
+          <xsd:element name="y1" type="xsd:string" />
+          <xsd:element name="st_distance" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="get_nearest_cornerResultType0">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute wsdl:arrayType="tns:get_nearest_cornerResultType0Row[]" ref="SOAP-ENC:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="get_notification_eventsResultType0Row">
+        <xsd:all>
+          <xsd:element name="registration" type="xsd:string" />
+          <xsd:element name="terminal_serial" type="xsd:string" />
+          <xsd:element name="geofence_id" type="xsd:string" />
+          <xsd:element name="geofence_name" type="xsd:string" />
+          <xsd:element name="geofence_desc" type="xsd:string" />
+          <xsd:element name="event_ts" type="xsd:string" />
+          <xsd:element name="create_ts" type="xsd:string" />
+          <xsd:element name="contact_description" type="xsd:string" />
+          <xsd:element name="notification_msg" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="get_notification_eventsResultType0">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute wsdl:arrayType="tns:get_notification_eventsResultType0Row[]" ref="SOAP-ENC:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="get_odo_differenceResultType0Row">
+        <xsd:all>
+          <xsd:element name="o_registration" type="xsd:string" />
+          <xsd:element name="o_odo_diff" type="xsd:decimal" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="get_odo_differenceResultType0">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute wsdl:arrayType="tns:get_odo_differenceResultType0Row[]" ref="SOAP-ENC:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="get_poiResultType0Row">
+        <xsd:all>
+          <xsd:element name="label" type="xsd:string" />
+          <xsd:element name="point_type_id" type="xsd:string" />
+          <xsd:element name="description" type="xsd:string" />
+          <xsd:element name="category" type="xsd:string" />
+          <xsd:element name="distance" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="get_poiResultType0">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute wsdl:arrayType="tns:get_poiResultType0Row[]" ref="SOAP-ENC:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="get_poi_status_action_joinResultType0Row">
+        <xsd:all>
+          <xsd:element name="o_poi_status_id" type="xsd:string" />
+          <xsd:element name="o_status_group_name" type="xsd:string" />
+          <xsd:element name="o_action_name" type="xsd:string" />
+          <xsd:element name="o_user_name" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="get_poi_status_action_joinResultType0">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute wsdl:arrayType="tns:get_poi_status_action_joinResultType0Row[]" ref="SOAP-ENC:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="get_predefined_messagesResultType0Row">
+        <xsd:all>
+          <xsd:element name="message_offset" type="xsd:string" />
+          <xsd:element name="message_text" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="get_predefined_messagesResultType0">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute wsdl:arrayType="tns:get_predefined_messagesResultType0Row[]" ref="SOAP-ENC:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="get_registration_last_positionResultType0Row">
+        <xsd:all>
+          <xsd:element name="out_event_ts" type="xsd:string" />
+          <xsd:element name="out_lat" type="xsd:double" />
+          <xsd:element name="out_lon" type="xsd:double" />
+          <xsd:element name="out_speed" type="xsd:string" />
+          <xsd:element name="out_bearing" type="xsd:string" />
+          <xsd:element name="out_position_description" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="get_registration_last_positionResultType0">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute wsdl:arrayType="tns:get_registration_last_positionResultType0Row[]" ref="SOAP-ENC:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="get_simple_routeResultType0Row">
+        <xsd:all>
+          <xsd:element name="o_registration" type="xsd:string" />
+          <xsd:element name="o_driver_tag" type="xsd:decimal" />
+          <xsd:element name="o_event_ts" type="xsd:string" />
+          <xsd:element name="o_event_location" type="xsd:string" />
+          <xsd:element name="o_latitude" type="xsd:decimal" />
+          <xsd:element name="o_longitude" type="xsd:decimal" />
+          <xsd:element name="o_ignition" type="xsd:decimal" />
+          <xsd:element name="o_odometer" type="xsd:decimal" />
+          <xsd:element name="o_speed" type="xsd:decimal" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="get_simple_routeResultType0">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute wsdl:arrayType="tns:get_simple_routeResultType0Row[]" ref="SOAP-ENC:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="get_single_vehicle_eventsResultType0Row">
+        <xsd:all>
+          <xsd:element name="result_vehicle_id" type="xsd:string" />
+          <xsd:element name="result_registration" type="xsd:string" />
+          <xsd:element name="result_event_ts" type="xsd:string" />
+          <xsd:element name="result_driver" type="xsd:string" />
+          <xsd:element name="result_latitude" type="xsd:string" />
+          <xsd:element name="result_longitude" type="xsd:string" />
+          <xsd:element name="result_speed" type="xsd:string" />
+          <xsd:element name="result_event_description" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="get_single_vehicle_eventsResultType0">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute wsdl:arrayType="tns:get_single_vehicle_eventsResultType0Row[]" ref="SOAP-ENC:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="get_task_dataResultType0Row">
+        <xsd:all>
+          <xsd:element name="task_id" type="xsd:integer" />
+          <xsd:element name="task_text" type="xsd:string" />
+          <xsd:element name="create_ts" type="xsd:string" />
+          <xsd:element name="scheduled_arrival_ts" type="xsd:string" />
+          <xsd:element name="task_notification" type="xsd:string" />
+          <xsd:element name="task_state" type="xsd:string" />
+          <xsd:element name="task_completion" type="xsd:string" />
+          <xsd:element name="order_id" type="xsd:string" />
+          <xsd:element name="task_type" type="xsd:string" />
+          <xsd:element name="third_party_ref" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="get_task_dataResultType0">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute wsdl:arrayType="tns:get_task_dataResultType0Row[]" ref="SOAP-ENC:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="get_task_step_typesResultType0Row">
+        <xsd:all>
+          <xsd:element name="task_step_type_id" type="xsd:integer" />
+          <xsd:element name="sub_client_id" type="xsd:integer" />
+          <xsd:element name="description" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="get_task_step_typesResultType0">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute wsdl:arrayType="tns:get_task_step_typesResultType0Row[]" ref="SOAP-ENC:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="get_task_stepsResultType0Row">
+        <xsd:all>
+          <xsd:element name="task_step_number" type="xsd:integer" />
+          <xsd:element name="customer_id" type="xsd:integer" />
+          <xsd:element name="task_step_type_id" type="xsd:integer" />
+          <xsd:element name="task_step_text" type="xsd:string" />
+          <xsd:element name="task_step_state_id" type="xsd:integer" />
+          <xsd:element name="scheduled_arrival_ts" type="xsd:string" />
+          <xsd:element name="task_step_type_text" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="get_task_stepsResultType0">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute wsdl:arrayType="tns:get_task_stepsResultType0Row[]" ref="SOAP-ENC:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="get_task_typesResultType0Row">
+        <xsd:all>
+          <xsd:element name="task_type_id" type="xsd:integer" />
+          <xsd:element name="sub_client_id" type="xsd:integer" />
+          <xsd:element name="description" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="get_task_typesResultType0">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute wsdl:arrayType="tns:get_task_typesResultType0Row[]" ref="SOAP-ENC:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="get_user_alertsResultType0Row">
+        <xsd:all>
+          <xsd:element name="trigger_description" type="xsd:string" />
+          <xsd:element name="event_ts" type="xsd:string" />
+          <xsd:element name="type" type="xsd:string" />
+          <xsd:element name="message" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="get_user_alertsResultType0">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute wsdl:arrayType="tns:get_user_alertsResultType0Row[]" ref="SOAP-ENC:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="get_vehicleResultType0Row">
+        <xsd:all>
+          <xsd:element name="user_name" type="xsd:string" />
+          <xsd:element name="terminal_serial" type="xsd:string" />
+          <xsd:element name="registration" type="xsd:string" />
+          <xsd:element name="manufacturer" type="xsd:string" />
+          <xsd:element name="model" type="xsd:string" />
+          <xsd:element name="colour" type="xsd:string" />
+          <xsd:element name="modelyear" type="xsd:string" />
+          <xsd:element name="create_ts" type="xsd:string" />
+          <xsd:element name="update_ts" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="get_vehicleResultType0">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute wsdl:arrayType="tns:get_vehicleResultType0Row[]" ref="SOAP-ENC:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="get_vehicle_alertsResultType0Row">
+        <xsd:all>
+          <xsd:element name="trigger_description" type="xsd:string" />
+          <xsd:element name="event_ts" type="xsd:string" />
+          <xsd:element name="type" type="xsd:string" />
+          <xsd:element name="message" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="get_vehicle_alertsResultType0">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute wsdl:arrayType="tns:get_vehicle_alertsResultType0Row[]" ref="SOAP-ENC:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="get_vehicle_detailed_eventResultType0Row">
+        <xsd:all>
+          <xsd:element name="id" type="xsd:decimal" />
+          <xsd:element name="registration" type="xsd:string" />
+          <xsd:element name="event_ts" type="xsd:string" />
+          <xsd:element name="event_description" type="xsd:string" />
+          <xsd:element name="longitude" type="xsd:decimal" />
+          <xsd:element name="latitude" type="xsd:decimal" />
+          <xsd:element name="odometer" type="xsd:decimal" />
+          <xsd:element name="bearing" type="xsd:decimal" />
+          <xsd:element name="ignition" type="xsd:string" />
+          <xsd:element name="speed" type="xsd:decimal" />
+          <xsd:element name="mapzone" type="xsd:string" />
+          <xsd:element name="temp1" type="xsd:decimal" />
+          <xsd:element name="temp2" type="xsd:decimal" />
+          <xsd:element name="temp3" type="xsd:decimal" />
+          <xsd:element name="temp4" type="xsd:decimal" />
+          <xsd:element name="door1_status" type="xsd:string" />
+          <xsd:element name="door2_status" type="xsd:string" />
+          <xsd:element name="received_ts" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="get_vehicle_detailed_eventResultType0">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute wsdl:arrayType="tns:get_vehicle_detailed_eventResultType0Row[]" ref="SOAP-ENC:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="get_vehicle_detailsResultType0Row">
+        <xsd:all>
+          <xsd:element name="out_vehicle_id" type="xsd:string" />
+          <xsd:element name="out_registration" type="xsd:string" />
+          <xsd:element name="out_terminal_serial" type="xsd:string" />
+          <xsd:element name="out_manufacturer" type="xsd:string" />
+          <xsd:element name="out_model" type="xsd:string" />
+          <xsd:element name="out_colour" type="xsd:string" />
+          <xsd:element name="out_modelyear" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="get_vehicle_detailsResultType0">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute wsdl:arrayType="tns:get_vehicle_detailsResultType0Row[]" ref="SOAP-ENC:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="get_vehicle_driversResultType0Row">
+        <xsd:all>
+          <xsd:element name="driver_name" type="xsd:string" />
+          <xsd:element name="id_number" type="xsd:string" />
+          <xsd:element name="cell_number" type="xsd:string" />
+          <xsd:element name="license_code" type="xsd:string" />
+          <xsd:element name="license_driver_restrictions" type="xsd:string" />
+          <xsd:element name="license_points" type="xsd:string" />
+          <xsd:element name="license_valid_end" type="xsd:string" />
+          <xsd:element name="client_driver_id" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="get_vehicle_driversResultType0">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute wsdl:arrayType="tns:get_vehicle_driversResultType0Row[]" ref="SOAP-ENC:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="get_vehicle_eventsResultType0Row">
+        <xsd:all>
+          <xsd:element name="event_ts" type="xsd:string" />
+          <xsd:element name="event_desc" type="xsd:string" />
+          <xsd:element name="speed" type="xsd:string" />
+          <xsd:element name="bearing" type="xsd:string" />
+          <xsd:element name="latitude" type="xsd:string" />
+          <xsd:element name="longitude" type="xsd:string" />
+          <xsd:element name="gps_fix_type" type="xsd:string" />
+          <xsd:element name="ignition" type="xsd:string" />
+          <xsd:element name="road_name" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="get_vehicle_eventsResultType0">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute wsdl:arrayType="tns:get_vehicle_eventsResultType0Row[]" ref="SOAP-ENC:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="get_vehicle_fuelResultType0Row">
+        <xsd:all>
+          <xsd:element name="out_vehicle_id" type="xsd:integer" />
+          <xsd:element name="out_value" type="xsd:decimal" />
+          <xsd:element name="out_odometer" type="xsd:integer" />
+          <xsd:element name="out_latitude" type="xsd:decimal" />
+          <xsd:element name="out_longitude" type="xsd:decimal" />
+          <xsd:element name="out_tm" type="xsd:string" />
+          <xsd:element name="out_position_description" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="get_vehicle_fuelResultType0">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute wsdl:arrayType="tns:get_vehicle_fuelResultType0Row[]" ref="SOAP-ENC:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="get_vehicle_instant_positionResultType0Row">
+        <xsd:all>
+          <xsd:element name="action_result" type="xsd:string" />
+          <xsd:element name="comment" type="xsd:string" />
+          <xsd:element name="registration" type="xsd:string" />
+          <xsd:element name="terminal_serial" type="xsd:string" />
+          <xsd:element name="event_ts" type="xsd:string" />
+          <xsd:element name="latitude" type="xsd:decimal" />
+          <xsd:element name="longitude" type="xsd:decimal" />
+          <xsd:element name="gps_fix" type="xsd:decimal" />
+          <xsd:element name="speed" type="xsd:string" />
+          <xsd:element name="bearing" type="xsd:string" />
+          <xsd:element name="ignition" type="xsd:string" />
+          <xsd:element name="event_odo" type="xsd:decimal" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="get_vehicle_instant_positionResultType0">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute wsdl:arrayType="tns:get_vehicle_instant_positionResultType0Row[]" ref="SOAP-ENC:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="get_vehicle_last_positionsResultType0Row">
+        <xsd:all>
+          <xsd:element name="out_vehicle_id" type="xsd:string" />
+          <xsd:element name="out_registration" type="xsd:string" />
+          <xsd:element name="out_event_ts" type="xsd:string" />
+          <xsd:element name="out_driver" type="xsd:string" />
+          <xsd:element name="out_latitude" type="xsd:double" />
+          <xsd:element name="out_longitude" type="xsd:double" />
+          <xsd:element name="out_speed" type="xsd:string" />
+          <xsd:element name="out_event_description" type="xsd:string" />
+          <xsd:element name="out_event_odo" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="get_vehicle_last_positionsResultType0">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute wsdl:arrayType="tns:get_vehicle_last_positionsResultType0Row[]" ref="SOAP-ENC:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="get_vehicle_last_positions_dealResultType0Row">
+        <xsd:all>
+          <xsd:element name="out_vehicle_id" type="xsd:string" />
+          <xsd:element name="out_registration" type="xsd:string" />
+          <xsd:element name="out_event_ts" type="xsd:string" />
+          <xsd:element name="out_driver" type="xsd:string" />
+          <xsd:element name="out_latitude" type="xsd:double" />
+          <xsd:element name="out_longitude" type="xsd:double" />
+          <xsd:element name="out_speed" type="xsd:string" />
+          <xsd:element name="out_event_description" type="xsd:string" />
+          <xsd:element name="out_ignition" type="xsd:string" />
+          <xsd:element name="out_event_odo" type="xsd:string" />
+          <xsd:element name="out_event_distance" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="get_vehicle_last_positions_dealResultType0">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute wsdl:arrayType="tns:get_vehicle_last_positions_dealResultType0Row[]" ref="SOAP-ENC:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="get_vehicle_last_positions_with_didResultType0Row">
+        <xsd:all>
+          <xsd:element name="out_vehicle_id" type="xsd:string" />
+          <xsd:element name="out_registration" type="xsd:string" />
+          <xsd:element name="out_event_ts" type="xsd:string" />
+          <xsd:element name="out_driver" type="xsd:string" />
+          <xsd:element name="out_latitude" type="xsd:double" />
+          <xsd:element name="out_longitude" type="xsd:double" />
+          <xsd:element name="out_speed" type="xsd:string" />
+          <xsd:element name="out_event_description" type="xsd:string" />
+          <xsd:element name="out_event_odo" type="xsd:string" />
+          <xsd:element name="out_last_driver" type="xsd:string" />
+          <xsd:element name="out_last_tag" type="xsd:string" />
+          <xsd:element name="out_tag_description" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="get_vehicle_last_positions_with_didResultType0">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute wsdl:arrayType="tns:get_vehicle_last_positions_with_didResultType0Row[]" ref="SOAP-ENC:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="get_vehicle_list_all_detailsResultType0Row">
+        <xsd:all>
+          <xsd:element name="out_vehicle_id" type="xsd:string" />
+          <xsd:element name="out_registration" type="xsd:string" />
+          <xsd:element name="out_event_ts" type="xsd:string" />
+          <xsd:element name="out_driver" type="xsd:string" />
+          <xsd:element name="out_latitude" type="xsd:double" />
+          <xsd:element name="out_longitude" type="xsd:double" />
+          <xsd:element name="out_bearing" type="xsd:double" />
+          <xsd:element name="out_speed" type="xsd:string" />
+          <xsd:element name="out_event_description" type="xsd:string" />
+          <xsd:element name="out_event_odo" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="get_vehicle_list_all_detailsResultType0">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute wsdl:arrayType="tns:get_vehicle_list_all_detailsResultType0Row[]" ref="SOAP-ENC:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="get_vehicle_stateResultType0Row">
+        <xsd:all>
+          <xsd:element name="id" type="xsd:decimal" />
+          <xsd:element name="registration" type="xsd:string" />
+          <xsd:element name="manufacturer" type="xsd:string" />
+          <xsd:element name="model" type="xsd:string" />
+          <xsd:element name="colour" type="xsd:string" />
+          <xsd:element name="modelyear" type="xsd:decimal" />
+          <xsd:element name="terminal_serial" type="xsd:string" />
+          <xsd:element name="cvd" type="xsd:string" />
+          <xsd:element name="bearing" type="xsd:decimal" />
+          <xsd:element name="longitude" type="xsd:decimal" />
+          <xsd:element name="latitude" type="xsd:decimal" />
+          <xsd:element name="temp1" type="xsd:decimal" />
+          <xsd:element name="temp2" type="xsd:decimal" />
+          <xsd:element name="temp3" type="xsd:decimal" />
+          <xsd:element name="temp4" type="xsd:decimal" />
+          <xsd:element name="speed" type="xsd:decimal" />
+          <xsd:element name="ignition" type="xsd:string" />
+          <xsd:element name="kms" type="xsd:decimal" />
+          <xsd:element name="event_ts" type="xsd:string" />
+          <xsd:element name="pd" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="get_vehicle_stateResultType0">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute wsdl:arrayType="tns:get_vehicle_stateResultType0Row[]" ref="SOAP-ENC:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="get_vehiclelistResultType0Row">
+        <xsd:all>
+          <xsd:element name="user_name" type="xsd:string" />
+          <xsd:element name="terminal_serial" type="xsd:string" />
+          <xsd:element name="registration" type="xsd:string" />
+          <xsd:element name="manufacturer" type="xsd:string" />
+          <xsd:element name="model" type="xsd:string" />
+          <xsd:element name="colour" type="xsd:string" />
+          <xsd:element name="modelyear" type="xsd:string" />
+          <xsd:element name="create_ts" type="xsd:string" />
+          <xsd:element name="update_ts" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="get_vehiclelistResultType0">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute wsdl:arrayType="tns:get_vehiclelistResultType0Row[]" ref="SOAP-ENC:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="get_vehicles_at_timeResultType0Row">
+        <xsd:all>
+          <xsd:element name="out_vehicle_id" type="xsd:string" />
+          <xsd:element name="out_registration" type="xsd:string" />
+          <xsd:element name="out_event_ts" type="xsd:string" />
+          <xsd:element name="out_latitude" type="xsd:double" />
+          <xsd:element name="out_longitude" type="xsd:double" />
+          <xsd:element name="out_event_odo" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="get_vehicles_at_timeResultType0">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute wsdl:arrayType="tns:get_vehicles_at_timeResultType0Row[]" ref="SOAP-ENC:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="get_vehicles_at_time_by_regResultType0Row">
+        <xsd:all>
+          <xsd:element name="out_vehicle_id" type="xsd:string" />
+          <xsd:element name="out_registration" type="xsd:string" />
+          <xsd:element name="out_event_ts" type="xsd:string" />
+          <xsd:element name="out_latitude" type="xsd:double" />
+          <xsd:element name="out_longitude" type="xsd:double" />
+          <xsd:element name="out_event_odo" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="get_vehicles_at_time_by_regResultType0">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute wsdl:arrayType="tns:get_vehicles_at_time_by_regResultType0Row[]" ref="SOAP-ENC:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="get_vehicles_details_per_driverResultType0Row">
+        <xsd:all>
+          <xsd:element name="manufacturer" type="xsd:string" />
+          <xsd:element name="model" type="xsd:string" />
+          <xsd:element name="modelyear" type="xsd:string" />
+          <xsd:element name="registration" type="xsd:string" />
+          <xsd:element name="terminal_serial" type="xsd:string" />
+          <xsd:element name="colour" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="get_vehicles_details_per_driverResultType0">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute wsdl:arrayType="tns:get_vehicles_details_per_driverResultType0Row[]" ref="SOAP-ENC:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="get_vehicles_nearest_to_postcodeResultType0Row">
+        <xsd:all>
+          <xsd:element name="out_vehicle_id" type="xsd:string" />
+          <xsd:element name="out_registration" type="xsd:string" />
+          <xsd:element name="out_distance" type="xsd:string" />
+          <xsd:element name="out_latitude" type="xsd:string" />
+          <xsd:element name="out_longitude" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="get_vehicles_nearest_to_postcodeResultType0">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute wsdl:arrayType="tns:get_vehicles_nearest_to_postcodeResultType0Row[]" ref="SOAP-ENC:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="get_worker_tag_registrationResultType0Row">
+        <xsd:all>
+          <xsd:element name="out_place" type="xsd:string" />
+          <xsd:element name="worker_name" type="xsd:string" />
+          <xsd:element name="desc_1" type="xsd:string" />
+          <xsd:element name="desc_2" type="xsd:string" />
+          <xsd:element name="cell_number" type="xsd:string" />
+          <xsd:element name="worker_tag" type="xsd:string" />
+          <xsd:element name="worker_start_dt_1" type="xsd:string" />
+          <xsd:element name="worker_end_dt_1" type="xsd:string" />
+          <xsd:element name="time_1_sec" type="xsd:string" />
+          <xsd:element name="worker_start_dt_2" type="xsd:string" />
+          <xsd:element name="worker_end_dt_2" type="xsd:string" />
+          <xsd:element name="time_2_sec" type="xsd:string" />
+          <xsd:element name="worker_start_dt_3" type="xsd:string" />
+          <xsd:element name="worker_end_dt_3" type="xsd:string" />
+          <xsd:element name="time_3_sec" type="xsd:string" />
+          <xsd:element name="worker_start_dt_4" type="xsd:string" />
+          <xsd:element name="worker_end_dt_4" type="xsd:string" />
+          <xsd:element name="time_4_sec" type="xsd:string" />
+          <xsd:element name="total_time" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="get_worker_tag_registrationResultType0">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute wsdl:arrayType="tns:get_worker_tag_registrationResultType0Row[]" ref="SOAP-ENC:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="insert_poiResultType0Row">
+        <xsd:all>
+          <xsd:element name="out_success" type="xsd:string" />
+          <xsd:element name="out_msg" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="insert_poiResultType0">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute wsdl:arrayType="tns:insert_poiResultType0Row[]" ref="SOAP-ENC:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="set_driver_privacy_modeResultType0Row">
+        <xsd:all>
+          <xsd:element name="result" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="set_driver_privacy_modeResultType0">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute wsdl:arrayType="tns:set_driver_privacy_modeResultType0Row[]" ref="SOAP-ENC:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="set_predefined_messagesResultType0Row">
+        <xsd:all>
+          <xsd:element name="result" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="set_predefined_messagesResultType0">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute wsdl:arrayType="tns:set_predefined_messagesResultType0Row[]" ref="SOAP-ENC:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="set_task_dataResultType0Row">
+        <xsd:all>
+          <xsd:element name="task_state" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="set_task_dataResultType0">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute wsdl:arrayType="tns:set_task_dataResultType0Row[]" ref="SOAP-ENC:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="endpoint.create_driverRequest">
+    <wsdl:part name="sub_username" type="xsd:string" />
+    <wsdl:part name="driver_name" type="xsd:string" />
+    <wsdl:part name="id_number" type="xsd:string" />
+    <wsdl:part name="gender" type="xsd:integer" />
+    <wsdl:part name="cell_number" type="xsd:string" />
+    <wsdl:part name="license_number" type="xsd:string" />
+    <wsdl:part name="license_driver_restrictions" type="xsd:string" />
+    <wsdl:part name="license_vehicle_restrictions" type="xsd:string" />
+    <wsdl:part name="license_valid_start" type="xsd:string" />
+    <wsdl:part name="license_valid_end" type="xsd:string" />
+    <wsdl:part name="license_code" type="xsd:string" />
+    <wsdl:part name="license_first_issue_date" type="xsd:string" />
+    <wsdl:part name="license_issued_country" type="xsd:string" />
+    <wsdl:part name="license_points" type="xsd:integer" />
+    <wsdl:part name="expiry_notification_id" type="xsd:integer" />
+    <wsdl:part name="expiry_notification_method_id" type="xsd:integer" />
+    <wsdl:part name="create_note_txt" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.create_driverResponse">
+    <wsdl:part name="SqlResult0" type="tns:create_driverResultType0" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.create_geofenceRequest">
+    <wsdl:part name="p_user_name" type="xsd:string" />
+    <wsdl:part name="p_geofence_type_id" type="xsd:integer" />
+    <wsdl:part name="p_geofence_name" type="xsd:string" />
+    <wsdl:part name="p_geofence_description" type="xsd:string" />
+    <wsdl:part name="p_longitude" type="xsd:decimal" />
+    <wsdl:part name="p_latitude" type="xsd:decimal" />
+    <wsdl:part name="p_radius_m" type="xsd:integer" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.create_geofenceResponse">
+    <wsdl:part name="SqlResult0" type="tns:create_geofenceResultType0" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.create_geofencegroup_alertRequest">
+    <wsdl:part name="registration" type="xsd:string" />
+    <wsdl:part name="geofencegroupname" type="xsd:string" />
+    <wsdl:part name="msisdn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.create_geofencegroup_alertResponse">
+    <wsdl:part name="SqlResult0" type="tns:create_geofencegroup_alertResultType0" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.create_geofencegroup_alert_by_contact_typeRequest">
+    <wsdl:part name="registration" type="xsd:string" />
+    <wsdl:part name="geofencegroupname" type="xsd:string" />
+    <wsdl:part name="contract_desc" type="xsd:string" />
+    <wsdl:part name="contract_type" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.create_geofencegroup_alert_by_contact_typeResponse">
+    <wsdl:part name="SqlResult0" type="tns:create_geofencegroup_alert_by_contact_typeResultType0" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.create_geofencegrouplist_alertRequest">
+    <wsdl:part name="registration" type="xsd:string" />
+    <wsdl:part name="geofencegrouplist" type="xsd:string" />
+    <wsdl:part name="contact_type" type="xsd:string" />
+    <wsdl:part name="contact" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.create_geofencegrouplist_alertResponse">
+    <wsdl:part name="SqlResult0" type="tns:create_geofencegrouplist_alertResultType0" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.create_messageRequest">
+    <wsdl:part name="sub_username" type="xsd:string" />
+    <wsdl:part name="terminal_serial" type="xsd:string" />
+    <wsdl:part name="message_body" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.create_messageResponse">
+    <wsdl:part name="SqlResult0" type="tns:create_messageResultType0" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.create_reportRequest">
+    <wsdl:part name="report_name" type="xsd:string" />
+    <wsdl:part name="registration" type="xsd:string" />
+    <wsdl:part name="email" type="xsd:string" />
+    <wsdl:part name="start_ts" type="xsd:string" />
+    <wsdl:part name="end_ts" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.create_reportResponse">
+    <wsdl:part name="SqlResult0" type="tns:create_reportResultType0" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.create_taskRequest">
+    <wsdl:part name="sub_username" type="xsd:string" />
+    <wsdl:part name="terminal_serial" type="xsd:string" />
+    <wsdl:part name="in_task_text" type="xsd:string" />
+    <wsdl:part name="in_scheduled_arrival_ts" type="xsd:string" />
+    <wsdl:part name="in_task_notification_id" type="xsd:integer" />
+    <wsdl:part name="in_order_id" type="xsd:integer" />
+    <wsdl:part name="in_task_type_id" type="xsd:integer" />
+    <wsdl:part name="in_third_party_ref" type="xsd:string" />
+    <wsdl:part name="in_task_type_text" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.create_taskResponse">
+    <wsdl:part name="SqlResult0" type="tns:create_taskResultType0" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.create_task_destinationRequest">
+    <wsdl:part name="sub_username" type="xsd:string" />
+    <wsdl:part name="country" type="xsd:string" />
+    <wsdl:part name="suburb" type="xsd:string" />
+    <wsdl:part name="street" type="xsd:string" />
+    <wsdl:part name="street_number" type="xsd:string" />
+    <wsdl:part name="contact_person" type="xsd:string" />
+    <wsdl:part name="contact_number" type="xsd:string" />
+    <wsdl:part name="contact_email" type="xsd:string" />
+    <wsdl:part name="lat" type="xsd:decimal" />
+    <wsdl:part name="lon" type="xsd:decimal" />
+    <wsdl:part name="destination_type_id" type="xsd:integer" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.create_task_destinationResponse">
+    <wsdl:part name="SqlResult0" type="tns:create_task_destinationResultType0" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.create_task_stepRequest">
+    <wsdl:part name="sub_username" type="xsd:string" />
+    <wsdl:part name="task_id" type="xsd:integer" />
+    <wsdl:part name="task_step_number" type="xsd:integer" />
+    <wsdl:part name="customer_id" type="xsd:integer" />
+    <wsdl:part name="task_step_type_id" type="xsd:integer" />
+    <wsdl:part name="task_step_text" type="xsd:string" />
+    <wsdl:part name="task_step_state_id" type="xsd:integer" />
+    <wsdl:part name="scheduled_arrival_ts" type="xsd:string" />
+    <wsdl:part name="task_step_type_text" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.create_task_stepResponse">
+    <wsdl:part name="SqlResult0" type="tns:create_task_stepResultType0" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.get_LCST00001_vehicle_localRequest">
+    <wsdl:part name="username" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.get_LCST00001_vehicle_localResponse">
+    <wsdl:part name="SqlResult0" type="tns:get_LCST00001_vehicle_localResultType0" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.get_all_tripsRequest">
+    <wsdl:part name="user_name" type="xsd:string" />
+    <wsdl:part name="reg" type="xsd:string" />
+    <wsdl:part name="start_ts" type="xsd:string" />
+    <wsdl:part name="end_ts" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.get_all_tripsResponse">
+    <wsdl:part name="SqlResult0" type="tns:get_all_tripsResultType0" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.get_all_vehicles_last_positionsRequest">
+    <wsdl:part name="user_name" type="xsd:string" />
+    <wsdl:part name="registration" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.get_all_vehicles_last_positionsResponse">
+    <wsdl:part name="SqlResult0" type="tns:get_all_vehicles_last_positionsResultType0" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.get_communicatorsRequest">
+    <wsdl:part name="username" type="xsd:string" />
+    <wsdl:part name="sub_username" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.get_communicatorsResponse">
+    <wsdl:part name="SqlResult0" type="tns:get_communicatorsResultType0" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.get_customer_dataRequest">
+    <wsdl:part name="terminal_serial" type="xsd:string" />
+    <wsdl:part name="message_received_after" type="xsd:string" />
+    <wsdl:part name="sub_username" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.get_customer_dataResponse">
+    <wsdl:part name="SqlResult0" type="tns:get_customer_dataResultType0" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.get_destination_bycontactRequest">
+    <wsdl:part name="search" type="xsd:string" />
+    <wsdl:part name="sub_username" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.get_destination_bycontactResponse">
+    <wsdl:part name="SqlResult0" type="tns:get_destination_bycontactResultType0" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.get_destination_bystreetRequest">
+    <wsdl:part name="search" type="xsd:string" />
+    <wsdl:part name="sub_username" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.get_destination_bystreetResponse">
+    <wsdl:part name="SqlResult0" type="tns:get_destination_bystreetResultType0" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.get_destination_bysuburbRequest">
+    <wsdl:part name="search" type="xsd:string" />
+    <wsdl:part name="sub_username" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.get_destination_bysuburbResponse">
+    <wsdl:part name="SqlResult0" type="tns:get_destination_bysuburbResultType0" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.get_destinationlistRequest">
+    <wsdl:part name="username" type="xsd:string" />
+    <wsdl:part name="sub_username" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.get_destinationlistResponse">
+    <wsdl:part name="SqlResult0" type="tns:get_destinationlistResultType0" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.get_directionsRequest">
+    <wsdl:part name="route_type" type="xsd:string" />
+    <wsdl:part name="from_lat" type="xsd:string" />
+    <wsdl:part name="from_lng" type="xsd:string" />
+    <wsdl:part name="to_lat" type="xsd:string" />
+    <wsdl:part name="to_lng" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.get_directionsResponse">
+    <wsdl:part name="SqlResult0" type="tns:get_directionsResultType0" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.get_driverRequest">
+    <wsdl:part name="drivername" type="xsd:string" />
+    <wsdl:part name="sub_username" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.get_driverResponse">
+    <wsdl:part name="SqlResult0" type="tns:get_driverResultType0" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.get_driver_loginRequest">
+    <wsdl:part name="mobile" type="xsd:string" />
+    <wsdl:part name="pswrd_hash" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.get_driver_loginResponse">
+    <wsdl:part name="SqlResult0" type="tns:get_driver_loginResultType0" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.get_driver_password_resetRequest">
+    <wsdl:part name="mobile" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.get_driver_password_resetResponse">
+    <wsdl:part name="SqlResult0" type="tns:get_driver_password_resetResultType0" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.get_driver_privacy_modeRequest">
+    <wsdl:part name="driver_id" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.get_driver_privacy_modeResponse">
+    <wsdl:part name="SqlResult0" type="tns:get_driver_privacy_modeResultType0" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.get_driver_vehiclesRequest">
+    <wsdl:part name="sub_username" type="xsd:string" />
+    <wsdl:part name="client_driver_id" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.get_driver_vehiclesResponse">
+    <wsdl:part name="SqlResult0" type="tns:get_driver_vehiclesResultType0" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.get_driverlistRequest">
+    <wsdl:part name="username" type="xsd:string" />
+    <wsdl:part name="sub_username" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.get_driverlistResponse">
+    <wsdl:part name="SqlResult0" type="tns:get_driverlistResultType0" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.get_drivers_detail_per_vehicleRequest">
+    <wsdl:part name="registration" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.get_drivers_detail_per_vehicleResponse">
+    <wsdl:part name="SqlResult0" type="tns:get_drivers_detail_per_vehicleResultType0" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.get_fuel_fillsRequest">
+    <wsdl:part name="in_user_name" type="xsd:string" />
+    <wsdl:part name="in_registration" type="xsd:string" />
+    <wsdl:part name="in_start_timestamp" type="xsd:string" />
+    <wsdl:part name="in_end_timestamp" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.get_fuel_fillsResponse">
+    <wsdl:part name="SqlResult0" type="tns:get_fuel_fillsResultType0" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.get_geofenceRequest">
+    <wsdl:part name="username" type="xsd:string" />
+    <wsdl:part name="geofence_id" type="xsd:string" />
+    <wsdl:part name="geofence_desc" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.get_geofenceResponse">
+    <wsdl:part name="SqlResult0" type="tns:get_geofenceResultType0" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.get_geofence_visitsRequest">
+    <wsdl:part name="user_name" type="xsd:string" />
+    <wsdl:part name="sub_user_name" type="xsd:string" />
+    <wsdl:part name="registration" type="xsd:string" />
+    <wsdl:part name="start_timestamp" type="xsd:string" />
+    <wsdl:part name="end_timestamp" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.get_geofence_visitsResponse">
+    <wsdl:part name="SqlResult0" type="tns:get_geofence_visitsResultType0" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.get_geofence_visits_by_idRequest">
+    <wsdl:part name="username" type="xsd:string" />
+    <wsdl:part name="geofence_id" type="xsd:string" />
+    <wsdl:part name="vehicle_limit" type="xsd:string" />
+    <wsdl:part name="start_date" type="xsd:string" />
+    <wsdl:part name="end_date" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.get_geofence_visits_by_idResponse">
+    <wsdl:part name="SqlResult0" type="tns:get_geofence_visits_by_idResultType0" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.get_message_stateRequest">
+    <wsdl:part name="reference" type="xsd:string" />
+    <wsdl:part name="sub_username" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.get_message_stateResponse">
+    <wsdl:part name="SqlResult0" type="tns:get_message_stateResultType0" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.get_messagesRequest">
+    <wsdl:part name="username" type="xsd:string" />
+    <wsdl:part name="sub_username" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.get_messagesResponse">
+    <wsdl:part name="SqlResult0" type="tns:get_messagesResultType0" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.get_messages_afterRequest">
+    <wsdl:part name="create_ts" type="xsd:string" />
+    <wsdl:part name="sub_username" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.get_messages_afterResponse">
+    <wsdl:part name="SqlResult0" type="tns:get_messages_afterResultType0" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.get_nearest_cornerRequest">
+    <wsdl:part name="lat" type="xsd:string" />
+    <wsdl:part name="lng" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.get_nearest_cornerResponse">
+    <wsdl:part name="SqlResult0" type="tns:get_nearest_cornerResultType0" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.get_notification_eventsRequest">
+    <wsdl:part name="timestamp" type="xsd:string" />
+    <wsdl:part name="sub_username" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.get_notification_eventsResponse">
+    <wsdl:part name="SqlResult0" type="tns:get_notification_eventsResultType0" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.get_odo_differenceRequest">
+    <wsdl:part name="user_name" type="xsd:string" />
+    <wsdl:part name="reg" type="xsd:string" />
+    <wsdl:part name="start_ts" type="xsd:string" />
+    <wsdl:part name="end_ts" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.get_odo_differenceResponse">
+    <wsdl:part name="SqlResult0" type="tns:get_odo_differenceResultType0" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.get_poiRequest">
+    <wsdl:part name="point_type_id" type="xsd:string" />
+    <wsdl:part name="point_desc" type="xsd:string" />
+    <wsdl:part name="lat" type="xsd:string" />
+    <wsdl:part name="lng" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.get_poiResponse">
+    <wsdl:part name="SqlResult0" type="tns:get_poiResultType0" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.get_poi_status_action_joinRequest">
+    <wsdl:part name="in_user_name" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.get_poi_status_action_joinResponse">
+    <wsdl:part name="SqlResult0" type="tns:get_poi_status_action_joinResultType0" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.get_predefined_messagesRequest">
+    <wsdl:part name="username" type="xsd:string" />
+    <wsdl:part name="sub_username" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.get_predefined_messagesResponse">
+    <wsdl:part name="SqlResult0" type="tns:get_predefined_messagesResultType0" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.get_registration_last_positionRequest">
+    <wsdl:part name="username" type="xsd:string" />
+    <wsdl:part name="registration" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.get_registration_last_positionResponse">
+    <wsdl:part name="SqlResult0" type="tns:get_registration_last_positionResultType0" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.get_simple_routeRequest">
+    <wsdl:part name="user_name" type="xsd:string" />
+    <wsdl:part name="reg" type="xsd:string" />
+    <wsdl:part name="start_ts" type="xsd:string" />
+    <wsdl:part name="end_ts" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.get_simple_routeResponse">
+    <wsdl:part name="SqlResult0" type="tns:get_simple_routeResultType0" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.get_single_vehicle_eventsRequest">
+    <wsdl:part name="registration" type="xsd:string" />
+    <wsdl:part name="date" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.get_single_vehicle_eventsResponse">
+    <wsdl:part name="SqlResult0" type="tns:get_single_vehicle_eventsResultType0" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.get_task_dataRequest">
+    <wsdl:part name="terminal_serial" type="xsd:string" />
+    <wsdl:part name="task_created_after" type="xsd:string" />
+    <wsdl:part name="sub_username" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.get_task_dataResponse">
+    <wsdl:part name="SqlResult0" type="tns:get_task_dataResultType0" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.get_task_step_typesRequest">
+    <wsdl:part name="username" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.get_task_step_typesResponse">
+    <wsdl:part name="SqlResult0" type="tns:get_task_step_typesResultType0" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.get_task_stepsRequest">
+    <wsdl:part name="task_id" type="xsd:integer" />
+    <wsdl:part name="sub_username" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.get_task_stepsResponse">
+    <wsdl:part name="SqlResult0" type="tns:get_task_stepsResultType0" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.get_task_typesRequest">
+    <wsdl:part name="username" type="xsd:string" />
+    <wsdl:part name="sub_username" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.get_task_typesResponse">
+    <wsdl:part name="SqlResult0" type="tns:get_task_typesResultType0" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.get_user_alertsRequest">
+    <wsdl:part name="user_name" type="xsd:string" />
+    <wsdl:part name="start_date" type="xsd:string" />
+    <wsdl:part name="end_date" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.get_user_alertsResponse">
+    <wsdl:part name="SqlResult0" type="tns:get_user_alertsResultType0" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.get_vehicleRequest">
+    <wsdl:part name="registration" type="xsd:string" />
+    <wsdl:part name="sub_username" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.get_vehicleResponse">
+    <wsdl:part name="SqlResult0" type="tns:get_vehicleResultType0" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.get_vehicle_alertsRequest">
+    <wsdl:part name="registration" type="xsd:string" />
+    <wsdl:part name="start_date" type="xsd:string" />
+    <wsdl:part name="end_date" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.get_vehicle_alertsResponse">
+    <wsdl:part name="SqlResult0" type="tns:get_vehicle_alertsResultType0" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.get_vehicle_detailed_eventRequest">
+    <wsdl:part name="user_name" type="xsd:string" />
+    <wsdl:part name="reg" type="xsd:string" />
+    <wsdl:part name="start_ts" type="xsd:string" />
+    <wsdl:part name="end_ts" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.get_vehicle_detailed_eventResponse">
+    <wsdl:part name="SqlResult0" type="tns:get_vehicle_detailed_eventResultType0" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.get_vehicle_detailsRequest">
+    <wsdl:part name="username" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.get_vehicle_detailsResponse">
+    <wsdl:part name="SqlResult0" type="tns:get_vehicle_detailsResultType0" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.get_vehicle_driversRequest">
+    <wsdl:part name="sub_username" type="xsd:string" />
+    <wsdl:part name="registration" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.get_vehicle_driversResponse">
+    <wsdl:part name="SqlResult0" type="tns:get_vehicle_driversResultType0" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.get_vehicle_eventsRequest">
+    <wsdl:part name="registration" type="xsd:string" />
+    <wsdl:part name="date" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.get_vehicle_eventsResponse">
+    <wsdl:part name="SqlResult0" type="tns:get_vehicle_eventsResultType0" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.get_vehicle_fuelRequest">
+    <wsdl:part name="username" type="xsd:string" />
+    <wsdl:part name="registration" type="xsd:string" />
+    <wsdl:part name="start-date" type="xsd:string" />
+    <wsdl:part name="end-date" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.get_vehicle_fuelResponse">
+    <wsdl:part name="SqlResult0" type="tns:get_vehicle_fuelResultType0" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.get_vehicle_instant_positionRequest">
+    <wsdl:part name="registration" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.get_vehicle_instant_positionResponse">
+    <wsdl:part name="SqlResult0" type="tns:get_vehicle_instant_positionResultType0" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.get_vehicle_last_positionsRequest">
+    <wsdl:part name="username" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.get_vehicle_last_positionsResponse">
+    <wsdl:part name="SqlResult0" type="tns:get_vehicle_last_positionsResultType0" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.get_vehicle_last_positions_dealRequest">
+    <wsdl:part name="dealnumber" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.get_vehicle_last_positions_dealResponse">
+    <wsdl:part name="SqlResult0" type="tns:get_vehicle_last_positions_dealResultType0" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.get_vehicle_last_positions_with_didRequest">
+    <wsdl:part name="username" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.get_vehicle_last_positions_with_didResponse">
+    <wsdl:part name="SqlResult0" type="tns:get_vehicle_last_positions_with_didResultType0" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.get_vehicle_list_all_detailsRequest">
+    <wsdl:part name="username" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.get_vehicle_list_all_detailsResponse">
+    <wsdl:part name="SqlResult0" type="tns:get_vehicle_list_all_detailsResultType0" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.get_vehicle_stateRequest">
+    <wsdl:part name="user_name" type="xsd:string" />
+    <wsdl:part name="reg" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.get_vehicle_stateResponse">
+    <wsdl:part name="SqlResult0" type="tns:get_vehicle_stateResultType0" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.get_vehiclelistRequest">
+    <wsdl:part name="username" type="xsd:string" />
+    <wsdl:part name="sub_username" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.get_vehiclelistResponse">
+    <wsdl:part name="SqlResult0" type="tns:get_vehiclelistResultType0" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.get_vehicles_at_timeRequest">
+    <wsdl:part name="username" type="xsd:string" />
+    <wsdl:part name="datetime" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.get_vehicles_at_timeResponse">
+    <wsdl:part name="SqlResult0" type="tns:get_vehicles_at_timeResultType0" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.get_vehicles_at_time_by_regRequest">
+    <wsdl:part name="username" type="xsd:string" />
+    <wsdl:part name="datetime" type="xsd:string" />
+    <wsdl:part name="registration" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.get_vehicles_at_time_by_regResponse">
+    <wsdl:part name="SqlResult0" type="tns:get_vehicles_at_time_by_regResultType0" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.get_vehicles_details_per_driverRequest">
+    <wsdl:part name="client_driver_id" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.get_vehicles_details_per_driverResponse">
+    <wsdl:part name="SqlResult0" type="tns:get_vehicles_details_per_driverResultType0" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.get_vehicles_nearest_to_postcodeRequest">
+    <wsdl:part name="username" type="xsd:string" />
+    <wsdl:part name="postcode" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.get_vehicles_nearest_to_postcodeResponse">
+    <wsdl:part name="SqlResult0" type="tns:get_vehicles_nearest_to_postcodeResultType0" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.get_worker_tag_registrationRequest">
+    <wsdl:part name="user_name" type="xsd:string" />
+    <wsdl:part name="place" type="xsd:string" />
+    <wsdl:part name="driver_tag" type="xsd:string" />
+    <wsdl:part name="start_date" type="xsd:string" />
+    <wsdl:part name="end_date" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.get_worker_tag_registrationResponse">
+    <wsdl:part name="SqlResult0" type="tns:get_worker_tag_registrationResultType0" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.insert_poiRequest">
+    <wsdl:part name="in_poi_name" type="xsd:string" />
+    <wsdl:part name="in_poi_description" type="xsd:string" />
+    <wsdl:part name="in_poi_lat" type="xsd:decimal" />
+    <wsdl:part name="in_poi_lon" type="xsd:decimal" />
+    <wsdl:part name="in_poi_user_name" type="xsd:string" />
+    <wsdl:part name="in_poi_status_id" type="xsd:integer" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.insert_poiResponse">
+    <wsdl:part name="SqlResult0" type="tns:insert_poiResultType0" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.set_driver_privacy_modeRequest">
+    <wsdl:part name="driver_id" type="xsd:string" />
+    <wsdl:part name="new_privacy_mode" type="xsd:boolean" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.set_driver_privacy_modeResponse">
+    <wsdl:part name="SqlResult0" type="tns:set_driver_privacy_modeResultType0" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.set_predefined_messagesRequest">
+    <wsdl:part name="sub_username" type="xsd:string" />
+    <wsdl:part name="message_no" type="xsd:integer" />
+    <wsdl:part name="message_text" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.set_predefined_messagesResponse">
+    <wsdl:part name="SqlResult0" type="tns:set_predefined_messagesResultType0" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.set_task_dataRequest">
+    <wsdl:part name="sub_username" type="xsd:string" />
+    <wsdl:part name="task_id" type="xsd:integer" />
+    <wsdl:part name="in_task_text" type="xsd:string" />
+    <wsdl:part name="in_scheduled_arrival_ts" type="xsd:string" />
+    <wsdl:part name="in_task_notification_id" type="xsd:integer" />
+    <wsdl:part name="in_order_id" type="xsd:integer" />
+    <wsdl:part name="in_task_type_id" type="xsd:integer" />
+    <wsdl:part name="in_third_party_ref" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="endpoint.set_task_dataResponse">
+    <wsdl:part name="SqlResult0" type="tns:set_task_dataResultType0" />
+  </wsdl:message>
+  <wsdl:portType name="endpointPortType">
+    <wsdl:operation name="endpoint.create_driver">
+      <documentation>This function creates a new driver</documentation>
+      <wsdl:input message="tns:endpoint.create_driverRequest" />
+      <wsdl:output message="tns:endpoint.create_driverResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.create_geofence">
+      <documentation>This function creates a geofence.</documentation>
+      <wsdl:input message="tns:endpoint.create_geofenceRequest" />
+      <wsdl:output message="tns:endpoint.create_geofenceResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.create_geofencegroup_alert">
+      <documentation>This function creates a alert for the supplied registration, geofence group name, and msisdn</documentation>
+      <wsdl:input message="tns:endpoint.create_geofencegroup_alertRequest" />
+      <wsdl:output message="tns:endpoint.create_geofencegroup_alertResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.create_geofencegroup_alert_by_contact_type">
+      <documentation>This function creates a alert for the supplied registration, geofence group name, and msisdn</documentation>
+      <wsdl:input message="tns:endpoint.create_geofencegroup_alert_by_contact_typeRequest" />
+      <wsdl:output message="tns:endpoint.create_geofencegroup_alert_by_contact_typeResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.create_geofencegrouplist_alert">
+      <documentation>This function creates a alert for the supplied registration, geofence group name, and msisdn</documentation>
+      <wsdl:input message="tns:endpoint.create_geofencegrouplist_alertRequest" />
+      <wsdl:output message="tns:endpoint.create_geofencegrouplist_alertResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.create_message">
+      <documentation>This function is used to send a message</documentation>
+      <wsdl:input message="tns:endpoint.create_messageRequest" />
+      <wsdl:output message="tns:endpoint.create_messageResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.create_report">
+      <documentation>This function creates a report and returns the result.</documentation>
+      <wsdl:input message="tns:endpoint.create_reportRequest" />
+      <wsdl:output message="tns:endpoint.create_reportResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.create_task">
+      <documentation>This function creates a new task</documentation>
+      <wsdl:input message="tns:endpoint.create_taskRequest" />
+      <wsdl:output message="tns:endpoint.create_taskResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.create_task_destination">
+      <documentation>This function creates a new destination</documentation>
+      <wsdl:input message="tns:endpoint.create_task_destinationRequest" />
+      <wsdl:output message="tns:endpoint.create_task_destinationResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.create_task_step">
+      <documentation>This function creates create a new task step</documentation>
+      <wsdl:input message="tns:endpoint.create_task_stepRequest" />
+      <wsdl:output message="tns:endpoint.create_task_stepResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.get_LCST00001_vehicle_local">
+      <documentation>This function returns  most current position details of LCST00001 vehicles list</documentation>
+      <wsdl:input message="tns:endpoint.get_LCST00001_vehicle_localRequest" />
+      <wsdl:output message="tns:endpoint.get_LCST00001_vehicle_localResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.get_all_trips">
+      <documentation>This function returns all trips between two timestamps.</documentation>
+      <wsdl:input message="tns:endpoint.get_all_tripsRequest" />
+      <wsdl:output message="tns:endpoint.get_all_tripsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.get_all_vehicles_last_positions">
+      <documentation>This function returns all vehicles last positions.</documentation>
+      <wsdl:input message="tns:endpoint.get_all_vehicles_last_positionsRequest" />
+      <wsdl:output message="tns:endpoint.get_all_vehicles_last_positionsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.get_communicators">
+      <documentation>This function is used to get a list of navigators</documentation>
+      <wsdl:input message="tns:endpoint.get_communicatorsRequest" />
+      <wsdl:output message="tns:endpoint.get_communicatorsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.get_customer_data">
+      <documentation>This function retrieves customer data</documentation>
+      <wsdl:input message="tns:endpoint.get_customer_dataRequest" />
+      <wsdl:output message="tns:endpoint.get_customer_dataResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.get_destination_bycontact">
+      <documentation>This function search destinations by contact person</documentation>
+      <wsdl:input message="tns:endpoint.get_destination_bycontactRequest" />
+      <wsdl:output message="tns:endpoint.get_destination_bycontactResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.get_destination_bystreet">
+      <documentation>This function search destinations by street</documentation>
+      <wsdl:input message="tns:endpoint.get_destination_bystreetRequest" />
+      <wsdl:output message="tns:endpoint.get_destination_bystreetResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.get_destination_bysuburb">
+      <documentation>This function search destinations by suburb</documentation>
+      <wsdl:input message="tns:endpoint.get_destination_bysuburbRequest" />
+      <wsdl:output message="tns:endpoint.get_destination_bysuburbResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.get_destinationlist">
+      <documentation>This function returns a destination list</documentation>
+      <wsdl:input message="tns:endpoint.get_destinationlistRequest" />
+      <wsdl:output message="tns:endpoint.get_destinationlistResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.get_directions">
+      <documentation>This function returns directions from a location to a location</documentation>
+      <wsdl:input message="tns:endpoint.get_directionsRequest" />
+      <wsdl:output message="tns:endpoint.get_directionsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.get_driver">
+      <documentation>This function searches for a driver(s) by name</documentation>
+      <wsdl:input message="tns:endpoint.get_driverRequest" />
+      <wsdl:output message="tns:endpoint.get_driverResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.get_driver_login">
+      <documentation>This function returns driver login and privacy details if successful.</documentation>
+      <wsdl:input message="tns:endpoint.get_driver_loginRequest" />
+      <wsdl:output message="tns:endpoint.get_driver_loginResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.get_driver_password_reset">
+      <documentation>This function returns privacy settings for supplied registration</documentation>
+      <wsdl:input message="tns:endpoint.get_driver_password_resetRequest" />
+      <wsdl:output message="tns:endpoint.get_driver_password_resetResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.get_driver_privacy_mode">
+      <documentation>This function returns privacy settings for supplied registration</documentation>
+      <wsdl:input message="tns:endpoint.get_driver_privacy_modeRequest" />
+      <wsdl:output message="tns:endpoint.get_driver_privacy_modeResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.get_driver_vehicles">
+      <documentation>This function returns a a drivers vehicles</documentation>
+      <wsdl:input message="tns:endpoint.get_driver_vehiclesRequest" />
+      <wsdl:output message="tns:endpoint.get_driver_vehiclesResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.get_driverlist">
+      <documentation>This function returns a detailed driver list</documentation>
+      <wsdl:input message="tns:endpoint.get_driverlistRequest" />
+      <wsdl:output message="tns:endpoint.get_driverlistResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.get_drivers_detail_per_vehicle">
+      <documentation>This function returns a vehicle`s drivers</documentation>
+      <wsdl:input message="tns:endpoint.get_drivers_detail_per_vehicleRequest" />
+      <wsdl:output message="tns:endpoint.get_drivers_detail_per_vehicleResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.get_fuel_fills">
+      <documentation>This function returns fuel fills per vehicle, per time interval.</documentation>
+      <wsdl:input message="tns:endpoint.get_fuel_fillsRequest" />
+      <wsdl:output message="tns:endpoint.get_fuel_fillsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.get_geofence">
+      <documentation>This function returns details of a geofence queried</documentation>
+      <wsdl:input message="tns:endpoint.get_geofenceRequest" />
+      <wsdl:output message="tns:endpoint.get_geofenceResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.get_geofence_visits">
+      <documentation>This function returns geofence visits per vehicle, per time interval.</documentation>
+      <wsdl:input message="tns:endpoint.get_geofence_visitsRequest" />
+      <wsdl:output message="tns:endpoint.get_geofence_visitsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.get_geofence_visits_by_id">
+      <documentation>This function returns details of a geofence queried by id</documentation>
+      <wsdl:input message="tns:endpoint.get_geofence_visits_by_idRequest" />
+      <wsdl:output message="tns:endpoint.get_geofence_visits_by_idResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.get_message_state">
+      <documentation>This function is used to get the status of a dreevo message</documentation>
+      <wsdl:input message="tns:endpoint.get_message_stateRequest" />
+      <wsdl:output message="tns:endpoint.get_message_stateResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.get_messages">
+      <documentation>This function returns a list of the last 50 messages</documentation>
+      <wsdl:input message="tns:endpoint.get_messagesRequest" />
+      <wsdl:output message="tns:endpoint.get_messagesResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.get_messages_after">
+      <documentation>This function returns a list of messages sent after a certain time</documentation>
+      <wsdl:input message="tns:endpoint.get_messages_afterRequest" />
+      <wsdl:output message="tns:endpoint.get_messages_afterResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.get_nearest_corner">
+      <documentation>This function returns nearest corner to position</documentation>
+      <wsdl:input message="tns:endpoint.get_nearest_cornerRequest" />
+      <wsdl:output message="tns:endpoint.get_nearest_cornerResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.get_notification_events">
+      <documentation>This function returns notification events</documentation>
+      <wsdl:input message="tns:endpoint.get_notification_eventsRequest" />
+      <wsdl:output message="tns:endpoint.get_notification_eventsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.get_odo_difference">
+      <documentation>This function returns odometer difference between 2 timestamps.</documentation>
+      <wsdl:input message="tns:endpoint.get_odo_differenceRequest" />
+      <wsdl:output message="tns:endpoint.get_odo_differenceResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.get_poi">
+      <documentation>This function returns POI items</documentation>
+      <wsdl:input message="tns:endpoint.get_poiRequest" />
+      <wsdl:output message="tns:endpoint.get_poiResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.get_poi_status_action_join">
+      <documentation>This function returns clients poi_status_action_join.</documentation>
+      <wsdl:input message="tns:endpoint.get_poi_status_action_joinRequest" />
+      <wsdl:output message="tns:endpoint.get_poi_status_action_joinResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.get_predefined_messages">
+      <documentation>This function is used to get predefined dreevo messages</documentation>
+      <wsdl:input message="tns:endpoint.get_predefined_messagesRequest" />
+      <wsdl:output message="tns:endpoint.get_predefined_messagesResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.get_registration_last_position">
+      <documentation>This function returns most current position details of vehicle with registration</documentation>
+      <wsdl:input message="tns:endpoint.get_registration_last_positionRequest" />
+      <wsdl:output message="tns:endpoint.get_registration_last_positionResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.get_simple_route">
+      <documentation>This function returns a route between 2 timestamps.</documentation>
+      <wsdl:input message="tns:endpoint.get_simple_routeRequest" />
+      <wsdl:output message="tns:endpoint.get_simple_routeResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.get_single_vehicle_events">
+      <documentation>This function returns last 3000 event details of USER $1, registration $2 from date $3</documentation>
+      <wsdl:input message="tns:endpoint.get_single_vehicle_eventsRequest" />
+      <wsdl:output message="tns:endpoint.get_single_vehicle_eventsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.get_task_data">
+      <documentation>This function retrieves task data</documentation>
+      <wsdl:input message="tns:endpoint.get_task_dataRequest" />
+      <wsdl:output message="tns:endpoint.get_task_dataResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.get_task_step_types">
+      <documentation>This function will get task step types defined by a user</documentation>
+      <wsdl:input message="tns:endpoint.get_task_step_typesRequest" />
+      <wsdl:output message="tns:endpoint.get_task_step_typesResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.get_task_steps">
+      <documentation>This function will get task steps</documentation>
+      <wsdl:input message="tns:endpoint.get_task_stepsRequest" />
+      <wsdl:output message="tns:endpoint.get_task_stepsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.get_task_types">
+      <documentation>This function will get task types defined by a user</documentation>
+      <wsdl:input message="tns:endpoint.get_task_typesRequest" />
+      <wsdl:output message="tns:endpoint.get_task_typesResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.get_user_alerts">
+      <documentation>This function returns last 300 events for user $1, registration $2 from date $3</documentation>
+      <wsdl:input message="tns:endpoint.get_user_alertsRequest" />
+      <wsdl:output message="tns:endpoint.get_user_alertsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.get_vehicle">
+      <documentation>This function searches for a vehicle(s) by registration</documentation>
+      <wsdl:input message="tns:endpoint.get_vehicleRequest" />
+      <wsdl:output message="tns:endpoint.get_vehicleResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.get_vehicle_alerts">
+      <documentation>This function returns last 300 events for user $1, registration $2 from date $3</documentation>
+      <wsdl:input message="tns:endpoint.get_vehicle_alertsRequest" />
+      <wsdl:output message="tns:endpoint.get_vehicle_alertsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.get_vehicle_detailed_event">
+      <documentation>This function returns events (including door and temperature data) for a vehicle between 2 timestamps.</documentation>
+      <wsdl:input message="tns:endpoint.get_vehicle_detailed_eventRequest" />
+      <wsdl:output message="tns:endpoint.get_vehicle_detailed_eventResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.get_vehicle_details">
+      <documentation>This function returns active vehicle details for user accocunt</documentation>
+      <wsdl:input message="tns:endpoint.get_vehicle_detailsRequest" />
+      <wsdl:output message="tns:endpoint.get_vehicle_detailsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.get_vehicle_drivers">
+      <documentation>This function returns a vehicle`s drivers</documentation>
+      <wsdl:input message="tns:endpoint.get_vehicle_driversRequest" />
+      <wsdl:output message="tns:endpoint.get_vehicle_driversResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.get_vehicle_events">
+      <documentation>This function returns last 300 events for user $1, registration $2 from date $3</documentation>
+      <wsdl:input message="tns:endpoint.get_vehicle_eventsRequest" />
+      <wsdl:output message="tns:endpoint.get_vehicle_eventsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.get_vehicle_fuel">
+      <documentation>This function returns fuel data for the supplied username and time range</documentation>
+      <wsdl:input message="tns:endpoint.get_vehicle_fuelRequest" />
+      <wsdl:output message="tns:endpoint.get_vehicle_fuelResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.get_vehicle_instant_position">
+      <documentation>This function returns instant position info for the supplied registration</documentation>
+      <wsdl:input message="tns:endpoint.get_vehicle_instant_positionRequest" />
+      <wsdl:output message="tns:endpoint.get_vehicle_instant_positionResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.get_vehicle_last_positions">
+      <documentation>This function returns most current position details of USER $1 vehicles list</documentation>
+      <wsdl:input message="tns:endpoint.get_vehicle_last_positionsRequest" />
+      <wsdl:output message="tns:endpoint.get_vehicle_last_positionsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.get_vehicle_last_positions_deal">
+      <documentation>This function returns most current position details of DEAL $1 vehicles list</documentation>
+      <wsdl:input message="tns:endpoint.get_vehicle_last_positions_dealRequest" />
+      <wsdl:output message="tns:endpoint.get_vehicle_last_positions_dealResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.get_vehicle_last_positions_with_did">
+      <documentation>This function returns most current position details of USER $1 vehicles list</documentation>
+      <wsdl:input message="tns:endpoint.get_vehicle_last_positions_with_didRequest" />
+      <wsdl:output message="tns:endpoint.get_vehicle_last_positions_with_didResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.get_vehicle_list_all_details">
+      <documentation>This function returns last known position details of USER $1 vehicles list</documentation>
+      <wsdl:input message="tns:endpoint.get_vehicle_list_all_detailsRequest" />
+      <wsdl:output message="tns:endpoint.get_vehicle_list_all_detailsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.get_vehicle_state">
+      <documentation>This function returns returns vehicle current state.</documentation>
+      <wsdl:input message="tns:endpoint.get_vehicle_stateRequest" />
+      <wsdl:output message="tns:endpoint.get_vehicle_stateResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.get_vehiclelist">
+      <documentation>This function returns a detailed list of vehicles</documentation>
+      <wsdl:input message="tns:endpoint.get_vehiclelistRequest" />
+      <wsdl:output message="tns:endpoint.get_vehiclelistResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.get_vehicles_at_time">
+      <documentation>This function returns the first position details of vehicles after a specific time</documentation>
+      <wsdl:input message="tns:endpoint.get_vehicles_at_timeRequest" />
+      <wsdl:output message="tns:endpoint.get_vehicles_at_timeResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.get_vehicles_at_time_by_reg">
+      <documentation>This function returns the first position details of vehicles after a specific time</documentation>
+      <wsdl:input message="tns:endpoint.get_vehicles_at_time_by_regRequest" />
+      <wsdl:output message="tns:endpoint.get_vehicles_at_time_by_regResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.get_vehicles_details_per_driver">
+      <documentation>This function returns a a drivers vehicles</documentation>
+      <wsdl:input message="tns:endpoint.get_vehicles_details_per_driverRequest" />
+      <wsdl:output message="tns:endpoint.get_vehicles_details_per_driverResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.get_vehicles_nearest_to_postcode">
+      <documentation>This function returns the nearest vehicles to the passed in postcode for the passed in username. (Up to 5 vehicles)</documentation>
+      <wsdl:input message="tns:endpoint.get_vehicles_nearest_to_postcodeRequest" />
+      <wsdl:output message="tns:endpoint.get_vehicles_nearest_to_postcodeResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.get_worker_tag_registration">
+      <documentation>This function lists worker tag registrations.</documentation>
+      <wsdl:input message="tns:endpoint.get_worker_tag_registrationRequest" />
+      <wsdl:output message="tns:endpoint.get_worker_tag_registrationResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.insert_poi">
+      <documentation>This function creates a POI.</documentation>
+      <wsdl:input message="tns:endpoint.insert_poiRequest" />
+      <wsdl:output message="tns:endpoint.insert_poiResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.set_driver_privacy_mode">
+      <documentation>This function returns privacy settings for supplied registration</documentation>
+      <wsdl:input message="tns:endpoint.set_driver_privacy_modeRequest" />
+      <wsdl:output message="tns:endpoint.set_driver_privacy_modeResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.set_predefined_messages">
+      <documentation>This function is used to set a predefined message</documentation>
+      <wsdl:input message="tns:endpoint.set_predefined_messagesRequest" />
+      <wsdl:output message="tns:endpoint.set_predefined_messagesResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.set_task_data">
+      <documentation>This function updates a task</documentation>
+      <wsdl:input message="tns:endpoint.set_task_dataRequest" />
+      <wsdl:output message="tns:endpoint.set_task_dataResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="endpointBinding" type="tns:endpointPortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <wsdl:operation name="endpoint.create_driver">
+      <soap:operation soapAction="fleettestlive.cartrackme.com/api/#create_driver" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.create_geofence">
+      <soap:operation soapAction="fleettestlive.cartrackme.com/api/#create_geofence" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.create_geofencegroup_alert">
+      <soap:operation soapAction="fleettestlive.cartrackme.com/api/#create_geofencegroup_alert" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.create_geofencegroup_alert_by_contact_type">
+      <soap:operation soapAction="fleettestlive.cartrackme.com/api/#create_geofencegroup_alert_by_contact_type" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.create_geofencegrouplist_alert">
+      <soap:operation soapAction="fleettestlive.cartrackme.com/api/#create_geofencegrouplist_alert" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.create_message">
+      <soap:operation soapAction="fleettestlive.cartrackme.com/api/#create_message" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.create_report">
+      <soap:operation soapAction="fleettestlive.cartrackme.com/api/#create_report" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.create_task">
+      <soap:operation soapAction="fleettestlive.cartrackme.com/api/#create_task" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.create_task_destination">
+      <soap:operation soapAction="fleettestlive.cartrackme.com/api/#create_task_destination" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.create_task_step">
+      <soap:operation soapAction="fleettestlive.cartrackme.com/api/#create_task_step" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.get_LCST00001_vehicle_local">
+      <soap:operation soapAction="fleettestlive.cartrackme.com/api/#get_LCST00001_vehicle_local" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.get_all_trips">
+      <soap:operation soapAction="fleettestlive.cartrackme.com/api/#get_all_trips" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.get_all_vehicles_last_positions">
+      <soap:operation soapAction="fleettestlive.cartrackme.com/api/#get_all_vehicles_last_positions" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.get_communicators">
+      <soap:operation soapAction="fleettestlive.cartrackme.com/api/#get_communicators" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.get_customer_data">
+      <soap:operation soapAction="fleettestlive.cartrackme.com/api/#get_customer_data" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.get_destination_bycontact">
+      <soap:operation soapAction="fleettestlive.cartrackme.com/api/#get_destination_bycontact" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.get_destination_bystreet">
+      <soap:operation soapAction="fleettestlive.cartrackme.com/api/#get_destination_bystreet" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.get_destination_bysuburb">
+      <soap:operation soapAction="fleettestlive.cartrackme.com/api/#get_destination_bysuburb" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.get_destinationlist">
+      <soap:operation soapAction="fleettestlive.cartrackme.com/api/#get_destinationlist" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.get_directions">
+      <soap:operation soapAction="fleettestlive.cartrackme.com/api/#get_directions" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.get_driver">
+      <soap:operation soapAction="fleettestlive.cartrackme.com/api/#get_driver" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.get_driver_login">
+      <soap:operation soapAction="fleettestlive.cartrackme.com/api/#get_driver_login" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.get_driver_password_reset">
+      <soap:operation soapAction="fleettestlive.cartrackme.com/api/#get_driver_password_reset" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.get_driver_privacy_mode">
+      <soap:operation soapAction="fleettestlive.cartrackme.com/api/#get_driver_privacy_mode" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.get_driver_vehicles">
+      <soap:operation soapAction="fleettestlive.cartrackme.com/api/#get_driver_vehicles" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.get_driverlist">
+      <soap:operation soapAction="fleettestlive.cartrackme.com/api/#get_driverlist" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.get_drivers_detail_per_vehicle">
+      <soap:operation soapAction="fleettestlive.cartrackme.com/api/#get_drivers_detail_per_vehicle" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.get_fuel_fills">
+      <soap:operation soapAction="fleettestlive.cartrackme.com/api/#get_fuel_fills" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.get_geofence">
+      <soap:operation soapAction="fleettestlive.cartrackme.com/api/#get_geofence" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.get_geofence_visits">
+      <soap:operation soapAction="fleettestlive.cartrackme.com/api/#get_geofence_visits" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.get_geofence_visits_by_id">
+      <soap:operation soapAction="fleettestlive.cartrackme.com/api/#get_geofence_visits_by_id" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.get_message_state">
+      <soap:operation soapAction="fleettestlive.cartrackme.com/api/#get_message_state" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.get_messages">
+      <soap:operation soapAction="fleettestlive.cartrackme.com/api/#get_messages" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.get_messages_after">
+      <soap:operation soapAction="fleettestlive.cartrackme.com/api/#get_messages_after" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.get_nearest_corner">
+      <soap:operation soapAction="fleettestlive.cartrackme.com/api/#get_nearest_corner" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.get_notification_events">
+      <soap:operation soapAction="fleettestlive.cartrackme.com/api/#get_notification_events" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.get_odo_difference">
+      <soap:operation soapAction="fleettestlive.cartrackme.com/api/#get_odo_difference" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.get_poi">
+      <soap:operation soapAction="fleettestlive.cartrackme.com/api/#get_poi" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.get_poi_status_action_join">
+      <soap:operation soapAction="fleettestlive.cartrackme.com/api/#get_poi_status_action_join" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.get_predefined_messages">
+      <soap:operation soapAction="fleettestlive.cartrackme.com/api/#get_predefined_messages" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.get_registration_last_position">
+      <soap:operation soapAction="fleettestlive.cartrackme.com/api/#get_registration_last_position" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.get_simple_route">
+      <soap:operation soapAction="fleettestlive.cartrackme.com/api/#get_simple_route" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.get_single_vehicle_events">
+      <soap:operation soapAction="fleettestlive.cartrackme.com/api/#get_single_vehicle_events" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.get_task_data">
+      <soap:operation soapAction="fleettestlive.cartrackme.com/api/#get_task_data" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.get_task_step_types">
+      <soap:operation soapAction="fleettestlive.cartrackme.com/api/#get_task_step_types" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.get_task_steps">
+      <soap:operation soapAction="fleettestlive.cartrackme.com/api/#get_task_steps" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.get_task_types">
+      <soap:operation soapAction="fleettestlive.cartrackme.com/api/#get_task_types" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.get_user_alerts">
+      <soap:operation soapAction="fleettestlive.cartrackme.com/api/#get_user_alerts" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.get_vehicle">
+      <soap:operation soapAction="fleettestlive.cartrackme.com/api/#get_vehicle" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.get_vehicle_alerts">
+      <soap:operation soapAction="fleettestlive.cartrackme.com/api/#get_vehicle_alerts" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.get_vehicle_detailed_event">
+      <soap:operation soapAction="fleettestlive.cartrackme.com/api/#get_vehicle_detailed_event" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.get_vehicle_details">
+      <soap:operation soapAction="fleettestlive.cartrackme.com/api/#get_vehicle_details" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.get_vehicle_drivers">
+      <soap:operation soapAction="fleettestlive.cartrackme.com/api/#get_vehicle_drivers" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.get_vehicle_events">
+      <soap:operation soapAction="fleettestlive.cartrackme.com/api/#get_vehicle_events" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.get_vehicle_fuel">
+      <soap:operation soapAction="fleettestlive.cartrackme.com/api/#get_vehicle_fuel" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.get_vehicle_instant_position">
+      <soap:operation soapAction="fleettestlive.cartrackme.com/api/#get_vehicle_instant_position" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.get_vehicle_last_positions">
+      <soap:operation soapAction="fleettestlive.cartrackme.com/api/#get_vehicle_last_positions" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.get_vehicle_last_positions_deal">
+      <soap:operation soapAction="fleettestlive.cartrackme.com/api/#get_vehicle_last_positions_deal" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.get_vehicle_last_positions_with_did">
+      <soap:operation soapAction="fleettestlive.cartrackme.com/api/#get_vehicle_last_positions_with_did" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.get_vehicle_list_all_details">
+      <soap:operation soapAction="fleettestlive.cartrackme.com/api/#get_vehicle_list_all_details" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.get_vehicle_state">
+      <soap:operation soapAction="fleettestlive.cartrackme.com/api/#get_vehicle_state" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.get_vehiclelist">
+      <soap:operation soapAction="fleettestlive.cartrackme.com/api/#get_vehiclelist" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.get_vehicles_at_time">
+      <soap:operation soapAction="fleettestlive.cartrackme.com/api/#get_vehicles_at_time" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.get_vehicles_at_time_by_reg">
+      <soap:operation soapAction="fleettestlive.cartrackme.com/api/#get_vehicles_at_time_by_reg" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.get_vehicles_details_per_driver">
+      <soap:operation soapAction="fleettestlive.cartrackme.com/api/#get_vehicles_details_per_driver" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.get_vehicles_nearest_to_postcode">
+      <soap:operation soapAction="fleettestlive.cartrackme.com/api/#get_vehicles_nearest_to_postcode" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.get_worker_tag_registration">
+      <soap:operation soapAction="fleettestlive.cartrackme.com/api/#get_worker_tag_registration" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.insert_poi">
+      <soap:operation soapAction="fleettestlive.cartrackme.com/api/#insert_poi" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.set_driver_privacy_mode">
+      <soap:operation soapAction="fleettestlive.cartrackme.com/api/#set_driver_privacy_mode" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.set_predefined_messages">
+      <soap:operation soapAction="fleettestlive.cartrackme.com/api/#set_predefined_messages" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="endpoint.set_task_data">
+      <soap:operation soapAction="fleettestlive.cartrackme.com/api/#set_task_data" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="fleettestlive.cartrackme.com/api/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="endpoint">
+    <wsdl:port name="endpointPort" binding="tns:endpointBinding">
+      <soap:address location="http://fleettestlive.cartrackme.com/api/index.php" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

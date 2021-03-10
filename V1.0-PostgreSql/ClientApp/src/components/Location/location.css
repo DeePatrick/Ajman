@@ -1,0 +1,95 @@
+.location .fa-map-marker {
+  color: #9f8865;
+}
+
+.location .row h4 {
+  color: #9f8865;
+  font-weight: bolder;
+  font-size: 1em;
+  margin-left: 15px;
+}
+
+.location .row h5 {
+  background-color:#9f8865;
+  color: white;
+  font-size: 0.6em;
+  height: 2.5em;
+  padding: 0.6em 1.5em 0.5em 1.5em;
+  margin-left: 13.4%;
+  margin-top: -3px;
+}
+
+/* LEFT COLUMN */
+.location .row .left {
+  /* background-color: red; */
+  height: 500px;
+  padding: 5px;
+}
+
+.location .row .left .search-bar {
+  background-color: #ffffff;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 30px;
+}
+
+.location .row .left .search-bar .inner-search-bar {
+  border-bottom: 1px solid #a0a0a0;
+}
+
+.location .row .left .search-bar .inner-search-bar input {
+  float:left;
+  width: 80%;
+}
+
+.location .row .left .search-bar .inner-search-bar input:focus {
+  border: none;
+  box-shadow: none;
+}
+
+.location .row .left .search-bar .inner-search-bar button {
+  float:right;
+  width: 20%;
+  margin-top: 4px;
+  border: none;
+  cursor: pointer;
+  background-color: #ffffff;
+}
+
+.location .row .left .search-bar .inner-search-bar button:focus,.location .row .left .search-bar .inner-search-bar button:active {
+  box-shadow: none;
+  outline: none;
+}
+
+.location .row .left .search-bar .inner-search-bar button i {
+  color: #a0a0a0;
+}
+
+.location .row .left .search-bar .inner-search-bar::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.location .row .left .list ul {
+  background-color:#ffffff;
+  border-radius: 5px;
+  padding: 0;
+}
+
+/* LEFT COLUMN */
+
+/* RIGHT COLUMN */
+
+.location .row .right {
+  /* background-color: blue; */
+  height: 500px;
+  padding: 5px;
+}
+
+.location .row .right .map {
+  padding: 10px;
+  background-color: #ffffff;
+  border-radius: 5px;
+}
+/* RIGHT COLUMN */

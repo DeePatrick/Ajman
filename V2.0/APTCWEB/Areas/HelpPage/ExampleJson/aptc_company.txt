@@ -1,0 +1,48 @@
+﻿<strong>JSON Input<strong> <br/><br/>
+  {
+            "address": {"city":"agra","state":"up","area":"gz","street":"12","bldgNum":"1","flatNum":"702"},
+            "chamberNum": "chamberNum_3",
+            "comStatus": {"statusID":"PE","DateTime": "2018-09-06 15:41:10"
+			},
+            "comType": "comType_3",
+            "crNum": "cRNum_2",
+            "created_On": "06-09-2018 15:20:28",
+            "dED": "dED_3",
+            "email": "abc3@qlc.ocm",
+            "estDate": "2018-08-19",
+            "franshisee": "False",
+            "isActive": true,
+            "legalForm": "legalForm_3",
+            "name": {
+                "ar_SA": "Sunil",
+                "en_US": "Sunil"
+            },
+			"employeeIDs": [
+            {
+                "keyID": "111"
+            },
+            {
+                "keyID": "222"
+            }
+			 ],
+			"ownerRoles":
+			{
+				"ownerRoleID":"Test Owner",
+				"id":"ID Owner",
+				"nationality":"UAE",
+				"ownerNameAr":"owner Name Ar",
+				"ownerNameEn":"owner Name En",
+				"ownerRoleType":"Company Owner"
+			},
+            "notes": "Notes3",
+            "telNum": {"countryCodeT":"+91","numT":"90878877777","areaT":"agra"},
+            "website": "website_3",
+			"companyPhoto":"abc"
+        }
+<br/>
+<br/>
+<br/><strong>Response</strong><br/><br/>
+{"id":"company_cRNum_2", "IsSuccess": "true", "message":"Successfully","statusCode":"200"}<br/>
+{"id":"", "IsSuccess": "false", "message": "112-email is required","statusCode":"400"}<br/>
+
+

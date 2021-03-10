@@ -1,0 +1,55 @@
+.companies .row .right .company-result-details {
+  background-color: #ffffff;
+  width: 100%;
+  /* height: 300px; */
+  border-radius: 5px;
+  padding: 15px;
+  padding-left: 35px;
+}
+
+.companies .row .right .company-result-details .headline i {
+  float: left;
+  font-size: 2.5em;
+  color:#a0a0a0;
+}
+
+.companies .row .right .company-result-details .headline h4 {
+  float: left;
+  color:#a0a0a0;
+  padding-top: 10px;
+  font-size: 1.2em;
+}
+
+.companies .row .right .company-result-details .headline h4::first-letter {
+  text-transform: capitalize;
+}
+
+.companies .row .right .company-result-details .headline::after{
+  display: block;
+  content: '';
+  clear: both;
+}
+
+.companies .row .right .company-result-details .body p {
+  margin: 0;
+  padding: 0;
+  color:#a0a0a0;
+  font-weight: bolder;
+}
+
+.companies .row .right .company-result-details .body p:first-child {
+  margin-top: 30px;
+}
+
+.companies .row .right .company-result-details button {
+  border: none;
+  background-color:#9f8865;
+  color:#fff;
+  margin-top: 20px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.companies .row .right .vehicle-result-details button i {
+  margin-right: 10px;
+}

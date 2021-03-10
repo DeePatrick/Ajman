@@ -1,0 +1,76 @@
+﻿<strong>JSON Input<strong> <br/><br/>
+{
+	"keyID": "784123412345671",
+	"profilePhoto": "",
+	"docType": "individual",
+	"email": "brijesh.kumar@quicklinkconsultancy.com",
+	"fullName": {
+		"en_US": "brijesh kumar",
+		"ar_SA": "بريجيش كومار"
+	},
+	"mobNum": {
+		"CountryCodeM": "+971",
+		"NumM": "9988776655",
+		"areaM": "05"
+	},
+	"telNum": {
+		"CountryCodeT": "+971",
+		"NumT": "9988776644",
+		"areaT": "2"
+	},
+	"address": {
+		"city": "Delhi",
+		"state": "Delhi",
+		"area": "NCR",
+		"bldngNum": null,
+		"flatNum": "702",
+		"street": "test"
+	},
+	"dOB": "01-01-1992",
+	"nationality": "Indian",
+	"religion": "Hindu",
+	"notes": null,
+	"gender": "Male",
+	"language": "English",
+	"maritalStatus": null,
+	"roles": [],
+	"fines": [{
+		"fineID": "F0001",
+		"dateTime": "2018-05-29T00:00:00+05:30",
+		"amount": "3000",
+		"status": "pending",
+		"remark": null
+	}],
+	"documents": [{
+		"documentID": "D0001",
+		"version": "1",
+		"type": "ID",
+		"expDate": "2028-05-29",
+		"status": "saved"
+	}],
+	"vehicles": [{
+		"vehicleID": "V0001",
+		"make": "Toyota",
+		"modelYear": "2018",
+		"vehType": "SUV",
+		"status": "true"
+	}],
+	"status": {
+		"statusID": "PE",
+		"dateTime": "2018-05-29T00:00:00+05:30"
+	},
+	"incidents": [{
+		"incidentID": "I0001",
+		"dateTime": "2018-05-29T00:00:00+05:30",
+		"rank": 1,
+		"status": "true",
+		"remarks": null
+	}]
+}
+<br/>
+<br/>
+<br/><strong>Response</strong><br/><br/>
+{"id":"individual_", "IsSuccess": "true", "message":"Successfully","statusCode":"200"}<br/>
+{"id":"", "IsSuccess": "false", "message": "143-Emirati Id is required","statusCode":"400"}<br/>
+{"id":"", "IsSuccess": "false", "message": "112-email is required","statusCode":"400"}<br/>
+

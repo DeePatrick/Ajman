@@ -1,0 +1,179 @@
+﻿@{
+    /**/
+
+    ViewBag.Title = "IncidentMessage";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="jumbotron">
+    <h3>Incident Message List</h3>
+</div>
+<div class="row">
+    <div id="target">
+
+    </div>
+</div>
+
+<div id="addNew" style="display:none">
+
+    <div class="row">
+        <div class="col-md-4">
+            <label>Driver ID</label>
+            <input type="text" id="txtDriverID" name="name" value="" class="form-control" placeholder="Driver ID" title="Driver ID" />
+        </div>
+        <div class="col-md-4">
+            <label>Date Time</label>
+            <input type="text" id="txtDateTime" name="name" value="" class="form-control" placeholder="Date Time" title="Date Time" />
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4">
+            <label>Notes</label>
+            <input type="text" id="txtNotes" name="name" value="" class="form-control" placeholder="Notes" title="Notes" />
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4">
+
+        </div>
+        <div class="col-md-4">
+            <input type="submit" name="Save" onclick="SaveIncidentMessage()" value="Save" class="btn btn-danger" style="width:100px; margin-top:20px;" />
+        </div>
+    </div>
+</div>
+<div id="dvAddButton">
+    <input type="submit" onclick="addNewIncidentMessage();" name="name" class="btn btn-danger" value="Add New Incident Message" />
+    <input type="submit" id="btnCancel" onclick="Cancel();" class="btn btn-danger" style="display:none" name="name" value="Cancel" />
+</div>
+<div class="row" id="grdDriver">
+    <table id="tblEntAttributes" class="table table-bordered">
+        <thead class="success">
+            <tr>
+                <th>ID</th>
+                <th>Driver ID</th>
+                <th>Date Time</th>
+                <th>Notes</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody"></tbody>
+    </table>
+</div>
+<div>
+    <script>
+
+        function addNewIncidentMessage() {
+            $('#addNew').show();
+            $('#btnCancel').show();
+        }
+
+        function deleteIncidentMessage(obj) {
+            $.ajax({
+                url: hostUrl + 'aptc.incdnt/delete/' + obj.id,
+                type: 'GET',
+                dataType: 'json',
+                success: function (data) {
+                    if (data == 'deleted') {
+                        alert('deleted successfully');
+                        getAllIncidentMessage();
+                    }
+                },
+                error: function (data) {
+                    alert(data.responseText);
+                },
+            });
+        }
+
+        var editObj = {};
+
+        function editIncidentMessage(obj) {
+            $.ajax({
+                url: hostUrl + 'aptc.incdnt/edit/' + obj.id,
+                type: 'GET',
+                dataType: 'json',
+                success: function (data) {
+                    //debugger;
+
+                },
+                error: function (data) {
+                    alert(data.responseText);
+                },
+            });
+        }
+
+        function Cancel() {
+            $('#addNew').hide();
+            $('#btnCancel').hide();
+        }
+
+        function getAllIncidentMessage() {
+            var strTable = ` `
+            tableBody
+            $.ajax({
+                url: hostUrl + 'aptc.incdnt/getall',
+                type: 'GET',
+                dataType: 'json',
+                success: function (data) {
+                    $('#tableBody').html('');
+                    for (var i = 0; i < data.length; i++) {
+                        var tblBody = '';
+                        tblBody = '<tr><td>' + data[i].IncidentMessage.id + '</td><td>' + data[i].IncidentMessage.driverID + '</td><td>' + data[i].IncidentMessage.dateTime + '</td><td>' + data[i].IncidentMessage.notes + '</td></tr>'
+                        $("#tblEntAttributes tbody").append(tblBody);
+                    }
+                },
+                error: function (data) {
+                    alert(data.responseText);
+                },
+            });
+        }
+
+        var filePath = '';
+        $(function () {
+            $('#fileUpload').change(function (event) {
+                var tmppath = URL.createObjectURL(event.target.files[0]);
+                //debugger;
+                filePath = $(this).val();
+                $("img").fadeIn("fast").attr('src', URL.createObjectURL(event.target.files[0]));
+            });
+            getAllIncidentMessage();
+        });
+
+        function deleteIncidentMessage(obj) {
+            $.ajax({
+                url: hostUrl + 'aptc.incdnt/delete/' + obj.id,
+                type: 'GET',
+                dataType: 'json',
+                success: function (data) {
+                    //debugger;
+                    if (data == 'deleted') {
+                        alert('deleted successfully');
+                        getAllIncidentMessage();
+                    }
+                },
+                error: function (data) {
+                    alert(data.responseText);
+                },
+            });
+        }
+
+        function SaveIncidentMessage() {
+            var obj = {};
+            obj.driverID = $("#txtDriverID").val();
+            obj.dateTime = $("#txtDateTime").val();
+            obj.notes = $("#txtNotes").val();
+            $.ajax({
+                type: 'POST',
+                data: obj,
+                dataType: "json",
+                url: hostUrl + 'aptc.incdnt',
+                success: function (data) {
+                    alert(data);
+                },
+                error: function (errMsg) {
+                    alert(errMsg.responseText)
+                }
+            });
+        }
+    </script>
+</div>

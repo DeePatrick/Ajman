@@ -1,0 +1,282 @@
+﻿@{
+    ViewBag.Title = "Driver";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="jumbotron" style="padding:5px;">
+    <h3>Driver List</h3>
+</div>
+
+<div id="addNew" style="display:none">
+
+    <div class="row">
+        <div class="col-md-4">
+            <label><strong style="color:red">*</strong>&nbsp;Emirati Id</label>
+            @*<label id="lblId"></label>*@
+            <input type="text" name="name" id="txtEmiratiId" value="" class="form-control" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <label><strong style="color:red">*</strong>&nbsp;First Name EN</label>
+            <input type="text" name="name" id="txtfEName" value="" class="form-control" />
+        </div>
+        <div class="col-md-4">
+            <label><strong style="color:red">*</strong>&nbsp;Last Name EN</label>
+            <input type="text" name="name" value="" id="txtlEName" class="form-control" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <label><strong style="color:red">*</strong>&nbsp;First Name AR</label>
+            <input type="text" name="name" value="" id="txtfAName" class="form-control" />
+        </div>
+        <div class="col-md-4">
+            <label><strong style="color:red">*</strong>&nbsp;Last Name AR</label>
+            <input type="text" name="name" value="" id="txtlAName" class="form-control" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <label><strong style="color:red">*</strong>&nbsp;Mobile Number</label>
+            <input type="text" name="name" value="" maxlength="10" id="txtMob" class="form-control" />
+        </div>
+        <div class="col-md-4">
+            <label><strong style="color:red">*</strong>&nbsp;Email Address</label>
+            <input type="text" name="name" value="" id="txtEemail" class="form-control" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <label><strong style="color:red">*</strong>&nbsp;Vehicle Type</label>
+            <select id="drpVType" class="form-control">
+                <option value="Bike">Bike</option>
+                <option value="Car">Car</option>
+                <option value="Bus">Bus</option>
+                <option value="Truck">Truck</option>
+            </select>
+        </div>
+        <div class="col-md-4">
+            <label><strong style="color:red">*</strong>&nbsp;Permit Number</label>
+            <input type="text" name="name" value="" id="txtPermit" class="form-control" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <label><strong style="color:red">*</strong>&nbsp;License Number</label>
+            <input type="text" name="name" value="" id="txtLic" class="form-control" />
+        </div>
+        <div class="col-md-4">
+            <label><strong style="color:red">*</strong>&nbsp;License Issue Date</label>
+            <input type="date" name="name" value="" id="txtLicIssueDate" class="form-control" />
+        </div>
+        <div class="col-md-4">
+            <label><strong style="color:red">*</strong>&nbsp;License Expiry Date</label>
+            <input type="date" name="name" value="" id="txtLicExpiryDate" class="form-control" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <label><strong style="color:red">*</strong>&nbsp;Pasport Number</label>
+            <input type="text" name="name" value="" id="txtPass" class="form-control" />
+        </div>
+        <div class="col-md-4">
+            <label>Photo</label>
+            <input type="file" name="name" id="fileUpload" value="Select" />
+            <img src="" width="200" style="display:none;" />
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <input type="submit" name="Save" onclick="SaveDriver()" value="Save" class="btn btn-danger" style="width:100px; margin-top:20px;" />
+        </div>
+    </div>
+</div>
+<div id="dvAddButton">
+    <input type="submit" onclick="addNewDriver();" name="name" class="btn btn-danger" value="Add New Driver" />
+    <input type="submit" id="btnCancel" onclick="Cancel();" class="btn btn-danger" style="display:none" name="name" value="Cancel" />
+</div>
+<div class="row" id="grdDriver">
+    <table id="tblEntAttributes" class="table table-bordered">
+        <thead class="success">
+            <tr>
+                <th>Emirati Id</th>
+                <th>First Name EN</th>
+                <th>Last Name EN</th>
+                <th>EmailAddress</th>
+                <th>Mobile Number</th>
+                <th>License Number</th>
+                <th>Pasport Number</th>
+                <th>Permit Number</th>
+                <th>Is Valid</th>
+                <th>CT Response</th>
+                <th>CT Response Descicription</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody"></tbody>
+    </table>
+</div>
+<div>
+    <script>
+        var editObj = {};
+        var editId = '';
+        $(function () {
+            $('#fileUpload').change(function (event) {
+                debugger;
+                var tmppath = URL.createObjectURL(event.target.files[0]);
+                var reader = new FileReader(event.target.files[0]);
+                filePath = $(this).val();
+                $("img").fadeIn("fast").attr('src', URL.createObjectURL(event.target.files[0]));
+            });
+            getAllDriver();
+        });
+        function addNewDriver() {
+            $('#addNew').show();
+            editObj = '';
+            $("#txtEmiratiId").show();
+            $('#btnCancel').show();
+        }
+        function deleteDriver(obj) {
+            $.ajax({
+                url: hostUrl + 'aptc.driver/delete/' + obj.id,
+                type: 'GET',
+                dataType: 'json',
+                success: function (data) {
+                    alert('deleted successfully');
+                    getAllDriver();
+                },
+                error: function (data) {
+                    alert(data.responseText);
+                },
+            });
+        }
+        function editDriver(obj) {
+            editId = obj.id;
+            $.ajax({
+                url: hostUrl + 'aptc.driver/edit/' + obj.id,
+                type: 'GET',
+                dataType: 'json',
+                success: function (data) {
+                    editObj = data.Value;
+                    $('#addNew').show();
+                    $('#txtEmiratiId').attr('readonly');
+                    $('#txtEmiratiId').val(data.Value.emiratiId);
+                    $("#txtfEName").val(data.Value.firstNameEN),
+                        $("#txtlEName").val(data.Value.lastNameEN),
+                        $("#txtfAName").val(data.Value.firstNameAR),
+                        $("#txtlAName").val(data.Value.lastNameAR),
+                        $("#txtMob").val(data.Value.mobileNumber),
+                        $("#txtEemail").val(data.Value.emailAddress),
+                        $('select#drpVType option:selected').val(data.Value.vehicleType),
+                        $("#txtPermit").val(data.Value.permitNumber),
+                        $("#txtLic").val(data.Value.licenseNumber),
+                        $("#txtPass").val(data.Value.pasportNumber),
+                        $("#txtLicIssueDate").val(data.Value.licenseIssueDate),
+                        $("#txtLicExpiryDate").val(data.Value.licenseExpiryDate)
+
+                },
+                error: function (data) {
+                    alert(data.responseText);
+                },
+            });
+        }
+        function Cancel() {
+            $('#addNew').hide();
+            $('#btnCancel').hide();
+        }
+        function getAllDriver() {
+            var strTable = ` `
+            tableBody
+            $.ajax({
+                url: hostUrl + 'car.driver/getall',
+                type: 'GET',
+                dataType: 'json',
+                success: function (data) {
+                    $('#tableBody').html('');
+                    for (var i = 0; i < data.length; i++) {
+                        var carTrackDriverResponse = '';
+                        var tblBody = '';
+                        tblBody = '<tr><td>' + data[i].Driver.emiratiId + '</td><td>' + data[i].Driver.firstNameEN + '</td><td>' + data[i].Driver.lastNameEN + '</td><td>' + data[i].Driver.emailAddress + '</td><td>' + data[i].Driver.mobileNumber + '</td><td>' + data[i].Driver.licenseNumber + '</td><td>' + data[i].Driver.pasportNumber + '</td><td>' + data[i].Driver.permitNumber + '</td><td>' + data[i].Driver.driverValid + '</td><td>' + data[i].Driver.carTrackDriverResponse.ctStatus + '</td><td>' + data[i].Driver.carTrackDriverResponse.ctDescription + '</td><td><a id=' + data[i].Driver.id + ' onclick="editDriver(this);" style="margin-right:10px;display:block" href="#">Edit</a><a id=' + data[i].Driver.id + ' onclick="deleteDriver(this);" style="margin-left:10px;" href="#">Delete</a></td></tr>'
+                        $("#tblEntAttributes tbody").append(tblBody);
+                        //$('#tableBody').add(tblBody);
+                    }
+                },
+                error: function (data) {
+                    alert(data.responseText);
+                },
+            });
+        }
+        var filePath = '';
+        function SaveDriver() {
+            if (editId == '') {
+                var driver =
+                    {
+                        emiratiId: $("#txtEmiratiId").val(),
+                        firstNameEN: $("#txtfEName").val(),
+                        lastNameEN: $("#txtlEName").val(),
+                        firstNameAR: $("#txtfAName").val(),
+                        lastNameAR: $("#txtlAName").val(),
+                        mobileNumber: $("#txtMob").val(),
+                        emailAddress: $("#txtEemail").val(),
+                        vehicleType: $('select#drpVType option:selected').val(),
+                        permitNumber: $("#txtPermit").val(),
+                        licenseNumber: $("#txtLic").val(),
+                        LicenseIssueDate: $("#txtLicIssueDate").val(),
+                        LicenseExpiryDate: $("#txtLicExpiryDate").val(),
+                        pasportNumber: $("#txtPass").val(),
+                        photo: filePath
+                    }
+                //debugger;
+                //driver.carTrackDriverResponse.cTStatus = 'No';
+                //driver.carTrackDriverResponse.cTDescription = '';
+
+                $.ajax({
+                    url: hostUrl + 'aptc.driver/register',
+                    type: 'POST',
+                    data: driver,
+                    dataType: 'json',
+                    success: function (data) {
+                        $('#addNew').hide();
+                        getAllDriver();
+                    },
+                    error: function (data) {
+                        alert(data.responseText);
+                    },
+                });
+            }
+            else {
+                editObj.firstNameEN = $("#txtfEName").val();
+                editObj.lastNameEN = $("#txtlEName").val();
+                editObj.firstNameAR = $("#txtfAName").val();
+                editObj.lastNameAR = $("#txtlAName").val();
+                editObj.mobileNumber = $("#txtMob").val();
+                editObj.emailAddress = $("#txtEemail").val();
+                editObj.vehicleType = $('select#drpVType option:selected').val();
+                editObj.permitNumber = $("#txtPermit").val();
+                editObj.licenseNumber = $("#txtLic").val();
+                editObj.pasportNumber = $("#txtPass").val();
+                editObj.emiratiId = editObj.emiratiId,
+                    editObj.driverValid = editObj.driverValid
+                if (filePath != '') {
+                    editObj.photo = filePath;
+                }
+                debugger;
+                $.ajax({
+                    url: hostUrl + 'aptc.driver/update',
+                    type: 'POST',
+                    data: editObj,
+                    dataType: 'json',
+                    success: function (data) {
+                        alert(data);
+                        $('#addNew').hide();
+                        getAllDriver();
+                    },
+                    error: function (data) {
+                        alert(data.responseText);
+                    },
+                });
+            }
+        }
+    </script>
+</div>

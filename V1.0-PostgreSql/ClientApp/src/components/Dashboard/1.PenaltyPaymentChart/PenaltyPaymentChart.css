@@ -1,0 +1,102 @@
+.penaltypayment-barchart-container {
+    height: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.panel-element-container-row-top {
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+    padding: 15px 5px;
+    height: auto;
+}
+
+.panel-element-container-row-bottom {
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+    padding: 15px 5px;
+    height: 335px;
+}
+
+.white-panel-container {
+    background-color: #ffffff;
+    border-radius: 5px;
+}
+
+.carousel-main-PenaltyPaymentChart {
+    padding: 30px 33px;
+    margin: 0px 17px 0px 20px;
+    height: 100%;
+    text-align: center;
+}
+
+.carousel-indicators-PenaltyPaymentChart {
+    bottom: -20px !important;
+    margin-bottom: 0px;
+}
+
+.carousel-controls-PenaltyPaymentChart {
+    color: #9f8865;
+    padding-top: 50px;
+    font-size: 40px;
+}
+
+.recent-penalty-charge-container {
+    background-color: rgb(159, 136, 101);
+    padding: 17px;
+    height: 100%;
+    width: 100%;
+}
+
+.recent-penalty-charge-button {
+    background: white;
+    color: rgb(159, 136, 101);
+}
+
+.textwhite {
+    color: #fff;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.textwhite-payment {
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.textwhite-AED {
+    color: #ffffff;
+    margin-left: 7px;
+    font-size: 25px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.totalpaymentsdue {
+    color: #9f8865;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.textgold-payment {
+    color: #9f8865;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.textgold-AED {
+    color: #9f8865;
+    margin-left: 10px;
+    font-size: 30px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.textgold-account {
+    border-top: 1px solid black;
+    padding-top: 3px;
+    color: #9f8865;
+    font-size: 18px;
+    font-weight: 500;
+}

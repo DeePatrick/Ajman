@@ -1,0 +1,20 @@
+﻿<strong>JSON Input<strong> <br/><br/>
+{
+ "date":"2018-05-29",
+ "braking":"10",
+ "accel":"40",
+ "turning":"6",
+ "idling":"Test idling",
+ "tenKmPerHrOver":"33",
+ "twentyKmPerHrOver":"22",
+ "thirtyKmPerHrOver":"11",
+ "pointsDeducted":"3",
+ "points":"5",
+ "percentage":"60"
+}
+<br/>
+<br/>
+<br/><strong>Response</strong><br/><br/>
+{"id":"Score card has been added sucessfully", "IsSuccess": "true", "message":"Successfully","statusCode":"200"}<br/>
+
+

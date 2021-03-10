@@ -1,0 +1,16 @@
+<strong>JSON Input<strong> <br/><br/>
+{ 
+	"driverID": "784-2020-1234567-1",
+	"driverState": "off-line",
+	"date": "2018-07-01",
+	"time": "19:48:02:034354",
+	"vehicleID": "1GNEK13ZX3R298984" 
+} 
+<br/>
+<br/>
+<br/><strong>Response</strong><br/><br/>
+{"id":"DriverStatus_784-2020-1234567-1", "IsSuccess": "true", "message":"Successfully","statusCode":"200"}<br/>
+{"id":"", "IsSuccess": "false", "message": "150-Driver State is required","statusCode":"400"}<br/>
+{"id":"", "IsSuccess": "false", "message": "151-Date is required","statusCode":"400"}<br/>
+{"id":"", "IsSuccess": "false", "message": "152-Time is required","statusCode":"400"}<br/>
+

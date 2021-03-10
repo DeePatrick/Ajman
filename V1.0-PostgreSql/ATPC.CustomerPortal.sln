@@ -1,0 +1,71 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2047
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "ClientApp(1)", "ClientApp", "{1012487C-EB71-411C-AA08-1A77E1C4B991}"
+	ProjectSection(WebsiteProperties) = preProject
+		SccProjectName = "SAK"
+		SccAuxPath = "SAK"
+		SccLocalPath = "SAK"
+		SccProvider = "SAK"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_52929"
+		Debug.AspNetCompiler.PhysicalPath = "ClientApp\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_52929\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_52929"
+		Release.AspNetCompiler.PhysicalPath = "ClientApp\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_52929\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "52929"
+		SlnRelativePath = "ClientApp\"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|iPhone = Debug|iPhone
+		Debug|iPhoneSimulator = Debug|iPhoneSimulator
+		Release|Any CPU = Release|Any CPU
+		Release|iPhone = Release|iPhone
+		Release|iPhoneSimulator = Release|iPhoneSimulator
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1012487C-EB71-411C-AA08-1A77E1C4B991}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1012487C-EB71-411C-AA08-1A77E1C4B991}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1012487C-EB71-411C-AA08-1A77E1C4B991}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{1012487C-EB71-411C-AA08-1A77E1C4B991}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{1012487C-EB71-411C-AA08-1A77E1C4B991}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{1012487C-EB71-411C-AA08-1A77E1C4B991}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{1012487C-EB71-411C-AA08-1A77E1C4B991}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{1012487C-EB71-411C-AA08-1A77E1C4B991}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{1012487C-EB71-411C-AA08-1A77E1C4B991}.Release|iPhone.ActiveCfg = Debug|Any CPU
+		{1012487C-EB71-411C-AA08-1A77E1C4B991}.Release|iPhone.Build.0 = Debug|Any CPU
+		{1012487C-EB71-411C-AA08-1A77E1C4B991}.Release|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{1012487C-EB71-411C-AA08-1A77E1C4B991}.Release|iPhoneSimulator.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0B33C12C-F926-49AD-9EE6-7DF956627C0C}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 2
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://103.69.38.2:4040/tfs/ajmango
+		SccWebProject0 = true
+		SccProjectUniqueName0 = ClientApp
+		SccProjectName0 = ClientApp
+		SccLocalPath0 = ClientApp
+		SccProjectEnlistmentChoice0 = 2
+		SccLocalPath1 = .
+	EndGlobalSection
+EndGlobal

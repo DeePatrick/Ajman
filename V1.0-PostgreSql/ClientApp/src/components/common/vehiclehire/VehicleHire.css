@@ -1,0 +1,107 @@
+.text-vertical {
+  line-height: 10px;
+  color: #606060;
+}
+
+
+#icon-truck-gold-no-circle {
+  position: relative;
+  color: #333;
+  font-size: 35px;
+  padding-left: 6px;
+  padding-right: 5pHx;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  margin-top: 150px;
+}
+
+.black-spacing>i {
+  color: #ffffff;
+  font-size: 10px;
+}
+
+
+
+.black-spacing {
+  width: 120px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  margin-top: 5px;
+  margin-right: 25px;
+  margin-bottom: 4px;
+  background-color: #333333;
+  color: #ffffff;
+  border: none;
+  border-color: #333333;
+  font-size: 10px;
+  cursor: pointer;
+  border-radius: .4em;
+}
+
+
+.black-spacing {
+  width: 120px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  margin-top: 5px;
+  margin-right: 25px;
+  margin-bottom: 4px;
+  background-color: #333333;
+  color: #ffffff;
+  border: none;
+  border-color: #333333;
+  font-size: 10px;
+  cursor: pointer;
+  border-radius: .4em;
+}
+
+
+
+
+#left-border-line {
+  border-left: 1px solid #ccc;
+  margin-left: -40px;
+  padding-left: 40px;
+}
+
+#icon-truck-big {
+  color: #9f8865;
+  border: 3px solid #9f8865;
+  border-radius: 50%;
+  padding: 25px;
+  font-size: 85px;
+  margin-top: 6px;
+  padding-left: 21px;
+  padding-right: 21px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+#scaled-arrow-truck {
+  font-size: 25px;
+  transform: translate(0px, -40px);
+  color: #9f8865;
+}
+
+#scaled-arrow-truck:hover,
+#scaled-arrow-truck:focus,
+#scaled-arrow-truck:active {
+    font-size: 25px;
+    transform: translate(0px, -40px);
+    color: #fff;
+    user-select: none;
+    outline: none;
+    border: none;
+}
+
+#icon-truck-gold {
+  color: #9f8865;
+  border: 2px solid #9f8865;
+  border-radius: 50%;
+  font-size: 25px;
+  padding-left: 6px;
+  padding-right: 5px;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  transform: translate(0px, 15px);
+}

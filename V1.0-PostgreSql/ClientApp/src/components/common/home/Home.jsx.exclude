@@ -1,0 +1,49 @@
+import React, { Component } from 'react';
+import './home.css';
+
+
+export default class Home extends Component {
+
+    render() {
+        return (
+          <div className="inner-view home">
+            <div className="container-fluid">
+              <div className="row row-top">
+                  <div className="col-lg-7 column">
+                    <i className="fa fa-bar-chart"></i>
+                    <h4>PENALTY PAYMENT CHART</h4>
+                    <div className="inner-panel">
+                      Payment Penalty Chart
+                    </div>
+                  </div>
+
+                  <div className="col-lg-5 column">
+                    <i className="fa fa-credit-card"></i>
+                    <h4>PENALTY PAYMENT CHART</h4>
+                    <div className="inner-panel">
+                      LatestTransaction
+                    </div>
+                  </div>
+              </div>
+
+              <div className="row">
+                  <div className="col-lg-7 column">
+                    <i className="fa fa-play-circle-o"></i>
+                    <h4>PENALTY PAYMENT CHART</h4>
+                    <div className="inner-panel">
+                      MediaInfo
+                    </div>
+                  </div>
+                  <div className="col-lg-5 column">
+                    <i className="fa fa-file-text-o"></i>
+                    <h4>PENALTY PAYMENT CHART</h4>
+                    <div className="inner-panel">
+                      OutstandingActions
+                    </div>
+                  </div>
+              </div>
+            </div>
+
+    </div>
+  )}
+}

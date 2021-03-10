@@ -1,0 +1,32 @@
+.icon-subtext{
+    font-size:12px;
+    padding:5px;
+}
+
+#pics{
+    color:#333;
+    font-size:8px;
+}
+
+.media-info-tabs {
+    width: 100%;
+}
+
+.tab-content {
+    height: auto !important;
+    padding: 10px 10px;
+}
+
+.carousel-indicators {
+    right: 50%;
+    top: auto;
+    bottom: -40px;
+    margin-right: -19px;
+}
+
+.media-info-panel {
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+    padding: 15px 5px;
+    height: 390px;
+}

@@ -1,0 +1,818 @@
+﻿@{
+    /**/
+    ViewBag.Title = "Car Track APIs WSDL";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="jumbotron" style="padding:5px;">
+    <h3>Car Track - APIs WSDL</h3>
+</div>
+<div id="addNew" style="margin-top:20px;">
+    <div class="row" id="dvLogin" style="display:none">
+        <input type="text" style="margin-bottom:10px;" id="txtUser" class="form-control" name="name" value="" placeholder="userid" />
+        <input type="password" style="margin-bottom:10px;" id="txtPassword" class="form-control" name="name" value="" placeholder="password" />
+        <input type="submit" onclick="login()" name="name" value="Login for API" />
+    </div>
+    <div class="row" id="dvLeft" style="margin-top:20px;">
+        <div class="col-md-2">
+            @*<label>Get APIs</label>
+            <div id="dvvGetDriver">
+                <a href="javascript:void(0)" id="btnGetDriverWSDL" onclick="GetDriver();">Get Driver [CAR]</a>
+            </div>
+            <br />
+            <div id="dvvGetDriver">
+                <a href="javascript:void(0)" id="btnGetDriverlicenseWSDL" onclick="GetDriverLicense();">Get Driver License by Emirati Id [CAR]</a>
+            </div>
+            <br />
+            <div id="dvvGetVehicle">
+                <a href="javascript:void(0)" id="btnGetVehicleWSDL" onclick="GetVehicle();">Get Vehicle [CAR]</a>
+            </div>
+            <br />*@
+            <label>Push APIs</label>
+            <div id="dvvPostVehicle">
+                <a href="javascript:void(0)" id="btnGetDriverWSDL" onclick="PostDriverWSDL();">Push Driver [CAR]</a>
+            </div>
+            <br />
+            <div id="dvvPostVehicle">
+                <a href="javascript:void(0)" id="btnGetVehicleWSDL" onclick="PostVehicleWSDL();">Push Vehicle [CAR]</a>
+            </div>
+            <br />
+            <label>Post APIs</label>
+            <div id="dvvPostPassengerMessage">
+                <a href="javascript:void(0)" id="btnGetVehicleWSDL" onclick="PostPassengerMessage();">Post Passenger Message [CAR]</a>
+                @*<input type="submit" id="btnPostPassengerMessage" onclick="PostPassengerMessage();" class="btn btn-danger" value="Post Passenger Message" title="Click here to Post Passenger Message api details." />*@
+            </div>
+            <br />
+            <div id="dvvPostDriverStatus">
+                <a href="javascript:void(0)" id="btnGetVehicleWSDL" onclick="PostDriverStatus();">Post Driver Status [CAR]</a>
+                @*<input type="submit" id="btnPostDriverStatus" onclick="PostDriverStatus();" class="btn btn-danger" name="Vehicle" value="Post Driver Status" title="Click here to Post Driver Status api details." />*@
+            </div>
+            <br />
+            <div id="dvvPostIncidentMessage">
+                <a href="javascript:void(0)" id="btnGetVehicleWSDL" onclick="PostIncidentMessage();">Post Incident Message [CAR]</a>
+                @*<input type="submit" id="btnPostIncidentMessage" onclick="PostIncidentMessage();" class="btn btn-danger" name="Vehicle" value="Post Incident Message" title="Click here to Post Incident Message api details." />*@
+            </div>
+            <br />
+            <div id="dvvPostDriverJourney">
+                <a href="javascript:void(0)" id="btnGetDriverJourneyWSDL" onclick="PostDriverJourneyWSDL();">Post Driver Journey [CAR]</a>
+            </div>
+            <br />
+            <div id="dvvPostSawariBooking ">
+                <a href="javascript:void(0)" id="btnGetSawariBookingWSDL" onclick="PostSawariBookingWSDL();">Post Sawari Booking [CAR]</a>
+            </div>
+            <br />
+            <div id="dvvPostRoadSideAssistance">
+                <a href="javascript:void(0)" id="btnGetRoadSideAssistanceWSDL" onclick="PostRoadSideAssistanceWSDL();">Post Road Side Assistance [CAR]</a>
+            </div>
+            <br />
+        </div>
+        <div class="col-md-10" style="background-color:lightblue;min-height:500px; padding:20px;">
+            <div>
+                <div id="dvGetDriver" style="display:none;background-color:lightblue;">
+                    <div>
+                        <label><h2>Get Driver WSDL [CAR]</h2></label>
+                        <br />
+                        <label>URL</label>: http://103.69.38.2:8080/api/car.driver <br />
+                        <br />
+                        <label>
+                            JSON Output
+                        </label>:<br />
+                        [
+                        {
+                        "Driver": {
+                        "ModifiedDate": "2018-06-06 15:16:11",
+                        "action": "MOD",
+                        "carTrackDriverResponse": {
+                        "ctDescription": "",
+                        "ctStatus": "No"
+                        },
+                        "createdBy": null,
+                        "createdDate": "2018-06-06 15:15:44",
+                        "driverValid": "True",
+                        "emailAddress": "vishal.saxena@qlc.com",
+                        "emiratiId": "74312341234561",
+                        "fullnameEN": "Abdul Rahman",
+                        "fullnameAR": "عبد الرحمن",
+                        "id": "Driver_74312341234561",
+                        "isActive": true,
+                        "isDeleted": true,
+                        "licenseNumber": "DE3138275",
+                        "mobileNumber": "9876543210",
+                        "modifiedBy": null,
+                        "modifiedDate": "2018-06-06 15:15:44",
+                        "pasportNumber": "P46RGWFQGF",
+                        "password": "bbfa",
+                        "permitNumber": "DL6HW 5652",
+                        "photo": "C:\\fakepath\\Elxire_Logo_Client.png",
+                        "vehicleType": "Truck"
+                        }
+                        }
+                        ]
+                        <br />
+                    </div>
+                </div>
+
+                <div id="dvGetDriverLicense" style="display:none">
+                    <div>
+                        <label><h2>Get Driver License WSDL  by Emirati Id [CAR]</h2></label>
+                        <br />
+                        <label>URL</label>: http://103.69.38.2:8080/api/car.drilns/emiratiId <br />
+                        <br />
+                        <label>
+                            JSON Output
+                        </label>:<br />
+                        [
+                        {
+                        "action": "ADD",
+                        "id": "Driver_74312341234561",
+                        "licenseExpiryDate": "2018-07-03",
+                        "licenseIssueDate": "2018-07-04",
+                        "licenseNumber": "DE3138275"
+                        }
+                        ]
+                        <br />
+                    </div>
+                </div>
+
+                <div id="dvGetVehicle" style="display:none">
+                    <div>
+                        <label><h2>Get Vehicle WSDL [CAR]</h2></label>
+                        <br />
+                        <label>URL</label>: http://103.69.38.2:8080/api/car.vehicle <br />
+                        <br />
+                        <label>
+                            JSON Output
+                        </label>:<br />
+                        [
+                        {
+                        "Vehicle": {
+                        "ModifiedDate": "2018-06-06 19:48:02",
+                        "action": "MOD",
+                        "carTrackVehicleResponse": {
+                        "ctDescription": "",
+                        "ctStatus": "No"
+                        },
+                        "colour": "Red",
+                        "createdBy": null,
+                        "createdDate": "2018-06-06 18:14:23",
+                        "engineNumber": "44WPQ10335",
+                        "id": "Vehicle_44WPQ10335",
+                        "isActive": true,
+                        "isDeleted": true,
+                        "make": "Mercedes-Benz",
+                        "model": "Mercedes",
+                        "modelYear": "2017",
+                        "modifiedBy": null,
+                        "modifiedDate": null,
+                        "ownerName": "Arvind Kumar",
+                        "photo": null,
+                        "registration": "JL09GHS",
+                        "vehicleValid": "true",
+                        "vehicletype": "Car",
+                        "vin": "1HGBH41JXMN109142"
+                        }
+                        }
+                        ]
+                        <br />
+                    </div>
+                </div>
+            </div>
+
+            <div id="dvPushDriver">
+                <label><h2>Push Driver WSDL [CAR]</h2></label>
+                <br />
+                <label>URL</label>: http://103.69.38.2:8080/api/car.driver <br />
+                <br />
+                <label>
+                    JSON Input
+                </label>:
+                <br />
+                <br />
+                {"action": "ADD", "emiratiId": "784-2020-9871234-1", "fullnameEN": "Abdul Rahman", "fullnameAR": "عبد الرحمن", "mobileNumber": "9876543210", "emailAddress": "v.s@qlc.com", "vehicleType": "car", "permitNumber": "DL6HW 5652", "licenseNumber": "DE3138275", "passportNumber": "P46RGWFQGF", "photo": "Abdul_Rahman_784-2020-9871234-1.png", "password": "aWe4", "driverValid": "true", "licenseIssueDate": "2015-07-01", "licenseExpiryDate": "2025-07-01" }
+                </label>
+                <br />@*<br />
+        <label>Response</label><br />
+        {"id":"784-2020-1234567-1", "IsSuccess": "true", "message":"Successfully","statusCode":"200"}<br />
+        <br />*@
+            </div>
+
+            <div id="dvPushVehicle" style="display:none;background-color:lightblue;">
+                <label><h2>Push Vehicle WSDL [CAR]</h2></label>
+                <br />
+                <label>URL</label>: http://103.69.38.2:8080/api/car.vehicle <br />
+                <br />
+                <label>
+                    JSON Input
+                </label>:<br />
+                <br />
+                {
+                "action": "ADD",
+                "vehicleValid": "true",
+                "vIN": "3UGBH71JXRY109122",
+                "engineNumber": "44WPQ10335",
+                "registration": "JL09GHS",
+                "vehicleType": "car",
+                "make": "toyota",
+                "model": "Altima",
+                "modelYear": "2018",
+                "colour": "red"
+                }
+                </label>
+                <br /><br />
+                @*<label>Response</label><br />
+                {"id":"784-2020-1234567-1", "IsSuccess": "true", "message":"Successfully","statusCode":"200"}<br />*@
+            </div>
+
+            <div id="dvPostPassengerMessage" style="display:none;background-color:lightblue;">
+                <label><h2>Post Passenger Message WSDL [CAR]</h2></label>
+                <br />
+                <label>URL</label>: http://103.69.38.2:8080/api/car.passng
+                <br />
+                <br />
+                <label>
+                    JSON Input
+                </label>:<br />
+                <br />
+                {
+                "passengerID":"784-2020-9871234-1",
+                "action": "ADD",
+                "fullnameEN": "Abdul Rahman",
+                "fullnameAR": "عبد الرحمن",
+                "mobileNumber": "9876543210",
+                "emailAddress": "abdul.rahman@qlc.com"
+                }
+                </label>
+                <br /><br />
+                <label>Response</label><br />
+                {"id":"784-2020-9871234-1", “IsSuccess”: “true”, "message":"Successfully","statusCode":"200"}<br />
+                {"id":"", "IsSuccess": "false", "message": "162-Full Name AR is required","statusCode":"400"}<br />
+                {"id":"", "IsSuccess": "false", "message": "110-Full Name EN is required","statusCode":"400"}<br />
+                {"id":"", "IsSuccess": "false", "message": "111-Mobile Number is required","statusCode":"400"}<br />
+                <br />
+            </div>
+
+            <div id="dvPostDriverStatus" style="display:none;background-color:lightblue;">
+                <label><h2>Post Driver Status WSDL [CAR]</h2></label>
+                <br />
+                <label>URL</label>: http://103.69.38.2:8080/api/car.drstat <br />
+                <br />
+                <label>
+                    JSON Input
+                </label>:<br />
+                <br />
+                {
+                "driverID": "784-2020-1234567-1",
+                "driverState": "off-line",
+                "date": "2018-07-01",
+                "time": "19:48:02:034354",
+                "vehicleID": "1GNEK13ZX3R298984"
+                }
+                </label>
+                <br /><br />
+                <label>Response</label><br />
+                {"id":"784-2020-1234567-1", "IsSuccess": "true", "message":"Successfully","statusCode":"200"}<br />
+                {"id":"", "IsSuccess": "false", "message": "150-Driver State is required","statusCode":"400"}<br />
+                {"id":"", "IsSuccess": "false", "message": "151-Date is required","statusCode":"400"}<br />
+                {"id":"", "IsSuccess": "false", "message": "152-Time is required","statusCode":"400"}<br />
+                <br />
+            </div>
+
+            <div id="dvPostIncidentMessage" style="display:none;background-color:lightblue;">
+                <label><h2>Post Incident Message WSDL [CAR]</h2></label>
+                <br />
+                <label>URL</label>: http://103.69.38.2:8080/api/car.incdnt <br />
+                <br />
+                <label>
+                    JSON Input
+                </label>:<br />
+                <br />
+                {
+                "driverID": "784-2020-1234567-1",
+                "dateTime": "2018-06-06 19:48:02",
+                "notes": "Incident reported,please contact as earliest to driver."
+                }
+                </label>
+                <br /><br />
+                <label>Response</label><br />
+                {"id":"784-2020-1234567-1", "IsSuccess": "true", "message":"Successfully","statusCode":"200"}<br />
+                {"id":"", "IsSuccess": "false", "message": "154-Driver ID is required","statusCode":"400"}<br />
+                {"id":"", "IsSuccess": "false", "message": "155-Notes is required","statusCode":"400"}<br />
+            </div>
+
+            <div id="dvPostDriverPerformance" style="display:none;background-color:lightblue;">
+                <label><h2>Post Driver Performance WSDL [CAR]</h2></label>
+                <br />
+                <label>URL</label>: http://103.69.38.2:8080/api/car.perfmc/register <br />
+                <br />
+                <br />
+                {
+                "action": "ADD",
+                "startDateTime": "2018-06-06 19:48:02",
+                "endDateTime": "2018-06-06 19:48:02",
+                "driverScore": [
+                {
+                "driverId": "784-2020-1234567-1",
+                "kmsTravelled": "2",
+                "braking": "3",
+                "accel": "4",
+                "corner": "5",
+                "idle": "6",
+                "speeding": "7",
+                "averageTotal": "8"
+                }
+                ],
+                }
+                </label>
+                <br /><br />
+                <label>Response</label><br />
+                {"id":"784-2020-1234567-1", "IsSuccess": "true", "message":"Successfully","statusCode":"200"}<br />
+                <br />
+            </div>
+
+            <div id="dvPostDriverJourney" style="display:none;background-color:lightblue;">
+                <label><h2>Post Driver Journey WSDL [CAR]</h2></label>
+                <br />
+                <label>URL</label>: http://103.69.38.2:8080/api/car.trip <br />
+                <br />
+                <label>
+                    JSON Input
+                </label>:<br />
+                <br />
+                {"action": "ADD", "BookingId":"068886234", "passengerID":"PA123456", "vehicleID": "Vehicle_44WPQ10335", "driverID": "784-2020-1234567-1", "pickupDateTime": "2018-06-06 19:48:02", "pickupAddress": "A/227 JAC 003", "pickupLon": "11.11111", "pickupLat": "55.6666", "destinationAddress": "Lajpath nagar", "destinationLon": "25.333443", "destinationLat": "34.5455555", "waypoints": "12", "numPassengers": "03", "taxiType": "car"}
+                </label>
+                <br /><br />
+                <label>Response</label><br />
+                {"id":"068886234", "IsSuccess": "true", "message":"Successfully","statusCode":"200"}<br />
+                {"id":"", "IsSuccess": "false", "message": "102-Invalid vehicle ID","statusCode":"400"}<br />
+                {"id":"", "IsSuccess": "false", "message": "103-Invalid driver ID","statusCode":"400"}<br />
+                {"id":"", "IsSuccess": "false", "message": "109-Number of passengers must be greater than zero":"400"}<br />
+                <br />
+            </div>
+
+            <div id="dvPostSawariBooking" style="display:none;background-color:lightblue;">
+                <label><h2>Post Sawari Booking WSDL [CAR]</h2></label>
+                <br />
+                <label>URL</label>: http://103.69.38.2:8080/api/car.sawari <br />
+                <br />
+                <label>
+                    JSON Input
+                </label>:<br />
+                <br />
+                {
+                "passengerID": "784-2020-9871234-1",
+                "mobileNumber": "9876543210",
+                "fromLocation": "ghaziabad",
+                "toLocation": "noida",
+                "dateTimeRequired": "2018-07-08 12:00:99",
+                "comments": "ok"
+                @*,"auditInfo": {}*@
+                }
+                </label>
+                <br /><br />
+                <label>Response</label><br />
+                {"id":"7654321", "IsSuccess": "true", "message":"Successfully","statusCode":"200"}<br />
+                {"id":"", "IsSuccess": "false", "message": "111-Mobile number is required","statusCode":"400"}<br />
+                {"id":"", "IsSuccess": "false", "message": "117-From Location is required","statusCode":"400"}<br />
+                {"id":"", "IsSuccess": "false", "message": "118-To Location is required","statusCode":"400"}<br />
+                <br />
+            </div>
+
+            <div id="dvPostRoadSideAssistance" style="display:none;background-color:lightblue;">
+                <label><h2>Post Road Side Assistance WSDL [CAR]</h2></label>
+                <br />
+                <label>URL</label>:  http://103.69.38.2:8080/api/car.rdasst <br />
+                <br />
+                <label>
+                    JSON Input
+                </label>:<br />
+                <br />
+                {
+                "passengerID": "7654321",
+                "mobileNumber": "9876543210",
+                "latitude": "11.33333",
+                "longitude": "12.44333",
+                "serviceRequired": "api test by mohan.",
+                "comments": "done"
+                @*,"AuditInfo":{}*@
+                }
+                </label>
+                <br /><br />
+                <label>Response</label><br />
+                {"id":"7654321", "IsSuccess": "true", "message":"Successfully","statusCode":"200"}<br />
+                {"id":"", "IsSuccess": "false", "message": "113-Passenger ID is required","statusCode":"400"}<br />
+                {"id":"", "IsSuccess": "false", "message": "111-Mobile number is required","statusCode":"400"}<br />
+                {"id":"", "IsSuccess": "false", "message": "114-Latitude ID is required","statusCode":"400"}<br />
+                <br />
+            </div>
+        </div>
+    </div>
+    </div>
+<div style="display:none">
+        <div class="row">
+            <div class="col-md-2">
+                <label>Get APIs</label>
+                <div id="dvvGetVehicle">
+                    <a href="#" id="btnGetVehicleWSDL" onclick="GetVehicle();">Get Vehicle</a>
+                    @*<input type="submit" id="btnGetVehicleWSDL" onclick="GetVehicle();"  value="Get Vehicle" title="Click here to get Vehicle api details." />*@
+                </div>
+                <br />
+                <div id="dvvGetLoginById">
+                    <a href="#" id="btnGetLoginByIdWSDL" onclick="GetLoginById();">Get Lgoin by Id [APTC]</a>
+                </div>
+                <br />
+                <div id="dvvGetAllLogin">
+                    <a href="#" id="btnGetAllLoginWSDL" onclick="GetAllLogin();">Get All Login [APTC]</a>
+                </div>
+                <br />
+                <div id="dvvGetPassengerMessage">
+                    <a href="#" id="btnGetVehicleWSDL" onclick="GetPassengerMessage();">Get Passenger Message</a>
+                    @*<input type="submit" id="btnGetPassengerMessage" onclick="GetPassengerMessage();" value="Get Passenger Message" title="Click here to get Passenger Message api details." />*@
+                </div>
+                <br />
+                <div id="dvvGetDriverStatus">
+                    <a href="#" id="btnGetVehicleWSDL" onclick="GetDriverStatus();">Get Driver Status</a>
+                    @*<input type="submit" id="btnGetDriverStatus" onclick="GetDriverStatus();" name="Vehicle" value="Get Driver Status" title="Click here to get Driver Status api details." />*@
+                </div>
+                <br />
+                <div id="dvvGetIncidentMessage">
+                    <a href="#" id="btnGetVehicleWSDL" onclick="GetIncidentMessage();">Get Driver Status</a>
+                    @*<input type="submit" id="btnGetIncidentMessage" onclick="GetIncidentMessage();" name="Vehicle" value="Get Incident Message" title="Click here to get Incident Message api details." />*@
+                </div>
+                <br />
+            </div>
+            <div class="col-md-8" style="margin-left:10px;">
+                <!-- Get Divs-->
+            </div>
+            </div>
+        <div class="row">
+            <div class="col-md-2">
+                <label>Post APIs</label>
+                <div id="dvvPostVehicle">
+                    <a href="#" id="btnGetVehicleWSDL" onclick="PostVehicleWSDL();">Post Vehicle</a>
+                    @*<input type="submit" id="btnPostVehicleWSDL" onclick="PostVehicleWSDL();" class="btn btn-danger" name="Vehicle" value="Post Vehicle" title="Click here to Post Vehicle api details." />*@
+                </div>
+                <br />
+                <div id="dvvPostPassengerMessage">
+                    <a href="#" id="btnGetVehicleWSDL" onclick="PostPassengerMessage();">Post Passenger Message</a>
+                    @*<input type="submit" id="btnPostPassengerMessage" onclick="PostPassengerMessage();" class="btn btn-danger" value="Post Passenger Message" title="Click here to Post Passenger Message api details." />*@
+                </div>
+                <br />
+                <div id="dvvPostDriverStatus">
+                    <a href="#" id="btnGetVehicleWSDL" onclick="PostVehicleWSDL();">Post Driver Status</a>
+                    @*<input type="submit" id="btnPostDriverStatus" onclick="PostDriverStatus();" class="btn btn-danger" name="Vehicle" value="Post Driver Status" title="Click here to Post Driver Status api details." />*@
+                </div>
+                <br />
+                <div id="dvvPostIncidentMessage">
+                    <a href="#" id="btnGetVehicleWSDL" onclick="PostIncidentMessage();">Post Incident Message</a>
+                    @*<input type="submit" id="btnPostIncidentMessage" onclick="PostIncidentMessage();" class="btn btn-danger" name="Vehicle" value="Post Incident Message" title="Click here to Post Incident Message api details." />*@
+                </div>
+                <br />
+            </div>
+            <div class="col-md-8">
+                <!-- Post Divs-->
+            </div>
+        </div>
+    </div>
+</div>
+<div>
+    <script>
+        function login() {
+            var obj = {};
+            obj.userId = $('#txtUser').val();
+            obj.password = $('#txtPassword').val();
+            //debugger;
+            $.ajax({
+                url: 'http://localhost:63391/api/login/login',
+                type: 'POST',
+                data: obj,
+                dataType: 'json',
+                success: function (data) {
+                    if (data == 'E') {
+                        alert('please enter userid and password');
+                    }
+                    else if (data == 'F') {
+                        alert('please enter valid userid or password');
+                    }
+                    else {
+                        $('#dvLogin').hide();
+                        $('#dvLeft').show();
+                    }
+                },
+                error: function (data) {
+                    alert(data.responseText);
+                },
+            });
+        }
+    </script>
+    <script>
+        //////////// Post
+       
+        function PostDriverPerformanceWSDL() {
+            $('#dvPostDriverPerformance').show();
+            $('#dvPostDriverJourney').hide();
+            $('#dvPostCustomer').hide();
+            $('#dvPushDriver').hide();
+            $('#dvPushVehicle').hide();
+            $('#dvPostPassengerMessage').hide();
+            $('#dvPostDriverStatus').hide();
+            $('#dvPostIncidentMessage').hide();
+            $('#dvGetCustomer').hide();
+            $('#dvGetDriver').hide();
+            $('#dvGetVehicle').hide();
+            $('#dvGetPassengerMessage').hide();
+            $('#dvGetDriverStatus').hide();
+            $('#dvGetIncidentMessage').hide();
+            $('#dvGetLoginById').hide();
+            $('#dvGetAllLogin').hide();
+            $('#dvGetDriverLicense').hide();
+            $('#dvPostSawariBooking').hide();
+            $('#dvPostRoadSideAssistance').hide();
+        }
+
+        function PostDriverJourneyWSDL() {
+            $('#dvPostDriverPerformance').hide();
+            $('#dvPostDriverJourney').show();
+            $('#dvPostCustomer').hide();
+            $('#dvPushDriver').hide();
+            $('#dvPushVehicle').hide();
+            $('#dvPostPassengerMessage').hide();
+            $('#dvPostDriverStatus').hide();
+            $('#dvPostIncidentMessage').hide();
+            $('#dvGetCustomer').hide();
+            $('#dvGetDriver').hide();
+            $('#dvGetVehicle').hide();
+            $('#dvGetPassengerMessage').hide();
+            $('#dvGetDriverStatus').hide();
+            $('#dvGetIncidentMessage').hide();
+            $('#dvGetLoginById').hide();
+            $('#dvGetAllLogin').hide();
+            $('#dvGetDriverLicense').hide();
+            $('#dvPostSawariBooking').hide();
+            $('#dvPostRoadSideAssistance').hide();
+        }
+
+        function PostCustomerWSDL() {
+            $('#dvPostDriverPerformance').hide();
+            $('#dvPostDriverJourney').hide();
+            $('#dvPostCustomer').show();
+            $('#dvPushDriver').hide();
+            $('#dvPushVehicle').hide();
+            $('#dvPostPassengerMessage').hide();
+            $('#dvPostDriverStatus').hide();
+            $('#dvPostIncidentMessage').hide();
+            $('#dvGetCustomer').hide();
+            $('#dvGetDriver').hide();
+            $('#dvGetVehicle').hide();
+            $('#dvGetPassengerMessage').hide();
+            $('#dvGetDriverStatus').hide();
+            $('#dvGetIncidentMessage').hide();
+            $('#dvGetLoginById').hide();
+            $('#dvGetAllLogin').hide();
+            $('#dvGetDriverLicense').hide();
+            $('#dvPostSawariBooking').hide();
+            $('#dvPostRoadSideAssistance').hide();
+        }
+
+        function PostDriverWSDL() {
+            $('#dvPostDriverPerformance').hide();
+            $('#dvPostDriverJourney').hide();
+            $('#dvPostCustomer').hide();
+            $('#dvPushDriver').show();
+            $('#dvPushVehicle').hide();
+            $('#dvPostPassengerMessage').hide();
+            $('#dvPostDriverStatus').hide();
+            $('#dvPostIncidentMessage').hide();
+            $('#dvGetCustomer').hide();
+            $('#dvGetDriver').hide();
+            $('#dvGetVehicle').hide();
+            $('#dvGetPassengerMessage').hide();
+            $('#dvGetDriverStatus').hide();
+            $('#dvGetIncidentMessage').hide();
+            $('#dvGetLoginById').hide();
+            $('#dvGetAllLogin').hide();
+            $('#dvGetDriverLicense').hide();
+            $('#dvPostSawariBooking').hide();
+            $('#dvPostRoadSideAssistance').hide();
+        }
+
+        function PostVehicleWSDL() {
+            $('#dvPostDriverPerformance').hide();
+            $('#dvPostDriverJourney').hide();
+            $('#dvPostCustomer').hide();
+            $('#dvPushDriver').hide();
+            $('#dvPushVehicle').show();
+            $('#dvPostPassengerMessage').hide();
+            $('#dvPostDriverStatus').hide();
+            $('#dvPostIncidentMessage').hide();
+            $('#dvGetCustomer').hide();
+            $('#dvGetDriver').hide();
+            $('#dvGetVehicle').hide();
+            $('#dvGetPassengerMessage').hide();
+            $('#dvGetDriverStatus').hide();
+            $('#dvGetIncidentMessage').hide();
+            $('#dvGetLoginById').hide();
+            $('#dvGetAllLogin').hide();
+            $('#dvGetDriverLicense').hide();
+            $('#dvPostSawariBooking').hide();
+            $('#dvPostRoadSideAssistance').hide();
+        }
+
+        function PostPassengerMessage() {
+            $('#dvPostDriverPerformance').hide();
+            $('#dvPostDriverJourney').hide();
+            $('#dvPostCustomer').hide();
+            $('#dvPushDriver').hide();
+            $('#dvPushVehicle').hide();
+            $('#dvPostPassengerMessage').show();
+            $('#dvPostDriverStatus').hide();
+            $('#dvPostIncidentMessage').hide();
+            $('#dvGetCustomer').hide();
+            $('#dvGetDriver').hide();
+            $('#dvGetVehicle').hide();
+            $('#dvGetPassengerMessage').hide();
+            $('#dvGetDriverStatus').hide();
+            $('#dvGetIncidentMessage').hide();
+            $('#dvGetLoginById').hide();
+            $('#dvGetAllLogin').hide();
+            $('#dvGetDriverLicense').hide();
+            $('#dvPostSawariBooking').hide();
+            $('#dvPostRoadSideAssistance').hide();
+        }
+
+        function PostDriverStatus() {
+            $('#dvPostDriverPerformance').hide();
+            $('#dvPostDriverJourney').hide();
+            $('#dvPostCustomer').hide();
+            $('#dvPushDriver').hide();
+            $('#dvPushVehicle').hide();
+            $('#dvPostPassengerMessage').hide();
+            $('#dvPostDriverStatus').show();
+            $('#dvPostIncidentMessage').hide();
+            $('#dvGetCustomer').hide();
+            $('#dvGetDriver').hide();
+            $('#dvGetVehicle').hide();
+            $('#dvGetPassengerMessage').hide();
+            $('#dvGetDriverStatus').hide();
+            $('#dvGetIncidentMessage').hide();
+            $('#dvGetLoginById').hide();
+            $('#dvGetAllLogin').hide();
+            $('#dvGetDriverLicense').hide();
+            $('#dvPostSawariBooking').hide();
+            $('#dvPostRoadSideAssistance').hide();
+        }
+
+        function PostIncidentMessage() {
+            $('#dvPostDriverPerformance').hide();
+            $('#dvPostDriverJourney').hide();
+            $('#dvPostCustomer').hide();
+            $('#dvPushDriver').hide();
+            $('#dvPushVehicle').hide();
+            $('#dvPostPassengerMessage').hide();
+            $('#dvPostDriverStatus').hide();
+            $('#dvPostIncidentMessage').show();
+            $('#dvGetCustomer').hide();
+            $('#dvGetDriver').hide();
+            $('#dvGetVehicle').hide();
+            $('#dvGetPassengerMessage').hide();
+            $('#dvGetDriverStatus').hide();
+            $('#dvGetIncidentMessage').hide();
+            $('#dvGetLoginById').hide();
+            $('#dvGetAllLogin').hide();
+            $('#dvGetDriverLicense').hide();
+            $('#dvPostSawariBooking').hide();
+            $('#dvPostRoadSideAssistance').hide();
+        }
+
+        function PostSawariBookingWSDL() {
+            $('#dvPostDriverPerformance').hide();
+            $('#dvPostDriverJourney').hide();
+            $('#dvPostCustomer').hide();
+            $('#dvPushDriver').hide();
+            $('#dvPushVehicle').hide();
+            $('#dvPostPassengerMessage').hide();
+            $('#dvPostDriverStatus').hide();
+            $('#dvPostIncidentMessage').hide();
+            $('#dvGetCustomer').hide();
+            $('#dvGetDriver').hide();
+            $('#dvGetVehicle').hide();
+            $('#dvGetPassengerMessage').hide();
+            $('#dvGetDriverStatus').hide();
+            $('#dvGetIncidentMessage').hide();
+            $('#dvGetLoginById').hide();
+            $('#dvGetAllLogin').hide();
+            $('#dvGetDriverLicense').hide();
+            $('#dvPostSawariBooking').show();
+            $('#dvPostRoadSideAssistance').hide();
+        }
+
+        function PostRoadSideAssistanceWSDL() {
+            $('#dvPostDriverPerformance').hide();
+            $('#dvPostDriverJourney').hide();
+            $('#dvPostCustomer').hide();
+            $('#dvPushDriver').hide();
+            $('#dvPushVehicle').hide();
+            $('#dvPostPassengerMessage').hide();
+            $('#dvPostDriverStatus').hide();
+            $('#dvPostIncidentMessage').hide();
+            $('#dvGetCustomer').hide();
+            $('#dvGetDriver').hide();
+            $('#dvGetVehicle').hide();
+            $('#dvGetPassengerMessage').hide();
+            $('#dvGetDriverStatus').hide();
+            $('#dvGetIncidentMessage').hide();
+            $('#dvGetLoginById').hide();
+            $('#dvGetAllLogin').hide();
+            $('#dvGetDriverLicense').hide();
+            $('#dvPostSawariBooking').hide();
+            $('#dvPostRoadSideAssistance').show();
+        }
+
+        ///////////////// Get
+
+        function Hide() {
+            $('#dvPostDriverPerformance').hide();
+            $('#dvPostDriverJourney').hide();
+            $('#dvPostCustomer').hide();
+            $('#dvPushDriver').hide();
+            $('#dvPushVehicle').hide();
+            $('#dvPostPassengerMessage').hide();
+            $('#dvPostDriverStatus').hide();
+            $('#dvPostIncidentMessage').hide();
+            $('#dvPostSawariBooking').hide();
+            $('#dvPostRoadSideAssistance').hide();
+            $('#dvGetCustomer').hide();
+            $('#dvGetAllCustomer').hide();
+            $('#dvGetDriver').hide();
+            $('#dvGetVehicle').hide();
+            $('#dvGetPassengerMessage').hide();
+            $('#dvGetDriverStatus').hide();
+            $('#dvGetIncidentMessage').hide();
+            $('#dvGetCustomerdb').hide();
+            $('#dvGetLoginById').hide();
+            $('#dvGetAllLogin').hide();
+            $('#dvGetDriverLicense').hide();
+        }
+
+        function GetLoginById() {
+            Hide();
+            $('#dvGetLoginById').show();
+        }
+
+        function GetAllLogin() {
+            Hide();
+            $('#dvGetAllLogin').show();
+        }
+
+        function GetCustomer(obj) {
+            //debugger;
+            $.getJSON('../web.json', function (data) {
+               // alert(data);
+                //console.log(data);
+
+                //var items = data.items.map(function (item) {
+                //    return item.key + ': ' + item.value;
+                });
+            Hide();
+            $('#dvGetCustomer').show();
+        }
+
+        function GetCustomerdb(obj) {
+            Hide();
+            $('#dvGetCustomerdb').show();
+        }
+
+        function GetAllCustomer() {
+            Hide();
+            $('#dvGetAllCustomer').show();
+        }
+
+        function GetDriver() {
+            Hide();
+            $('#dvGetDriver').show();
+        }
+
+        function GetDriverLicense() {
+            Hide();
+            $('#dvGetDriverLicense').show();
+        }
+
+        function GetVehicle() {
+            Hide();
+            $('#dvGetVehicle').show();
+        }
+
+        function GetPassengerMessage() {
+            Hide();
+            $('#dvGetPassengerMessage').show();
+        }
+
+        function GetDriverStatus() {
+            Hide();
+            $('#dvGetDriverStatus').show();
+        }
+
+        function GetIncidentMessage() {
+            Hide();
+            $('#dvGetIncidentMessage').show();
+        }
+    </script>
+</div>

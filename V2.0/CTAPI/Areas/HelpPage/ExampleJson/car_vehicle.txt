@@ -1,0 +1,14 @@
+<strong>JSON Input<strong> <br/><br/>
+{
+    "action": "ADD",
+	"franchise":"1234567",
+	"vehicleValid": "true",
+	"vIN": "3UGBH71JXRY109122",
+	"engineNumber": "44WPQ10335",
+	"registration": "JL09GHS",
+	"vehicleType": "car",
+	"make": "toyota",
+	"model": "Altima",
+	"modelYear": "2018",
+	"colour": "red"  
+}

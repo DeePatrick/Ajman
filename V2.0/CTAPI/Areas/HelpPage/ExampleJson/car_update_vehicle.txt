@@ -1,0 +1,30 @@
+<strong>JSON Input<strong> <br/><br/>
+{
+		
+	"registration": "JL09GHS",
+
+	"taxi_type": "Sedan 7 seater",
+
+	"manufacturer": "Nissan",
+
+	"model": "Maxima",
+
+	"modelyear": "1993",
+
+	"colour": "Champagne",
+
+	"passenger_capacity": "7",
+
+	"vehicle_enabled": "t",
+
+	"vehicle_status": "1",
+
+	"franchisee_user_name": null
+	
+}
+<br/>
+<br/>
+<br/><strong>Response</strong><br/><br/>
+{"id":"Vehicle_CT_Data_JL09GHS", "IsSuccess": "true", "message":"Successfully","statusCode":"200"}<br/>
+{"id":"", "IsSuccess": "false", "message": "127-registration number is required","statusCode":"400"}<br/>
+

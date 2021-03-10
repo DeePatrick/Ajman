@@ -1,0 +1,20 @@
+﻿<strong>JSON Input<strong> <br/><br/>
+{
+	"action": "ADD",
+	"emiratiId": "784-2020-9871234-1",
+	"nameEN": "Abdul Rahman",
+	"nameAR": "عبد الرحمن",
+	"franchise":"1234567",
+	"mobileNumber": "9876543210",
+	"emailAddress": "v.s@qlc.com",
+	"vehicleType": "car",
+	"permitNumber": "DL6HW 5652",
+	"licenseNumber": "DE3138275",
+	"passportNumber": "P46RGWFQGF",
+	"photo": "Abdul_Rahman_784-2020-9871234-1.png",
+	"password": "aWe4",
+	"driverValid": "true",
+	"licenseIssueDate": "2015-07-01",
+	"licenseExpiryDate": "2025-07-01",
+	"HotelPickup":"false"
+} 

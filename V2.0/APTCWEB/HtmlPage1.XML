@@ -1,0 +1,222 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+  <?xml version="1.0" encoding="UTF-8"?>
+  <SOAP-ENV:Envelope SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="fleettestlive.cartrackme.com/api/">
+    <SOAP-ENV:Body>
+      <ns1:endpoint.get_driverlistResponse xmlns:ns1="fleettestlive.cartrackme.com/api/">
+        <SqlResult0 xsi:type="SOAP-ENC:Array" SOAP-ENC:arrayType="tns:get_driverlistResultType0Row[12]">
+          <item xsi:type="tns:get_driverlistResultType0Row">
+            <client_driver_id xsi:type="xsd:string">80aa2da1-c7c9-11e7-85eb-fec0cfef84d1</client_driver_id>
+            <user_id xsi:type="xsd:integer">92602</user_id>
+            <driver_name xsi:type="xsd:string">Amer El Hosny</driver_name>
+            <id_number xsi:type="xsd:string">03</id_number>
+            <gender xsi:type="xsd:integer">1</gender>
+            <cell_number xsi:nil="true" xsi:type="xsd:string"/>
+            <license_number xsi:nil="true" xsi:type="xsd:string"/>
+            <license_driver_restrictions xsi:nil="true" xsi:type="xsd:string"/>
+            <license_vehicle_restrictions xsi:nil="true" xsi:type="xsd:string"/>
+            <license_valid_start xsi:nil="true" xsi:type="xsd:string"/>
+            <license_valid_end xsi:nil="true" xsi:type="xsd:string"/>
+            <license_code xsi:nil="true" xsi:type="xsd:string"/>
+            <license_first_issue_date xsi:nil="true" xsi:type="xsd:string"/>
+            <license_issued_country xsi:type="xsd:string">AE</license_issued_country>
+            <license_points xsi:nil="true" xsi:type="xsd:integer"/>
+          </item>
+          <item xsi:type="tns:get_driverlistResultType0Row">
+            <client_driver_id xsi:type="xsd:string">ada6fc0c-c7c9-11e7-b8f0-fec0cfef84d1</client_driver_id>
+            <user_id xsi:type="xsd:integer">92602</user_id>
+            <driver_name xsi:type="xsd:string">Zartash Malik</driver_name>
+            <id_number xsi:type="xsd:string">04</id_number>
+            <gender xsi:type="xsd:integer">1</gender>
+            <cell_number xsi:nil="true" xsi:type="xsd:string"/>
+            <license_number xsi:nil="true" xsi:type="xsd:string"/>
+            <license_driver_restrictions xsi:nil="true" xsi:type="xsd:string"/>
+            <license_vehicle_restrictions xsi:nil="true" xsi:type="xsd:string"/>
+            <license_valid_start xsi:nil="true" xsi:type="xsd:string"/>
+            <license_valid_end xsi:nil="true" xsi:type="xsd:string"/>
+            <license_code xsi:nil="true" xsi:type="xsd:string"/>
+            <license_first_issue_date xsi:nil="true" xsi:type="xsd:string"/>
+            <license_issued_country xsi:type="xsd:string">AE</license_issued_country>
+            <license_points xsi:nil="true" xsi:type="xsd:integer"/>
+          </item>
+          <item xsi:type="tns:get_driverlistResultType0Row">
+            <client_driver_id xsi:type="xsd:string">06975fd1-c7ca-11e7-a4d9-fec0cfef84d1</client_driver_id>
+            <user_id xsi:type="xsd:integer">92602</user_id>
+            <driver_name xsi:type="xsd:string">Robert Mendoza</driver_name>
+            <id_number xsi:type="xsd:string">07</id_number>
+            <gender xsi:type="xsd:integer">1</gender>
+            <cell_number xsi:nil="true" xsi:type="xsd:string"/>
+            <license_number xsi:nil="true" xsi:type="xsd:string"/>
+            <license_driver_restrictions xsi:nil="true" xsi:type="xsd:string"/>
+            <license_vehicle_restrictions xsi:nil="true" xsi:type="xsd:string"/>
+            <license_valid_start xsi:nil="true" xsi:type="xsd:string"/>
+            <license_valid_end xsi:nil="true" xsi:type="xsd:string"/>
+            <license_code xsi:nil="true" xsi:type="xsd:string"/>
+            <license_first_issue_date xsi:nil="true" xsi:type="xsd:string"/>
+            <license_issued_country xsi:type="xsd:string">AE</license_issued_country>
+            <license_points xsi:nil="true" xsi:type="xsd:integer"/>
+          </item>
+          <item xsi:type="tns:get_driverlistResultType0Row">
+            <client_driver_id xsi:type="xsd:string">e1c65d6e-c7c9-11e7-bcfc-fec0cfef84d1</client_driver_id>
+            <user_id xsi:type="xsd:integer">92602</user_id>
+            <driver_name xsi:type="xsd:string">Mohamad Nisar</driver_name>
+            <id_number xsi:type="xsd:string">06</id_number>
+            <gender xsi:type="xsd:integer">1</gender>
+            <cell_number xsi:nil="true" xsi:type="xsd:string"/>
+            <license_number xsi:nil="true" xsi:type="xsd:string"/>
+            <license_driver_restrictions xsi:nil="true" xsi:type="xsd:string"/>
+            <license_vehicle_restrictions xsi:nil="true" xsi:type="xsd:string"/>
+            <license_valid_start xsi:nil="true" xsi:type="xsd:string"/>
+            <license_valid_end xsi:nil="true" xsi:type="xsd:string"/>
+            <license_code xsi:nil="true" xsi:type="xsd:string"/>
+            <license_first_issue_date xsi:nil="true" xsi:type="xsd:string"/>
+            <license_issued_country xsi:type="xsd:string">AE</license_issued_country>
+            <license_points xsi:nil="true" xsi:type="xsd:integer"/>
+          </item>
+          <item xsi:type="tns:get_driverlistResultType0Row">
+            <client_driver_id xsi:type="xsd:string">3cca96b0-c7c9-11e7-b860-fec0cfef84d1</client_driver_id>
+            <user_id xsi:type="xsd:integer">92602</user_id>
+            <driver_name xsi:type="xsd:string">Alishan Khowaja</driver_name>
+            <id_number xsi:type="xsd:string">01</id_number>
+            <gender xsi:type="xsd:integer">1</gender>
+            <cell_number xsi:nil="true" xsi:type="xsd:string"/>
+            <license_number xsi:nil="true" xsi:type="xsd:string"/>
+            <license_driver_restrictions xsi:nil="true" xsi:type="xsd:string"/>
+            <license_vehicle_restrictions xsi:nil="true" xsi:type="xsd:string"/>
+            <license_valid_start xsi:nil="true" xsi:type="xsd:string"/>
+            <license_valid_end xsi:nil="true" xsi:type="xsd:string"/>
+            <license_code xsi:nil="true" xsi:type="xsd:string"/>
+            <license_first_issue_date xsi:nil="true" xsi:type="xsd:string"/>
+            <license_issued_country xsi:type="xsd:string">AE</license_issued_country>
+            <license_points xsi:nil="true" xsi:type="xsd:integer"/>
+          </item>
+          <item xsi:type="tns:get_driverlistResultType0Row">
+            <client_driver_id xsi:type="xsd:string">c70b93ba-c7c9-11e7-8989-fec0cfef84d1</client_driver_id>
+            <user_id xsi:type="xsd:integer">92602</user_id>
+            <driver_name xsi:type="xsd:string">Mohammad Arif</driver_name>
+            <id_number xsi:type="xsd:string">05</id_number>
+            <gender xsi:type="xsd:integer">1</gender>
+            <cell_number xsi:nil="true" xsi:type="xsd:string"/>
+            <license_number xsi:nil="true" xsi:type="xsd:string"/>
+            <license_driver_restrictions xsi:nil="true" xsi:type="xsd:string"/>
+            <license_vehicle_restrictions xsi:nil="true" xsi:type="xsd:string"/>
+            <license_valid_start xsi:nil="true" xsi:type="xsd:string"/>
+            <license_valid_end xsi:nil="true" xsi:type="xsd:string"/>
+            <license_code xsi:nil="true" xsi:type="xsd:string"/>
+            <license_first_issue_date xsi:nil="true" xsi:type="xsd:string"/>
+            <license_issued_country xsi:type="xsd:string">AE</license_issued_country>
+            <license_points xsi:nil="true" xsi:type="xsd:integer"/>
+          </item>
+          <item xsi:type="tns:get_driverlistResultType0Row">
+            <client_driver_id xsi:type="xsd:string">5f01ffb5-c7c9-11e7-ac19-fec0cfef84d1</client_driver_id>
+            <user_id xsi:type="xsd:integer">92602</user_id>
+            <driver_name xsi:type="xsd:string">Wassim Nakkach</driver_name>
+            <id_number xsi:type="xsd:string">02</id_number>
+            <gender xsi:type="xsd:integer">1</gender>
+            <cell_number xsi:nil="true" xsi:type="xsd:string"/>
+            <license_number xsi:nil="true" xsi:type="xsd:string"/>
+            <license_driver_restrictions xsi:nil="true" xsi:type="xsd:string"/>
+            <license_vehicle_restrictions xsi:nil="true" xsi:type="xsd:string"/>
+            <license_valid_start xsi:nil="true" xsi:type="xsd:string"/>
+            <license_valid_end xsi:nil="true" xsi:type="xsd:string"/>
+            <license_code xsi:nil="true" xsi:type="xsd:string"/>
+            <license_first_issue_date xsi:nil="true" xsi:type="xsd:string"/>
+            <license_issued_country xsi:type="xsd:string">AE</license_issued_country>
+            <license_points xsi:nil="true" xsi:type="xsd:integer"/>
+          </item>
+          <item xsi:type="tns:get_driverlistResultType0Row">
+            <client_driver_id xsi:type="xsd:string">2f437fd4-c878-11e7-a250-fec0cfef84d1</client_driver_id>
+            <user_id xsi:type="xsd:integer">92602</user_id>
+            <driver_name xsi:type="xsd:string">Raymond Vaz</driver_name>
+            <id_number xsi:type="xsd:string">08</id_number>
+            <gender xsi:type="xsd:integer">1</gender>
+            <cell_number xsi:nil="true" xsi:type="xsd:string"/>
+            <license_number xsi:nil="true" xsi:type="xsd:string"/>
+            <license_driver_restrictions xsi:nil="true" xsi:type="xsd:string"/>
+            <license_vehicle_restrictions xsi:nil="true" xsi:type="xsd:string"/>
+            <license_valid_start xsi:nil="true" xsi:type="xsd:string"/>
+            <license_valid_end xsi:nil="true" xsi:type="xsd:string"/>
+            <license_code xsi:nil="true" xsi:type="xsd:string"/>
+            <license_first_issue_date xsi:nil="true" xsi:type="xsd:string"/>
+            <license_issued_country xsi:type="xsd:string">AE</license_issued_country>
+            <license_points xsi:nil="true" xsi:type="xsd:integer"/>
+          </item>
+          <item xsi:type="tns:get_driverlistResultType0Row">
+            <client_driver_id xsi:type="xsd:string">e32e2385-cecf-11e7-ab9a-fec0cfef84d1</client_driver_id>
+            <user_id xsi:type="xsd:integer">92602</user_id>
+            <driver_name xsi:type="xsd:string">Hassan Moussa</driver_name>
+            <id_number xsi:type="xsd:string">09</id_number>
+            <gender xsi:type="xsd:integer">1</gender>
+            <cell_number xsi:nil="true" xsi:type="xsd:string"/>
+            <license_number xsi:nil="true" xsi:type="xsd:string"/>
+            <license_driver_restrictions xsi:nil="true" xsi:type="xsd:string"/>
+            <license_vehicle_restrictions xsi:nil="true" xsi:type="xsd:string"/>
+            <license_valid_start xsi:nil="true" xsi:type="xsd:string"/>
+            <license_valid_end xsi:nil="true" xsi:type="xsd:string"/>
+            <license_code xsi:nil="true" xsi:type="xsd:string"/>
+            <license_first_issue_date xsi:nil="true" xsi:type="xsd:string"/>
+            <license_issued_country xsi:type="xsd:string">AE</license_issued_country>
+            <license_points xsi:nil="true" xsi:type="xsd:integer"/>
+          </item>
+          <item xsi:type="tns:get_driverlistResultType0Row">
+            <client_driver_id xsi:type="xsd:string">e0786a05-ced0-11e7-ac57-fec0cfef84d1</client_driver_id>
+            <user_id xsi:type="xsd:integer">92602</user_id>
+            <driver_name xsi:type="xsd:string">Karla Chandrya</driver_name>
+            <id_number xsi:type="xsd:string">10</id_number>
+            <gender xsi:type="xsd:integer">1</gender>
+            <cell_number xsi:nil="true" xsi:type="xsd:string"/>
+            <license_number xsi:nil="true" xsi:type="xsd:string"/>
+            <license_driver_restrictions xsi:nil="true" xsi:type="xsd:string"/>
+            <license_vehicle_restrictions xsi:nil="true" xsi:type="xsd:string"/>
+            <license_valid_start xsi:nil="true" xsi:type="xsd:string"/>
+            <license_valid_end xsi:nil="true" xsi:type="xsd:string"/>
+            <license_code xsi:nil="true" xsi:type="xsd:string"/>
+            <license_first_issue_date xsi:nil="true" xsi:type="xsd:string"/>
+            <license_issued_country xsi:type="xsd:string">AE</license_issued_country>
+            <license_points xsi:nil="true" xsi:type="xsd:integer"/>
+          </item>
+          <item xsi:type="tns:get_driverlistResultType0Row">
+            <client_driver_id xsi:type="xsd:string">483b4dd7-f876-11e7-9a0e-fec0cfef84d1</client_driver_id>
+            <user_id xsi:type="xsd:integer">92602</user_id>
+            <driver_name xsi:type="xsd:string">Uzair Munir Malik</driver_name>
+            <id_number xsi:type="xsd:string">12</id_number>
+            <gender xsi:type="xsd:integer">1</gender>
+            <cell_number xsi:nil="true" xsi:type="xsd:string"/>
+            <license_number xsi:nil="true" xsi:type="xsd:string"/>
+            <license_driver_restrictions xsi:nil="true" xsi:type="xsd:string"/>
+            <license_vehicle_restrictions xsi:nil="true" xsi:type="xsd:string"/>
+            <license_valid_start xsi:nil="true" xsi:type="xsd:string"/>
+            <license_valid_end xsi:nil="true" xsi:type="xsd:string"/>
+            <license_code xsi:nil="true" xsi:type="xsd:string"/>
+            <license_first_issue_date xsi:nil="true" xsi:type="xsd:string"/>
+            <license_issued_country xsi:type="xsd:string">AE</license_issued_country>
+            <license_points xsi:nil="true" xsi:type="xsd:integer"/>
+          </item>
+          <item xsi:type="tns:get_driverlistResultType0Row">
+            <client_driver_id xsi:type="xsd:string">40339d30-f876-11e7-9c37-fec0cfef84d1</client_driver_id>
+            <user_id xsi:type="xsd:integer">92602</user_id>
+            <driver_name xsi:type="xsd:string">Mahmoud Kalamouni</driver_name>
+            <id_number xsi:type="xsd:string">11</id_number>
+            <gender xsi:type="xsd:integer">1</gender>
+            <cell_number xsi:nil="true" xsi:type="xsd:string"/>
+            <license_number xsi:nil="true" xsi:type="xsd:string"/>
+            <license_driver_restrictions xsi:nil="true" xsi:type="xsd:string"/>
+            <license_vehicle_restrictions xsi:nil="true" xsi:type="xsd:string"/>
+            <license_valid_start xsi:nil="true" xsi:type="xsd:string"/>
+            <license_valid_end xsi:nil="true" xsi:type="xsd:string"/>
+            <license_code xsi:nil="true" xsi:type="xsd:string"/>
+            <license_first_issue_date xsi:nil="true" xsi:type="xsd:string"/>
+            <license_issued_country xsi:type="xsd:string">AE</license_issued_country>
+            <license_points xsi:nil="true" xsi:type="xsd:integer"/>
+          </item>
+        </SqlResult0>
+      </ns1:endpoint.get_driverlistResponse>
+    </SOAP-ENV:Body>
+  </SOAP-ENV:Envelope>
+</body>
+</html>

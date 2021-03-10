@@ -1,0 +1,110 @@
+﻿@using System.Web.Http
+@using System.Web.Http.Controllers
+@using System.Web.Http.Description
+@using System.Collections.ObjectModel
+@using APTCWEB.Areas.HelpPage.Models
+@model Collection<ApiDescription>
+
+@{
+    ViewBag.Title = "CAR TRACK API LIST";
+
+    ILookup<HttpControllerDescriptor, ApiDescription> apiGroups = Model.ToLookup(api => api.ActionDescriptor.ControllerDescriptor);
+}
+
+<link type="text/css" href="~/Areas/HelpPage/HelpPage.css" rel="stylesheet" />
+<header class="help-page">
+    <div class="content-wrapper">
+        <div class="float-left">
+            <h1>@ViewBag.Title</h1>
+        </div>
+    </div>
+</header>
+<div id="body" class="help-page">
+    <section class="featured">
+        <div class="content-wrapper">
+            <h2>Introduction</h2>
+            <p>
+                Provide a general description of your APIs here.
+            </p>
+        </div>
+    </section>
+    <section class="content-wrapper main-content clear-fix">
+        <span style="padding-bottom:20px;font-weight:bold;font-size:20px">GET API</span><br /><br />
+        <table>
+            <thead>
+                <tr style="background-color:lightgray;height:30px;padding:2px">
+                    <td>Method</td>
+                    <td>Api</td>
+                    <td>Document</td>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var group in apiGroups)
+                {
+                    //@Html.DisplayFor(m => group, "ApiGroup")
+                    foreach (var item in group)
+                    {
+                        if (item.ID.Contains("car") && item.HttpMethod.Method == "GET")
+                        {
+                            <tr>
+                                <td style="width:300px">@item.HttpMethod.Method</td>
+                                <td style="width:300px">
+                                    @Html.ActionLink(item.RelativePath, "Api", "Help", new { area = "", apiId = item.HttpMethod.Method + "-" + item.RelativePath.Replace("/", "-").Replace("{id}", "id") }, null)
+                                </td>
+                                <td style="width:500px">
+                                    @if (item.Documentation != null)
+                                    {
+                                        <p>@item.Documentation</p>
+                                    }
+                                    else
+                                    {
+                                        <p>No documentation available.</p>
+                                    }
+                                </td>
+                            </tr>
+                        }
+                    }
+                }
+            </tbody>
+        </table>
+        <br /><br />
+        <span style="padding-bottom:20px;font-weight:bold;font-size:20px">POST API</span><br /><br />
+        <table>
+            <thead>
+                <tr style="background-color:lightgray;height:30px;padding:2px">
+                    <td>Method</td>
+                    <td>Api</td>
+                    <td>Document</td>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var group in apiGroups)
+                {
+                    //@Html.DisplayFor(m => group, "ApiGroup")
+                    foreach (var item in group)
+                    {
+                        if (item.ID.Contains("car") && item.HttpMethod.Method == "POST")
+                        {
+                            <tr>
+                                <td style="width:300px">@item.HttpMethod.Method</td>
+                                <td style="width:300px">
+                                    @Html.ActionLink(item.RelativePath, "Api", "Help", new { area = "", apiId = item.HttpMethod.Method + "-" + item.RelativePath.Replace("/", "-").Replace("{id}", "id") }, null)
+                                </td>
+                                <td style="width:500px">
+                                    @if (item.Documentation != null)
+                                    {
+                                        <p>@item.Documentation</p>
+                                    }
+                                    else
+                                    {
+                                        <p>No documentation available.</p>
+                                    }
+                                </td>
+                            </tr>
+                        }
+                    }
+                }
+            </tbody>
+        </table>
+    </section>
+</div>

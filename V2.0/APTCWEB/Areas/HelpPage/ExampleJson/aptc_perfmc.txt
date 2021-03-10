@@ -1,0 +1,15 @@
+﻿<strong>JSON Input<strong> <br/><br/>
+{ 
+	"driverId":"Driver_784-2020-9871234-1",
+	"kmsTravelled":"10", 
+	"braking":"2", 
+	"accel":"0", 
+	"corner":"11", 
+	"idle":"5", 
+	"speeding":"56", 
+	"averageTotal":"34" 
+} 
+<br/>
+<br/>
+<br/><strong>Response</strong><br/><br/>
+{"id":"438727ab-ce64-4afd-b58e-202eeawwb86ed", “IsSuccess”: “true”, "message":"Successfully","statusCode":"200"}<br/>

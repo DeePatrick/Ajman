@@ -1,0 +1,33 @@
+﻿<strong>JSON Input<strong> <br/><br/>
+{
+	"docType":"DocType_1",
+	"docRef":"docRef_1",
+	"docClass":"docClass_1",
+	"lang":"EN",
+	"version":"1",
+	"dateTime":"2018=-0-06 5:00:0000",
+	"status":true,
+	"validFrom":"2018-09-10",
+	"validTo":"2028-09-09",
+	"rejReas":"rejReas_1",
+	"indivID":"indivID_1",
+	"vehID":"",
+	"compID":"",
+	"docContent":
+	{
+		"duration":"duration_1",
+		"fees":"fees_1"
+	},
+	"DocFile":[
+	{"docFormat":"docFormat_1",
+	"docImage":"docImage_1"},
+	{"docFormat":"docFormat_2",
+	"docImage":"docImage_2"}
+	],
+	"docAccepted":"PE"
+}
+<br/>
+<br/><strong>Response</strong><br/><br/>
+{"id":"PERMIT_21345", "IsSuccess": "true", "message":"Successfully","statusCode":"200"}<br/>
+{"id":"", "IsSuccess": "false", "message": "187-document referance is required","statusCode":"400"}<br/>
+{"id":"", "IsSuccess": "false", "message": "123-language is required":"400"}<br/>

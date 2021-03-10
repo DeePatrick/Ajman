@@ -1,0 +1,17 @@
+﻿<strong>JSON Input<strong> <br/><br/>
+{
+ "dateTime":"2018-05-29",
+ "incidentID":"IN001",
+ "rank":"1",
+ "status":"Active",
+ "remarks":"Test idling"
+}
+
+
+<br/>
+<br/>
+<br/><strong>Response</strong><br/><br/>
+{"id":"IN001 has been added sucessfully", "IsSuccess": "true", "message":"Successfully","statusCode":"200"}<br/>
+{"id":"", "IsSuccess": "false", "message": "IN001 already exists","statusCode":"409"}<br/>
+
+

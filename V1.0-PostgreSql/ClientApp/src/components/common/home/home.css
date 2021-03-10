@@ -1,0 +1,48 @@
+.inner-view {
+    height: 700px;
+    width: 108%;
+    padding: 2% 1%;
+    background: -webkit-gradient(linear, left top, left bottom, from(#ffffff),to(#e9dece));
+    background: -webkit-linear-gradient(top, #ffffff 0%,#e9dece 100%);
+    background: -o-linear-gradient(top, #ffffff 0%,#e9dece 100%);
+    background: linear-gradient(top, #ffffff 0%,#e9dece 100%);
+}
+.home .column {
+  height: 280px;
+  padding: 20px;
+  position: relative;
+  margin-bottom: 35px;
+  /* background-color: white; */
+}
+
+
+.home .row .column .fa-bar-chart,
+.home .row .column .fa-credit-card,
+.home .row .column .fa-play-circle-o,
+.home .row .column .fa-file-text-o {
+  color: #9f8865;
+}
+
+.home .row .column h4 {
+  color: #9f8865;
+  font-weight: bolder;
+  font-size: 1em;
+  float: right;
+  position: absolute;
+  top:22px;
+  left:50px;
+}
+
+.home .row .column:after {
+  clear: both;
+  content:'';
+  display: block;
+}
+
+.home .row .column .inner-panel {
+  background-color: white;
+  height: inherit;
+  border-radius: 5px;
+  padding: 10px;
+  width: 100%;
+}

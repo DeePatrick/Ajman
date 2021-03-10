@@ -1,0 +1,60 @@
+/* Header */
+
+.ModalEditVehicle .modal-header {
+  position: relative;
+}
+
+.ModalEditVehicle .modal-header h6 {
+  color:#a0a0a0;
+}
+
+.ModalEditVehicle .modal-header h6 i {
+  margin-right: 10px;
+}
+
+.ModalEditVehicle .modal-header #close-modal {
+  position: absolute;
+  top:-19px;
+  right:16px;
+  background-color:#ffffff;
+}
+
+.ModalEditVehicle .modal-header button span {
+  background-color: #ffffff;
+  color:black;
+}
+
+/* Body */
+
+.ModalEditVehicle .modal-body {
+ padding: 25px;
+ color: #a0a0a0;
+ font-weight: bold;
+ font-size: 0.6em;
+}
+
+.ModalEditVehicle .modal-body label {
+  margin-top: 20px;
+  font-size: 0.9em;
+}
+
+.ModalEditVehicle .modal-body input {
+  color: #a0a0a0;
+  border: none;
+  border-bottom: 1px #a0a0a0 solid;
+  outline: none;
+}
+
+/* Footer */
+
+.ModalEditVehicle .modal-footer {
+  text-align: center;
+}
+
+.ModalEditVehicle .modal-footer .save-changes {
+  border-radius: 0;
+  margin: 0 auto;
+  width: 120px;
+  height: 25px;
+  font-size: 0.7em;
+}

@@ -1,0 +1,46 @@
+﻿{
+  "startDateTime": "10-12-2018 :10:20:00",
+  "endDateTime": "11-12-2018 :10:20:00",
+  "driverScore": [
+    {
+      "driverId": "Driver_123321",
+      "kmsTravelled": 3,
+      "braking": 111,
+      "accel": 0,
+      "corner": 0,
+      "idle": 0,
+      "speeding": 100,
+      "averageTotal": 80
+    },
+    {
+      "driverId": "Driver_123322",
+      "kmsTravelled": 3,
+      "braking": 1111,
+      "accel": 0,
+      "corner": 0,
+      "idle": 0,
+      "speeding": 1001,
+      "averageTotal": 801
+    },
+    {
+      "driverId": "Driver_123323",
+      "kmsTravelled": 3,
+      "braking": 1111,
+      "accel": 0,
+      "corner": 0,
+      "idle": 0,
+      "speeding": 1001,
+      "averageTotal": 801
+    },
+    {
+      "driverId": "Driver_123324",
+      "kmsTravelled": 3,
+      "braking": 1111,
+      "accel": 0,
+      "corner": 0,
+      "idle": 0,
+      "speeding": 1001,
+      "averageTotal": 801
+    }
+  ]
+}

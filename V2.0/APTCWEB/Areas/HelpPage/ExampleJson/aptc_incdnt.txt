@@ -1,0 +1,12 @@
+<strong>JSON Input<strong> <br/><br/>
+{ 
+	"driverID": "784-2020-1234567-1",
+	"dateTime": "2018-06-06 19:48:02",
+	"notes": "Incident reported,please contact as earliest to driver."
+} 
+<br/>
+<br/>
+<br/><strong>Response</strong><br/><br/>
+{"id":"784-2020-1234567-1", "IsSuccess": "true", "message":"Successfully","statusCode":"200"}<br/>
+{"id":"", "IsSuccess": "false", "message": "154-Driver ID is required","statusCode":"400"}<br/>
+{"id":"", "IsSuccess": "false", "message": "155-Notes is required","statusCode":"400"}<br/>

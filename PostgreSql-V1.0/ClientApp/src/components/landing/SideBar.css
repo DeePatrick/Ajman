@@ -1,0 +1,95 @@
+@font-face {
+    font-family: 'ajman-ptc-logo';
+    src: url('../../assets/ajman-ptc-logo.svg') format('svg');
+}
+
+.navbar-inverse {
+    background-color: #333;
+    border-color: #333;
+}
+
+    .navbar-inverse .navbar-nav > li > a:hover {
+        background-color: #9f8865;
+        border-radius: 10rem !important;
+    }
+
+        .navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
+            background-color: #9f8865 !important;
+            border-radius: 10rem;
+        }
+
+.nav > li > a:hover, .nav > li > a:focus {
+    background-color: #9f8865;
+    border-radius: 10rem !important;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+
+        .sidenav a {
+            font-size: 18px;
+        }
+}
+
+.bshadow0, input {
+    box-shadow: inset 0 -2px #e7e7e7;
+}
+
+ul > li {
+    cursor: pointer;
+}
+
+li a.highlighted.active {
+    background-color: #9f8865;
+    border-radius: 10rem !important;
+}
+
+.fixed {
+    overflow: hidden;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+}
+
+.fixed-component {
+    overflow: hidden;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 100px; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+}
+
+#nav-padding {
+    padding-top: 10px;
+}
+
+.top-nav {
+    position: fixed;
+    background-color: #fff;
+    display: block;
+    width: 100%;
+    z-index: 1;
+}
+
+.fixed-search {
+    display: block;
+    position: fixed;
+    z-index: 1;
+    background-color: rgba(235, 225, 211, 0.5);
+    padding: 20px 100px 20px 20px;
+    width: 100%;
+    height: 100px;
+    margin: 79px 0 auto;
+}
+
+.fixed-side-panel {
+    display: block;
+    overflow: hidden;
+    position: fixed; /* Set the navbar to fixed position */
+    width: 70vw; /* Full width */
+    padding-left: 0px;
+    padding-right: 0;
+    margin-right: 0;
+}

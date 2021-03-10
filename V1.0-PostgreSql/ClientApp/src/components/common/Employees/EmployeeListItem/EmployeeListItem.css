@@ -1,0 +1,54 @@
+.list-item {
+  list-style: none;
+  padding: 15px;
+}
+
+.list-item .list-container {
+  padding-bottom: 10px;
+  border-bottom: 1px #a0a0a0 solid;
+}
+
+
+
+.list-item .list-container .fa-user-plus {
+  font-size: 2em;
+  float: left;
+  width: 10%;
+  color: #a0a0a0;
+}
+
+.list-item .list-container .content {
+  float: left;
+  width: 70%;
+  margin-left: 5%;
+  margin-top: 10px;
+  font-size: 0.7em;
+  color: #a0a0a0;
+}
+
+.list-item .list-container button {
+  float:left;
+  padding: 0;
+  width: 10%;
+  border: none;
+  cursor: pointer;
+  background-color: #ffffff;
+
+}
+
+.list-item .list-container button:focus,.list-item .list-container button:active  {
+  box-shadow: none;
+  border: none;
+  outline: none;
+}
+
+.list-item button i {
+  color: #9f8865;
+  font-size: 1.4em;
+}
+
+.list-item .list-container:after {
+  content: '';
+  display: block;
+  clear: both;
+}

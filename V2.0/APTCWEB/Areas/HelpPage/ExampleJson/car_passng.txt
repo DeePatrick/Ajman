@@ -1,0 +1,14 @@
+﻿<strong>JSON Input<strong> <br/><br/>
+{
+	"passengerID":"PA123456",
+	"NameEN":"Abdul Rahman",
+	"NameAR":"عبد الرحمن",
+	"mobileNumber":"9876543210",
+	"emailAddress":"abdul.rahman@qlc.com"
+}
+<br/>
+<br/>
+<br/><strong>Response</strong><br/><br/>
+{"id":"PassengerMessage_v.s@qlc.com", "IsSuccess": "true", "message":"Successfully","statusCode":"200"}<br/>
+{"id":"", "IsSuccess": "false", "message": "110-NameEN or NameAR is required","statusCode":"400"}<br/>
+{"id":"", "IsSuccess": "false", "message": "111-mobile number is required":"400"}<br/>

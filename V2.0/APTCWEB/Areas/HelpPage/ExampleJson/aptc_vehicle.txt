@@ -1,0 +1,39 @@
+<strong>JSON Input<strong> <br/><br/>
+{
+	"keyID":"3UGBH71JXRY109122",
+	"docType":"vehicle",
+	"engineNum":"44WPQ10335",
+	"numSeats":"05",
+	"trafficNum":"636NH",
+	"firstRegData":"2015-07-19",
+	"yearManufacture":"2018",
+	"make":"Toyota",
+	"model":"Altima",
+	"colour":"red",
+	"vehType":"car",
+	"fuelType":"F",
+	"transType":"SN",
+	"vehValid":true,
+	"isActive":true,
+	"status":"PE",
+	"disabledFriendly":"true",
+	"vehPlate": {
+            "plateNumber": "UP25 TC 1282",
+            "plateCategory": "PC",
+            "plateSource": "Honda",
+            "plateCode": "Silver"
+        },
+        "remarks": "new vehicle added in APTC",
+        "ownership": {
+            "ownershipType": "company",
+            "ownerID": "company_crNum_3",
+            "ownerName": "APTC Pvt. Ltd. UAE"
+        }
+}
+<br/>
+<br/>
+<br/><strong>Response</strong><br/><br/>
+{"id":"3UGBH71JXRY109122", "IsSuccess": "true", "message":"Successfully","statusCode":"200"}<br/>
+{"id":"", "IsSuccess": "false", "message": "133-Key number is required","statusCode":"400"}<br/>
+{"id":"", "IsSuccess": "false", "message": "126-engine number is required","statusCode":"400"}<br/>
+{"id":"", "IsSuccess": "false", "message": "134-year manufacture is required":"400"}<br/>

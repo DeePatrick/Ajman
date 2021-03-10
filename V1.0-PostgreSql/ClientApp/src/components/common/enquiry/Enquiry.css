@@ -1,0 +1,64 @@
+.inquiriy .fa-exclamation-circle {
+  color: #9f8865;
+}
+
+.inquiriy .row h4 {
+  color: #9f8865;
+  font-weight: bolder;
+  font-size: 1em;
+  margin-left: 15px;
+}
+
+.inquiriy .row h5 {
+  background-color:#9f8865;
+  color: white;
+  font-size: 0.6em;
+  height: 2.5em;
+  padding: 0.6em 1.5em 0.5em 1.5em;
+  margin-left: 11.5%;
+  margin-top: -3px;
+}
+
+/* LEFT COLUMN */
+.inquiriy .row .left {
+  /* background-color: red; */
+  padding: 5px;
+}
+
+.inquiriy .row .left .list ul {
+  background-color:#ffffff;
+  border-radius: 5px;
+  padding: 15px;
+  /* margin-left: -15px; */
+}
+
+/* LEFT COLUMN */
+
+/* RIGHT COLUMN */
+
+.inquiriy .row .right {
+  /* background-color: blue; */
+  height: 500px;
+  padding: 5px;
+}
+
+.inquiriy .row .right .company-result {
+  background-color: #ffffff;
+  width: 100%;
+  height: 300px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.inquiriy .row .right .company-result .fa-exclamation-circle {
+  color: #a0a0a0;
+  font-size: 2em;
+  margin-top: 100px;
+}
+
+.inquiriy .row .right .company-result p {
+  color: #a0a0a0;
+  font-size: 0.8em;
+}
+
+/* RIGHT COLUMN */

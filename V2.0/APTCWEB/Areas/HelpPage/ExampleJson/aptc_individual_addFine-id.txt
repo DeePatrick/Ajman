@@ -1,0 +1,16 @@
+﻿<strong>JSON Input<strong> <br/><br/>
+{
+  "fineID": "F001",
+  "amount":"200.00",
+  "status":"Active",
+  "remark":"Test by vishal",
+  "dateTime":"2018-05-29T00:00:00+05:30"
+}
+
+<br/>
+<br/>
+<br/><strong>Response</strong><br/><br/>
+{"id":"F001 has been added sucessfully", "IsSuccess": "true", "message":"Successfully","statusCode":"200"}<br/>
+{"id":"", "IsSuccess": "false", "message": "F001 already exists","statusCode":"409"}<br/>
+
+

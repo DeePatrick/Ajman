@@ -1,0 +1,16 @@
+<strong>JSON Input<strong> <br/><br/>
+{ 
+	"passengerID": "784-2020-9871234-1", 
+	"mobileNumber": "9876543210", 
+	"fromLocation": "Ghaziabad", 
+	"toLocation": "Noida", 
+	"dateTimeRequired": "2018-07-08 12:00:99",
+	"comments": "Trip has been completed." 
+} 
+<br/>
+<br/>
+<br/><strong>Response</strong><br/><br/>
+{"id":"7654321", "IsSuccess": "true", "message":"Successfully","statusCode":"200"}<br/>
+{"id":"", "IsSuccess": "false", "message": "111-Mobile number is required","statusCode":"400"}<br/>
+{"id":"", "IsSuccess": "false", "message": "117-From Location is required","statusCode":"400"}<br/>
+{"id":"", "IsSuccess": "false", "message": "118-To Location is required","statusCode":"400"}<br/>

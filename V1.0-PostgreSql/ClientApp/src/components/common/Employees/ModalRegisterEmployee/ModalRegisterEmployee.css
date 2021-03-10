@@ -1,0 +1,83 @@
+/* General */
+.ModalRegisterEmployee .modal-content {
+  padding: 0 15px;
+}
+
+/* Header */
+
+
+/* Body */
+.ModalRegisterEmployee .modal-content .upload-image-section {
+  text-align: center;
+}
+.ModalRegisterEmployee .modal-content .upload-image-section i {
+  display: block;
+  font-size: 2.5em;
+  margin-bottom: 15px;
+  color:#a0a0a0;
+}
+
+.ModalRegisterEmployee .modal-content .upload-image-section button {
+  display: block;
+  margin:  0 auto;
+  background-color: #a0a0a0;
+  color: #ffffff;
+  font-size: 0.8em;
+  border: none;
+  outline:none;
+  cursor:pointer;
+  position:relative;
+  border-radius: 2px;
+  width:140px;
+  height: 30px;
+}
+
+.ModalRegisterEmployee .modal-content .upload-image-section button i {
+  font-size: 0.8em;
+  position:absolute;
+  top:9px;
+  left:18px;
+  color:#ffffff;
+}
+
+.ModalRegisterEmployee .modal-content .modal-body label {
+  color:#a0a0a0;
+  margin: 10px 0;
+}
+
+.ModalRegisterEmployee .modal-content .modal-body input {
+  color:#a0a0a0;
+  margin: 5px 0;
+  border: none;
+  border-bottom: 1px #a0a0a0 solid;
+  outline:none;
+}
+
+.ModalRegisterEmployee .modal-content .modal-body .add-another-role {
+  float: right;
+  color: #ffffff;
+  background-color:#a0a0a0;
+  border: none;
+  outline:none;
+  cursor:pointer;
+}
+
+
+/* Footer */
+
+.ModalRegisterEmployee .modal-content .modal-footer button {
+  border-radius: 0;
+  margin: 0 auto;
+  width: 120px;
+  height: 30px;
+  font-size: 0.7em;
+  background-color: #a0a0a0;
+  outline: none;
+  border:none;
+}
+
+.ModalRegisterEmployee .modal-footer button:focus {
+  border: none;
+  background-color:#a0a0a0;
+  outline: none;
+}

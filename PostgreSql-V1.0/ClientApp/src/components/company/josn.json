@@ -1,0 +1,335 @@
+vehicles: [
+  {
+    VehicleID: "122",
+    Make: "Toyota",
+    yearManufacture: "2005- 2009",
+    vehType: "Bob Cat",
+    color:"Grey"
+    status: "true"
+  },
+
+  {
+    vehicleID: "122",
+    make: "Toyota",
+    yearManufacture: "2010 - 2015",
+    vehType: "Bob Cat",
+    color:"Silver"
+    status: "true"
+  },
+
+
+  {
+    vehicleID: "122",
+    make: "Toyota-Corolla",
+    yearManufacture: "2010 - 2015",
+    vehType: "Bob Cat",
+    color:"Silver"
+    status: "true"
+  },
+
+  {
+    vehicleID: "3UHBH71JXRY309123",
+    make: "Skoda-Superb",
+    yearManufacture: "2010 - 2015",
+    vehType: "Hatchback",
+    color:"Blue"
+    status: "true"
+  },
+
+  {
+    vehicleID: "3UHBH71JXRY309223",
+    make: "Skoda-Octivia",
+    yearManufacture: "2010 - 2015",
+    vehType: "Pickup",
+    color:"Red"
+    Status: "true"
+  },
+  {
+    vehicleID: "558655",
+    make: "Toyota-Camry",
+    yearManufacture: "2010-2015",
+    vehType: "Pickup",
+    color:"Red"
+    status: "true"
+  },
+  {
+    VehicleID: "6443",
+    Make: "Toyota-Camry",
+    yearManufacture: "",
+    vehType: "Saloon",
+    color:"Red"
+    status: "true"
+  }
+],
+
+
+fines: [
+  {
+    fineID: "12341",
+    dateTime: "2018-12-04 11:48:44",
+    amount: "3000",
+    status: "pending",
+    trafficNum:"EY33VHY",
+    individualName: "Johnny Cash"
+  },
+  {
+    fineID: "12342",
+    dateTime: "2018-11-02 13:48:44",
+    amount: "3000",
+    status: "pending",
+    trafficNum:"LP62NHY",
+    individualName: "Stella Damscus1"
+  },
+  {
+    fineID: "12343",
+    dateTime: "2018-03-07 16:48:44",
+    amount: "3000",
+    status: "pending",
+    trafficNum:"EA67VHY",
+    individualName: "Sara John"
+  },
+  {
+    fineID: "12344",
+    dateTime: "2017-05-07 15:48:44",
+    amount: "5000",
+    status: "pending",
+    trafficNum:"LP66NHY",
+    individualName: "Stella Damscus1"
+  },
+  {
+    fineID: "12345",
+    dateTime: "2018-12-04 11:48:44",
+    amount: "3000",
+    status: "pending",
+    trafficNum:"EA63VHY",
+    individualName: "Sally Ali"
+  },
+  {
+    fineID: "12346",
+    dateTime: "2018-11-02 13:48:44",
+    amount: "3000",
+    status: "pending",
+    trafficNum:"LP66NHY",
+    individualName: "Ibrahim Buhari"
+  },
+  {
+    fineID: "12347",
+    dateTime: "2018-03-07 16:48:44",
+    amount: "3000",
+    status: "pending",
+    trafficNum:"EA63VHY",
+    individualName: "Donald Trump"
+  },
+  {
+    fineID: "12348",
+    dateTime: "2017-05-07 15:48:44",
+    amount: "5000",
+    status: "pending",
+    trafficNum:"LV66RIP",
+    individualName: "Stella Damscus"
+  },
+  {
+    fineID: "12349",
+    dateTime: "2018-12-04 11:48:44",
+    amount: "5000",
+    status: "pending",
+    trafficNum:"EA63RIB",
+    individualName: "Mariam Jabar"
+  },
+  {
+    fineID: "12350",
+    dateTime: "2018-11-02 13:48:44",
+    amount: "5000",
+    status: "pending",
+    trafficNum:"BU66NHY",
+    individualName: "Ade Jabar"
+  },
+  {
+    fineID: "12351",
+    dateTime: "2018-03-07 16:48:44",
+    amount: "3000",
+    status: "pending",
+    trafficNum:"ZX63VHY",
+    individualName: "Joss Burton"
+  },
+  {
+    fineID: "12352",
+    dateTime: "2017-05-07 15:48:44",
+    amount: "5000",
+    status: "pending",
+    trafficNum:"AY66NHY",
+    individualName: "Manish Mital"
+  }
+  
+],
+
+"ownerRoles": [
+    {
+      "ownerRoleID": "PR",
+      "id": "ID Owner",
+      "nationality": "India",
+      "ownerRoleType": "Sales Director",
+      "ownerNameAr": "مانيش",
+      "ownerNameEn": "Simbi Mittal"
+    },
+    {
+      "ownerRoleID": "PRESID",
+      "id": "ID Owner",
+      "nationality": "India",
+      "ownerRoleType": "President",
+      "ownerNameAr": "مانيش",
+      "ownerNameEn": "Vishal Saxena"
+      },
+      {
+        "ownerRoleID": "VP",
+        "id": "ID Owner",
+        "nationality": "UAE",
+        "ownerRoleType": "Director",
+        "ownerNameAr": "مانيش",
+        "ownerNameEn": "Manish Mittal"
+        },
+        {
+          "ownerRoleID": "DIR",
+          "id": "ID Owner",
+          "nationality": "UAE",
+          "ownerRoleType": "Director",
+          "ownerNameAr": "مانيش ميتال",
+          "ownerNameEn": "Manish Mittal"
+        }
+  ]
+
+
+  "ownerRoles": [
+    {
+      "ownerRoleID": "CHAIR",
+      "id": "ID Owner",
+      "nationality": "India",
+      "ownerRoleType": "Chairman",
+      "ownerNameAr": "مانيش",
+      "ownerNameEn": "Johnny Saxena"
+      }
+    {
+      "ownerRoleID": "PR",
+      "id": "ID Owner",
+      "nationality": "India",
+      "ownerRoleType": "Sales Director",
+      "ownerNameAr": "مانيش",
+      "ownerNameEn": "Simbi Joshia"
+    },
+    {
+      "ownerRoleID": "PRESID",
+      "id": "ID Owner",
+      "nationality": "India",
+      "ownerRoleType": "President",
+      "ownerNameAr": "مانيش",
+      "ownerNameEn": "Johnny Saxena"
+      }
+
+  ]
+
+
+  "ownerRoles": [
+    {
+      "ownerRoleID": "CHAIR",
+      "id": "ID Owner",
+      "nationality": "Nigerian",
+      "ownerRoleType": "Chairman",
+      "ownerNameAr": "مانيش",
+      "ownerNameEn": "Femi Bamishe"
+      }
+    {
+      "ownerRoleID": "PR",
+      "id": "ID Owner",
+      "nationality": "India",
+      "ownerRoleType": "Sales Director",
+      "ownerNameAr": "مانيش",
+      "ownerNameEn": "Wellington Joshia"
+    },
+    {
+      "ownerRoleID": "PRESID",
+      "id": "ID Owner",
+      "nationality": "Mayalsian",
+      "ownerRoleType": "President",
+      "ownerNameAr": "مانيش",
+      "ownerNameEn": "Lee Saxena"
+      }
+
+  ]
+
+
+  "ownerRoles": [
+    {
+      "ownerRoleID": "CHAIR",
+      "id": "ID Owner",
+      "nationality": "Korean",
+      "ownerRoleType": "Chairman",
+      "ownerNameAr": "مانيش",
+      "ownerNameEn": "Li Ki Soo"
+      }
+    {
+      "ownerRoleID": "PR",
+      "id": "ID Owner",
+      "nationality": "India",
+      "ownerRoleType": "Sales Director",
+      "ownerNameAr": "مانيش",
+      "ownerNameEn": "Wellington Vinay"
+    },
+    {
+      "ownerRoleID": "PRESID",
+      "id": "ID Owner",
+      "nationality": "Noway",
+      "ownerRoleType": "President",
+      "ownerNameAr": "مانيش",
+      "ownerNameEn": "Lee Johnsson"
+      }
+
+  ]
+
+
+  "ownerRoles": [
+    {
+      "ownerRoleID": "CHAIR",
+      "id": "ID Owner",
+      "nationality": "Korean",
+      "ownerRoleType": "Chairman",
+      "ownerNameAr": "مانيش",
+      "ownerNameEn": "Ki Ki Soo"
+      }
+
+  ]
+
+
+  "ownerRoles": [
+    {
+      "ownerRoleID": "PR",
+      "id": "ID Owner",
+      "nationality": "India",
+      "ownerRoleType": "Sales Director",
+      "ownerNameAr": "مانيش",
+      "ownerNameEn": "Simbi Mittal"
+    },
+    {
+      "ownerRoleID": "PRESID",
+      "id": "ID Owner",
+      "nationality": "India",
+      "ownerRoleType": "President",
+      "ownerNameAr": "مانيش",
+      "ownerNameEn": "Vishal Saxena"
+      },
+      {
+        "ownerRoleID": "VP",
+        "id": "ID Owner",
+        "nationality": "UAE",
+        "ownerRoleType": "Director",
+        "ownerNameAr": "مانيش",
+        "ownerNameEn": "Manish Mittal"
+        },
+        {
+          "ownerRoleID": "DIR",
+          "id": "ID Owner",
+          "nationality": "UAE",
+          "ownerRoleType": "Director",
+          "ownerNameAr": "مانيش ميتال",
+          "ownerNameEn": "Manish Mittal"
+        }
+  ]

@@ -1,0 +1,690 @@
+﻿@{
+    ViewBag.Title = "Vehicle";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="jumbotron">
+    <h3>Vehicle List</h3>
+</div>
+<div class="row">
+    <div id="target">
+
+    </div>
+</div>
+
+<div id="addNew" style="display:none">
+    <div class="row">
+        <div class="col-md-4">
+            <label><strong style="color:red">*</strong>&nbsp;VIN</label>
+            <input type="text" id="txtVIN" name="name" value="" class="form-control" placeholder="VIN" title="VIN" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <label><strong style="color:red">*</strong>&nbsp;Engine Number</label>
+            <input type="text" id="txtEngineNumber" name="name" value="" class="form-control" placeholder="Engine Number" title="Engine Number" />
+        </div>
+        <div class="col-md-4">
+            <label><strong style="color:red">*</strong>&nbsp;Registration Number</label>
+            <input type="text" id="txtRegistration" name="name" value="" class="form-control" placeholder="Registration" title="Registration Number" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <label><strong style="color:red">*</strong>&nbsp;Model Year</label>
+            <input type="text" id="txtModelYear" name="name" value="" class="form-control" placeholder="Model Year" title="Model Year" />
+        </div>
+        <div class="col-md-4">
+            <label><strong style="color:red">*</strong>&nbsp;Vehicle Type</label>
+            @*<select id="ddlVehicletype" class="form-control" onchange="selectVehicletype(this);">
+            <option value="Bike">Bike</option>
+            <option value="Car">Car</option>
+            <option value="Bus">Bus</option>
+            <option value="Taxi">Taxi</option>
+           <option value="Truck">Truck</option>
+        </select>*@
+            <select id="ddlVehicletype" class="form-control">
+            </select>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <label><strong style="color:red">*</strong>&nbsp;Make</label>
+            <select id="ddlMake" class="form-control" title="Make" onchange="bindALLModel(this)">
+            </select>
+        </div>
+        <div class="col-md-4">
+            <label><strong style="color:red">*</strong>&nbsp;Model</label>
+            <select id="ddlModel" class="form-control" title="Model">
+            </select>
+        </div>
+    </div>
+    <div class="row">
+        @*<div class="col-md-4">
+                <label>Vehicle Type</label>
+                <select id="drpVType" class="form-control">
+                    <option value="Bike">Bike</option>
+                    <option value="Car">Car</option>
+                    <option value="Bus">Bus</option>
+                    <option value="Truck">Truck</option>
+                </select>
+            </div>*@
+        <div class="col-md-4">
+            <label><strong style="color:red">*</strong>&nbsp;Colour</label>
+            <select id="ddlColour" class="form-control" title="Colour">
+            </select>
+        </div>
+    </div>
+
+    @*<div class="row">
+            <div class="col-md-4">
+                <label>License Number</label>
+                <input type="text" name="name" value="" id="txtLic" class="form-control" />
+            </div>
+            <div class="col-md-4">
+                <label>Pasport Number</label>
+                <input type="text" name="name" value="" id="txtPass" class="form-control" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <label>Photo</label>
+                <input type="file" name="name" id="fileUpload" value="Select" />
+                <img src="" width="200" style="display:none;" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+         </div>*@
+
+    <div class="row">
+        <div class="col-md-4">
+            <label><strong style="color:red">*</strong>&nbsp;Owner Name</label>
+            <input type="text" id="txtOwnerName" name="name" value="" class="form-control" placeholder="Owner Name" title="Owner Name" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <label>Owner Photo</label>
+            <input type="file" name="name" id="fileUpload" value="Select" />
+            <img src="" width="200" style="display:none;" />
+        </div>
+    </div>
+    <div class="row">
+            <div class="col-md-4">
+            </div>
+            <div class="col-md-4">
+                <input type="submit" name="Save" onclick="SaveVehicle()" value="Save" class="btn btn-danger" style="width:100px; margin-top:20px;" />
+            </div>
+        </div>
+</div>
+    <div id="dvAddButton">
+        <input type="submit" onclick="addNewVehicle();" name="name" class="btn btn-danger" value="Add New Vehicle" />
+        <input type="submit" id="btnCancel" onclick="Cancel();" class="btn btn-danger" style="display:none" name="name" value="Cancel" />
+    </div>
+    <div class="row" id="grdDriver">
+        <table id="tblEntAttributes" class="table table-bordered">
+            <thead class="success">
+                <tr>
+                    <th>VIN</th>
+                    <th>Owner Name</th>
+                    <th>Vehicle Valid</th>
+                    <th>Engine Number</th>
+                    <th>Registration Number</th>
+                    <th>Vehicle Type</th>
+                    <th>Make</th>
+                    <th>Model</th>
+                    <th>Model Year</th>
+                    <th>Color</th>
+                    <th>CT Response</th>
+                    <th>CT Response Descicription</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody"></tbody>
+        </table>
+    </div>
+    <div>
+        <script>
+            var editObj = {};
+            var editId = '';
+            $(function () {
+                $('#fileUpload').change(function (event) {
+                    var tmppath = URL.createObjectURL(event.target.files[0]);
+                    filePath = $(this).val();
+                    $("img").fadeIn("fast").attr('src', URL.createObjectURL(event.target.files[0]));
+                });
+                defaultFun();
+            });
+
+            function selectVehicletype(obj) {
+                var taxi = "CAMRY,ALTIMA,ACCORD,CORLLOA,6"
+                var bus = "Quest XL,Quest SL"
+                var mars = "GLA 200,Mercedes - Benz Vito van, 2014 - present,Mercedes - Benz SLR McLaren(built from 2003 to 2010,815D Vario minibus,Mercedes - Benz 560SEC,Mercedes - Benz SLK, 1996 - 2004,Mercedes - Benz M - Class, models go by ML250, ML300,Mercedes - Benz CLA - Class.,Mercedes - Benz MB100, produced 1981 - 1995,Mercedes - Benz Citan(2012)"
+
+                if (obj.value == 'Car') {
+                    var make = "Mercedes-Benz,Nissan,Vauxhall,Skoda";
+                    var makeArray = make.split(',')
+                    $("#ddlMake").html("");
+                    for (var i = 0; i < makeArray.length; i++) {
+                        $("#ddlMake").append($('<option value=' + makeArray[i] + '>' + makeArray[i] + '</option>'))
+                    }
+                    var makeArray1 = mars.split(',')
+                    $("#ddlModel").html("");
+                    for (var i = 0; i < makeArray1.length; i++) {
+                        $("#ddlModel").append($('<option value=' + makeArray1[i] + '>' + makeArray1[i] + '</option>'))
+                    }
+                }
+
+                if (obj.value == 'Bus')
+                {
+                    var make = "Starcraft Bus";
+                    var makeArray = make.split(',')
+                    $("#ddlMake").html("");
+                    for (var i = 0; i < makeArray.length; i++) {
+                        $("#ddlMake").append($('<option value=' + makeArray[i] + '>' + makeArray[i] + '</option>'))
+                    }
+
+                    var makeArray1 = bus.split(',')
+                    $("#ddlModel").html("");
+                    for (var i = 0; i < makeArray1.length; i++) {
+                        $("#ddlModel").append($('<option value=' + makeArray1[i] + '>' + makeArray1[i] + '</option>'))
+                    }
+                }
+
+                if (obj.value == 'Taxi')
+                    {
+                    var make = "TOYOTA,NISSAN,HONDA,MAZDA";
+                    var makeArray = make.split(',')
+                    $("#ddlMake").html("");
+                    for (var i = 0; i < makeArray.length; i++)
+                    {
+                        $("#ddlMake").append($('<option value=' + makeArray[i] + '>' + makeArray[i] + '</option>'))
+                    }
+
+                    var model1 = "CAMRY", model2 = "CORLLOA";
+                    $("#ddlModel").html("");
+                    $("#ddlModel").append($('<option value=' + model1 + '>' + model1 + '</option>'))
+                    $("#ddlModel").append($('<option value=' + model2 + '>' + model2 + '</option>'))
+                }
+
+            }
+
+            function selectVehicletype_Value(obj)
+            {
+                var bus = "Quest XL,Quest SL"
+                var mars = "GLA 200,Mercedes - Benz Vito van, 2014 - present,Mercedes - Benz SLR McLaren(built from 2003 to 2010,815D Vario minibus,Mercedes - Benz 560SEC,Mercedes - Benz SLK, 1996 - 2004,Mercedes - Benz M - Class, models go by ML250, ML300,Mercedes - Benz CLA - Class.,Mercedes - Benz MB100, produced 1981 - 1995,Mercedes - Benz Citan(2012)"
+                if (obj == 'Car') {
+                    var make = "Mercedes-Benz,Nissan,Vauxhall,Skoda";
+                    var makeArray = make.split(',')
+                    $("#ddlMake").html("");
+                    for (var i = 0; i < makeArray.length; i++)
+                    {
+                        $("#ddlMake").append($('<option value=' + makeArray[i] + '>' + makeArray[i] + '</option>'))
+                    }
+                    var makeArray1 = mars.split(',')
+                    $("#ddlModel").html("");
+                    for (var i = 0; i < makeArray1.length; i++)
+                    {
+                        $("#ddlModel").append($('<option value=' + makeArray1[i] + '>' + makeArray1[i] + '</option>'))
+                    }
+                }
+                if (obj == 'Bus') {
+                    var make = "Starcraft Bus";
+                    var makeArray = make.split(',')
+                    $("#ddlMake").html("");
+                    for (var i = 0; i < makeArray.length; i++)
+                    {
+                        $("#ddlMake").append($('<option value=' + makeArray[i] + '>' + makeArray[i] + '</option>'))
+                    }
+
+                    var makeArray1 = bus.split(',')
+                    $("#ddlModel").html("");
+                    for (var i = 0; i < makeArray1.length; i++)
+                    {
+                        $("#ddlModel").append($('<option value=' + makeArray1[i] + '>' + makeArray1[i] + '</option>'))
+                    }
+                }
+
+                if (obj == 'Taxi') {
+                    var make = "TOYOTA,NISSAN,HONDA,MAZDA";
+                    var makeArray = make.split(',')
+                    $("#ddlMake").html("");
+                    for (var i = 0; i < makeArray.length; i++) {
+                        $("#ddlMake").append($('<option value=' + makeArray[i] + '>' + makeArray[i] + '</option>'))
+                    }
+
+                    var model1 = "CAMRY", model2 = "CORLLOA";
+                    $("#ddlModel").html("");
+                    $("#ddlModel").append($('<option value=' + model1 + '>' + model1 + '</option>'))
+                    $("#ddlModel").append($('<option value=' + model2 + '>' + model2 + '</option>'))
+                }
+            }
+
+            function selectddlMake(obj) {
+
+                var mars = "GLA 200,Mercedes - Benz Vito van, 2014 - present,Mercedes - Benz SLR McLaren(built from 2003 to 2010,815D Vario minibus,Mercedes - Benz 560SEC,Mercedes - Benz SLK, 1996 - 2004,Mercedes - Benz M - Class, models go by ML250, ML300,Mercedes - Benz CLA - Class.,Mercedes - Benz MB100, produced 1981 - 1995,Mercedes - Benz Citan(2012)"
+                var nis = "Altima,Juke,Qashqai,Micra  K12 2005-2010,Space Bus";
+                var vau = "Astra SE 2007"
+                var skoda = "Superb VGT 2010"
+                var bus = "Quest XL,Quest SL"
+                if (obj.value == 'Mercedes-Benz') {
+                    var makeArray = mars.split(',')
+                    $("#ddlModel").html("");
+                    for (var i = 0; i < makeArray.length; i++) {
+                        $("#ddlModel").append($('<option value=' + makeArray[i] + '>' + makeArray[i] + '</option>'))
+                    }
+
+                }
+                if (obj.value == 'Nissan') {
+                    var makeArray = nis.split(',')
+                    $("#ddlModel").html("");
+                    for (var i = 0; i < makeArray.length; i++) {
+                        $("#ddlModel").append($('<option value=' + makeArray[i] + '>' + makeArray[i] + '</option>'))
+                    }
+                }
+                if (obj.value == 'Vauxhall') {
+                    var makeArray = vau.split(',')
+                    $("#ddlModel").html("");
+                    for (var i = 0; i < makeArray.length; i++) {
+                        $("#ddlModel").append($('<option value=' + makeArray[i] + '>' + makeArray[i] + '</option>'))
+                    }
+
+                }
+                if (obj.value == 'Skoda') {
+                    var makeArray = skoda.split(',')
+                    $("#ddlModel").html("");
+                    for (var i = 0; i < makeArray.length; i++) {
+                        $("#ddlModel").append($('<option value=' + makeArray[i] + '>' + makeArray[i] + '</option>'))
+                    }
+
+                }
+                if (obj.value == 'Starcraft Bus') {
+                    var makeArray = bus.split(',')
+                    $("#ddlModel").html("");
+                    for (var i = 0; i < makeArray.length; i++) {
+                        $("#ddlModel").append($('<option value=' + makeArray[i] + '>' + makeArray[i] + '</option>'))
+                    }
+
+                }
+
+                if (obj.value == 'TOYOTA') {
+                    var model1 = "CAMRY", model2 = "CORLLOA";
+                    $("#ddlModel").html("");
+                    $("#ddlModel").append($('<option value=' + model1 + '>' + model1 + '</option>'))
+                    $("#ddlModel").append($('<option value=' + model2 + '>' + model2 + '</option>'))
+                }
+
+                if (obj.value == 'NISSAN') {
+                    var model = "ALTIMA";
+                    $("#ddlModel").html("");
+                    $("#ddlModel").append($('<option value=' + model + '>' + model + '</option>'))
+                }
+                if (obj.value == 'HONDA') {
+                    var model = "ACCORD";
+                    $("#ddlModel").html("");
+                    $("#ddlModel").append($('<option value=' + model + '>' + model + '</option>'))
+                }
+                if (obj.value == 'MAZDA') {
+                    var model = "6";
+                    $("#ddlModel").html("");
+                    $("#ddlModel").append($('<option value=' + model + '>' + model + '</option>'))
+                }
+            }
+
+            function selectddlMake_Value(obj) {
+
+                var mars = "GLA 200,Mercedes - Benz Vito van, 2014 - present,Mercedes - Benz SLR McLaren(built from 2003 to 2010,815D Vario minibus,Mercedes - Benz 560SEC,Mercedes - Benz SLK, 1996 - 2004,Mercedes - Benz M - Class, models go by ML250, ML300,Mercedes - Benz CLA - Class.,Mercedes - Benz MB100, produced 1981 - 1995,Mercedes - Benz Citan(2012)"
+                var nis = "Altima,Juke,Qashqai,Micra  K12 2005-2010,Space Bus";
+                var vau = "Astra SE 2007"
+                var skoda = "Superb VGT 2010"
+                var bus = "Quest XL,Quest SL"
+                if (obj == 'Mercedes-Benz') {
+                    var makeArray = mars.split(',')
+                    $("#ddlModel").html("");
+                    for (var i = 0; i < makeArray.length; i++) {
+                        $("#ddlModel").append($('<option value=' + makeArray[i] + '>' + makeArray[i] + '</option>'))
+                    }
+
+                }
+                if (obj == 'Nissan') {
+                    var makeArray = nis.split(',')
+                    $("#ddlModel").html("");
+                    for (var i = 0; i < makeArray.length; i++) {
+                        $("#ddlModel").append($('<option value=' + makeArray[i] + '>' + makeArray[i] + '</option>'))
+                    }
+
+                }
+                if (obj == 'Vauxhall') {
+                    var makeArray = vau.split(',')
+                    $("#ddlModel").html("");
+                    for (var i = 0; i < makeArray.length; i++) {
+                        $("#ddlModel").append($('<option value=' + makeArray[i] + '>' + makeArray[i] + '</option>'))
+                    }
+
+                }
+                if (obj == 'Skoda') {
+                    var makeArray = skoda.split(',')
+                    $("#ddlModel").html("");
+                    for (var i = 0; i < makeArray.length; i++) {
+                        $("#ddlModel").append($('<option value=' + makeArray[i] + '>' + makeArray[i] + '</option>'))
+                    }
+
+                }
+                if (obj == 'Starcraft Bus') {
+                    var makeArray = bus.split(',')
+                    $("#ddlModel").html("");
+                    for (var i = 0; i < makeArray.length; i++) {
+                        $("#ddlModel").append($('<option value=' + makeArray[i] + '>' + makeArray[i] + '</option>'))
+                    }
+
+                }
+
+                if (obj == 'TOYOTA') {
+                    var model1 = "CAMRY", model2 = "CORLLOA";
+                    $("#ddlModel").html("");
+                    $("#ddlModel").append($('<option value=' + model1 + '>' + model1 + '</option>'))
+                    $("#ddlModel").append($('<option value=' + model2 + '>' + model2 + '</option>'))
+                }
+
+                if (obj == 'NISSAN') {
+                    var model = "ALTIMA";
+                    $("#ddlModel").html("");
+                    $("#ddlModel").append($('<option value=' + model + '>' + model + '</option>'))
+                }
+                if (obj == 'HONDA') {
+                    var model = "ACCORD";
+                    $("#ddlModel").html("");
+                    $("#ddlModel").append($('<option value=' + model + '>' + model + '</option>'))
+                }
+                if (obj == 'MAZDA') {
+                    var model = "6";
+                    $("#ddlModel").html("");
+                    $("#ddlModel").append($('<option value=' + model + '>' + model + '</option>'))
+                }
+            }
+
+            $(function () {
+
+                //var make = "Mercedes-Benz,Nissan,Vauxhall,Skoda";
+                //var makeArray = make.split(',')
+                //$("#ddlMake").html("");
+                //for (var i = 0; i < makeArray.length; i++) {
+                //    $("#ddlMake").append($('<option value=' + makeArray[i] + '>' + makeArray[i] + '</option>'))
+                //}
+
+                //var mars = "GLA 200,Mercedes-Benz Vito van, 2014-present,Mercedes-Benz SLR McLaren(built from 2003 to 2010,815D Vario minibus,Mercedes-Benz 560SEC,Mercedes-Benz SLK, 1996-2004,Mercedes-Benz M-Class, models go by ML250, ML300,Mercedes-Benz CLA-Class,Mercedes-Benz MB100, produced 1981-1995,Mercedes-Benz Citan(2012)"
+                //var makeArray1 = mars.split(',')
+                //$("#ddlModel").html("");
+                //for (var i = 0; i < makeArray1.length; i++) {
+                //    $("#ddlModel").append($('<option value=' + makeArray1[i] + '>' + makeArray1[i] + '</option>'))
+                //}
+
+                //$('#fileUpload').change(function (event) {
+                //    var tmppath = URL.createObjectURL(event.target.files[0]);
+                //    filePath = $(this).val();
+                //    $("img").fadeIn("fast").attr('src', URL.createObjectURL(event.target.files[0]));
+                //});
+
+                defaultFun();
+            });
+
+            function editVehicle(obj) {
+                $('#fileUpload').change(function (event) {
+                    var tmppath = URL.createObjectURL(event.target.files[0]);
+                    //debugger;
+                    filePath = $(this).val();
+                    $("img").fadeIn("fast").attr('src', URL.createObjectURL(event.target.files[0]));
+                });
+                editId = obj.id;
+                $.ajax({
+                    url: hostUrl + 'aptc.vehicle/edit/' + obj.id,
+                    type: 'GET',
+                    dataType: 'json',
+                    success: function (data) {
+                        editObj = data.Value;
+                        $('#addNew').show();
+                        $('#txtEngineNumber').attr('readonly');
+                        $('#txtVIN').val(data.Value.vin);
+                        $("#txtOwnerName").val(data.Value.ownerName),
+                        $("#txtEngineNumber").val(data.Value.engineNumber),
+                        $("#txtRegistration").val(data.Value.registration),
+                        //$('select#ddlVehicletype option:selected').val(data.Value.vehicletype),
+                        //$('select#ddlMake option:selected').val(data.Value.make),
+                        //$('select#ddlModel option:selected').val(data.Value.model),
+                            $("#ddlVehicletype").val(data.Value.vehicletype),
+
+                        //selectVehicletype_Value(data.Value.vehicletype);
+                            $("#ddlMake").val(data.Value.make),
+
+                        //selectddlMake_Value(data.Value.make);
+                        //alert(data.Value.model);
+                        $("#ddlModel").val(data.Value.model),
+                        $("#txtModelYear").val(data.Value.modelYear),
+                            $("#ddlColour").val(data.Value.colour)
+                        defaultFun();
+                    },
+                    error: function (data) {
+                        alert(data.responseText);
+                    },
+                });
+            }
+
+            ///////////////////////////////////////////////////////////
+
+            function addNewVehicle() {
+                $('#addNew').show();
+                $('#btnCancel').show();
+            }
+
+            function deleteVehicle(obj) {
+                $.ajax({
+                    url: hostUrl + 'aptc.vehicle/delete/' + obj.id,
+                    type: 'GET',
+                    dataType: 'json',
+                    success: function (data) {
+                        //debugger;
+                        if (data == 'deleted') {
+                            alert('deleted successfully');
+                            defaultFun();
+                        }
+                    },
+                    error: function (data) {
+                        alert(data.responseText);
+                    },
+                });
+            }
+
+            function aDDNewV() {
+                var obj = {};
+                obj.vin = $("#txtVIN").val();
+                obj.ownerName = $("#txtOwnerName").val();
+                obj.engineNumber = $("#txtEngineNumber").val();
+                obj.registration = $("#txtRegistration").val();
+                obj.vehicletype = $('select#ddlVehicletype option:selected').val();
+                obj.make = $('select#ddlMake option:selected').val();
+                obj.model = $('select#ddlModel option:selected').val();
+                obj.modelYear = $("#txtModelYear").val();
+                obj.colour = $('select#ddlColour option:selected').val();
+                obj.photo = $("#filePath").val();
+                $.ajax({
+                    type: 'POST',
+                    data: obj,
+                    dataType: "json",
+                    url: hostUrl + 'aptc.vehicle/register',
+                    success: function (data) {
+                        defaultFun();
+                    },
+                    error: function (errMsg) {
+                        alert(errMsg.responseText)
+                    }
+                });
+            }
+
+            function deleteVehicle(obj) {
+                $.ajax({
+                    url: hostUrl + 'aptc.driver/delete/' + obj.id,
+                    type: 'GET',
+                    dataType: 'json',
+                    success: function (data) {
+                        if (data == 'deleted') {
+                            alert('deleted successfully');
+                            defaultFun();
+                        }
+                    },
+                    error: function (data) {
+                        alert(data.responseText);
+                    },
+                });
+            }
+
+            function Cancel() {
+                $('#addNew').hide();
+                $('#btnCancel').hide();
+            }
+
+            var filePath = '';
+
+            function SaveVehicle() {
+                if (editId == '') {
+                    aDDNewV();
+                }
+                else {
+                    //debugger;
+                    editObj.vin = $("#txtVIN").val();
+                    editObj.ownerName = $("#txtOwnerName").val();
+                    editObj.engineNumber = $("#txtEngineNumber").val();
+                    editObj.registration = $("#txtRegistration").val();
+                    editObj.vehicletype = $('select#ddlVehicletype option:selected').val();
+                    editObj.make = $('select#ddlMake option:selected').val();
+                    editObj.model = $('select#ddlModel option:selected').val();
+                    editObj.modelYear = $("#txtModelYear").val();
+                    editObj.colour = $('select#ddlColour option:selected').val();
+                    
+                    if (filePath != '') {
+                        editObj.photo = filePath;
+                    }
+                    //debugger;
+                    $.ajax({
+                        url: hostUrl + 'aptc.vehicle/update',
+                        type: 'POST',
+                        data: editObj,
+                        dataType: 'json',
+                        success: function (data) {
+                            alert(data);
+                            $('#addNew').hide();
+                            defaultFun();
+                        },
+                        error: function (data) {
+                            alert(data.responseText);
+                        },
+                    });
+                }
+            }
+
+            function defaultFun() {
+                getAllVehicle();
+                bindALLVehicleType();
+                bindALLColour();
+                bindALLMake();
+               // bindALLModel();
+            }
+
+            function getAllVehicle() {
+                var strTable = ''
+                tableBody
+                $.ajax({
+                    url: hostUrl + 'car.vehicle/getall',
+                    type: 'GET',
+                    dataType: 'json',
+                    success: function (data) {
+                        $('#tableBody').html('');
+                        for (var i = 0; i < data.length; i++) {
+                            var carTrackDriverResponse = '';
+                            var tblBody = '';
+                            tblBody = '<tr><td>' + data[i].Vehicle.vin + '</td><td>' + data[i].Vehicle.ownerName + '</td><td>' + data[i].Vehicle.vehicleValid + '</td><td>' + data[i].Vehicle.engineNumber + '</td><td>' + data[i].Vehicle.registration + '</td><td>' + data[i].Vehicle.vehicletype + '</td><td>' + data[i].Vehicle.make + '</td><td>' + data[i].Vehicle.model + '</td><td>' + data[i].Vehicle.modelYear + '</td><td>' + data[i].Vehicle.colour + '</td><td>' + data[i].Vehicle.carTrackVehicleResponse.ctStatus + '</td><td>' + data[i].Vehicle.carTrackVehicleResponse.ctDescription + '</td><td><a id=' + data[i].Vehicle.id + ' onclick="editVehicle(this);" style="margin-right:10px;display:block" href="#">Edit</a><a id=' + data[i].Vehicle.id + ' onclick="deleteVehicle(this);" style="margin-left:10px;" href="#">Delete</a></td></tr>'
+                            $("#tblEntAttributes tbody").append(tblBody);
+                        }
+                    },
+                    error: function (data) {
+                        alert(data.responseText);
+                    },
+                });
+            }
+
+            function bindALLVehicleType() {
+                var strTable = ''
+                tableBody
+                $.ajax({
+                    url: hostUrl + 'aptc.vehicle/vehicleTypeDDL',
+                    type: 'GET',
+                    dataType: 'json',
+                    success: function (data) {
+                        $("#ddlVehicletype").html("");
+                        for (var i = 0; i < data[0].VehType.length; i++) {
+                            $("#ddlVehicletype").append($('<option value=' + data[0].VehType[i].Code + '>' + data[0].VehType[i].Val + '</option>'))
+                        }
+                    },
+                    error: function (data) {
+                        alert(data.responseText);
+                    },
+                });
+            }
+
+            function bindALLColour() {
+                var strTable = ''
+                tableBody
+                $.ajax({
+                    url: hostUrl + 'aptc.vehicle/colourDDL',
+                    type: 'GET',
+                    dataType: 'json',
+                    success: function (data) {
+                        $("#ddlColour").html("");
+                        for (var i = 0; i < data[0].VehColour.length; i++) {
+                            $("#ddlColour").append($('<option value=' + data[0].VehColour[i].Code + '>' + data[0].VehColour[i].Val + '</option>'))
+                        }
+                    },
+                    error: function (data) {
+                        alert(data.responseText);
+                    },
+                });
+            }
+
+            function bindALLMake() {
+                var strTable = ''
+                tableBody
+                $.ajax({
+                    url: hostUrl + 'aptc.vehicle/makeDDL',
+                    type: 'GET',
+                    dataType: 'json',
+                    success: function (data) {
+                        $("#ddlMake").html("");
+                        for (var i = 0; i < data[0].VehMake.length; i++) {
+                            $("#ddlMake").append($('<option value=' + data[0].VehMake[i].Code + '>' + data[0].VehMake[i].Val + '</option>'))
+                        }
+                    },
+                    error: function (data) {
+                        alert(data.responseText);
+                    },
+                });
+            }
+
+            function bindALLModel(obj) {
+                var strTable = ''
+                tableBody
+                $.ajax({
+                    url: hostUrl + 'aptc.vehicle/modelDDL/' + obj.value,
+                    type: 'GET',
+                    dataType: 'json',
+                    success: function (data) {
+                        $("#ddlModel").html("");
+                        for (var i = 0; i < data[0].Model.length; i++) {
+                            $("#ddlModel").append($('<option value=' + data[0].Model[i].Code + '>' + data[0].Model[i].Val + '</option>'))
+                        }
+                    },
+                    error: function (data) {
+                        alert(data.responseText);
+                    },
+                });
+            }
+        </script>
+    </div>

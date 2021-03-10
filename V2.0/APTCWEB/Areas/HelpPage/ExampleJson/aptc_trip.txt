@@ -1,0 +1,26 @@
+<strong>JSON Input<strong> <br/><br/>
+{
+    "BookingId": "068886234",
+    "passengerID": "PA123456",
+    "vehicleID": "Vehicle_44WPQ10335",
+    "driverID": "784-2020-1234567-1",
+    "pickupDateTime": "2018-06-06 19:48:02",
+    "pickupAddress": "A/227 JAC 003",
+    "pickupLon": "11.11111",
+    "pickupLat": "55.6666",
+    "destinationAddress": "Lajpath nagar",
+    "destinationLon": "25.333443",
+    "destinationLat": "34.5455555",
+    "waypoints": "12",
+    "numPassengers": "03",
+    "taxiType": "car"
+}
+<br/>
+<br/><strong>Response</strong><br/><br/>
+{"id":"438727ab-ce64-4afd-b58e-202eea1b86ed", "IsSuccess": "true", "message":"Successfully","statusCode":"200"}<br/>
+{"id":"", "IsSuccess": "false", "message": "102-Invalid vehicle ID","statusCode":"400"}<br/>
+{"id":"", "IsSuccess": "false", "message": "103-Invalid driver ID","statusCode":"400"}<br/>
+{"id":"", "IsSuccess": "false", "message": "109-Number of passengers must be greater than zero":"400"}<br/>
+
+
+
