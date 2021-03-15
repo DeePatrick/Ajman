@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace APTCWebb.Library.Models
+namespace APTCWebbb.Library.Models
 {
     public class UserModel
     {

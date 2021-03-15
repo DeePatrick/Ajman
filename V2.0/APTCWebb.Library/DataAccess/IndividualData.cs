@@ -1,11 +1,11 @@
-﻿using APTCWebb.Library.Internal.DataAccess;
-using APTCWebb.Library.Models;
+﻿using APTCWebbb.Library.Internal.DataAccess;
+using APTCWebbb.Library.Models;
 using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace APTCWebb.Library.DataAccess
+namespace APTCWebbb.Library.DataAccess
 {
     public class IndividualData
     {

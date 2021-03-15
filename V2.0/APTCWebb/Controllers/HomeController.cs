@@ -26,7 +26,8 @@ namespace APTCWebb.Controllers
 
         public IActionResult Index()
         {
-            return Redirect("~/Help/Index");
+            return View();
+            //return Redirect("~/Help/Index");
         }
 
         public async Task<IActionResult> Privacy()
@@ -119,5 +120,8 @@ namespace APTCWebb.Controllers
             ViewBag.Title = "Login";
             return View();
         }
+
+
+
     }
 }

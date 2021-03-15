@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Text;
 
-namespace APTCWebb.Library
+namespace APTCWebbb.Library
 {
     public class ConfigHelper
     {

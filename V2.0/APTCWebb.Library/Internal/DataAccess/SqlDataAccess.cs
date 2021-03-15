@@ -7,7 +7,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 
-namespace APTCWebb.Library.Internal.DataAccess
+namespace APTCWebbb.Library.Internal.DataAccess
 {
     public class SqlDataAccess : IDisposable
     {

@@ -942,12 +942,12 @@
             Franchisee_user_name
             </summary>
         </member>
-        <member name="T:APTCWEB.Controllers.JourneyController">
+        <member name="T:APTCWebb.Controllers.JourneyController">
             <summary>
             Journey Controller
             </summary>
         </member>
-        <member name="M:APTCWEB.Controllers.JourneyController.Journey(CTAPI.Models.Journey)">
+        <member name="M:APTCWebb.Controllers.JourneyController.Journey(CTAPI.Models.Journey)">
             <summary>
             Post Trip
             </summary>
