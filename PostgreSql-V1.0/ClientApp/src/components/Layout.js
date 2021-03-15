@@ -226,161 +226,176 @@ class Layout extends Component {
             });
     }
 
-
-
     render() {
-        const { translate } = this.props;
-        console.log("individual details!" + this.state.userDetails);
         return (
             <div className="whole-app">
-                {this.state.loading === true && <div>
-                    <Loader />
-                </div>}
-                {
-                    this.state.isMatchOtp === true && this.state.showing === false &&
-                    <div className="view">
-                        <Sidebar user={this.state.user} />
-                        <Header username={this.state.username} user={this.state.user} />
-                        <div className={(localStorage.getItem('selectedLanguageCode') == 2) ? "arab-overlay" : "overlay"} >
-                            {this.props.children}
-                        </div>
+                <div className="view">
+                    <Sidebar user={this.state.user} />
+                    <Header username={this.state.username} user={this.state.user} />
+                    <div className="overlay">
+                        {this.props.children}
+                        <div>
+                            <Otp matches={this} showDashBoard={this.showDashBoard.bind(this)} />
+                         </div>
                     </div>
-                }
-                {this.state.showing === true &&
-                    <div id="background">
-                        <div className="center">
-                            {
-                                this.state.isSelectLang === true &&
-                                <div className="form-group" style={{ paddingTop: '65px' }}>
-                                    <img
-                                        className="padding-icon"
-                                        src={require('../assets/big logo.png')}
-                                        width="150"
-                                        alt="logo" />
-                                    <Logo />
-
-                                    <br />
-                                    <div className="row">
-                                        <div className="col-md-12 col-lg-12 col-sm-12">
-                                            <h4 className="center" style={{ marginTop: '0px', color: 'white' }}>Welcome to the Ajman GO Staff Portal</h4>
-                                        </div>
-                                    </div>
-
-                                    <div className="row" style={{ marginTop: '20px' }}>
-                                        <div className="col-lg-4 col-md-4" />
-                                        <div className="col-md-4 col-lg-4">
-                                            <div className="form-group">
-                                                <select className="language" required value={this.state.langid} onChange={this.onLangChange}>
-                                                    <option value="">{this.props.t("Plaese_Select_Language")}</option>
-                                                    {this.state
-                                                        .langList
-                                                        .map((lang, index) => <option key={index} value={lang.commonmasterid}>
-                                                            {index === 0 &&
-                                                                <span>
-                                                                    {this.props.t("English")}
-                                                                </span>
-
-                                                            }
-                                                            {index === 1 &&
-                                                                <span>
-                                                                    {this.props.t("Arabic")}
-                                                                </span>
-
-                                                            }
-                                                        </option>)}
-                                                </select><br />
-                                                <button style={{ marginTop: '20px' }} onClick={this.onContinue} type="button" className="btn-signin">Continue</button>
-                                            </div>
-                                        </div>
-                                        <div className="col-md-4 col-lg-4" />
-                                    </div>
-                                </div>
-
-                            }
-                            <br />
-                            {this.state.isLogin === true &&
-                                <div>
-
-                                    <br />
-                                    <div id="login">
-                                        <Animated animationIn="bounceInDown" animationOut="fadeOut" isVisible>
-                                            <form onSubmit={this.handleSubmit}>
-                                                <br />
-                                                <div className="form-group">
-                                                    <img
-                                                        className="padding-icon"
-                                                        src={require('./../assets/big logo.png')}
-                                                        width="150"
-                                                        alt="logo" />
-                                                    <Logo />
-
-                                                    <div className="row">
-                                                        <div className="col-lg-4 col-md-4" />
-                                                        <div className="col-md-4 col-lg-4">
-                                                            <div className="bordered-loginbar" dir={(localStorage.getItem('selectedLanguageCode') == 2) ? "rtl" : "ltr"}>
-                                                                <input
-                                                                    value={this.state.email}
-                                                                    onChange={this.handleChange}
-                                                                    type="email"
-                                                                    name="email"
-                                                                    required
-                                                                    className="form-control mineformcontrol "
-                                                                    id="exampleInputemail1"
-                                                                    aria-describedby="emailHelp"
-                                                                    placeholder={this.props.t('Username')} />
-                                                            </div>
-                                                            <div className="bordered-loginbar" dir={(localStorage.getItem('selectedLanguageCode') == 2) ? "rtl" : "ltr"}>
-                                                                <input
-                                                                    value={this.state.password}
-                                                                    onChange={this.handleChange}
-                                                                    type="password"
-                                                                    name="password"
-                                                                    required
-                                                                    className="form-control mineformcontrol "
-                                                                    id="exampleInputPassword1"
-                                                                    placeholder={this.props.t('Password')} />
-                                                            </div>
-                                                        </div>
-                                                        <div className="col-lg-4 col-md-4" />
-                                                    </div>
-
-                                                    <div className="row">
-                                                        <div className="col-md-4 col-lg-4 col-sm-2 col-xs-1" />
-                                                        <div className="col-md-4 col-lg-4 col-sm-8 col-xs-10">
-                                                            <button type="submit" onClick={this.forgotpassword} className={(localStorage.getItem('selectedLanguageCode') == 2) ? "btn btn-link pull-left make-white" : "btn btn-link pull-right make-white"}>{this.props.t('Forgot_password')} </button><br />
-                                                            <br /><br /><br />
-                                                        </div>
-                                                        <div className="col-md-4 col-lg-4 col-sm-2 col-xs-1" />
-                                                    </div>
-
-                                                    <div className="row">
-                                                        <div className="col-md-4 col-lg-4 col-sm-4 col-xs-1" />
-                                                        <div className="col-md-4 col-lg-4 col-sm-4 col-xs-10">
-                                                            <button type="submit" className="btn-signin">{this.props.t('Sign_in')}</button>
-                                                        </div>
-                                                        <div className="col-md-4 col-lg-4 col-sm-4 col-xs-1" />
-
-                                                    </div>
-                                                </div>
-                                            </form>
-                                        </Animated>
-                                    </div>
-                                </div>
-
-                            }
-                            {
-                                this.state.isSendOtp === true &&
-                                <div>
-                                    <Otp matches={this} showDashBoard={this.showDashBoard.bind(this)} />
-                                </div>
-                            }
-
-                        </div>
-                    </div>
-                }
+                </div>
             </div>
-
-        );
+            )
     }
+
+    //render() {
+    //    const { translate } = this.props;
+    //    console.log("individual details!" + this.state.userDetails);
+    //    return (
+    //        <div className="whole-app">
+    //            {this.state.loading === true && <div>
+    //                <Loader />
+    //            </div>}
+    //            {
+    //                this.state.isMatchOtp === true && this.state.showing === false &&
+    //                <div className="view">
+    //                    <Sidebar user={this.state.user} />
+    //                    <Header username={this.state.username} user={this.state.user} />
+    //                    <div className={(localStorage.getItem('selectedLanguageCode') == 2) ? "arab-overlay" : "overlay"} >
+    //                        {this.props.children}
+    //                    </div>
+    //                </div>
+    //            }
+    //            {this.state.showing === true &&
+    //                <div id="background">
+    //                    <div className="center">
+    //                        {
+    //                            this.state.isSelectLang === true &&
+    //                            <div className="form-group" style={{ paddingTop: '65px' }}>
+    //                                <img
+    //                                    className="padding-icon"
+    //                                    src={require('../assets/big logo.png')}
+    //                                    width="150"
+    //                                    alt="logo" />
+    //                                <Logo />
+
+    //                                <br />
+    //                                <div className="row">
+    //                                    <div className="col-md-12 col-lg-12 col-sm-12">
+    //                                        <h4 className="center" style={{ marginTop: '0px', color: 'white' }}>Welcome to the Ajman GO Staff Portal</h4>
+    //                                    </div>
+    //                                </div>
+
+    //                                <div className="row" style={{ marginTop: '20px' }}>
+    //                                    <div className="col-lg-4 col-md-4" />
+    //                                    <div className="col-md-4 col-lg-4">
+    //                                        <div className="form-group">
+    //                                            <select className="language" required value={this.state.langid} onChange={this.onLangChange}>
+    //                                                <option value="">{this.props.t("Plaese_Select_Language")}</option>
+    //                                                {this.state
+    //                                                    .langList
+    //                                                    .map((lang, index) => <option key={index} value={lang.commonmasterid}>
+    //                                                        {index === 0 &&
+    //                                                            <span>
+    //                                                                {this.props.t("English")}
+    //                                                            </span>
+
+    //                                                        }
+    //                                                        {index === 1 &&
+    //                                                            <span>
+    //                                                                {this.props.t("Arabic")}
+    //                                                            </span>
+
+    //                                                        }
+    //                                                    </option>)}
+    //                                            </select><br />
+    //                                            <button style={{ marginTop: '20px' }} onClick={this.onContinue} type="button" className="btn-signin">Continue</button>
+    //                                        </div>
+    //                                    </div>
+    //                                    <div className="col-md-4 col-lg-4" />
+    //                                </div>
+    //                            </div>
+
+    //                        }
+    //                        <br />
+    //                        {this.state.isLogin === true &&
+    //                            <div>
+
+    //                                <br />
+    //                                <div id="login">
+    //                                    <Animated animationIn="bounceInDown" animationOut="fadeOut" isVisible>
+    //                                        <form onSubmit={this.handleSubmit}>
+    //                                            <br />
+    //                                            <div className="form-group">
+    //                                                <img
+    //                                                    className="padding-icon"
+    //                                                    src={require('./../assets/big logo.png')}
+    //                                                    width="150"
+    //                                                    alt="logo" />
+    //                                                <Logo />
+
+    //                                                <div className="row">
+    //                                                    <div className="col-lg-4 col-md-4" />
+    //                                                    <div className="col-md-4 col-lg-4">
+    //                                                        <div className="bordered-loginbar" dir={(localStorage.getItem('selectedLanguageCode') == 2) ? "rtl" : "ltr"}>
+    //                                                            <input
+    //                                                                value={this.state.email}
+    //                                                                onChange={this.handleChange}
+    //                                                                type="email"
+    //                                                                name="email"
+    //                                                                required
+    //                                                                className="form-control mineformcontrol "
+    //                                                                id="exampleInputemail1"
+    //                                                                aria-describedby="emailHelp"
+    //                                                                placeholder={this.props.t('Username')} />
+    //                                                        </div>
+    //                                                        <div className="bordered-loginbar" dir={(localStorage.getItem('selectedLanguageCode') == 2) ? "rtl" : "ltr"}>
+    //                                                            <input
+    //                                                                value={this.state.password}
+    //                                                                onChange={this.handleChange}
+    //                                                                type="password"
+    //                                                                name="password"
+    //                                                                required
+    //                                                                className="form-control mineformcontrol "
+    //                                                                id="exampleInputPassword1"
+    //                                                                placeholder={this.props.t('Password')} />
+    //                                                        </div>
+    //                                                    </div>
+    //                                                    <div className="col-lg-4 col-md-4" />
+    //                                                </div>
+
+    //                                                <div className="row">
+    //                                                    <div className="col-md-4 col-lg-4 col-sm-2 col-xs-1" />
+    //                                                    <div className="col-md-4 col-lg-4 col-sm-8 col-xs-10">
+    //                                                        <button type="submit" onClick={this.forgotpassword} className={(localStorage.getItem('selectedLanguageCode') == 2) ? "btn btn-link pull-left make-white" : "btn btn-link pull-right make-white"}>{this.props.t('Forgot_password')} </button><br />
+    //                                                        <br /><br /><br />
+    //                                                    </div>
+    //                                                    <div className="col-md-4 col-lg-4 col-sm-2 col-xs-1" />
+    //                                                </div>
+
+    //                                                <div className="row">
+    //                                                    <div className="col-md-4 col-lg-4 col-sm-4 col-xs-1" />
+    //                                                    <div className="col-md-4 col-lg-4 col-sm-4 col-xs-10">
+    //                                                        <button type="submit" className="btn-signin">{this.props.t('Sign_in')}</button>
+    //                                                    </div>
+    //                                                    <div className="col-md-4 col-lg-4 col-sm-4 col-xs-1" />
+
+    //                                                </div>
+    //                                            </div>
+    //                                        </form>
+    //                                    </Animated>
+    //                                </div>
+    //                            </div>
+
+    //                        }
+    //                        {
+    //                            this.state.isSendOtp === true &&
+    //                            <div>
+    //                                <Otp matches={this} showDashBoard={this.showDashBoard.bind(this)} />
+    //                            </div>
+    //                        }
+
+    //                    </div>
+    //                </div>
+    //            }
+    //        </div>
+
+    //    );
+    //}
 }
 export default translate(Layout);
